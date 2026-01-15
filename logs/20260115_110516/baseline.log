@@ -1,0 +1,96 @@
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-15 11:05:23,587] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-15 11:05:23,587] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train3.py --deepspeed_config configs/baseline.json --num_layers 12 --hidden_dim 1024 --batch_size 128 --seq_length 512 --num_steps 20 --warmup_steps 5
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-15 11:05:28,219] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-15 11:05:28,219] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-15 11:05:28,219] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-15 11:05:28,219] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-15 11:05:28,219] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-15 11:05:28,220] [INFO] [launch.py:272:main] process 362935 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train3.py', '--local_rank=0', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '128', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5']
+[2026-01-15 11:05:28,220] [INFO] [launch.py:272:main] process 362936 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train3.py', '--local_rank=1', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '128', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 0] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50000
+[Rank 1] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[Rank 0] Model parameters: 124,242,432 total, 124,242,432 trainable
+[Rank 1] Model parameters: 124,242,432 total, 124,242,432 trainable
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 0.25 GB         Max_MA 0.25 GB         CA 0.26 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.13 GB, percent = 5.5%
+DeepSpeedZeRoOffload initialize [begin]
+MA 0.25 GB         Max_MA 0.39 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 0.13 GB         Max_MA 0.29 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+Before creating fp16 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+After creating fp16 partitions: 1
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+Before creating fp32 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+After creating fp32 partitions
+MA 0.36 GB         Max_MA 0.59 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+Before initializing optimizer states
+MA 0.36 GB         Max_MA 0.36 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+After initializing optimizer states
+MA 0.36 GB         Max_MA 0.59 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+[Rank 1] DeepSpeed initialized with config: configs/baseline.json
+[Rank 1] Memory after init: allocated=0.57 GB, reserved=0.74 GB
+After initializing ZeRO optimizer
+MA 0.57 GB         Max_MA 0.71 GB         CA 0.74 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 110.17 GB, percent = 5.5%
+[Rank 0] DeepSpeed initialized with config: configs/baseline.json
+[Rank 0] Memory after init: allocated=0.57 GB, reserved=0.74 GB
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[Rank 0] Step 0: loss=10.9722, time=0.395s, alloc_mem=9.45 GB, peak_mem=78.55 GB
+[Rank 1] Step 0: loss=10.9722, time=0.451s, alloc_mem=9.45 GB, peak_mem=78.55 GB
+[Rank 1] Step 5: loss=10.9431, time=0.254s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 0] Step 5: loss=10.9431, time=0.254s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 1] Step 10: loss=10.9106, time=0.255s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 0] Step 10: loss=10.9106, time=0.255s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 1] Step 15: loss=10.8800, time=0.256s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 0] Step 15: loss=10.8800, time=0.256s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 1] Step 19: loss=10.8612, time=0.256s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+[Rank 0] Step 19: loss=10.8612, time=0.256s, alloc_mem=9.45 GB, peak_mem=79.21 GB
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=1024, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 128, Seq length: 512
+  Average step time: 0.256s
+  Peak memory: 79.21 GB
+  Final allocated memory: 9.45 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=124242432 peak_mem_bytes=85051137536 alloc_mem_bytes=10144201728 avg_step_time=0.2559
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=1024, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 128, Seq length: 512
+  Average step time: 0.256s
+  Peak memory: 79.21 GB
+  Final allocated memory: 9.45 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=124242432 peak_mem_bytes=85051137536 alloc_mem_bytes=10144201728 avg_step_time=0.2559
+[rank0]:[W115 11:05:47.801329088 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-15 11:05:49,223] [INFO] [launch.py:367:main] Process 362935 exits successfully.
+[2026-01-15 11:05:49,223] [INFO] [launch.py:367:main] Process 362936 exits successfully.
