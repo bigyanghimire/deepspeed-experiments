@@ -1,0 +1,934 @@
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-15 17:12:21,598] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1,2,3 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-15 17:12:21,598] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/bf16_full.json --num_layers 32 --hidden_dim 4096 --num_heads 32 --batch_size 1 --num_steps 1000 --activation_checkpointing --loss_log_file logs/bf16_full_loss.csv --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-15 17:12:26,602] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2026-01-15 17:12:26,602] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=4, node_rank=0
+[2026-01-15 17:12:26,602] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2026-01-15 17:12:26,602] [INFO] [launch.py:180:main] dist_world_size=4
+[2026-01-15 17:12:26,602] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2026-01-15 17:12:26,603] [INFO] [launch.py:272:main] process 3490226 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--num_heads', '32', '--batch_size', '1', '--num_steps', '1000', '--activation_checkpointing', '--loss_log_file', 'logs/bf16_full_loss.csv', '--use_real_data', '--seed', '42']
+[2026-01-15 17:12:26,603] [INFO] [launch.py:272:main] process 3490227 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--num_heads', '32', '--batch_size', '1', '--num_steps', '1000', '--activation_checkpointing', '--loss_log_file', 'logs/bf16_full_loss.csv', '--use_real_data', '--seed', '42']
+[2026-01-15 17:12:26,604] [INFO] [launch.py:272:main] process 3490228 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=2', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--num_heads', '32', '--batch_size', '1', '--num_steps', '1000', '--activation_checkpointing', '--loss_log_file', 'logs/bf16_full_loss.csv', '--use_real_data', '--seed', '42']
+[2026-01-15 17:12:26,604] [INFO] [launch.py:272:main] process 3490229 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=3', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--num_heads', '32', '--batch_size', '1', '--num_steps', '1000', '--activation_checkpointing', '--loss_log_file', 'logs/bf16_full_loss.csv', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Loading wikitext dataset...
+[Rank 0] Loading wikitext dataset...
+[Rank 2] Loading wikitext dataset...
+[Rank 3] Loading wikitext dataset...
+[Rank 3] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 3] Creating model with hidden_dim=4096, num_layers=32, num_heads=32, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=32, vocab_size=50257
+[Rank 2] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 2] Creating model with hidden_dim=4096, num_layers=32, num_heads=32, vocab_size=50257
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=4096, num_layers=32, num_heads=32, vocab_size=50257
+[Rank 2] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 2] Activation checkpointing enabled
+[Rank 0] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 0] Activation checkpointing enabled
+[Rank 3] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 3] Activation checkpointing enabled
+[Rank 1] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 1] Activation checkpointing enabled
+Stage 3 initialize beginning
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.79 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 22.96 GB, percent = 2.3%
+DeepSpeedZeRoOffload initialize [begin]
+MA 12.77 GB         Max_MA 13.54 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.24 GB, percent = 2.3%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 3.19 GB         Max_MA 12.87 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.25 GB, percent = 2.3%
+Before creating fp16 partitions
+MA 3.19 GB         Max_MA 3.19 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.25 GB, percent = 2.3%
+After creating fp16 partitions: 2
+MA 3.19 GB         Max_MA 3.19 GB         CA 3.2 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.23 GB, percent = 2.3%
+Before creating fp32 partitions
+MA 3.19 GB         Max_MA 3.19 GB         CA 3.2 GB         Max_CA 3 GB 
+CPU Virtual Memory:  used = 23.23 GB, percent = 2.3%
+After creating fp32 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 23.23 GB, percent = 2.3%
+Before initializing optimizer states
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 23.23 GB, percent = 2.3%
+After initializing optimizer states
+MA 6.39 GB         Max_MA 8.27 GB         CA 8.27 GB         Max_CA 8 GB 
+CPU Virtual Memory:  used = 23.23 GB, percent = 2.3%
+[Rank 1] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 3] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 1] Memory after init: allocated=9.67 GB, reserved=11.47 GB
+[Rank 2] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 3] Memory after init: allocated=9.67 GB, reserved=11.47 GB
+[Rank 2] Memory after init: allocated=9.67 GB, reserved=11.47 GB
+After initializing ZeRO optimizer
+MA 9.67 GB         Max_MA 10.44 GB         CA 11.47 GB         Max_CA 11 GB 
+CPU Virtual Memory:  used = 23.34 GB, percent = 2.3%
+[Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 0] Memory after init: allocated=9.67 GB, reserved=11.47 GB
+[Rank 2] Step 0: loss=11.1147, time=1.713s, alloc_mem=16.17 GB, peak_mem=17.49 GB[Rank 3] Step 0: loss=11.1177, time=2.000s, alloc_mem=16.17 GB, peak_mem=17.49 GB
+
+[Rank 1] Step 0: loss=11.0312, time=1.779s, alloc_mem=16.17 GB, peak_mem=17.49 GB
+[Rank 0] Step 0: loss=11.1138, time=1.532s, alloc_mem=16.17 GB, peak_mem=17.49 GB
+[Rank 3] Step 5: loss=26.8279, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 5: loss=23.9208, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 5: loss=25.0601, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 5: loss=25.8903, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 10: loss=3.0010, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 10: loss=6.1594, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 10: loss=5.9725, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 10: loss=7.6797, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 15: loss=11.7466, time=0.462s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 15: loss=8.4590, time=0.462s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 15: loss=1.2048, time=0.462s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 15: loss=13.5544, time=0.462s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 20: loss=5.7025, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 20: loss=2.4628, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 20: loss=3.7176, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 20: loss=1.7876, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 25: loss=3.4569, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 25: loss=7.5312, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 25: loss=6.3306, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 25: loss=3.2965, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 30: loss=2.5636, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 30: loss=5.3480, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 30: loss=2.2371, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 30: loss=2.0906, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 35: loss=2.0080, time=0.634s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 35: loss=1.6115, time=0.634s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 35: loss=4.1984, time=0.634s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 35: loss=4.9520, time=0.634s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 40: loss=3.2174, time=0.465s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 40: loss=4.8482, time=0.465s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 40: loss=3.7409, time=0.465s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 40: loss=1.1926, time=0.465s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 45: loss=1.3930, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 45: loss=1.8960, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 45: loss=5.5549, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 45: loss=1.5076, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 50: loss=3.6919, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 50: loss=5.1179, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 50: loss=3.7441, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 50: loss=2.3455, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 55: loss=5.5574, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 55: loss=0.7577, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 55: loss=3.1998, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 55: loss=3.5607, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 60: loss=2.3179, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 60: loss=3.4250, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 60: loss=3.3034, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 60: loss=3.5352, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 65: loss=1.5583, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 65: loss=2.3325, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 65: loss=1.7921, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 65: loss=2.0078, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 70: loss=2.7744, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 70: loss=2.9932, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 70: loss=5.6106, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 70: loss=1.5922, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 75: loss=2.3061, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 75: loss=1.1302, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 75: loss=3.0466, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 75: loss=6.8043, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 80: loss=4.3511, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 80: loss=2.2490, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 80: loss=2.8572, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 80: loss=4.6111, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 85: loss=1.4903, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 85: loss=2.0745, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 85: loss=2.3463, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 85: loss=1.0684, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 90: loss=3.4767, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 90: loss=4.4515, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 90: loss=4.6368, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 90: loss=1.9089, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 95: loss=1.2166, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 95: loss=2.9346, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 95: loss=2.9768, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 95: loss=6.2369, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 100: loss=1.5121, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 100: loss=1.4511, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 100: loss=2.0894, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 100: loss=1.2814, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 105: loss=4.7729, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 105: loss=0.7511, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 105: loss=0.8621, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 105: loss=2.1663, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 110: loss=4.3012, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 110: loss=1.7928, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 110: loss=4.2846, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 110: loss=2.1292, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 115: loss=4.1398, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 115: loss=1.6949, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 115: loss=4.7330, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 115: loss=3.9465, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 120: loss=1.2285, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 120: loss=3.6539, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 120: loss=3.7964, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 120: loss=3.4259, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 125: loss=0.9149, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 125: loss=2.6704, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 125: loss=2.5686, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 125: loss=5.5786, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 130: loss=0.4146, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 130: loss=4.2875, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 130: loss=4.3716, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 130: loss=3.4423, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 135: loss=4.5004, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 135: loss=2.5140, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 135: loss=2.3696, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 135: loss=1.5785, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 140: loss=2.5427, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 140: loss=2.5597, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 140: loss=1.3877, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 140: loss=3.6576, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 145: loss=3.4884, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 145: loss=2.0861, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 145: loss=4.2382, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 145: loss=0.5463, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 150: loss=2.2261, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 150: loss=3.3251, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 150: loss=2.8907, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 150: loss=3.1903, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 155: loss=2.7057, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 155: loss=4.3454, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 155: loss=2.8575, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 155: loss=2.6515, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 160: loss=2.2102, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 160: loss=0.7753, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 160: loss=2.2648, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 160: loss=3.3389, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 165: loss=3.6083, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 165: loss=1.5755, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 165: loss=1.5237, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 165: loss=4.5079, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 170: loss=1.0631, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 170: loss=2.2849, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 170: loss=2.0223, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 170: loss=3.5007, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 175: loss=1.4342, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 175: loss=1.8787, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 175: loss=2.7872, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 175: loss=2.0358, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 180: loss=0.8087, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 180: loss=3.1122, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 180: loss=4.7235, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 180: loss=0.5419, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 185: loss=2.3024, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 185: loss=1.5881, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 185: loss=1.0495, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 185: loss=3.0386, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 190: loss=1.0140, time=0.632s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 190: loss=1.8681, time=0.632s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 190: loss=6.5103, time=0.632s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 190: loss=4.2044, time=0.632s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 195: loss=3.6408, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 195: loss=1.4242, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 195: loss=2.8959, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 195: loss=1.8491, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 200: loss=0.9834, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 200: loss=2.1604, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 200: loss=8.0590, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 200: loss=1.2952, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 205: loss=1.9372, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 205: loss=3.8397, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 205: loss=2.6843, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 205: loss=2.9146, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 210: loss=1.8087, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 210: loss=4.6044, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 210: loss=2.3031, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 210: loss=2.3821, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 215: loss=3.8608, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 215: loss=3.3076, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 215: loss=2.9981, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 215: loss=1.6241, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 220: loss=2.4346, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 220: loss=3.8340, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 220: loss=2.4446, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 220: loss=0.9713, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 225: loss=2.5520, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 225: loss=0.9382, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 225: loss=4.1182, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 225: loss=3.6261, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 230: loss=2.4117, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 230: loss=2.8736, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 230: loss=1.7032, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 230: loss=0.7756, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 235: loss=4.6834, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 235: loss=0.6224, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 235: loss=2.7832, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 235: loss=2.2742, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 240: loss=0.5864, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 240: loss=3.3260, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 240: loss=2.1363, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 240: loss=2.7600, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 245: loss=2.4618, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 245: loss=1.9473, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 245: loss=2.0680, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 245: loss=1.9717, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 250: loss=2.7133, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 250: loss=6.2887, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 250: loss=1.6178, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 250: loss=2.5001, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 255: loss=2.0613, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 255: loss=2.3673, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 255: loss=1.0595, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 255: loss=2.4617, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 260: loss=2.6224, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 260: loss=2.1663, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 260: loss=4.1722, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 260: loss=1.5978, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 265: loss=2.8203, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 265: loss=2.3359, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 265: loss=2.5857, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 265: loss=5.3505, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 270: loss=1.3143, time=0.574s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 270: loss=2.6292, time=0.574s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 270: loss=2.0340, time=0.574s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 270: loss=0.9750, time=0.574s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 275: loss=2.4321, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 275: loss=4.2720, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 275: loss=4.6600, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 275: loss=3.0103, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 280: loss=4.5863, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 280: loss=1.9878, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 280: loss=2.7229, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 280: loss=5.8638, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 285: loss=0.9679, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 285: loss=1.8310, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 285: loss=4.7096, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 285: loss=0.8473, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 290: loss=6.3113, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 290: loss=2.4271, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 290: loss=1.6034, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 290: loss=2.8814, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 295: loss=5.6121, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 295: loss=0.8893, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 295: loss=3.1149, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 295: loss=1.6030, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 300: loss=2.5063, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 300: loss=3.5318, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 300: loss=1.2577, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 300: loss=3.5117, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 305: loss=1.3409, time=0.595s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 305: loss=2.5275, time=0.595s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 305: loss=5.7285, time=0.595s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 305: loss=3.7113, time=0.595s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 310: loss=3.4795, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 310: loss=3.2546, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 310: loss=4.9908, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 310: loss=0.6034, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 315: loss=2.7184, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 315: loss=3.8088, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 315: loss=4.8455, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 315: loss=2.8715, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 320: loss=3.2267, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 320: loss=4.0174, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 320: loss=4.5874, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 320: loss=3.5174, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 325: loss=0.9997, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 325: loss=2.1469, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 325: loss=2.1483, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 325: loss=0.6058, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 330: loss=2.2026, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 330: loss=3.2064, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 330: loss=3.9494, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 330: loss=2.1855, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 335: loss=5.7975, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 335: loss=2.2447, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 335: loss=1.1389, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 335: loss=2.7012, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 340: loss=1.7143, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 340: loss=1.4849, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 340: loss=3.2855, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 340: loss=4.0092, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 345: loss=3.2911, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 345: loss=4.8256, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 345: loss=2.8308, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 345: loss=9.4126, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 350: loss=3.4882, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 350: loss=3.9094, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 350: loss=1.4446, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 350: loss=3.0341, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 355: loss=1.9283, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 355: loss=3.6544, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 355: loss=1.8253, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 355: loss=1.7164, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 360: loss=2.5922, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 360: loss=2.9720, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 360: loss=4.2168, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 360: loss=2.5233, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 365: loss=1.7228, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 365: loss=2.8017, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 365: loss=0.6922, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 365: loss=2.7189, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 370: loss=1.8725, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 370: loss=1.7384, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 370: loss=3.2557, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 370: loss=0.8962, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 375: loss=3.3152, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 375: loss=2.9149, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 375: loss=3.8234, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 375: loss=3.1494, time=0.445s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 380: loss=4.4500, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 380: loss=5.1025, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 380: loss=2.3033, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 380: loss=1.4181, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 385: loss=3.1539, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 385: loss=5.6282, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 385: loss=3.2233, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 385: loss=3.6450, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 390: loss=5.0337, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 390: loss=2.3420, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 390: loss=2.3241, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 390: loss=7.0750, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 395: loss=3.5103, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 395: loss=2.3334, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 395: loss=3.7551, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 395: loss=3.2511, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 400: loss=1.5842, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 400: loss=4.2013, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 400: loss=1.2442, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 400: loss=2.7611, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 405: loss=0.7995, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 405: loss=2.1129, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 405: loss=1.4291, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 405: loss=0.5915, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 410: loss=6.2233, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 410: loss=1.7733, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 410: loss=2.3468, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 410: loss=4.2162, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 415: loss=3.3952, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 415: loss=0.6444, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 415: loss=2.1771, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 415: loss=5.9404, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 420: loss=2.3455, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 420: loss=0.7343, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 420: loss=0.9195, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 420: loss=0.6867, time=0.451s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 425: loss=3.3762, time=0.572s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 425: loss=1.6589, time=0.572s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 425: loss=2.5820, time=0.572s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 425: loss=2.8195, time=0.572s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 430: loss=4.5296, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 430: loss=7.2013, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 430: loss=0.5247, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 430: loss=0.9369, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 435: loss=3.1717, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 435: loss=3.4073, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 435: loss=3.6158, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 435: loss=2.0997, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 440: loss=2.8191, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 440: loss=0.8490, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 3] Step 440: loss=2.3378, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 440: loss=0.9360, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 445: loss=1.2281, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 445: loss=5.5150, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 445: loss=2.2239, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 445: loss=3.1684, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 450: loss=0.6630, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 450: loss=0.8462, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 450: loss=2.4653, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 450: loss=3.0182, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 455: loss=3.2429, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 455: loss=1.5670, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 455: loss=3.2138, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 455: loss=4.9471, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 460: loss=2.1028, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 460: loss=0.9893, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 460: loss=2.8112, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 460: loss=4.5248, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 465: loss=2.8218, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 465: loss=2.3620, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 465: loss=5.5802, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 465: loss=4.4027, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 470: loss=1.0976, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 470: loss=3.4020, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 470: loss=2.0106, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 470: loss=2.2183, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 475: loss=2.3650, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 475: loss=3.4002, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 475: loss=1.8358, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 475: loss=4.4604, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 480: loss=2.4071, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 480: loss=5.3890, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 480: loss=3.9480, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 480: loss=2.7663, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 485: loss=1.8127, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 485: loss=2.8004, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 485: loss=2.4544, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 485: loss=4.8439, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 490: loss=0.8026, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 490: loss=0.5482, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 490: loss=1.9727, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 490: loss=1.8683, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 495: loss=1.9931, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 495: loss=4.0459, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 495: loss=0.7975, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 495: loss=2.7785, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 500: loss=2.2905, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 500: loss=1.8962, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 500: loss=1.9140, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 500: loss=0.8196, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 505: loss=2.4966, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 505: loss=4.8193, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 505: loss=3.7634, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 505: loss=0.9318, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 510: loss=1.1688, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 510: loss=1.2195, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 510: loss=3.0725, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 510: loss=5.6091, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 515: loss=3.8879, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 515: loss=2.5447, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 515: loss=0.4899, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 515: loss=0.5955, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 520: loss=0.4709, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 520: loss=3.3601, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 520: loss=1.6360, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 520: loss=2.8965, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 525: loss=4.8292, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 525: loss=2.2813, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 525: loss=1.8523, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 525: loss=1.4208, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 530: loss=0.6620, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 530: loss=2.0481, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 530: loss=1.5375, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 530: loss=2.2768, time=0.446s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 535: loss=2.3911, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 535: loss=2.2911, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 535: loss=3.1238, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 535: loss=2.5875, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 540: loss=1.4129, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 540: loss=2.2141, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 540: loss=3.7176, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 540: loss=3.8486, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 545: loss=3.5736, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 545: loss=5.1037, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 545: loss=2.6465, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 545: loss=2.4958, time=0.444s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 550: loss=2.3784, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 550: loss=0.5291, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 550: loss=0.6096, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 550: loss=3.2717, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 555: loss=5.3838, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 555: loss=4.5141, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 555: loss=4.8155, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 555: loss=1.7339, time=0.438s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 560: loss=3.2626, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 560: loss=3.6314, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 560: loss=6.5029, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 560: loss=2.2455, time=0.453s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 565: loss=5.3320, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 565: loss=4.1123, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 565: loss=0.4967, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 565: loss=0.8046, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 570: loss=2.4544, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 570: loss=1.9706, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 570: loss=4.6641, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 570: loss=1.0014, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 575: loss=2.2402, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 575: loss=4.0094, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 575: loss=2.7794, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 575: loss=0.5992, time=0.439s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 580: loss=1.4128, time=0.700s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 580: loss=5.8768, time=0.700s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 580: loss=3.2342, time=0.700s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 580: loss=1.9948, time=0.700s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 585: loss=2.7216, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 585: loss=3.7495, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 585: loss=3.7609, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 585: loss=1.3263, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 590: loss=0.7081, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 590: loss=7.3671, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 590: loss=2.0271, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 590: loss=2.8806, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 595: loss=2.2692, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 595: loss=6.0491, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 595: loss=2.0209, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 595: loss=1.6674, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 600: loss=3.4372, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 600: loss=2.3178, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 600: loss=2.8738, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 600: loss=1.5869, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 605: loss=4.8822, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 605: loss=4.9362, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 605: loss=3.0946, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 605: loss=1.4943, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 610: loss=1.9083, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 610: loss=3.7796, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 610: loss=1.9741, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 610: loss=3.4546, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 615: loss=1.7339, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 615: loss=6.0866, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 615: loss=3.4896, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 615: loss=0.6240, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 620: loss=3.2710, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 620: loss=3.8168, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 620: loss=3.8984, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 620: loss=2.9496, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 625: loss=4.2160, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 625: loss=1.3103, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 625: loss=0.7815, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 625: loss=3.8980, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 630: loss=1.8890, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 630: loss=1.4823, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 630: loss=2.0867, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 630: loss=2.3422, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 635: loss=2.6922, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 635: loss=1.8208, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 635: loss=1.4287, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 635: loss=3.1646, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 640: loss=2.1192, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 640: loss=1.1444, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 640: loss=3.5758, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 640: loss=2.4311, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 645: loss=0.6277, time=0.454s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 645: loss=2.6190, time=0.454s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 645: loss=5.1213, time=0.454s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 645: loss=0.6562, time=0.454s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 650: loss=3.1798, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 650: loss=3.9860, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 650: loss=2.0405, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 650: loss=4.4988, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 655: loss=1.3061, time=0.455s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 655: loss=1.1360, time=0.455s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 655: loss=6.7960, time=0.455s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 655: loss=3.0403, time=0.455s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 660: loss=2.7645, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 660: loss=1.6769, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 660: loss=2.9587, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 660: loss=0.7788, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 665: loss=0.8799, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 665: loss=8.0315, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 665: loss=1.8988, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 665: loss=5.2687, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 670: loss=0.8454, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 670: loss=3.2695, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 670: loss=0.8630, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 670: loss=2.2330, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 675: loss=2.8099, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 675: loss=3.1761, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 675: loss=1.8784, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 675: loss=0.5540, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 680: loss=1.2198, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 680: loss=3.8702, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 680: loss=0.9371, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 680: loss=1.9852, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 685: loss=5.1909, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 685: loss=1.3193, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 685: loss=1.9694, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 685: loss=0.7092, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 690: loss=3.3476, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 690: loss=2.0033, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 690: loss=2.0353, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 690: loss=2.9768, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 695: loss=0.6230, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 695: loss=1.7766, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 695: loss=1.5275, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 695: loss=0.6711, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 700: loss=2.4075, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 700: loss=2.8350, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 700: loss=1.3863, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 700: loss=3.0834, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 705: loss=3.3516, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 705: loss=1.7516, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 705: loss=2.6545, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 705: loss=2.2297, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 710: loss=1.9586, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 710: loss=2.0348, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 710: loss=3.4000, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 710: loss=3.0656, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 715: loss=4.4084, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 715: loss=3.7958, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 715: loss=3.0766, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 715: loss=1.0553, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 720: loss=3.8468, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 720: loss=2.0402, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 720: loss=2.4568, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 720: loss=4.0046, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 725: loss=2.5200, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 725: loss=1.9148, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 725: loss=2.1677, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 725: loss=2.9042, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 730: loss=2.6707, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 730: loss=5.7947, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 730: loss=2.8172, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 730: loss=2.1909, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 735: loss=5.3362, time=0.588s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 735: loss=6.2293, time=0.588s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 735: loss=3.7086, time=0.588s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 735: loss=0.7800, time=0.588s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 740: loss=2.1842, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 740: loss=2.7836, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 740: loss=0.5615, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 740: loss=2.3115, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 745: loss=3.0799, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 745: loss=2.1103, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 745: loss=4.8156, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 745: loss=4.2341, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 750: loss=2.9782, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 750: loss=1.8897, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 750: loss=1.7307, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 750: loss=2.7782, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 755: loss=2.9154, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 755: loss=1.6781, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 755: loss=2.7919, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 755: loss=1.5832, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 760: loss=2.2928, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 760: loss=1.9445, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 760: loss=0.6076, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 760: loss=2.0367, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 765: loss=1.7865, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 765: loss=2.7174, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 765: loss=4.2180, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 765: loss=2.5330, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 770: loss=3.8788, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 770: loss=4.6295, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 770: loss=3.2957, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 770: loss=1.7134, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 775: loss=0.5741, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 775: loss=1.1562, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 775: loss=2.1388, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 775: loss=0.6314, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 780: loss=2.3662, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 780: loss=1.4785, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 780: loss=2.8165, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 780: loss=2.5648, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 785: loss=1.8569, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 785: loss=2.9604, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 785: loss=1.3077, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 785: loss=4.2392, time=0.437s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 790: loss=2.9536, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 790: loss=1.9417, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 790: loss=2.9529, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 790: loss=0.6881, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 795: loss=3.4940, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 795: loss=0.4887, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 795: loss=2.4122, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 795: loss=3.2849, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 800: loss=3.3106, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 800: loss=2.4554, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 800: loss=1.4324, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 800: loss=1.6646, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 805: loss=2.7892, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 805: loss=3.3497, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 805: loss=2.1002, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 805: loss=3.0260, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 810: loss=1.6367, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 810: loss=3.8447, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 810: loss=2.5862, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 810: loss=2.5613, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 815: loss=2.8817, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 815: loss=5.3465, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 815: loss=4.6688, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 815: loss=2.6279, time=0.435s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 820: loss=2.8828, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 820: loss=3.0782, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 820: loss=2.9332, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 820: loss=1.4013, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 825: loss=2.1680, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 825: loss=5.5419, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 825: loss=4.0762, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 825: loss=0.6743, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 830: loss=2.3768, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 830: loss=3.5961, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 830: loss=1.6620, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 830: loss=1.1004, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 835: loss=3.7037, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 835: loss=4.4592, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 835: loss=1.9548, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 835: loss=3.1028, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 840: loss=0.9672, time=0.442s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 840: loss=3.8383, time=0.442s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 840: loss=1.2247, time=0.442s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 840: loss=1.5497, time=0.442s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 845: loss=1.3840, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 845: loss=0.9873, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 845: loss=2.9596, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 845: loss=1.6291, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 850: loss=3.1688, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 850: loss=1.1811, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 850: loss=3.3164, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 850: loss=4.6687, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 855: loss=1.7623, time=0.568s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 855: loss=4.1463, time=0.568s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 855: loss=3.2201, time=0.568s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 855: loss=6.1018, time=0.568s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 860: loss=1.9985, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 860: loss=4.7335, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 860: loss=1.3017, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 860: loss=1.5325, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 865: loss=3.2973, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 865: loss=2.2576, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 865: loss=2.7860, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 865: loss=4.1508, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 870: loss=1.8041, time=0.436s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 870: loss=2.1721, time=0.436s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 870: loss=2.9207, time=0.436s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 870: loss=4.0244, time=0.436s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 875: loss=2.8714, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 875: loss=2.9594, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 875: loss=3.1395, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 875: loss=0.5917, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 880: loss=3.1642, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 880: loss=1.3970, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 880: loss=1.2728, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 880: loss=2.2381, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 885: loss=4.3704, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 885: loss=6.3246, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 885: loss=1.0469, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 885: loss=2.7831, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 890: loss=2.4426, time=0.603s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 890: loss=3.0127, time=0.603s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 890: loss=1.5837, time=0.603s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 890: loss=1.6070, time=0.603s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 895: loss=2.5305, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 895: loss=3.2893, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 895: loss=0.7224, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 895: loss=2.3685, time=0.450s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 900: loss=4.3568, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 900: loss=4.3140, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 900: loss=2.6322, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 900: loss=3.1452, time=0.429s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 905: loss=2.6889, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 905: loss=4.8607, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 905: loss=2.5727, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 905: loss=2.9160, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 910: loss=3.2005, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 910: loss=4.9345, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 910: loss=1.5728, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 910: loss=3.8517, time=0.452s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 915: loss=2.9103, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 915: loss=5.6326, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 915: loss=3.8030, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 915: loss=3.1226, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 920: loss=3.6644, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 920: loss=2.3674, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 920: loss=1.9964, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 920: loss=0.8148, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 925: loss=4.6070, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 925: loss=3.5542, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 925: loss=3.7205, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 925: loss=2.8643, time=0.434s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 930: loss=0.7289, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 930: loss=1.8418, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 930: loss=2.0622, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 930: loss=3.3904, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 935: loss=3.5724, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 935: loss=3.2085, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 935: loss=2.0866, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+
+[Rank 0] Step 935: loss=1.1457, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 940: loss=1.3976, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 940: loss=1.9328, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 940: loss=3.5962, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 940: loss=2.5099, time=0.433s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 945: loss=2.9832, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 3] Step 945: loss=4.9093, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 945: loss=3.4615, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 945: loss=4.0104, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 950: loss=2.6126, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 950: loss=0.6412, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 3] Step 950: loss=0.9602, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 950: loss=1.7458, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 955: loss=3.8779, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 1] Step 955: loss=2.8479, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 2] Step 955: loss=1.5313, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 955: loss=2.7792, time=0.431s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 960: loss=3.0512, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 960: loss=3.7925, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 960: loss=3.1662, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 960: loss=2.5657, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 965: loss=2.6625, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 965: loss=1.3408, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 965: loss=3.0018, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 965: loss=1.3249, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 970: loss=2.5259, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 970: loss=3.1019, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 970: loss=0.7886, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 970: loss=6.8434, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 975: loss=3.4381, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 975: loss=3.4237, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 975: loss=2.1859, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 975: loss=2.8493, time=0.432s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 980: loss=2.0804, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 980: loss=2.5448, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 1] Step 980: loss=1.8129, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 980: loss=3.0907, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 985: loss=3.7664, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 985: loss=3.1477, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB[Rank 2] Step 985: loss=2.7115, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+[Rank 0] Step 985: loss=0.8074, time=0.430s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 990: loss=1.7883, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 990: loss=2.6733, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 990: loss=2.0735, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 990: loss=0.9575, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 995: loss=2.6959, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 995: loss=1.5973, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 995: loss=3.0651, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 0] Step 995: loss=1.6626, time=0.449s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 1] Step 999: loss=2.6625, time=0.447s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 3] Step 999: loss=2.9749, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+[Rank 2] Step 999: loss=1.4788, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 1, Seq length: 512
+  Average step time: 0.444s
+  Peak memory: 18.93 GB
+  Final allocated memory: 16.17 GB
+============================================================
+
+============================================================SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=20324337664 alloc_mem_bytes=17364741120 avg_step_time=0.4440
+
+[Rank 3] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 1, Seq length: 512
+  Average step time: 0.444s
+  Peak memory: 18.93 GB
+============================================================
+
+  Final allocated memory: 16.17 GB[Rank 2] FINAL RESULTS
+
+============================================================
+  Config: configs/bf16_full.json
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=20324296704 alloc_mem_bytes=17364741120 avg_step_time=0.4440
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 1, Seq length: 512
+  Average step time: 0.444s
+  Peak memory: 18.93 GB
+  Final allocated memory: 16.17 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=20324345856 alloc_mem_bytes=17364741120 avg_step_time=0.4440
+[Rank 0] Step 999: loss=3.1206, time=0.448s, alloc_mem=16.17 GB, peak_mem=18.93 GB
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 1, Seq length: 512
+  Average step time: 0.444s
+  Peak memory: 18.93 GB
+  Final allocated memory: 16.17 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=20324378624 alloc_mem_bytes=17364741120 avg_step_time=0.4440
+Loss history saved to: logs/bf16_full_loss.csv
+[2026-01-15 17:20:55,666] [INFO] [launch.py:367:main] Process 3490228 exits successfully.
+[2026-01-15 17:20:56,666] [INFO] [launch.py:367:main] Process 3490226 exits successfully.
+[2026-01-15 17:20:56,666] [INFO] [launch.py:367:main] Process 3490229 exits successfully.
+[2026-01-15 17:20:56,666] [INFO] [launch.py:367:main] Process 3490227 exits successfully.

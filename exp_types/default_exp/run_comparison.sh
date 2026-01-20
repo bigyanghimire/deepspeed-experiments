@@ -14,15 +14,23 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Default settings
+# NUM_GPUS=2
+# NUM_LAYERS=32
+# HIDDEN_DIM=4096
+# BATCH_SIZE=4
+# SEQ_LENGTH=512
+# NUM_STEPS=20
+# WARMUP_STEPS=5
+# MASTER_PORT=29600
+
 NUM_GPUS=2
 NUM_LAYERS=12
 HIDDEN_DIM=1024
-BATCH_SIZE=64
+BATCH_SIZE=4
 SEQ_LENGTH=512
 NUM_STEPS=20
 WARMUP_STEPS=5
 MASTER_PORT=29600
-
 # Parse arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -79,7 +87,7 @@ echo "  NUM_STEPS: $NUM_STEPS"
 echo "  LOG_DIR: $LOG_DIR"
 echo "=============================================="
 
-COMMON_ARGS="--num_layers $NUM_LAYERS --hidden_dim $HIDDEN_DIM --batch_size $BATCH_SIZE --seq_length $SEQ_LENGTH --num_steps $NUM_STEPS --warmup_steps $WARMUP_STEPS"
+COMMON_ARGS="--num_layers $NUM_LAYERS --hidden_dim $HIDDEN_DIM --batch_size $BATCH_SIZE --seq_length $SEQ_LENGTH --num_steps $NUM_STEPS --warmup_steps $WARMUP_STEPS --activation_checkpointing --use_real_data --seed 42"
 
 # Run baseline configuration
 echo ""

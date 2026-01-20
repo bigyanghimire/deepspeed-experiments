@@ -17,9 +17,9 @@ cd "$SCRIPT_DIR"
 NUM_GPUS=2
 NUM_LAYERS=12
 HIDDEN_DIM=1024
-BATCH_SIZE=64
+BATCH_SIZE=32
 SEQ_LENGTH=512
-NUM_STEPS=20
+NUM_STEPS=10
 WARMUP_STEPS=5
 MASTER_PORT=29600
 
@@ -63,7 +63,7 @@ done
 
 # Create logs directory
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-LOG_DIR="logs/${TIMESTAMP}"
+LOG_DIR="logs/${TIMESTAMP}-${BATCH_SIZE}"
 mkdir -p "$LOG_DIR"
 
 echo "=============================================="
@@ -85,7 +85,7 @@ COMMON_ARGS="--num_layers $NUM_LAYERS --hidden_dim $HIDDEN_DIM --batch_size $BAT
 echo ""
 echo "[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)..."
 echo "----------------------------------------------"
-deepspeed --num_gpus=$NUM_GPUS --master_port=$MASTER_PORT train.py \
+deepspeed --num_gpus=$NUM_GPUS --master_port=$MASTER_PORT train_gpt.py \
     --deepspeed_config configs/baseline.json \
     $COMMON_ARGS \
     2>&1 | tee "$LOG_DIR/baseline.log"
@@ -94,7 +94,7 @@ deepspeed --num_gpus=$NUM_GPUS --master_port=$MASTER_PORT train.py \
 echo ""
 echo "[2/2] Running BF16_FULL (bf16 master weights, gradients, and optimizer states)..."
 echo "----------------------------------------------"
-deepspeed --num_gpus=$NUM_GPUS --master_port=$MASTER_PORT train.py \
+deepspeed --num_gpus=$NUM_GPUS --master_port=$MASTER_PORT train_gpt.py \
     --deepspeed_config configs/bf16_full.json \
     $COMMON_ARGS \
     2>&1 | tee "$LOG_DIR/bf16_full.log"

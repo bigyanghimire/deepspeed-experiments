@@ -1,0 +1,462 @@
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_GPUS: 2
+  NUM_LAYERS: 32
+  HIDDEN_DIM: 4096
+  BATCH_SIZE: 32
+  SEQ_LENGTH: 512
+  NUM_STEPS: 20
+  LOG_DIR: logs/20260120_123508
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 12:35:16,915] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-20 12:35:16,915] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/baseline.json --num_layers 32 --hidden_dim 4096 --batch_size 32 --seq_length 512 --num_steps 20 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 12:35:22,653] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-20 12:35:22,654] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-20 12:35:22,654] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-20 12:35:22,654] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-20 12:35:22,654] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-20 12:35:22,654] [INFO] [launch.py:272:main] process 1968891 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '32', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-20 12:35:22,655] [INFO] [launch.py:272:main] process 1968892 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '32', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Loading wikitext dataset...
+[Rank 0] Loading wikitext dataset...
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 1] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 1] Activation checkpointing enabled
+[Rank 0] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 0] Activation checkpointing enabled
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.79 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 21.55 GB, percent = 2.1%
+DeepSpeedZeRoOffload initialize [begin]
+MA 12.77 GB         Max_MA 13.54 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 6.39 GB         Max_MA 12.97 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.63 GB, percent = 2.1%
+Before creating fp16 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.63 GB, percent = 2.1%
+After creating fp16 partitions: 4
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Before creating fp32 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+After creating fp32 partitions
+MA 19.16 GB         Max_MA 22.92 GB         CA 22.93 GB         Max_CA 23 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Before initializing optimizer states
+MA 19.16 GB         Max_MA 19.16 GB         CA 22.93 GB         Max_CA 23 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+[Rank 0] time (ms) | init_optimizer_state: 0.00
+After initializing optimizer states
+MA 19.16 GB         Max_MA 22.93 GB         CA 26.7 GB         Max_CA 27 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+[Rank 1] DeepSpeed initialized with config: configs/baseline.json
+[Rank 1] Memory after init: allocated=25.64 GB, reserved=33.08 GB
+After initializing ZeRO optimizer
+MA 25.64 GB         Max_MA 26.41 GB         CA 33.08 GB         Max_CA 33 GB 
+CPU Virtual Memory:  used = 21.65 GB, percent = 2.2%
+[Rank 0] DeepSpeed initialized with config: configs/baseline.json
+[Rank 0] Memory after init: allocated=25.64 GB, reserved=33.08 GB
+[Rank 0] time (ms) | optimizer_step: 82.45
+[Rank 0] time (ms) | fwd_microstep: 633.82 | bwd_microstep: 1436.99 | bwd_inner_microstep: 1435.21 | bwd_allreduce_microstep: 1.70 | step_microstep: 144.97
+[Rank 0] time (ms) | fwd: 633.81 | bwd: 1437.00 | bwd_inner: 1435.23 | bwd_allreduce: 1.70 | step: 144.98
+Local>>>>>> step_time: 2.381985902786255, dataloading_time : 0.15873289108276367,forward_time :0.6359069347381592, backward_time: 1.442042589187622, optim time :0.14530134201049805
+Local>>>>>> step_time: 2.6003780364990234, dataloading_time : 0.1458282470703125,forward_time :0.8645064830780029, backward_time: 1.4446372985839844, optim time :0.14540362358093262
+[Rank 0] Step 0: loss=11.1250, time=2.382s, alloc_mem=52.79 GB, peak_mem=54.30 GB
+[Rank 1] Step 0: loss=11.1250, time=2.600s, alloc_mem=52.79 GB, peak_mem=54.30 GB
+[Rank 0] time (ms) | optimizer_step: 74.61
+Local>>>>>> step_time: 2.0448904037475586, dataloading_time : 0.0023546218872070312,forward_time :0.2728261947631836, backward_time: 1.6596784591674805, optim time :0.11002898216247559
+[Rank 0] time (ms) | fwd_microstep: 538.12 | bwd_microstep: 1388.71 | bwd_inner_microstep: 1386.96 | bwd_allreduce_microstep: 1.70 | step_microstep: 110.09
+[Rank 0] time (ms) | fwd: 538.11 | bwd: 1388.71 | bwd_inner: 1386.96 | bwd_allreduce: 1.70 | step: 110.10
+Local>>>>>> step_time: 2.04538631439209, dataloading_time : 0.002772808074951172,forward_time :0.27388596534729004, backward_time: 1.6583502292633057, optim time :0.11037445068359375
+[Rank 0] time (ms) | optimizer_step: 74.63Local>>>>>> step_time: 2.042450428009033, dataloading_time : 0.0002460479736328125,forward_time :0.21321940422058105, backward_time: 1.7191879749298096, optim time :0.10979509353637695
+
+[Rank 0] time (ms) | fwd_microstep: 535.69 | bwd_microstep: 1390.88 | bwd_inner_microstep: 1389.11 | bwd_allreduce_microstep: 1.72 | step_microstep: 110.06
+[Rank 0] time (ms) | fwd: 535.68 | bwd: 1390.88 | bwd_inner: 1389.11 | bwd_allreduce: 1.72 | step: 110.06
+Local>>>>>> step_time: 2.0426323413848877, dataloading_time : 0.00024962425231933594,forward_time :0.22390341758728027, backward_time: 1.7081444263458252, optim time :0.11033225059509277
+[Rank 0] time (ms) | optimizer_step: 74.31
+[Rank 0] time (ms) | fwd_microstep: 530.41 | bwd_microstep: 1394.94 | bwd_inner_microstep: 1393.20 | bwd_allreduce_microstep: 1.69 | step_microstep: 109.85
+[Rank 0] time (ms) | fwd: 530.40 | bwd: 1394.94 | bwd_inner: 1393.21 | bwd_allreduce: 1.69 | step: 109.85
+Local>>>>>> step_time: 2.042193651199341, dataloading_time : 0.0013384819030761719,forward_time :0.2137620449066162, backward_time: 1.7169780731201172, optim time :0.11011242866516113
+Local>>>>>> step_time: 2.042736053466797, dataloading_time : 0.0011377334594726562,forward_time :0.2125396728515625, backward_time: 1.718984603881836, optim time :0.11007237434387207
+[Rank 0] time (ms) | optimizer_step: 74.69
+Local>>>>>> step_time: 2.035911798477173, dataloading_time : 0.00021123886108398438,forward_time :0.21276450157165527, backward_time: 1.7129316329956055, optim time :0.11000275611877441
+[Rank 0] time (ms) | fwd_microstep: 528.88 | bwd_microstep: 1391.35 | bwd_inner_microstep: 1389.62 | bwd_allreduce_microstep: 1.67 | step_microstep: 110.18
+[Rank 0] time (ms) | fwd: 528.88 | bwd: 1391.35 | bwd_inner: 1389.64 | bwd_allreduce: 1.67 | step: 110.18
+Local>>>>>> step_time: 2.0363669395446777, dataloading_time : 0.00032329559326171875,forward_time :0.21425604820251465, backward_time: 1.7113385200500488, optim time :0.11044692993164062
+[Rank 0] time (ms) | optimizer_step: 74.36
+Local>>>>>> step_time: 2.0402655601501465, dataloading_time : 0.0011982917785644531,forward_time :0.20775294303894043, backward_time: 1.7217285633087158, optim time :0.10958337783813477
+[Rank 0] time (ms) | fwd_microstep: 532.12 | bwd_microstep: 1391.58 | bwd_inner_microstep: 1389.84 | bwd_allreduce_microstep: 1.70 | step_microstep: 109.59
+[Rank 1] Step 5: loss=9.3125, time=2.040s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] time (ms) | fwd: 532.12 | bwd: 1391.59 | bwd_inner: 1389.85 | bwd_allreduce: 1.70 | step: 109.59
+Local>>>>>> step_time: 2.040088653564453, dataloading_time : 0.0011472702026367188,forward_time :0.21633434295654297, backward_time: 1.7127494812011719, optim time :0.10985541343688965
+[Rank 0] Step 5: loss=8.0625, time=2.040s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] time (ms) | optimizer_step: 74.40
+[Rank 0] time (ms) | fwd_microstep: 531.43 | bwd_microstep: 1394.49 | bwd_inner_microstep: 1392.80 | bwd_allreduce_microstep: 1.64 | step_microstep: 109.70
+[Rank 0] time (ms) | fwd: 531.42 | bwd: 1394.50 | bwd_inner: 1392.82 | bwd_allreduce: 1.64 | step: 109.70
+Local>>>>>> step_time: 2.042389392852783, dataloading_time : 0.0011169910430908203,forward_time :0.22833776473999023, backward_time: 1.702967882156372, optim time :0.10996460914611816
+Local>>>>>> step_time: 2.042658805847168, dataloading_time : 0.0010175704956054688,forward_time :0.21662616729736328, backward_time: 1.7151083946228027, optim time :0.10990381240844727
+Local>>>>>> step_time: 2.0380895137786865, dataloading_time : 0.0011453628540039062,forward_time :0.21353697776794434, backward_time: 1.7137773036956787, optim time :0.10962748527526855
+[Rank 0] time (ms) | optimizer_step: 75.06
+[Rank 0] time (ms) | fwd_microstep: 535.90 | bwd_microstep: 1385.97 | bwd_inner_microstep: 1384.21 | bwd_allreduce_microstep: 1.71 | step_microstep: 110.28
+[Rank 0] time (ms) | fwd: 535.89 | bwd: 1385.97 | bwd_inner: 1384.22 | bwd_allreduce: 1.71 | step: 110.29
+Local>>>>>> step_time: 2.0389955043792725, dataloading_time : 0.0011813640594482422,forward_time :0.21516776084899902, backward_time: 1.712090015411377, optim time :0.11055397987365723
+[Rank 0] time (ms) | optimizer_step: 74.32
+[Rank 0] time (ms) | fwd_microstep: 533.95 | bwd_microstep: 1392.20 | bwd_inner_microstep: 1390.50 | bwd_allreduce_microstep: 1.65 | step_microstep: 109.44
+[Rank 0] time (ms) | fwd: 533.94 | bwd: 1392.21 | bwd_inner: 1390.51 | bwd_allreduce: 1.65 | step: 109.44
+Local>>>>>> step_time: 2.04314923286438, dataloading_time : 0.0010571479797363281,forward_time :0.2106928825378418, backward_time: 1.7217061519622803, optim time :0.10969114303588867Local>>>>>> step_time: 2.0422592163085938, dataloading_time : 0.0010302066802978516,forward_time :0.2119128704071045, backward_time: 1.7196128368377686, optim time :0.10970139503479004
+
+[Rank 0] time (ms) | optimizer_step: 74.57
+[Rank 0] time (ms) | fwd_microstep: 533.21 | bwd_microstep: 1388.82 | bwd_inner_microstep: 1387.08 | bwd_allreduce_microstep: 1.68 | step_microstep: 109.78
+[Rank 0] time (ms) | fwd: 533.20 | bwd: 1388.82 | bwd_inner: 1387.10 | bwd_allreduce: 1.68 | step: 109.78
+Local>>>>>> step_time: 2.0384984016418457, dataloading_time : 0.0010309219360351562,forward_time :0.2165086269378662, backward_time: 1.7109124660491943, optim time :0.11004352569580078
+Local>>>>>> step_time: 2.0385022163391113, dataloading_time : 0.0009903907775878906,forward_time :0.20615315437316895, backward_time: 1.721381664276123, optim time :0.10997581481933594
+[Rank 0] time (ms) | optimizer_step: 74.24
+Local>>>>>> step_time: 2.0491764545440674, dataloading_time : 0.0010378360748291016,forward_time :0.20549345016479492, backward_time: 1.7332427501678467, optim time :0.10940098762512207
+[Rank 0] time (ms) | fwd_microstep: 540.03 | bwd_microstep: 1393.40 | bwd_inner_microstep: 1391.64 | bwd_allreduce_microstep: 1.71 | step_microstep: 109.22
+[Rank 0] time (ms) | fwd: 540.02 | bwd: 1393.41 | bwd_inner: 1391.66 | bwd_allreduce: 1.70 | step: 109.22
+Local>>>>>> step_time: 2.0492775440216064, dataloading_time : 0.0009670257568359375,forward_time :0.21316146850585938, backward_time: 1.7256579399108887, optim time :0.10948991775512695
+[Rank 1] Step 10: loss=5.8125, time=2.049s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] Step 10: loss=6.7500, time=2.049s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] time (ms) | optimizer_step: 74.22
+[Rank 0] time (ms) | fwd_microstep: 531.53 | bwd_microstep: 1393.96 | bwd_inner_microstep: 1392.20 | bwd_allreduce_microstep: 1.71 | step_microstep: 109.67
+[Rank 0] time (ms) | fwd: 531.52 | bwd: 1393.97 | bwd_inner: 1392.22 | bwd_allreduce: 1.71 | step: 109.67
+Local>>>>>> step_time: 2.0420079231262207, dataloading_time : 0.001190185546875,forward_time :0.2231910228729248, backward_time: 1.7076900005340576, optim time :0.10993528366088867
+Local>>>>>> step_time: 2.0422043800354004, dataloading_time : 0.0011584758758544922,forward_time :0.2058699131011963, backward_time: 1.7250895500183105, optim time :0.11008477210998535
+Local>>>>>> step_time: 2.0426769256591797, dataloading_time : 0.0010001659393310547,forward_time :0.2144467830657959, backward_time: 1.717496395111084, optim time :0.10973238945007324
+[Rank 0] time (ms) | optimizer_step: 74.84
+[Rank 0] time (ms) | fwd_microstep: 535.80 | bwd_microstep: 1390.67 | bwd_inner_microstep: 1388.93 | bwd_allreduce_microstep: 1.69 | step_microstep: 109.97
+[Rank 0] time (ms) | fwd: 535.79 | bwd: 1390.67 | bwd_inner: 1388.94 | bwd_allreduce: 1.69 | step: 109.97
+Local>>>>>> step_time: 2.04328989982605, dataloading_time : 0.0012140274047851562,forward_time :0.2267768383026123, backward_time: 1.705061912536621, optim time :0.11023545265197754
+[Rank 0] time (ms) | optimizer_step: 74.36
+Local>>>>>> step_time: 2.0481364727020264, dataloading_time : 0.0009739398956298828,forward_time :0.21414613723754883, backward_time: 1.7236740589141846, optim time :0.10934066772460938
+[Rank 0] time (ms) | fwd_microstep: 540.03 | bwd_microstep: 1391.89 | bwd_inner_microstep: 1390.16 | bwd_allreduce_microstep: 1.68 | step_microstep: 109.29
+[Rank 0] time (ms) | fwd: 540.03 | bwd: 1391.89 | bwd_inner: 1390.17 | bwd_allreduce: 1.68 | step: 109.29
+Local>>>>>> step_time: 2.047851800918579, dataloading_time : 0.001008749008178711,forward_time :0.21372771263122559, backward_time: 1.7235684394836426, optim time :0.10954523086547852
+[Rank 0] time (ms) | optimizer_step: 74.20
+[Rank 0] time (ms) | fwd_microstep: 538.95 | bwd_microstep: 1388.27 | bwd_inner_microstep: 1386.57 | bwd_allreduce_microstep: 1.65 | step_microstep: 109.37
+[Rank 0] time (ms) | fwd: 538.95 | bwd: 1388.28 | bwd_inner: 1386.58 | bwd_allreduce: 1.65 | step: 109.37
+Local>>>>>> step_time: 2.0432255268096924, dataloading_time : 0.0009844303131103516,forward_time :0.22466754913330078, backward_time: 1.7079415321350098, optim time :0.10962986946105957
+Local>>>>>> step_time: 2.043706178665161, dataloading_time : 0.0010159015655517578,forward_time :0.20788264274597168, backward_time: 1.7248554229736328, optim time :0.10995078086853027
+[Rank 0] time (ms) | optimizer_step: 74.40
+Local>>>>>> step_time: 2.0540499687194824, dataloading_time : 0.0009675025939941406,forward_time :0.2063002586364746, backward_time: 1.7369723320007324, optim time :0.10980844497680664
+[Rank 0] time (ms) | fwd_microstep: 537.30 | bwd_microstep: 1400.56 | bwd_inner_microstep: 1398.83 | bwd_allreduce_microstep: 1.67 | step_microstep: 109.85
+[Rank 0] time (ms) | fwd: 537.30 | bwd: 1400.56 | bwd_inner: 1398.85 | bwd_allreduce: 1.67 | step: 109.86
+Local>>>>>> step_time: 2.0545754432678223, dataloading_time : 0.0011715888977050781,forward_time :0.2170429229736328, backward_time: 1.726231336593628, optim time :0.11012816429138184
+[Rank 1] Step 15: loss=4.1562, time=2.054s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] Step 15: loss=4.1250, time=2.055s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] time (ms) | optimizer_step: 74.47
+Local>>>>>> step_time: 2.0481767654418945, dataloading_time : 0.0008416175842285156,forward_time :0.2131040096282959, backward_time: 1.72426438331604, optim time :0.10996532440185547
+[Rank 0] time (ms) | fwd_microstep: 538.81 | bwd_microstep: 1392.67 | bwd_inner_microstep: 1390.88 | bwd_allreduce_microstep: 1.73 | step_microstep: 109.73
+[Rank 0] time (ms) | fwd: 538.80 | bwd: 1392.68 | bwd_inner: 1390.90 | bwd_allreduce: 1.74 | step: 109.73
+Local>>>>>> step_time: 2.0480406284332275, dataloading_time : 0.001184225082397461,forward_time :0.21639490127563477, backward_time: 1.7204716205596924, optim time :0.10998845100402832
+[Rank 0] time (ms) | optimizer_step: 74.25
+[Rank 0] time (ms) | fwd_microstep: 538.28 | bwd_microstep: 1404.27 | bwd_inner_microstep: 1402.51 | bwd_allreduce_microstep: 1.70 | step_microstep: 109.36
+Local>>>>>> step_time: 2.0586459636688232, dataloading_time : 0.001117706298828125,forward_time :0.20745372772216797, backward_time: 1.7404661178588867, optim time :0.10960721969604492
+[Rank 0] time (ms) | fwd: 538.27 | bwd: 1404.27 | bwd_inner: 1402.53 | bwd_allreduce: 1.70 | step: 109.36
+Local>>>>>> step_time: 2.0585834980010986, dataloading_time : 0.0010275840759277344,forward_time :0.21717095375061035, backward_time: 1.7307586669921875, optim time :0.10962510108947754
+[Rank 0] time (ms) | optimizer_step: 74.45
+Local>>>>>> step_time: 2.049743413925171, dataloading_time : 0.0012011528015136719,forward_time :0.2070767879486084, backward_time: 1.732004165649414, optim time :0.10945916175842285
+[Rank 0] time (ms) | fwd_microstep: 537.19 | bwd_microstep: 1396.64 | bwd_inner_microstep: 1394.90 | bwd_allreduce_microstep: 1.69 | step_microstep: 109.61
+[Rank 0] time (ms) | fwd: 537.19 | bwd: 1396.64 | bwd_inner: 1394.92 | bwd_allreduce: 1.69 | step: 109.61
+Local>>>>>> step_time: 2.050145387649536, dataloading_time : 0.0010552406311035156,forward_time :0.21703624725341797, backward_time: 1.7221786975860596, optim time :0.10987353324890137
+[Rank 0] time (ms) | optimizer_step: 74.55
+Local>>>>>> step_time: 2.055177927017212, dataloading_time : 0.000904083251953125,forward_time :0.21530556678771973, backward_time: 1.7293834686279297, optim time :0.10958337783813477
+[Rank 0] time (ms) | fwd_microstep: 538.38 | bwd_microstep: 1400.36 | bwd_inner_microstep: 1398.63 | bwd_allreduce_microstep: 1.67 | step_microstep: 109.55
+[Rank 0] time (ms) | fwd: 538.37 | bwd: 1400.36 | bwd_inner: 1398.65 | bwd_allreduce: 1.67 | step: 109.56
+Local>>>>>> step_time: 2.054936408996582, dataloading_time : 0.001001596450805664,forward_time :0.20938611030578613, backward_time: 1.7347285747528076, optim time :0.1098184585571289
+[Rank 1] Step 19: loss=3.8281, time=2.055s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+[Rank 0] Step 19: loss=3.1250, time=2.055s, alloc_mem=52.79 GB, peak_mem=63.50 GB
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 32, Seq length: 512
+  Average step time: 2.046s
+  Peak memory: 63.50 GB
+  Final allocated memory: 52.79 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=6858007633 peak_mem_bytes=68178321408 alloc_mem_bytes=56684869120 avg_step_time=2.0463
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 32, Seq length: 512
+  Average step time: 2.046s
+  Peak memory: 63.50 GB
+  Final allocated memory: 52.79 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=6858007633 peak_mem_bytes=68178296832 alloc_mem_bytes=56684869120 avg_step_time=2.0463
+[rank0]:[W120 12:36:48.831859762 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-20 12:36:50,663] [INFO] [launch.py:367:main] Process 1968892 exits successfully.
+[2026-01-20 12:36:50,663] [INFO] [launch.py:367:main] Process 1968891 exits successfully.
+
+[2/2] Running BF16_FULL (bf16 master weights, gradients, and optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 12:37:02,868] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-20 12:37:02,869] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/bf16_full.json --num_layers 32 --hidden_dim 4096 --batch_size 32 --seq_length 512 --num_steps 20 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 12:37:08,786] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-20 12:37:08,786] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-20 12:37:08,786] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-20 12:37:08,786] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-20 12:37:08,786] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-20 12:37:08,787] [INFO] [launch.py:272:main] process 1969616 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '32', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-20 12:37:08,787] [INFO] [launch.py:272:main] process 1969617 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '32', '--seq_length', '512', '--num_steps', '20', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 0] Loading wikitext dataset...
+[Rank 1] Loading wikitext dataset...
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 1] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 1] Activation checkpointing enabled
+[Rank 0] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 0] Activation checkpointing enabled
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.79 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 21.54 GB, percent = 2.1%
+DeepSpeedZeRoOffload initialize [begin]
+MA 12.77 GB         Max_MA 13.54 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 6.39 GB         Max_MA 12.97 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Before creating fp16 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.63 GB, percent = 2.1%
+After creating fp16 partitions: 4
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Before creating fp32 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+After creating fp32 partitions
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.78 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+Before initializing optimizer states
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.78 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+[Rank 0] time (ms) | init_optimizer_state: 0.00
+After initializing optimizer states
+MA 12.77 GB         Max_MA 14.66 GB         CA 14.67 GB         Max_CA 15 GB 
+CPU Virtual Memory:  used = 21.62 GB, percent = 2.1%
+[Rank 1] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 1] Memory after init: allocated=19.25 GB, reserved=21.05 GB
+After initializing ZeRO optimizer
+MA 19.25 GB         Max_MA 20.02 GB         CA 21.05 GB         Max_CA 21 GB 
+CPU Virtual Memory:  used = 21.66 GB, percent = 2.2%
+[Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 0] Memory after init: allocated=19.25 GB, reserved=21.05 GB
+[Rank 0] time (ms) | optimizer_step: 64.62
+[Rank 0] time (ms) | fwd_microstep: 672.40 | bwd_microstep: 1599.39 | bwd_inner_microstep: 1597.59 | bwd_allreduce_microstep: 1.69 | step_microstep: 127.15
+Local>>>>>> step_time: 2.9059321880340576, dataloading_time : 0.23902463912963867,forward_time :0.933269739151001, backward_time: 1.6061770915985107, optim time :0.1274576187133789
+[Rank 0] time (ms) | fwd: 672.39 | bwd: 1599.39 | bwd_inner: 1597.63 | bwd_allreduce: 1.69 | step: 127.15
+Local>>>>>> step_time: 2.4710853099823, dataloading_time : 0.05949211120605469,forward_time :0.6771514415740967, backward_time: 1.6069726943969727, optim time :0.12746620178222656
+[Rank 1] Step 0: loss=11.0964, time=2.906s, alloc_mem=33.62 GB, peak_mem=36.87 GB
+[Rank 0] Step 0: loss=11.1124, time=2.471s, alloc_mem=33.62 GB, peak_mem=36.87 GB
+[Rank 0] time (ms) | optimizer_step: 56.42
+[Rank 0] time (ms) | fwd_microstep: 605.07 | bwd_microstep: 1558.63 | bwd_inner_microstep: 1556.91 | bwd_allreduce_microstep: 1.67 | step_microstep: 91.50
+Local>>>>>> step_time: 2.2662081718444824, dataloading_time : 0.00036144256591796875,forward_time :0.25501537322998047, backward_time: 1.919100046157837, optim time :0.09172916412353516
+[Rank 0] time (ms) | fwd: 605.07 | bwd: 1558.63 | bwd_inner: 1556.92 | bwd_allreduce: 1.66 | step: 91.51
+Local>>>>>> step_time: 2.2662580013275146, dataloading_time : 0.00036644935607910156,forward_time :0.25254368782043457, backward_time: 1.9215669631958008, optim time :0.09177827835083008
+[Rank 0] time (ms) | optimizer_step: 56.41
+[Rank 0] time (ms) | fwd_microstep: 598.84 | bwd_microstep: 1555.90 | bwd_inner_microstep: 1554.12 | bwd_allreduce_microstep: 1.73 | step_microstep: 91.54
+Local>>>>>> step_time: 2.2584104537963867, dataloading_time : 0.0013632774353027344,forward_time :0.1969602108001709, backward_time: 1.9683051109313965, optim time :0.09177851676940918
+[Rank 0] time (ms) | fwd: 598.84 | bwd: 1555.91 | bwd_inner: 1554.13 | bwd_allreduce: 1.73 | step: 91.54
+Local>>>>>> step_time: 2.258441925048828, dataloading_time : 0.0014562606811523438,forward_time :0.19977331161499023, backward_time: 1.965404987335205, optim time :0.09180521965026855
+[Rank 0] time (ms) | optimizer_step: 56.41
+[Rank 0] time (ms) | fwd_microstep: 596.92 | bwd_microstep: 1552.14 | bwd_inner_microstep: 1550.41 | bwd_allreduce_microstep: 1.68 | step_microstep: 91.15
+[Rank 0] time (ms) | fwd: 596.91 | bwd: 1552.15 | bwd_inner: 1550.43 | bwd_allreduce: 1.67 | step: 91.15
+Local>>>>>> step_time: 2.252058506011963, dataloading_time : 0.001108407974243164,forward_time :0.1974496841430664, backward_time: 1.9621031284332275, optim time :0.09139466285705566
+Local>>>>>> step_time: 2.252013921737671, dataloading_time : 0.0012302398681640625,forward_time :0.19881987571716309, backward_time: 1.9605472087860107, optim time :0.0914144515991211
+[Rank 0] time (ms) | optimizer_step: 56.33
+[Rank 0] time (ms) | fwd_microstep: 602.92 | bwd_microstep: 1551.58 | bwd_inner_microstep: 1549.25 | bwd_allreduce_microstep: 2.28 | step_microstep: 91.37
+[Rank 0] time (ms) | fwd: 602.91 | bwd: 1551.59 | bwd_inner: 1549.27 | bwd_allreduce: 2.28 | step: 91.37
+Local>>>>>> step_time: 2.2575879096984863, dataloading_time : 0.0010063648223876953,forward_time :0.19790053367614746, backward_time: 1.9670426845550537, optim time :0.09163570404052734
+Local>>>>>> step_time: 2.257657051086426, dataloading_time : 0.0010592937469482422,forward_time :0.19803953170776367, backward_time: 1.9668142795562744, optim time :0.09174180030822754
+[Rank 0] time (ms) | optimizer_step: 56.35
+[Rank 0] time (ms) | fwd_microstep: 598.06 | bwd_microstep: 1553.76 | bwd_inner_microstep: 1552.05 | bwd_allreduce_microstep: 1.64 | step_microstep: 91.10
+[Rank 0] time (ms) | fwd: 598.06 | bwd: 1553.76 | bwd_inner: 1552.07 | bwd_allreduce: 1.65 | step: 91.10
+Local>>>>>> step_time: 2.254828453063965, dataloading_time : 0.0011897087097167969,forward_time :0.19807100296020508, backward_time: 1.964219570159912, optim time :0.09134554862976074
+Local>>>>>> step_time: 2.2549092769622803, dataloading_time : 0.0013065338134765625,forward_time :0.19768667221069336, backward_time: 1.9645535945892334, optim time :0.09136009216308594
+[Rank 1] Step 5: loss=3.8551, time=2.255s, alloc_mem=33.62 GB, peak_mem=51.27 GB[Rank 0] Step 5: loss=3.4050, time=2.255s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+
+[Rank 0] time (ms) | optimizer_step: 56.39
+[Rank 0] time (ms) | fwd_microstep: 599.69 | bwd_microstep: 1557.21 | bwd_inner_microstep: 1555.44 | bwd_allreduce_microstep: 1.72 | step_microstep: 91.49
+[Rank 0] time (ms) | fwd: 599.68 | bwd: 1557.22 | bwd_inner: 1555.46 | bwd_allreduce: 1.72 | step: 91.49
+Local>>>>>> step_time: 2.2600717544555664, dataloading_time : 0.001054525375366211,forward_time :0.19854235649108887, backward_time: 1.9687201976776123, optim time :0.0917520523071289
+Local>>>>>> step_time: 2.2600769996643066, dataloading_time : 0.0010688304901123047,forward_time :0.19191884994506836, backward_time: 1.9753458499908447, optim time :0.09174013137817383
+[Rank 0] time (ms) | optimizer_step: 56.41
+Local>>>>>> step_time: 2.2582201957702637, dataloading_time : 0.0009694099426269531,forward_time :0.19660520553588867, backward_time: 1.9691064357757568, optim time :0.09153628349304199
+[Rank 0] time (ms) | fwd_microstep: 595.71 | bwd_microstep: 1559.52 | bwd_inner_microstep: 1557.79 | bwd_allreduce_microstep: 1.67 | step_microstep: 91.41
+[Rank 0] time (ms) | fwd: 595.70 | bwd: 1559.53 | bwd_inner: 1557.81 | bwd_allreduce: 1.67 | step: 91.41
+Local>>>>>> step_time: 2.2583656311035156, dataloading_time : 0.0011224746704101562,forward_time :0.19849538803100586, backward_time: 1.9670531749725342, optim time :0.09169220924377441
+[Rank 0] time (ms) | optimizer_step: 56.32
+[Rank 0] time (ms) | fwd_microstep: 601.20 | bwd_microstep: 1556.52 | bwd_inner_microstep: 1554.78 | bwd_allreduce_microstep: 1.69 | step_microstep: 91.32
+[Rank 0] time (ms) | fwd: 601.19 | bwd: 1556.52 | bwd_inner: 1554.79 | bwd_allreduce: 1.69 | step: 91.32
+Local>>>>>> step_time: 2.2608749866485596, dataloading_time : 0.0010836124420166016,forward_time :0.19880104064941406, backward_time: 1.9693620204925537, optim time :0.09162640571594238
+Local>>>>>> step_time: 2.2610483169555664, dataloading_time : 0.0011577606201171875,forward_time :0.1981823444366455, backward_time: 1.97003173828125, optim time :0.0916750431060791
+[Rank 0] time (ms) | optimizer_step: 56.36
+[Rank 0] time (ms) | fwd_microstep: 596.81 | bwd_microstep: 1561.07 | bwd_inner_microstep: 1558.95 | bwd_allreduce_microstep: 2.03 | step_microstep: 96.46
+Local>>>>>> step_time: 2.266284465789795, dataloading_time : 0.0012462139129638672,forward_time :0.1923060417175293, backward_time: 1.976015329360962, optim time :0.09671401977539062
+[Rank 0] time (ms) | fwd: 596.80 | bwd: 1561.09 | bwd_inner: 1558.96 | bwd_allreduce: 2.05 | step: 96.45
+Local>>>>>> step_time: 2.2663962841033936, dataloading_time : 0.001379251480102539,forward_time :0.19854283332824707, backward_time: 1.9697246551513672, optim time :0.09674715995788574
+[Rank 0] time (ms) | optimizer_step: 56.32
+[Rank 0] time (ms) | fwd_microstep: 595.85 | bwd_microstep: 1557.26 | bwd_inner_microstep: 1555.55 | bwd_allreduce_microstep: 1.66 | step_microstep: 90.85
+Local>>>>>> step_time: 2.255659341812134, dataloading_time : 0.0011191368103027344,forward_time :0.19766855239868164, backward_time: 1.965817928314209, optim time :0.09105157852172852
+[Rank 0] time (ms) | fwd: 595.84 | bwd: 1557.26 | bwd_inner: 1555.56 | bwd_allreduce: 1.66 | step: 90.86
+Local>>>>>> step_time: 2.2556698322296143, dataloading_time : 0.001070261001586914,forward_time :0.19868159294128418, backward_time: 1.964808464050293, optim time :0.09110784530639648
+[Rank 1] Step 10: loss=6.4000, time=2.256s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+[Rank 0] Step 10: loss=7.4513, time=2.256s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+[Rank 0] time (ms) | optimizer_step: 56.37
+[Rank 0] time (ms) | fwd_microstep: 607.23 | bwd_microstep: 1559.52 | bwd_inner_microstep: 1557.71 | bwd_allreduce_microstep: 1.75 | step_microstep: 91.44
+[Rank 0] time (ms) | fwd: 607.22 | bwd: 1559.52 | bwd_inner: 1557.73 | bwd_allreduce: 1.75 | step: 91.44
+Local>>>>>> step_time: 2.2698769569396973, dataloading_time : 0.001001596450805664,forward_time :0.1977219581604004, backward_time: 1.9794445037841797, optim time :0.09170675277709961
+Local>>>>>> step_time: 2.2699344158172607, dataloading_time : 0.0009627342224121094,forward_time :0.19638991355895996, backward_time: 1.9808447360992432, optim time :0.09173464775085449
+[Rank 0] time (ms) | optimizer_step: 56.46
+Local>>>>>> step_time: 2.2698442935943604, dataloading_time : 0.0009083747863769531,forward_time :0.19038772583007812, backward_time: 1.987067699432373, optim time :0.09147882461547852
+[Rank 0] time (ms) | fwd_microstep: 600.49 | bwd_microstep: 1566.62 | bwd_inner_microstep: 1564.87 | bwd_allreduce_microstep: 1.70 | step_microstep: 91.36
+[Rank 0] time (ms) | fwd: 600.48 | bwd: 1566.63 | bwd_inner: 1564.88 | bwd_allreduce: 1.70 | step: 91.37
+Local>>>>>> step_time: 2.2700319290161133, dataloading_time : 0.0009698867797851562,forward_time :0.19728827476501465, backward_time: 1.9801437854766846, optim time :0.0916285514831543
+[Rank 0] time (ms) | optimizer_step: 56.51
+Local>>>>>> step_time: 2.273637056350708, dataloading_time : 0.0009045600891113281,forward_time :0.20174908638000488, backward_time: 1.9794840812683105, optim time :0.09149742126464844
+[Rank 0] time (ms) | fwd_microstep: 600.79 | bwd_microstep: 1569.79 | bwd_inner_microstep: 1568.05 | bwd_allreduce_microstep: 1.69 | step_microstep: 91.46
+[Rank 0] time (ms) | fwd: 600.78 | bwd: 1569.79 | bwd_inner: 1568.06 | bwd_allreduce: 1.69 | step: 91.46
+Local>>>>>> step_time: 2.2736852169036865, dataloading_time : 0.0010952949523925781,forward_time :0.20218491554260254, backward_time: 1.9786944389343262, optim time :0.09170961380004883
+[Rank 0] time (ms) | optimizer_step: 56.37
+Local>>>>>> step_time: 2.264828681945801, dataloading_time : 0.0011038780212402344,forward_time :0.19288063049316406, backward_time: 1.9795291423797607, optim time :0.09131360054016113
+[Rank 0] time (ms) | fwd_microstep: 596.49 | bwd_microstep: 1565.47 | bwd_inner_microstep: 1563.80 | bwd_allreduce_microstep: 1.62 | step_microstep: 91.22
+[Rank 0] time (ms) | fwd: 596.48 | bwd: 1565.47 | bwd_inner: 1563.81 | bwd_allreduce: 1.62 | step: 91.22
+Local>>>>>> step_time: 2.264740467071533, dataloading_time : 0.0009174346923828125,forward_time :0.19841504096984863, backward_time: 1.9739303588867188, optim time :0.0914764404296875
+[Rank 0] time (ms) | optimizer_step: 56.33
+[Rank 0] time (ms) | fwd_microstep: 601.89 | bwd_microstep: 1560.77 | bwd_inner_microstep: 1559.02 | bwd_allreduce_microstep: 1.70 | step_microstep: 91.05
+Local>>>>>> step_time: 2.265381097793579, dataloading_time : 0.0009751319885253906,forward_time :0.1925339698791504, backward_time: 1.9805874824523926, optim time :0.09128332138061523[Rank 0] time (ms) | fwd: 601.88 | bwd: 1560.77 | bwd_inner: 1559.04 | bwd_allreduce: 1.70 | step: 91.05
+
+Local>>>>>> step_time: 2.265300989151001, dataloading_time : 0.0010120868682861328,forward_time :0.1987316608428955, backward_time: 1.9742474555969238, optim time :0.0913076400756836
+[Rank 1] Step 15: loss=4.4087, time=2.265s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+[Rank 0] Step 15: loss=4.3544, time=2.265s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+[Rank 0] time (ms) | optimizer_step: 56.33
+[Rank 0] time (ms) | fwd_microstep: 608.84 | bwd_microstep: 1567.85 | bwd_inner_microstep: 1566.12 | bwd_allreduce_microstep: 1.68 | step_microstep: 91.11
+Local>>>>>> step_time: 2.279332160949707, dataloading_time : 0.0010836124420166016,forward_time :0.19899296760559082, backward_time: 1.9878652095794678, optim time :0.09138822555541992
+[Rank 0] time (ms) | fwd: 608.83 | bwd: 1567.85 | bwd_inner: 1566.13 | bwd_allreduce: 1.68 | step: 91.12
+Local>>>>>> step_time: 2.279353380203247, dataloading_time : 0.0009875297546386719,forward_time :0.1985170841217041, backward_time: 1.9884743690490723, optim time :0.09137272834777832
+[Rank 0] time (ms) | optimizer_step: 56.24
+[Rank 0] time (ms) | fwd_microstep: 600.71 | bwd_microstep: 1573.45 | bwd_inner_microstep: 1571.75 | bwd_allreduce_microstep: 1.66 | step_microstep: 91.12
+[Rank 0] time (ms) | fwd: 600.70 | bwd: 1573.46 | bwd_inner: 1571.76 | bwd_allreduce: 1.66 | step: 91.12
+Local>>>>>> step_time: 2.2769083976745605, dataloading_time : 0.0010638236999511719,forward_time :0.19880056381225586, backward_time: 1.985671043395996, optim time :0.09137153625488281
+Local>>>>>> step_time: 2.2769713401794434, dataloading_time : 0.000978231430053711,forward_time :0.19638752937316895, backward_time: 1.988215446472168, optim time :0.09138798713684082
+[Rank 0] time (ms) | optimizer_step: 56.34
+[Rank 0] time (ms) | fwd_microstep: 608.00 | bwd_microstep: 1570.19 | bwd_inner_microstep: 1568.46 | bwd_allreduce_microstep: 1.68 | step_microstep: 91.28
+[Rank 0] time (ms) | fwd: 607.99 | bwd: 1570.19 | bwd_inner: 1568.47 | bwd_allreduce: 1.68 | step: 91.28
+Local>>>>>> step_time: 2.2811429500579834, dataloading_time : 0.0009300708770751953,forward_time :0.1919717788696289, backward_time: 1.9966998100280762, optim time :0.09153914451599121
+Local>>>>>> step_time: 2.2811102867126465, dataloading_time : 0.0010225772857666016,forward_time :0.1959397792816162, backward_time: 1.9925956726074219, optim time :0.09155011177062988
+[Rank 0] time (ms) | optimizer_step: 56.34
+[Rank 0] time (ms) | fwd_microstep: 606.95 | bwd_microstep: 1573.77 | bwd_inner_microstep: 1571.86 | bwd_allreduce_microstep: 1.82 | step_microstep: 93.02
+[Rank 0] time (ms) | fwd: 606.95 | bwd: 1573.77 | bwd_inner: 1571.89 | bwd_allreduce: 1.82 | step: 93.02
+Local>>>>>> step_time: 2.285438060760498, dataloading_time : 0.0010137557983398438,forward_time :0.19834184646606445, backward_time: 1.992788314819336, optim time :0.093292236328125
+Local>>>>>> step_time: 2.285461902618408, dataloading_time : 0.0010025501251220703,forward_time :0.19634485244750977, backward_time: 1.9947113990783691, optim time :0.09340095520019531
+[Rank 0] Step 19: loss=4.0129, time=2.285s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+[Rank 1] Step 19: loss=4.3711, time=2.285s, alloc_mem=33.62 GB, peak_mem=51.27 GB
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 32, Seq length: 512
+  Average step time: 2.268s
+  Peak memory: 51.27 GB
+  Final allocated memory: 33.62 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=55054039040 alloc_mem_bytes=36104235520 avg_step_time=2.2682
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 32, Seq length: 512
+  Average step time: 2.268s
+  Peak memory: 51.27 GB
+  Final allocated memory: 33.62 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=55054006272 alloc_mem_bytes=36104235520 avg_step_time=2.2682
+[rank0]:[W120 12:38:38.013320866 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-20 12:38:39,796] [INFO] [launch.py:367:main] Process 1969616 exits successfully.
+[2026-01-20 12:38:39,796] [INFO] [launch.py:367:main] Process 1969617 exits successfully.
+
+==============================================
+All runs complete. Gathering results...
+==============================================
+================================================================================
+BF16 Low-Precision Master Weights - Memory Usage Comparison
+================================================================================
+
+Configuration                            Peak Memory     Reduction       Step Time   
+--------------------------------------------------------------------------------
+Baseline (fp32 master)                   63.50 GB        -               2.0463s     
+bf16_full (master + opt states)          51.27 GB        +19.2%          2.2682s     
+--------------------------------------------------------------------------------
+
+Detailed Results:
+----------------------------------------
+
+Baseline (fp32 master):
+  Parameters: 6,858,007,633
+  Peak Memory: 63.50 GB (68,178,321,408 bytes)
+  Allocated Memory: 52.79 GB (56,684,869,120 bytes)
+  Avg Step Time: 2.0463s
+
+bf16_full (master + opt states):
+  Parameters: 6,858,007,633
+  Peak Memory: 51.27 GB (55,054,039,040 bytes)
+  Allocated Memory: 33.62 GB (36,104,235,520 bytes)
+  Avg Step Time: 2.2682s
+
+================================================================================
+
+Markdown Table (for README):
+----------------------------------------
+
+| Configuration | Peak Memory | Memory Reduction | Avg Step Time |
+|---------------|-------------|------------------|---------------|
+| Baseline (fp32 master) | 63.50 GB | - | 2.0463s |
+| bf16_full (master + opt states) | 51.27 GB | +19.2% | 2.2682s |
+
+
+Summary saved to: logs/20260120_123508/summary.txt
+
+Results saved to: logs/20260120_123508/summary.txt
+==============================================

@@ -1,0 +1,34 @@
+================================================================================
+BF16 Low-Precision Master Weights - Memory Usage Comparison
+================================================================================
+
+Configuration                            Peak Memory     Reduction       Step Time   
+--------------------------------------------------------------------------------
+Baseline (fp32 master)                   56.95 GB        -               0.4642s     
+bf16_full (master + opt states)          34.87 GB        +38.8%          0.4645s     
+--------------------------------------------------------------------------------
+
+Detailed Results:
+----------------------------------------
+
+Baseline (fp32 master):
+  Parameters: 6,858,007,633
+  Peak Memory: 56.95 GB (61,150,836,224 bytes)
+  Allocated Memory: 51.31 GB (55,089,256,960 bytes)
+  Avg Step Time: 0.4642s
+
+bf16_full (master + opt states):
+  Parameters: 6,858,007,633
+  Peak Memory: 34.87 GB (37,443,852,800 bytes)
+  Allocated Memory: 32.14 GB (34,508,623,360 bytes)
+  Avg Step Time: 0.4645s
+
+================================================================================
+
+Markdown Table (for README):
+----------------------------------------
+
+| Configuration | Peak Memory | Memory Reduction | Avg Step Time |
+|---------------|-------------|------------------|---------------|
+| Baseline (fp32 master) | 56.95 GB | - | 0.4642s |
+| bf16_full (master + opt states) | 34.87 GB | +38.8% | 0.4645s |

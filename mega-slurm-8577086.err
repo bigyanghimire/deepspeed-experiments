@@ -1,0 +1,31 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/bigyang/llm-training/experiments/train.py", line 358, in <module>
+[rank3]:     main()
+[rank3]:   File "/home/bigyang/llm-training/experiments/train.py", line 246, in main
+[rank3]:     with open(args.deepspeed_config, 'r') as f:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: 'configs/bf16_full.json'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bigyang/llm-training/experiments/train.py", line 358, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/bigyang/llm-training/experiments/train.py", line 246, in main
+[rank0]:     with open(args.deepspeed_config, 'r') as f:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: 'configs/bf16_full.json'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/bigyang/llm-training/experiments/train.py", line 358, in <module>
+[rank2]:     main()
+[rank2]:   File "/home/bigyang/llm-training/experiments/train.py", line 246, in main
+[rank2]:     with open(args.deepspeed_config, 'r') as f:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: 'configs/bf16_full.json'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/bigyang/llm-training/experiments/train.py", line 358, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/bigyang/llm-training/experiments/train.py", line 246, in main
+[rank1]:     with open(args.deepspeed_config, 'r') as f:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: 'configs/bf16_full.json'
+[rank0]:[W115 16:48:58.819019508 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

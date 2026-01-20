@@ -1,0 +1,410 @@
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_GPUS: 2
+  NUM_LAYERS: 32
+  HIDDEN_DIM: 4096
+  BATCH_SIZE: 16
+  SEQ_LENGTH: 512
+  NUM_STEPS: 7
+  LOG_DIR: logs/20260120_131426
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 13:14:36,257] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-20 13:14:36,258] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/baseline.json --num_layers 32 --hidden_dim 4096 --batch_size 16 --seq_length 512 --num_steps 7 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 13:14:42,690] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-20 13:14:42,690] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-20 13:14:42,690] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-20 13:14:42,690] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-20 13:14:42,690] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-20 13:14:42,691] [INFO] [launch.py:272:main] process 1976591 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-20 13:14:42,691] [INFO] [launch.py:272:main] process 1976592 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Loading wikitext dataset...[Rank 0] Loading wikitext dataset...
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 1] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 1] Activation checkpointing enabled
+[Rank 0] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 0] Activation checkpointing enabled
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.79 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 23.49 GB, percent = 2.3%
+DeepSpeedZeRoOffload initialize [begin]
+MA 12.77 GB         Max_MA 13.54 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.61 GB, percent = 2.3%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 6.39 GB         Max_MA 12.97 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.62 GB, percent = 2.3%
+Before creating fp16 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.63 GB, percent = 2.3%
+After creating fp16 partitions: 4
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 23.65 GB, percent = 2.3%
+Before creating fp32 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 23.64 GB, percent = 2.3%
+After creating fp32 partitions
+MA 19.16 GB         Max_MA 22.92 GB         CA 22.93 GB         Max_CA 23 GB 
+CPU Virtual Memory:  used = 23.64 GB, percent = 2.3%
+Before initializing optimizer states
+MA 19.16 GB         Max_MA 19.16 GB         CA 22.93 GB         Max_CA 23 GB 
+CPU Virtual Memory:  used = 23.64 GB, percent = 2.3%
+[Rank 0] time (ms) | init_optimizer_state: 0.00
+After initializing optimizer states
+MA 19.16 GB         Max_MA 22.93 GB         CA 26.7 GB         Max_CA 27 GB 
+CPU Virtual Memory:  used = 23.64 GB, percent = 2.3%
+[Rank 1] DeepSpeed initialized with config: configs/baseline.json
+[Rank 1] Memory after init: allocated=25.64 GB, reserved=33.08 GB
+After initializing ZeRO optimizer
+MA 25.64 GB         Max_MA 26.41 GB         CA 33.08 GB         Max_CA 33 GB 
+CPU Virtual Memory:  used = 23.68 GB, percent = 2.4%
+[Rank 0] DeepSpeed initialized with config: configs/baseline.json
+[Rank 0] Memory after init: allocated=25.64 GB, reserved=33.08 GB
+The loss is : tensor(11.0625, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : The loss is : tensor(11.0625, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(11.1250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(11.1250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 82.75
+Local>>>>>> step_time: 1.8210883140563965, dataloading_time : 0.5300822257995605,forward_time :0.3752779960632324, backward_time: 0.769399881362915, optim time :0.14632415771484375
+[Rank 0] time (ms) | fwd_microstep: 371.79 | bwd_microstep: 763.67 | bwd_inner_microstep: 761.88 | bwd_allreduce_microstep: 1.70 | step_microstep: 146.26
+[Rank 0] time (ms) | fwd: 371.77 | bwd: 763.67 | bwd_inner: 761.90 | bwd_allreduce: 1.70 | step: 146.27
+Local>>>>>> step_time: 1.5256710052490234, dataloading_time : 0.23737502098083496,forward_time :0.37330079078674316, backward_time: 0.7683722972869873, optim time :0.1466202735900879
+[Rank 1] Step 0: loss=11.0625, time=1.821s, alloc_mem=52.02 GB, peak_mem=53.53 GB
+[Rank 0] Step 0: loss=11.1250, time=1.526s, alloc_mem=52.02 GB, peak_mem=53.53 GB
+The loss is : The loss is : tensor(7.1250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(7.1250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(5.8438, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(5.8438, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.72
+Local>>>>>> step_time: 1.1255054473876953, dataloading_time : 0.0003228187561035156,forward_time :0.21212387084960938, backward_time: 0.8017668724060059, optim time :0.11128997802734375
+[Rank 0] time (ms) | fwd_microstep: 290.56 | bwd_microstep: 718.49 | bwd_inner_microstep: 716.43 | bwd_allreduce_microstep: 1.99 | step_microstep: 111.16
+[Rank 0] time (ms) | fwd: 290.55 | bwd: 718.50 | bwd_inner: 716.45 | bwd_allreduce: 1.99 | step: 111.16
+Local>>>>>> step_time: 1.125530481338501, dataloading_time : 0.0003845691680908203,forward_time :0.21274399757385254, backward_time: 0.8009192943572998, optim time :0.1114802360534668
+The loss is : The loss is : tensor(15.1875, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(15.1875, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(15.6250, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(15.6250, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.65
+Local>>>>>> step_time: 1.1169977188110352, dataloading_time : 0.0013058185577392578,forward_time :0.1587963104248047, backward_time: 0.8468136787414551, optim time :0.11008000373840332
+[Rank 0] time (ms) | fwd_microstep: 282.68 | bwd_microstep: 716.75 | bwd_inner_microstep: 714.90 | bwd_allreduce_microstep: 1.79 | step_microstep: 109.87
+[Rank 0] time (ms) | fwd: 282.68 | bwd: 716.75 | bwd_inner: 714.91 | bwd_allreduce: 1.79 | step: 109.87
+Local>>>>>> step_time: 1.1167540550231934, dataloading_time : 0.0021352767944335938,forward_time :0.16395354270935059, backward_time: 0.8405246734619141, optim time :0.1101381778717041
+The loss is : The loss is : tensor(20.7500, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(20.7500, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(18.6250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(18.6250, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.39
+Local>>>>>> step_time: 1.1166088581085205, dataloading_time : 0.0001697540283203125,forward_time :0.15691280364990234, backward_time: 0.8496716022491455, optim time :0.10985279083251953
+[Rank 0] time (ms) | fwd_microstep: 281.95 | bwd_microstep: 717.92 | bwd_inner_microstep: 716.04 | bwd_allreduce_microstep: 1.82 | step_microstep: 109.54
+[Rank 0] time (ms) | fwd: 281.94 | bwd: 717.92 | bwd_inner: 716.06 | bwd_allreduce: 1.83 | step: 109.55
+Local>>>>>> step_time: 1.1165616512298584, dataloading_time : 0.0011630058288574219,forward_time :0.16061639785766602, backward_time: 0.8449490070343018, optim time :0.10983061790466309
+The loss is : The loss is : tensor(3.9688, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(3.9688, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(3.9844, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(3.9844, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.30
+[Rank 0] time (ms) | fwd_microstep: 283.87 | bwd_microstep: 717.56 | bwd_inner_microstep: 715.70 | bwd_allreduce_microstep: 1.81 | step_microstep: 109.42
+[Rank 0] time (ms) | fwd: 283.87 | bwd: 717.56 | bwd_inner: 715.71 | bwd_allreduce: 1.81 | step: 109.42
+Local>>>>>> step_time: 1.1179654598236084, dataloading_time : 0.0012853145599365234,forward_time :0.15967774391174316, backward_time: 0.8473029136657715, optim time :0.10969710350036621
+Local>>>>>> step_time: 1.118201494216919, dataloading_time : 0.0010902881622314453,forward_time :0.15358734130859375, backward_time: 0.853583812713623, optim time :0.10993790626525879
+The loss is : The loss is : tensor(20.6250, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(20.6250, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(20.3750, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(20.3750, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.39
+Local>>>>>> step_time: 1.1164703369140625, dataloading_time : 0.0010263919830322266,forward_time :0.15764832496643066, backward_time: 0.8483169078826904, optim time :0.10947680473327637
+[Rank 0] time (ms) | fwd_microstep: 284.87 | bwd_microstep: 714.97 | bwd_inner_microstep: 713.11 | bwd_allreduce_microstep: 1.80 | step_microstep: 109.27
+[Rank 0] time (ms) | fwd: 284.87 | bwd: 714.97 | bwd_inner: 713.13 | bwd_allreduce: 1.80 | step: 109.26
+Local>>>>>> step_time: 1.1167564392089844, dataloading_time : 0.001054525375366211,forward_time :0.15722918510437012, backward_time: 0.8489158153533936, optim time :0.10955429077148438
+[Rank 1] Step 5: loss=20.6250, time=1.116s, alloc_mem=52.02 GB, peak_mem=58.37 GB
+[Rank 0] Step 5: loss=20.3750, time=1.117s, alloc_mem=52.02 GB, peak_mem=58.37 GB
+The loss is : The loss is : tensor(6.3438, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(6.3438, device='cuda:0', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+tensor(6.4688, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(6.4688, device='cuda:1', dtype=torch.bfloat16,
+       grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 74.52
+Local>>>>>> step_time: 1.122117042541504, dataloading_time : 0.0013186931610107422,forward_time :0.15332937240600586, backward_time: 0.8577873706817627, optim time :0.1096794605255127
+[Rank 1] Step 6: loss=6.4688, time=1.122s, alloc_mem=52.02 GB, peak_mem=58.37 GB
+[Rank 0] time (ms) | fwd_microstep: 284.38 | bwd_microstep: 721.73 | bwd_inner_microstep: 719.85 | bwd_allreduce_microstep: 1.81 | step_microstep: 109.64
+[Rank 0] time (ms) | fwd: 284.38 | bwd: 721.73 | bwd_inner: 719.88 | bwd_allreduce: 1.81 | step: 109.64
+Local>>>>>> step_time: 1.1222705841064453, dataloading_time : 0.0010874271392822266,forward_time :0.15808701515197754, backward_time: 0.8531677722930908, optim time :0.10992598533630371
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 16, Seq length: 512
+  Average step time: 1.119s
+  Peak memory: 58.37 GB
+  Final allocated memory: 52.02 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=6858007633 peak_mem_bytes=62670558720 alloc_mem_bytes=55861300224 avg_step_time=1.1193
+[Rank 0] Step 6: loss=6.3438, time=1.122s, alloc_mem=52.02 GB, peak_mem=58.37 GB
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 16, Seq length: 512
+  Average step time: 1.120s
+  Peak memory: 58.37 GB
+  Final allocated memory: 52.02 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=6858007633 peak_mem_bytes=62670632448 alloc_mem_bytes=55861300224 avg_step_time=1.1195
+[rank0]:[W120 13:15:37.895458944 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-20 13:15:39,712] [INFO] [launch.py:367:main] Process 1976591 exits successfully.
+[2026-01-20 13:15:39,712] [INFO] [launch.py:367:main] Process 1976592 exits successfully.
+
+[2/2] Running BF16_FULL (bf16 master weights, gradients, and optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 13:15:53,173] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-20 13:15:53,173] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/bf16_full.json --num_layers 32 --hidden_dim 4096 --batch_size 16 --seq_length 512 --num_steps 7 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-20 13:15:59,660] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-20 13:15:59,660] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-20 13:15:59,660] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-20 13:15:59,660] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-20 13:15:59,660] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-20 13:15:59,661] [INFO] [launch.py:272:main] process 1977288 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-20 13:15:59,662] [INFO] [launch.py:272:main] process 1977289 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '32', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 0] Loading wikitext dataset...
+[Rank 1] Loading wikitext dataset...
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+[Rank 0] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 0] Activation checkpointing enabled
+[Rank 1] Model parameters: 6,858,007,633 total, 6,858,007,633 trainable
+[Rank 1] Activation checkpointing enabled
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.79 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 22.01 GB, percent = 2.2%
+DeepSpeedZeRoOffload initialize [begin]
+MA 12.77 GB         Max_MA 13.54 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 22.09 GB, percent = 2.2%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 6.39 GB         Max_MA 12.97 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 22.09 GB, percent = 2.2%
+Before creating fp16 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 13.56 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 22.09 GB, percent = 2.2%
+After creating fp16 partitions: 4
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 14 GB 
+CPU Virtual Memory:  used = 22.08 GB, percent = 2.2%
+Before creating fp32 partitions
+MA 6.39 GB         Max_MA 6.39 GB         CA 6.39 GB         Max_CA 6 GB 
+CPU Virtual Memory:  used = 22.08 GB, percent = 2.2%
+After creating fp32 partitions
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.78 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 22.08 GB, percent = 2.2%
+Before initializing optimizer states
+MA 12.77 GB         Max_MA 12.77 GB         CA 12.78 GB         Max_CA 13 GB 
+CPU Virtual Memory:  used = 22.08 GB, percent = 2.2%
+[Rank 0] time (ms) | init_optimizer_state: 0.00
+After initializing optimizer states
+MA 12.77 GB         Max_MA 14.66 GB         CA 14.67 GB         Max_CA 15 GB 
+CPU Virtual Memory:  used = 22.08 GB, percent = 2.2%
+[Rank 1] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 1] Memory after init: allocated=19.25 GB, reserved=21.05 GB
+After initializing ZeRO optimizer
+MA 19.25 GB         Max_MA 20.02 GB         CA 21.05 GB         Max_CA 21 GB 
+CPU Virtual Memory:  used = 22.1 GB, percent = 2.2%
+[Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 0] Memory after init: allocated=19.25 GB, reserved=21.05 GB
+The loss is : tensor(11.0809, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is : The loss is in backward : tensor(11.0809, device='cuda:1', grad_fn=<NllLossBackward0>)
+tensor(11.1196, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(11.1196, device='cuda:0', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 65.32
+[Rank 0] time (ms) | fwd_microstep: 399.16 | bwd_microstep: 838.76 | bwd_inner_microstep: 836.88 | bwd_allreduce_microstep: 1.78 | step_microstep: 128.75
+[Rank 0] time (ms) | fwd: 399.15 | bwd: 838.77 | bwd_inner: 836.92 | bwd_allreduce: 1.78 | step: 128.75
+Local>>>>>> step_time: 1.7408795356750488, dataloading_time : 0.365093469619751,forward_time :0.40204477310180664, backward_time: 0.8446660041809082, optim time :0.12907195091247559
+Local>>>>>> step_time: 1.8271713256835938, dataloading_time : 0.4495096206665039,forward_time :0.402829647064209, backward_time: 0.8456122875213623, optim time :0.12921667098999023
+[Rank 0] Step 0: loss=11.1196, time=1.741s, alloc_mem=32.86 GB, peak_mem=33.61 GB
+[Rank 1] Step 0: loss=11.0809, time=1.827s, alloc_mem=32.86 GB, peak_mem=33.61 GB
+The loss is : The loss is : tensor(7.1194, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(7.1194, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(5.8516, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(5.8516, device='cuda:1', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.40
+Local>>>>>> step_time: 1.2225661277770996, dataloading_time : 0.0031728744506835938,forward_time :0.20450472831726074, backward_time: 0.9233269691467285, optim time :0.09155917167663574
+[Rank 0] time (ms) | fwd_microstep: 322.23 | bwd_microstep: 800.57 | bwd_inner_microstep: 798.84 | bwd_allreduce_microstep: 1.66 | step_microstep: 91.36
+[Rank 0] time (ms) | fwd: 322.23 | bwd: 800.58 | bwd_inner: 798.86 | bwd_allreduce: 1.66 | step: 91.36
+Local>>>>>> step_time: 1.222856044769287, dataloading_time : 0.0012867450714111328,forward_time :0.20630550384521484, backward_time: 0.9236176013946533, optim time :0.0916438102722168
+The loss is : The loss is : tensor(13.7560, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(13.7560, device='cuda:1', grad_fn=<NllLossBackward0>)
+tensor(13.4604, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(13.4604, device='cuda:0', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.40
+Local>>>>>> step_time: 1.2137610912322998, dataloading_time : 0.00017762184143066406,forward_time :0.15516448020935059, backward_time: 0.9673898220062256, optim time :0.09102725982666016
+[Rank 0] time (ms) | fwd_microstep: 312.94 | bwd_microstep: 800.35 | bwd_inner_microstep: 798.62 | bwd_allreduce_microstep: 1.67 | step_microstep: 90.79
+[Rank 0] time (ms) | fwd: 312.94 | bwd: 800.35 | bwd_inner: 798.64 | bwd_allreduce: 1.67 | step: 90.80
+Local>>>>>> step_time: 1.213757038116455, dataloading_time : 0.0021102428436279297,forward_time :0.15107274055480957, backward_time: 0.9695115089416504, optim time :0.09106016159057617
+The loss is : The loss is : tensor(17.6456, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(17.6456, device='cuda:1', grad_fn=<NllLossBackward0>)
+tensor(15.8203, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(15.8203, device='cuda:0', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.28
+[Rank 0] time (ms) | fwd_microstep: 312.57 | bwd_microstep: 794.19 | bwd_inner_microstep: 792.49 | bwd_allreduce_microstep: 1.65 | step_microstep: 90.76
+[Rank 0] time (ms) | fwd: 312.57 | bwd: 794.20 | bwd_inner: 792.51 | bwd_allreduce: 1.65 | step: 90.76
+Local>>>>>> step_time: 1.2055437564849854, dataloading_time : 0.0004868507385253906,forward_time :0.14672279357910156, backward_time: 0.96730637550354, optim time :0.09102511405944824
+Local>>>>>> step_time: 1.2056562900543213, dataloading_time : 0.0013780593872070312,forward_time :0.146331787109375, backward_time: 0.9669218063354492, optim time :0.09102249145507812
+The loss is : The loss is : tensor(7.8844, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(7.8844, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(7.8798, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(7.8798, device='cuda:1', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.27
+[Rank 0] time (ms) | fwd_microstep: 310.58 | bwd_microstep: 800.55 | bwd_inner_microstep: 798.86 | bwd_allreduce_microstep: 1.64 | step_microstep: 90.70
+[Rank 0] time (ms) | fwd: 310.57 | bwd: 800.56 | bwd_inner: 798.88 | bwd_allreduce: 1.64 | step: 90.70
+Local>>>>>> step_time: 1.2102935314178467, dataloading_time : 0.0010280609130859375,forward_time :0.149003267288208, backward_time: 0.9692978858947754, optim time :0.09096217155456543
+Local>>>>>> step_time: 1.210313320159912, dataloading_time : 0.00017189979553222656,forward_time :0.14759254455566406, backward_time: 0.9716079235076904, optim time :0.09093904495239258
+The loss is : The loss is : tensor(9.4261, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(9.4261, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(8.8662, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(8.8662, device='cuda:1', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.28
+[Rank 0] time (ms) | fwd_microstep: 310.44 | bwd_microstep: 804.41 | bwd_inner_microstep: 802.71 | bwd_allreduce_microstep: 1.64 | step_microstep: 90.71
+[Rank 0] time (ms) | fwd: 310.43 | bwd: 804.41 | bwd_inner: 802.72 | bwd_allreduce: 1.64 | step: 90.72
+Local>>>>>> step_time: 1.2140884399414062, dataloading_time : 0.0010631084442138672,forward_time :0.14599895477294922, backward_time: 0.9760410785675049, optim time :0.09098315238952637
+Local>>>>>> step_time: 1.2140698432922363, dataloading_time : 0.001215219497680664,forward_time :0.14606523513793945, backward_time: 0.9757640361785889, optim time :0.09102320671081543
+[Rank 0] Step 5: loss=9.4261, time=1.214s, alloc_mem=32.86 GB, peak_mem=42.67 GB
+[Rank 1] Step 5: loss=8.8662, time=1.214s, alloc_mem=32.86 GB, peak_mem=42.67 GB
+The loss is : The loss is : tensor(6.9584, device='cuda:0', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(6.9584, device='cuda:0', grad_fn=<NllLossBackward0>)
+tensor(7.0610, device='cuda:1', grad_fn=<NllLossBackward0>)
+The loss is in backward : tensor(7.0610, device='cuda:1', grad_fn=<NllLossBackward0>)
+[Rank 0] time (ms) | optimizer_step: 56.36
+Local>>>>>> step_time: 1.2180919647216797, dataloading_time : 0.0011181831359863281,forward_time :0.152374267578125, backward_time: 0.9726941585540771, optim time :0.0919027328491211
+[Rank 1] Step 6: loss=7.0610, time=1.218s, alloc_mem=32.86 GB, peak_mem=42.67 GB
+[Rank 0] time (ms) | fwd_microstep: 312.84 | bwd_microstep: 804.80 | bwd_inner_microstep: 802.23 | bwd_allreduce_microstep: 2.50 | step_microstep: 91.85
+[Rank 0] time (ms) | fwd: 312.84 | bwd: 804.80 | bwd_inner: 802.25 | bwd_allreduce: 2.50 | step: 91.85
+Local>>>>>> step_time: 1.2184593677520752, dataloading_time : 0.0009808540344238281,forward_time :0.16002225875854492, backward_time: 0.9652903079986572, optim time :0.0921640396118164
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 16, Seq length: 512
+  Average step time: 1.216s
+  Peak memory: 42.67 GB
+  Final allocated memory: 32.86 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=45817264128 alloc_mem_bytes=35281463808 avg_step_time=1.2161
+[Rank 0] Step 6: loss=6.9584, time=1.218s, alloc_mem=32.86 GB, peak_mem=42.67 GB
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=32
+  Parameters: 6,858,007,633
+  Batch size: 16, Seq length: 512
+  Average step time: 1.216s
+  Peak memory: 42.67 GB
+  Final allocated memory: 32.86 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json params=6858007633 peak_mem_bytes=45817223168 alloc_mem_bytes=35281463808 avg_step_time=1.2163
+[rank0]:[W120 13:17:02.261390144 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-20 13:17:04,675] [INFO] [launch.py:367:main] Process 1977288 exits successfully.
+[2026-01-20 13:17:04,675] [INFO] [launch.py:367:main] Process 1977289 exits successfully.
+
+==============================================
+All runs complete. Gathering results...
+==============================================
+================================================================================
+BF16 Low-Precision Master Weights - Memory Usage Comparison
+================================================================================
+
+Configuration                            Peak Memory     Reduction       Step Time   
+--------------------------------------------------------------------------------
+Baseline (fp32 master)                   58.37 GB        -               1.1193s     
+bf16_full (master + opt states)          42.67 GB        +26.9%          1.2161s     
+--------------------------------------------------------------------------------
+
+Detailed Results:
+----------------------------------------
+
+Baseline (fp32 master):
+  Parameters: 6,858,007,633
+  Peak Memory: 58.37 GB (62,670,558,720 bytes)
+  Allocated Memory: 52.02 GB (55,861,300,224 bytes)
+  Avg Step Time: 1.1193s
+
+bf16_full (master + opt states):
+  Parameters: 6,858,007,633
+  Peak Memory: 42.67 GB (45,817,264,128 bytes)
+  Allocated Memory: 32.86 GB (35,281,463,808 bytes)
+  Avg Step Time: 1.2161s
+
+================================================================================
+
+Markdown Table (for README):
+----------------------------------------
+
+| Configuration | Peak Memory | Memory Reduction | Avg Step Time |
+|---------------|-------------|------------------|---------------|
+| Baseline (fp32 master) | 58.37 GB | - | 1.1193s |
+| bf16_full (master + opt states) | 42.67 GB | +26.9% | 1.2161s |
+
+
+Summary saved to: logs/20260120_131426/summary.txt
+
+Results saved to: logs/20260120_131426/summary.txt
+==============================================
