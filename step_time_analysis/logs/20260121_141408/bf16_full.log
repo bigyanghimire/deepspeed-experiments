@@ -1,0 +1,62 @@
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-21 14:14:43,940] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-21 14:14:43,940] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train.py --deepspeed_config configs/bf16_full.json --num_layers 12 --hidden_dim 1024 --batch_size 4 --seq_length 512 --num_steps 7 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-21 14:14:49,272] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-21 14:14:49,272] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-21 14:14:49,272] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-21 14:14:49,272] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-21 14:14:49,272] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-21 14:14:49,273] [INFO] [launch.py:272:main] process 1533833 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=0', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '4', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-21 14:14:49,274] [INFO] [launch.py:272:main] process 1533834 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '4', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Loading wikitext dataset...
+[Rank 0] Loading wikitext dataset...
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50257
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50257
+[Rank 0] Model parameters: 254,655,569 total, 254,655,569 trainable
+[Rank 0] Activation checkpointing enabled
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/bigyang/llm-training/experiments/exp_types/step_time_analysis/train.py", line 366, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/bigyang/llm-training/experiments/exp_types/step_time_analysis/train.py", line 254, in main
+[rank0]:     model_engine, optimizer, _, _ = deepspeed.initialize(
+[rank0]:                                     ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/__init__.py", line 188, in initialize
+[rank0]:     config_class = DeepSpeedConfig(config, mpu, mesh_device=mesh_device)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 753, in __init__
+[rank0]:     self._do_sanity_check()
+[rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 943, in _do_sanity_check
+[rank0]:     self._do_error_check()
+[rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 983, in _do_error_check
+[rank0]:     assert self.zero_enabled and self.zero_optimization_stage in (
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AssertionError: Bf16_master_weights_and_grads is only supported with ZeRO Stage 1, 2, or 3.
+[Rank 1] Model parameters: 254,655,569 total, 254,655,569 trainable
+[Rank 1] Activation checkpointing enabled
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/bigyang/llm-training/experiments/exp_types/step_time_analysis/train.py", line 366, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/bigyang/llm-training/experiments/exp_types/step_time_analysis/train.py", line 254, in main
+[rank1]:     model_engine, optimizer, _, _ = deepspeed.initialize(
+[rank1]:                                     ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/__init__.py", line 188, in initialize
+[rank1]:     config_class = DeepSpeedConfig(config, mpu, mesh_device=mesh_device)
+[rank1]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 753, in __init__
+[rank1]:     self._do_sanity_check()
+[rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 943, in _do_sanity_check
+[rank1]:     self._do_error_check()
+[rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/config.py", line 983, in _do_error_check
+[rank1]:     assert self.zero_enabled and self.zero_optimization_stage in (
+[rank1]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AssertionError: Bf16_master_weights_and_grads is only supported with ZeRO Stage 1, 2, or 3.
+[rank0]:[W121 14:14:58.340255348 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-21 14:15:00,275] [INFO] [launch.py:335:sigkill_handler] Killing subprocess 1533833
+[2026-01-21 14:15:00,275] [INFO] [launch.py:335:sigkill_handler] Killing subprocess 1533834
+[2026-01-21 14:15:00,292] [ERROR] [launch.py:341:sigkill_handler] ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '4', '--seq_length', '512', '--num_steps', '7', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42'] exits with return code = 1
