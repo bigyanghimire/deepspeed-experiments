@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=train_bf16
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:h100:2
+#SBATCH --gres=gpu:h200:2
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G

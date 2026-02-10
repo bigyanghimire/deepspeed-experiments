@@ -1,0 +1,231 @@
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-23 16:31:11,955] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-23 16:31:11,955] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train_bert_ds.py --checkpoint_dir experiment_deepspeed
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-23 16:31:16,274] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-23 16:31:16,274] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-23 16:31:16,274] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-23 16:31:16,274] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-23 16:31:16,274] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-23 16:31:16,275] [INFO] [launch.py:272:main] process 2274212 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_bert_ds.py', '--local_rank=0', '--checkpoint_dir', 'experiment_deepspeed']
+[2026-01-23 16:31:16,276] [INFO] [launch.py:272:main] process 2274213 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_bert_ds.py', '--local_rank=1', '--checkpoint_dir', 'experiment_deepspeed']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Stage 3 initialize beginning
+MA 0.03 GB         Max_MA 0.03 GB         CA 0.03 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 398.92 GB, percent = 19.8%
+DeepSpeedZeRoOffload initialize [begin]
+MA 0.03 GB         Max_MA 0.08 GB         CA 0.08 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.03 GB, percent = 19.8%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 0.02 GB         Max_MA 0.04 GB         CA 0.08 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.03 GB, percent = 19.8%
+Before creating fp16 partitions
+MA 0.02 GB         Max_MA 0.02 GB         CA 0.08 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.03 GB, percent = 19.8%
+After creating fp16 partitions: 1
+MA 0.02 GB         Max_MA 0.02 GB         CA 0.02 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+Before creating fp32 partitions
+MA 0.02 GB         Max_MA 0.02 GB         CA 0.02 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+After creating fp32 partitions
+MA 0.03 GB         Max_MA 0.03 GB         CA 0.04 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+Before initializing optimizer states
+MA 0.03 GB         Max_MA 0.03 GB         CA 0.04 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+After initializing optimizer states
+MA 0.03 GB         Max_MA 0.05 GB         CA 0.05 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+After initializing ZeRO optimizer
+MA 0.14 GB         Max_MA 0.19 GB         CA 0.2 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 399.06 GB, percent = 19.8%
+step_time: 0.04734158515930176
+step_time: 0.047460079193115234
+step_time: 0.04752850532531738
+step_time: 0.047672271728515625
+step_time: 0.04746556282043457
+step_time: 0.04746842384338379
+step_time: 0.04858803749084473
+step_time: 0.04853630065917969
+step_time: 0.0474088191986084
+step_time: 0.04738044738769531
+step_time: 0.04730653762817383
+step_time: 0.04729199409484863
+step_time: 0.047308921813964844
+step_time: 0.047307491302490234
+step_time: 0.04759836196899414
+step_time: 0.047501325607299805
+step_time: 0.04734611511230469
+step_time: 0.04727983474731445
+step_time: 0.04745793342590332
+step_time: 0.047304391860961914
+step_time: 0.04724287986755371
+step_time: 0.047316789627075195
+step_time: 0.04714655876159668
+step_time: 0.04717111587524414
+step_time: 0.04718136787414551
+step_time: 0.04723358154296875
+step_time: 0.0475153923034668
+step_time: 0.04749774932861328
+step_time: 0.05679130554199219
+step_time: 0.05674576759338379
+step_time: 0.047623634338378906
+step_time: 0.047577619552612305
+step_time: 0.04737210273742676
+step_time: 0.04730868339538574
+step_time: 0.04727888107299805
+step_time: 0.047296762466430664
+step_time: 0.047067880630493164
+step_time: 0.04700946807861328
+step_time: 0.04735207557678223
+step_time: 0.04736900329589844
+step_time: 0.047269344329833984
+step_time: 0.04714846611022949
+step_time: 0.047226905822753906
+step_time: 0.04739117622375488
+step_time: 0.04750370979309082
+step_time: 0.04745841026306152
+step_time: 0.047247886657714844
+step_time: 0.047204017639160156
+step_time: 0.047183990478515625
+step_time: 0.04723167419433594
+step_time: 0.04742431640625
+step_time: 0.047321319580078125
+step_time: 0.04728889465332031
+step_time: 0.04725241661071777
+step_time: 0.047243595123291016
+step_time: 0.04724740982055664
+step_time: 0.0476224422454834
+step_time: 0.04758739471435547
+step_time: 0.047434329986572266
+step_time: 0.04742884635925293
+step_time: 0.04757261276245117
+step_time: 0.04751300811767578
+step_time: 0.047060489654541016
+step_time: 0.047274112701416016
+step_time: 0.04720044136047363
+step_time: 0.04719209671020508
+step_time: 0.04735589027404785
+step_time: 0.04736185073852539
+step_time: 0.047386884689331055
+step_time: 0.04735851287841797
+step_time: 0.04755997657775879
+step_time: 0.047533512115478516
+step_time: 0.04855203628540039
+step_time: 0.04858708381652832
+step_time: 0.04798436164855957
+step_time: 0.048180580139160156
+step_time: 0.04730510711669922
+step_time: 0.04725003242492676
+step_time: 0.04730343818664551
+step_time: 0.04735898971557617
+step_time: 0.04738974571228027
+step_time: 0.04733085632324219
+step_time: 0.04726457595825195
+step_time: 0.04738211631774902
+step_time: 0.04730677604675293
+step_time: 0.04729604721069336
+step_time: 0.04734373092651367
+step_time: 0.04726552963256836
+step_time: 0.048040151596069336
+step_time: 0.04800248146057129
+step_time: 0.04737687110900879
+step_time: 0.047287702560424805
+step_time: 0.04739642143249512
+step_time: 0.04733729362487793
+step_time: 0.04782366752624512
+step_time: 0.047769784927368164
+step_time: 0.047513723373413086
+step_time: 0.04749894142150879
+step_time: 0.04740118980407715
+step_time: 0.04736804962158203
+step_time: 0.04724907875061035
+step_time: 0.04716229438781738
+step_time: 0.0472722053527832
+step_time: 0.04753875732421875
+step_time: 0.04744410514831543
+step_time: 0.04746651649475098
+step_time: 0.04733896255493164
+step_time: 0.04724717140197754
+step_time: 0.04756927490234375
+step_time: 0.047580718994140625
+step_time: 0.047037601470947266
+step_time: 0.047013282775878906
+step_time: 0.047350406646728516
+step_time: 0.047301292419433594
+step_time: 0.04742169380187988
+step_time: 0.0473783016204834
+step_time: 0.0470128059387207
+step_time: 0.047025203704833984
+step_time: 0.04741096496582031
+step_time: 0.0474550724029541
+step_time: 0.048081159591674805
+step_time: 0.04801440238952637
+step_time: 0.04718613624572754
+step_time: 0.047389984130859375
+step_time: 0.04737234115600586
+step_time: 0.047357797622680664
+step_time: 0.04740619659423828
+step_time: 0.0473330020904541
+step_time: 0.047265052795410156
+step_time: 0.04724931716918945
+step_time: 0.04713892936706543
+step_time: 0.0471651554107666
+step_time: 0.04759526252746582
+step_time: 0.04759478569030762
+step_time: 0.047638893127441406
+step_time: 0.047627925872802734
+step_time: 0.04794144630432129
+step_time: 0.04791069030761719
+step_time: 0.04707813262939453
+step_time: 0.04701566696166992
+step_time: 0.04704141616821289
+step_time: 0.04705500602722168
+step_time: 0.04696297645568848
+step_time: 0.047080039978027344
+step_time: 0.047501325607299805
+step_time: 0.04748868942260742
+step_time: 0.04723215103149414
+step_time: 0.047234535217285156
+step_time: 0.04734444618225098
+step_time: 0.04728126525878906
+step_time: 0.04741525650024414
+step_time: 0.04740643501281738
+step_time: 0.047224998474121094
+step_time: 0.047204017639160156
+step_time: 0.047118425369262695
+step_time: 0.04719376564025879
+step_time: 0.04783034324645996
+step_time: 0.04780840873718262
+step_time: 0.047002315521240234
+step_time: 0.047060489654541016
+step_time: 0.05508708953857422
+step_time: 0.05440640449523926
+step_time: 0.04711031913757324
+step_time: 0.047319889068603516
+step_time: 0.04733777046203613
+step_time: 0.04731321334838867
+step_time: 0.047890663146972656
+step_time: 0.04779815673828125
+step_time: 0.04814553260803223
+step_time: 0.04728341102600098
+step_time: 0.04735231399536133
+step_time: 0.04726004600524902
+step_time: 0.04732489585876465
+step_time: 0.04732465744018555
+step_time: 0.047208309173583984
+step_time: 0.0471196174621582
+step_time: 0.04730486869812012
+step_time: 0.0472714900970459
+step_time: 0.04719829559326172
+step_time: 0.04737448692321777
+peak_mem_bytes=621100032 alloc_mem_bytes=250907136 avg_step_time=0.0476
+peak_mem_bytes=621100032 alloc_mem_bytes=250907136 avg_step_time=0.0476
+experiment_deepspeed/bert_pretrain.2026.1.23.13.31.22.addjtvxg
+experiment_deepspeed/bert_pretrain.2026.1.23.13.31.22.addjtvxg
+[2026-01-23 16:31:34,278] [INFO] [launch.py:367:main] Process 2274213 exits successfully.
+[2026-01-23 16:31:34,278] [INFO] [launch.py:367:main] Process 2274212 exits successfully.

@@ -1,5 +1,5 @@
 {
-    "train_micro_batch_size_per_gpu": 4,
+    "train_micro_batch_size_per_gpu": 8,
     "gradient_accumulation_steps": 1,
     "steps_per_print": 100,
 
@@ -14,9 +14,7 @@
     },
 
     "bf16": {
-        "enabled": true,
-        "bf16_master_weights_and_grads": true,
-        "bf16_optimizer_states": true
+        "enabled": true
     },
 
     "zero_optimization": {
@@ -27,9 +25,5 @@
         "stage3_param_persistence_threshold": 0
     },
 
-    "torch_autocast": {
-        "enabled": true,
-        "dtype": "torch.bfloat16"
-    },
      "wall_clock_breakdown":true
 }

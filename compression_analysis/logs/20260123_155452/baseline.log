@@ -1,0 +1,624 @@
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-23 15:54:58,992] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-23 15:54:58,993] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train2.py --deepspeed_config configs/baseline.json --loss_log_file logs/baseline_loss.csv --num_layers 12 --hidden_dim 1024 --batch_size 8 --seq_length 512 --num_steps 100 --warmup_steps 5 --activation_checkpointing --use_real_data --seed 42
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-23 15:55:03,251] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-23 15:55:03,251] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-23 15:55:03,251] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-23 15:55:03,251] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-23 15:55:03,251] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-23 15:55:03,252] [INFO] [launch.py:272:main] process 2261407 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train2.py', '--local_rank=0', '--deepspeed_config', 'configs/baseline.json', '--loss_log_file', 'logs/baseline_loss.csv', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '8', '--seq_length', '512', '--num_steps', '100', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+[2026-01-23 15:55:03,252] [INFO] [launch.py:272:main] process 2261408 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train2.py', '--local_rank=1', '--deepspeed_config', 'configs/baseline.json', '--loss_log_file', 'logs/baseline_loss.csv', '--num_layers', '12', '--hidden_dim', '1024', '--batch_size', '8', '--seq_length', '512', '--num_steps', '100', '--warmup_steps', '5', '--activation_checkpointing', '--use_real_data', '--seed', '42']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Loading wikitext dataset...
+[Rank 0] Loading wikitext dataset...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 0] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50257
+[Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+[Rank 1] Creating model with hidden_dim=1024, num_layers=12, num_heads=16, vocab_size=50257
+[Rank 1] Model parameters: 254,655,569 total, 254,655,569 trainable
+[Rank 1] Activation checkpointing enabled
+[Rank 0] Model parameters: 254,655,569 total, 254,655,569 trainable
+[Rank 0] Activation checkpointing enabled
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 0.47 GB         Max_MA 0.47 GB         CA 0.51 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.75 GB, percent = 18.3%
+DeepSpeedZeRoOffload initialize [begin]
+MA 0.47 GB         Max_MA 0.67 GB         CA 0.7 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.77 GB, percent = 18.3%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 0.24 GB         Max_MA 0.52 GB         CA 0.71 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.77 GB, percent = 18.3%
+Before creating fp16 partitions
+MA 0.24 GB         Max_MA 0.24 GB         CA 0.71 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.8 GB, percent = 18.3%
+After creating fp16 partitions: 1
+MA 0.24 GB         Max_MA 0.24 GB         CA 0.24 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.81 GB, percent = 18.3%
+Before creating fp32 partitions
+MA 0.24 GB         Max_MA 0.24 GB         CA 0.24 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 368.81 GB, percent = 18.3%
+After creating fp32 partitions
+MA 0.71 GB         Max_MA 1.19 GB         CA 1.19 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.84 GB, percent = 18.3%
+Before initializing optimizer states
+MA 0.71 GB         Max_MA 0.71 GB         CA 1.19 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.84 GB, percent = 18.3%
+[Rank 0] time (ms) | init_optimizer_state: 0.00
+After initializing optimizer states
+MA 0.71 GB         Max_MA 1.19 GB         CA 1.19 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.84 GB, percent = 18.3%
+[Rank 1] DeepSpeed initialized with config: configs/baseline.json
+[Rank 1] Memory after init: allocated=1.04 GB, reserved=1.29 GB
+After initializing ZeRO optimizer
+MA 1.04 GB         Max_MA 1.23 GB         CA 1.29 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 368.87 GB, percent = 18.3%
+[Rank 0] DeepSpeed initialized with config: configs/baseline.json
+[Rank 0] Memory after init: allocated=1.04 GB, reserved=1.29 GB
+[Rank 1] Step 0: loss=11.5000, time=0.869s, alloc_mem=2.44 GB, peak_mem=2.91 GB
+[Rank 0] time (ms) | optimizer_step: 24.37
+[Rank 0] time (ms) | fwd_microstep: 188.50 | bwd_microstep: 154.81 | bwd_inner_microstep: 154.04 | bwd_allreduce_microstep: 0.68 | step_microstep: 67.06
+[Rank 0] time (ms) | fwd: 188.49 | bwd: 154.81 | bwd_inner: 154.06 | bwd_allreduce: 0.69 | step: 67.06
+[Rank 0] Step 0: loss=11.5625, time=0.566s, alloc_mem=2.44 GB, peak_mem=2.91 GB
+[Rank 0] time (ms) | optimizer_step: 2.47
+[Rank 0] time (ms) | fwd_microstep: 157.38 | bwd_microstep: 125.88 | bwd_inner_microstep: 117.57 | bwd_allreduce_microstep: 8.26 | step_microstep: 6.08
+[Rank 0] time (ms) | fwd: 157.38 | bwd: 125.89 | bwd_inner: 117.58 | bwd_allreduce: 8.27 | step: 6.08
+[Rank 0] time (ms) | optimizer_step: 2.49
+[Rank 0] time (ms) | fwd_microstep: 33.41 | bwd_microstep: 52.29 | bwd_inner_microstep: 51.20 | bwd_allreduce_microstep: 1.05 | step_microstep: 6.08
+[Rank 0] time (ms) | fwd: 33.41 | bwd: 52.30 | bwd_inner: 51.21 | bwd_allreduce: 1.05 | step: 6.08
+[Rank 0] time (ms) | optimizer_step: 2.48
+[Rank 0] time (ms) | fwd_microstep: 33.19 | bwd_microstep: 51.87 | bwd_inner_microstep: 51.21 | bwd_allreduce_microstep: 0.61 | step_microstep: 6.07
+[Rank 0] time (ms) | fwd: 33.19 | bwd: 51.88 | bwd_inner: 51.23 | bwd_allreduce: 0.61 | step: 6.07
+[Rank 0] time (ms) | optimizer_step: 2.46
+[Rank 0] time (ms) | fwd_microstep: 33.27 | bwd_microstep: 51.71 | bwd_inner_microstep: 51.11 | bwd_allreduce_microstep: 0.55 | step_microstep: 6.03
+[Rank 0] time (ms) | fwd: 33.26 | bwd: 51.72 | bwd_inner: 51.13 | bwd_allreduce: 0.55 | step: 6.03
+[Rank 0] time (ms) | optimizer_step: 2.63
+[Rank 0] time (ms) | fwd_microstep: 38.14 | bwd_microstep: 63.20 | bwd_inner_microstep: 62.52 | bwd_allreduce_microstep: 0.62 | step_microstep: 7.39
+[Rank 0] time (ms) | fwd: 38.13 | bwd: 63.20 | bwd_inner: 62.53 | bwd_allreduce: 0.62 | step: 7.39
+Local>>>>>> step_time: 0.11145639419555664, dataloading_time : 0.0011074542999267578,forward_time :0.03335881233215332, backward_time: 0.06924700736999512, optim time :0.00774073600769043
+Local>>>>>> step_time: 0.1535015106201172, dataloading_time : 0.00106048583984375,forward_time :0.07311177253723145, backward_time: 0.0714418888092041, optim time :0.007885456085205078
+[Rank 0] Step 5: loss=3.4531, time=0.111s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 5: loss=2.8438, time=0.154s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 3.72
+[Rank 0] time (ms) | fwd_microstep: 37.61 | bwd_microstep: 63.09 | bwd_inner_microstep: 62.37 | bwd_allreduce_microstep: 0.67 | step_microstep: 8.46
+[Rank 0] time (ms) | fwd: 37.61 | bwd: 63.10 | bwd_inner: 62.38 | bwd_allreduce: 0.67 | step: 8.46
+Local>>>>>> step_time: 0.11143875122070312, dataloading_time : 0.0006554126739501953,forward_time :0.03275132179260254, backward_time: 0.06920385360717773, optim time :0.008826732635498047
+Local>>>>>> step_time: 0.11131930351257324, dataloading_time : 0.0007648468017578125,forward_time :0.03270292282104492, backward_time: 0.0690317153930664, optim time :0.008818387985229492
+[Rank 0] time (ms) | optimizer_step: 2.63
+[Rank 0] time (ms) | fwd_microstep: 37.88 | bwd_microstep: 62.80 | bwd_inner_microstep: 62.06 | bwd_allreduce_microstep: 0.68 | step_microstep: 7.36
+[Rank 0] time (ms) | fwd: 37.88 | bwd: 62.81 | bwd_inner: 62.08 | bwd_allreduce: 0.68 | step: 7.36
+Local>>>>>> step_time: 0.11035561561584473, dataloading_time : 0.0006928443908691406,forward_time :0.033052682876586914, backward_time: 0.068878173828125, optim time :0.007730245590209961
+Local>>>>>> step_time: 0.11035346984863281, dataloading_time : 0.0006058216094970703,forward_time :0.03315401077270508, backward_time: 0.06882190704345703, optim time :0.0077702999114990234
+[Rank 0] time (ms) | optimizer_step: 2.84
+[Rank 0] time (ms) | fwd_microstep: 37.30 | bwd_microstep: 63.20 | bwd_inner_microstep: 62.19 | bwd_allreduce_microstep: 0.95 | step_microstep: 8.76
+[Rank 0] time (ms) | fwd: 37.29 | bwd: 63.21 | bwd_inner: 62.21 | bwd_allreduce: 0.95 | step: 8.77
+Local>>>>>> step_time: 0.11139845848083496, dataloading_time : 0.0006158351898193359,forward_time :0.032670021057128906, backward_time: 0.06900787353515625, optim time :0.009103059768676758
+Local>>>>>> step_time: 0.11148619651794434, dataloading_time : 0.0006103515625,forward_time :0.03247785568237305, backward_time: 0.06926751136779785, optim time :0.009128808975219727
+[Rank 0] time (ms) | optimizer_step: 2.63
+[Rank 0] time (ms) | fwd_microstep: 37.50 | bwd_microstep: 62.85 | bwd_inner_microstep: 61.88 | bwd_allreduce_microstep: 0.91 | step_microstep: 7.34
+[Rank 0] time (ms) | fwd: 37.49 | bwd: 62.86 | bwd_inner: 61.90 | bwd_allreduce: 0.91 | step: 7.34
+Local>>>>>> step_time: 0.11028599739074707, dataloading_time : 0.0006704330444335938,forward_time :0.0326685905456543, backward_time: 0.06892752647399902, optim time :0.008017778396606445
+Local>>>>>> step_time: 0.11031508445739746, dataloading_time : 0.0007345676422119141,forward_time :0.03253912925720215, backward_time: 0.06901931762695312, optim time :0.008020639419555664
+[Rank 0] time (ms) | optimizer_step: 2.95
+[Rank 0] time (ms) | fwd_microstep: 43.83 | bwd_microstep: 78.95 | bwd_inner_microstep: 78.23 | bwd_allreduce_microstep: 0.65 | step_microstep: 9.05
+[Rank 0] time (ms) | fwd: 43.82 | bwd: 78.95 | bwd_inner: 78.25 | bwd_allreduce: 0.63 | step: 9.05
+Local>>>>>> step_time: 0.13411760330200195, dataloading_time : 0.0006804466247558594,forward_time :0.03902125358581543, backward_time: 0.08500361442565918, optim time :0.009410619735717773
+Local>>>>>> step_time: 0.13421416282653809, dataloading_time : 0.000701904296875,forward_time :0.038957834243774414, backward_time: 0.08503293991088867, optim time :0.00952005386352539
+[Rank 0] Step 10: loss=3.2188, time=0.134s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 10: loss=3.2031, time=0.134s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.94
+[Rank 0] time (ms) | fwd_microstep: 43.93 | bwd_microstep: 78.98 | bwd_inner_microstep: 78.21 | bwd_allreduce_microstep: 0.72 | step_microstep: 10.31
+[Rank 0] time (ms) | fwd: 43.92 | bwd: 78.99 | bwd_inner: 78.22 | bwd_allreduce: 0.72 | step: 10.32
+Local>>>>>> step_time: 0.13547682762145996, dataloading_time : 0.0006499290466308594,forward_time :0.03910183906555176, backward_time: 0.08504748344421387, optim time :0.010676383972167969
+Local>>>>>> step_time: 0.13537120819091797, dataloading_time : 0.0007529258728027344,forward_time :0.03881716728210449, backward_time: 0.0850989818572998, optim time :0.01070094108581543
+[Rank 0] time (ms) | optimizer_step: 2.88
+[Rank 0] time (ms) | fwd_microstep: 43.85 | bwd_microstep: 79.54 | bwd_inner_microstep: 78.80 | bwd_allreduce_microstep: 0.68 | step_microstep: 9.01
+[Rank 0] time (ms) | fwd: 43.84 | bwd: 79.55 | bwd_inner: 78.82 | bwd_allreduce: 0.69 | step: 9.01
+Local>>>>>> step_time: 0.1346144676208496, dataloading_time : 0.0006103515625,forward_time :0.03904461860656738, backward_time: 0.0855875015258789, optim time :0.009370803833007812
+Local>>>>>> step_time: 0.13458776473999023, dataloading_time : 0.0006101131439208984,forward_time :0.03873562812805176, backward_time: 0.0858612060546875, optim time :0.009380102157592773
+[Rank 0] time (ms) | optimizer_step: 2.92
+[Rank 0] time (ms) | fwd_microstep: 45.26 | bwd_microstep: 81.03 | bwd_inner_microstep: 79.02 | bwd_allreduce_microstep: 1.94 | step_microstep: 9.00
+[Rank 0] time (ms) | fwd: 45.26 | bwd: 81.04 | bwd_inner: 79.04 | bwd_allreduce: 1.95 | step: 9.00
+Local>>>>>> step_time: 0.13791298866271973, dataloading_time : 0.0010111331939697266,forward_time :0.040497779846191406, backward_time: 0.08704876899719238, optim time :0.009354352951049805
+Local>>>>>> step_time: 0.13800954818725586, dataloading_time : 0.0006897449493408203,forward_time :0.04042673110961914, backward_time: 0.08743143081665039, optim time :0.009460687637329102
+[Rank 0] time (ms) | optimizer_step: 2.91
+[Rank 0] time (ms) | fwd_microstep: 43.80 | bwd_microstep: 80.86 | bwd_inner_microstep: 80.13 | bwd_allreduce_microstep: 0.68 | step_microstep: 9.02
+[Rank 0] time (ms) | fwd: 43.79 | bwd: 80.87 | bwd_inner: 80.15 | bwd_allreduce: 0.60 | step: 9.02
+Local>>>>>> step_time: 0.13634419441223145, dataloading_time : 0.0010406970977783203,forward_time :0.03902721405029297, backward_time: 0.08688783645629883, optim time :0.009387731552124023
+Local>>>>>> step_time: 0.1363210678100586, dataloading_time : 0.0010492801666259766,forward_time :0.03913712501525879, backward_time: 0.08666229248046875, optim time :0.009470462799072266
+[Rank 0] time (ms) | optimizer_step: 2.94
+[Rank 0] time (ms) | fwd_microstep: 44.21 | bwd_microstep: 80.86 | bwd_inner_microstep: 80.17 | bwd_allreduce_microstep: 0.61 | step_microstep: 9.06
+[Rank 0] time (ms) | fwd: 44.20 | bwd: 80.87 | bwd_inner: 80.21 | bwd_allreduce: 0.61 | step: 9.06
+Local>>>>>> step_time: 1.772197961807251, dataloading_time : 0.0010290145874023438,forward_time :0.039415836334228516, backward_time: 0.08690357208251953, optim time :1.6448473930358887
+[Rank 0] Step 15: loss=2.7812, time=1.772s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+Local>>>>>> step_time: 1.775139570236206, dataloading_time : 0.0011832714080810547,forward_time :0.039142608642578125, backward_time: 0.08692741394042969, optim time :1.6478843688964844
+[Rank 1] Step 15: loss=2.3750, time=1.775s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 38.70 | bwd_microstep: 62.62 | bwd_inner_microstep: 60.48 | bwd_allreduce_microstep: 2.08 | step_microstep: 6.98
+[Rank 0] time (ms) | fwd: 38.69 | bwd: 62.63 | bwd_inner: 60.50 | bwd_allreduce: 2.08 | step: 6.98
+Local>>>>>> step_time: 0.11101984977722168, dataloading_time : 0.001085519790649414,forward_time :0.0342099666595459, backward_time: 0.06841540336608887, optim time :0.0073070526123046875
+Local>>>>>> step_time: 0.10813665390014648, dataloading_time : 0.0008649826049804688,forward_time :0.03341841697692871, backward_time: 0.06643247604370117, optim time :0.0074193477630615234
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.19 | bwd_microstep: 59.78 | bwd_inner_microstep: 59.15 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.18 | bwd: 59.78 | bwd_inner: 59.17 | bwd_allreduce: 0.57 | step: 6.84
+Local>>>>>> step_time: 0.1054995059967041, dataloading_time : 0.0011200904846191406,forward_time :0.031358957290649414, backward_time: 0.06584453582763672, optim time :0.007174491882324219
+Local>>>>>> step_time: 0.10542607307434082, dataloading_time : 0.001026153564453125,forward_time :0.031314849853515625, backward_time: 0.06588101387023926, optim time :0.007202863693237305
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.07 | bwd_microstep: 59.55 | bwd_inner_microstep: 58.92 | bwd_allreduce_microstep: 0.56 | step_microstep: 6.89
+[Rank 0] time (ms) | fwd: 36.07 | bwd: 59.55 | bwd_inner: 58.94 | bwd_allreduce: 0.56 | step: 6.89
+Local>>>>>> step_time: 0.10505008697509766, dataloading_time : 0.0009758472442626953,forward_time :0.03127264976501465, backward_time: 0.06558489799499512, optim time :0.007215261459350586
+Local>>>>>> step_time: 0.10511898994445801, dataloading_time : 0.00060272216796875,forward_time :0.031049489974975586, backward_time: 0.06613707542419434, optim time :0.0073282718658447266
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.33 | bwd_microstep: 59.78 | bwd_inner_microstep: 58.96 | bwd_allreduce_microstep: 0.76 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.32 | bwd: 59.79 | bwd_inner: 58.98 | bwd_allreduce: 0.76 | step: 6.83
+Local>>>>>> step_time: 0.10548162460327148, dataloading_time : 0.0009799003601074219,forward_time :0.03144502639770508, backward_time: 0.06589698791503906, optim time :0.0071582794189453125
+Local>>>>>> step_time: 0.10540461540222168, dataloading_time : 0.0011708736419677734,forward_time :0.0313413143157959, backward_time: 0.06567788124084473, optim time :0.007213592529296875
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 35.92 | bwd_microstep: 59.57 | bwd_inner_microstep: 58.96 | bwd_allreduce_microstep: 0.56 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 35.92 | bwd: 59.57 | bwd_inner: 58.97 | bwd_allreduce: 0.56 | step: 6.83
+Local>>>>>> step_time: 0.10479211807250977, dataloading_time : 0.0009076595306396484,forward_time :0.03113555908203125, backward_time: 0.0655972957611084, optim time :0.007150411605834961
+Local>>>>>> step_time: 0.10480165481567383, dataloading_time : 0.0006089210510253906,forward_time :0.031017065048217773, backward_time: 0.0659797191619873, optim time :0.007194995880126953
+[Rank 0] Step 20: loss=2.0781, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 20: loss=2.8438, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.14 | bwd_microstep: 59.50 | bwd_inner_microstep: 58.89 | bwd_allreduce_microstep: 0.55 | step_microstep: 6.88
+[Rank 0] time (ms) | fwd: 36.13 | bwd: 59.50 | bwd_inner: 58.90 | bwd_allreduce: 0.55 | step: 6.88
+Local>>>>>> step_time: 0.10532307624816895, dataloading_time : 0.0012364387512207031,forward_time :0.03129172325134277, backward_time: 0.06558585166931152, optim time :0.0072078704833984375
+Local>>>>>> step_time: 0.10528421401977539, dataloading_time : 0.0010120868682861328,forward_time :0.031110525131225586, backward_time: 0.06593775749206543, optim time :0.007222414016723633
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.16 | bwd_microstep: 59.40 | bwd_inner_microstep: 58.70 | bwd_allreduce_microstep: 0.65 | step_microstep: 7.86
+[Rank 0] time (ms) | fwd: 36.15 | bwd: 59.40 | bwd_inner: 58.71 | bwd_allreduce: 0.65 | step: 7.86
+Local>>>>>> step_time: 0.10565304756164551, dataloading_time : 0.0006833076477050781,forward_time :0.03133845329284668, backward_time: 0.0654439926147461, optim time :0.008185863494873047
+Local>>>>>> step_time: 0.10573792457580566, dataloading_time : 0.0005784034729003906,forward_time :0.031104326248168945, backward_time: 0.06566548347473145, optim time :0.008388757705688477
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.03 | bwd_microstep: 59.53 | bwd_inner_microstep: 58.89 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.80
+[Rank 0] time (ms) | fwd: 36.02 | bwd: 59.54 | bwd_inner: 58.91 | bwd_allreduce: 0.57 | step: 6.80
+Local>>>>>> step_time: 0.1053001880645752, dataloading_time : 0.001379251480102539,forward_time :0.031198740005493164, backward_time: 0.06560277938842773, optim time :0.007117748260498047
+Local>>>>>> step_time: 0.10529541969299316, dataloading_time : 0.0010161399841308594,forward_time :0.03128361701965332, backward_time: 0.06578898429870605, optim time :0.007205009460449219
+[Rank 0] time (ms) | optimizer_step: 2.55
+[Rank 0] time (ms) | fwd_microstep: 36.04 | bwd_microstep: 59.57 | bwd_inner_microstep: 58.57 | bwd_allreduce_microstep: 0.94 | step_microstep: 6.78
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 59.58 | bwd_inner: 58.59 | bwd_allreduce: 0.95 | step: 6.79
+Local>>>>>> step_time: 0.10487604141235352, dataloading_time : 0.0009088516235351562,forward_time :0.031244277954101562, backward_time: 0.06561279296875, optim time :0.007109165191650391
+Local>>>>>> step_time: 0.10483121871948242, dataloading_time : 0.0010454654693603516,forward_time :0.031016111373901367, backward_time: 0.06559085845947266, optim time :0.007177114486694336
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.29 | bwd_microstep: 59.41 | bwd_inner_microstep: 58.77 | bwd_allreduce_microstep: 0.56 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.29 | bwd: 59.42 | bwd_inner: 58.80 | bwd_allreduce: 0.56 | step: 6.81
+Local>>>>>> step_time: 0.10521459579467773, dataloading_time : 0.0011506080627441406,forward_time :0.03145480155944824, backward_time: 0.06548166275024414, optim time :0.007126331329345703
+Local>>>>>> step_time: 0.10519814491271973, dataloading_time : 0.0009920597076416016,forward_time :0.03129935264587402, backward_time: 0.0657191276550293, optim time :0.007185935974121094
+[Rank 0] Step 25: loss=1.2422, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 25: loss=1.7422, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.62
+[Rank 0] time (ms) | fwd_microstep: 35.92 | bwd_microstep: 59.51 | bwd_inner_microstep: 58.71 | bwd_allreduce_microstep: 0.75 | step_microstep: 6.86
+[Rank 0] time (ms) | fwd: 35.91 | bwd: 59.52 | bwd_inner: 58.73 | bwd_allreduce: 0.75 | step: 6.86
+Local>>>>>> step_time: 0.10495758056640625, dataloading_time : 0.0011012554168701172,forward_time :0.031136035919189453, backward_time: 0.0655374526977539, optim time :0.007181406021118164
+Local>>>>>> step_time: 0.10490036010742188, dataloading_time : 0.0011746883392333984,forward_time :0.031136035919189453, backward_time: 0.06538915634155273, optim time :0.007199525833129883
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.05 | bwd_microstep: 63.13 | bwd_inner_microstep: 62.53 | bwd_allreduce_microstep: 0.55 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 63.13 | bwd_inner: 62.54 | bwd_allreduce: 0.55 | step: 6.84
+Local>>>>>> step_time: 0.10853886604309082, dataloading_time : 0.0009591579437255859,forward_time :0.031219005584716797, backward_time: 0.06920003890991211, optim time :0.00715947151184082
+Local>>>>>> step_time: 0.10863995552062988, dataloading_time : 0.0008769035339355469,forward_time :0.03118276596069336, backward_time: 0.06932210922241211, optim time :0.007256984710693359
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.31 | bwd_microstep: 59.48 | bwd_inner_microstep: 58.82 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.30 | bwd: 59.48 | bwd_inner: 58.84 | bwd_allreduce: 0.61 | step: 6.84
+Local>>>>>> step_time: 0.10529923439025879, dataloading_time : 0.001104116439819336,forward_time :0.031491994857788086, backward_time: 0.06553769111633301, optim time :0.007164478302001953
+Local>>>>>> step_time: 0.10521841049194336, dataloading_time : 0.0008456707000732422,forward_time :0.031211137771606445, backward_time: 0.06601548194885254, optim time :0.007144927978515625
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.13 | bwd_microstep: 59.34 | bwd_inner_microstep: 58.72 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.88
+[Rank 0] time (ms) | fwd: 36.12 | bwd: 59.35 | bwd_inner: 58.73 | bwd_allreduce: 0.57 | step: 6.89
+Local>>>>>> step_time: 0.10503268241882324, dataloading_time : 0.0011105537414550781,forward_time :0.031323909759521484, backward_time: 0.06538558006286621, optim time :0.007211446762084961
+Local>>>>>> step_time: 0.10505867004394531, dataloading_time : 0.0009467601776123047,forward_time :0.03121495246887207, backward_time: 0.06570267677307129, optim time :0.007193088531494141
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 35.99 | bwd_microstep: 59.67 | bwd_inner_microstep: 58.73 | bwd_allreduce_microstep: 0.88 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 35.98 | bwd: 59.67 | bwd_inner: 58.74 | bwd_allreduce: 0.88 | step: 6.82
+Local>>>>>> step_time: 0.10476565361022949, dataloading_time : 0.0007307529449462891,forward_time :0.031176328659057617, backward_time: 0.06570959091186523, optim time :0.007147789001464844
+Local>>>>>> step_time: 0.1046912670135498, dataloading_time : 0.0008683204650878906,forward_time :0.03120279312133789, backward_time: 0.0654439926147461, optim time :0.00717473030090332
+[Rank 0] Step 30: loss=1.6016, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 30: loss=1.6250, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.31 | bwd_microstep: 59.37 | bwd_inner_microstep: 58.61 | bwd_allreduce_microstep: 0.70 | step_microstep: 6.77
+[Rank 0] time (ms) | fwd: 36.30 | bwd: 59.38 | bwd_inner: 58.63 | bwd_allreduce: 0.70 | step: 6.77
+Local>>>>>> step_time: 0.10493922233581543, dataloading_time : 0.0009124279022216797,forward_time :0.03149008750915527, backward_time: 0.0654306411743164, optim time :0.0071048736572265625
+Local>>>>>> step_time: 0.1049811840057373, dataloading_time : 0.0009746551513671875,forward_time :0.0313870906829834, backward_time: 0.06542205810546875, optim time :0.007195711135864258
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.05 | bwd_microstep: 59.17 | bwd_inner_microstep: 58.49 | bwd_allreduce_microstep: 0.62 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 36.05 | bwd: 59.18 | bwd_inner: 58.50 | bwd_allreduce: 0.62 | step: 6.85
+Local>>>>>> step_time: 0.1044771671295166, dataloading_time : 0.0006465911865234375,forward_time :0.031067848205566406, backward_time: 0.0655827522277832, optim time :0.007178306579589844
+Local>>>>>> step_time: 0.10459375381469727, dataloading_time : 0.0009434223175048828,forward_time :0.031229734420776367, backward_time: 0.06523823738098145, optim time :0.0071811676025390625
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 35.87 | bwd_microstep: 59.50 | bwd_inner_microstep: 58.79 | bwd_allreduce_microstep: 0.67 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 35.87 | bwd: 59.51 | bwd_inner: 58.80 | bwd_allreduce: 0.67 | step: 6.81
+Local>>>>>> step_time: 0.10455322265625, dataloading_time : 0.0008127689361572266,forward_time :0.031052112579345703, backward_time: 0.06555962562561035, optim time :0.007128000259399414
+Local>>>>>> step_time: 0.10462498664855957, dataloading_time : 0.0009417533874511719,forward_time :0.031177520751953125, backward_time: 0.06531023979187012, optim time :0.0071942806243896484
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.23 | bwd_microstep: 59.37 | bwd_inner_microstep: 58.67 | bwd_allreduce_microstep: 0.65 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.22 | bwd: 59.37 | bwd_inner: 58.68 | bwd_allreduce: 0.65 | step: 6.84
+Local>>>>>> step_time: 0.10518765449523926, dataloading_time : 0.0009520053863525391,forward_time :0.031308650970458984, backward_time: 0.06577181816101074, optim time :0.007153749465942383
+Local>>>>>> step_time: 0.1052541732788086, dataloading_time : 0.0012445449829101562,forward_time :0.03141283988952637, backward_time: 0.06541776657104492, optim time :0.007178544998168945
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.10 | bwd_microstep: 59.23 | bwd_inner_microstep: 58.50 | bwd_allreduce_microstep: 0.65 | step_microstep: 6.89
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 59.23 | bwd_inner: 58.54 | bwd_allreduce: 0.65 | step: 6.89
+Local>>>>>> step_time: 0.10470175743103027, dataloading_time : 0.0008690357208251953,forward_time :0.031184911727905273, backward_time: 0.06538248062133789, optim time :0.007263898849487305
+Local>>>>>> step_time: 0.10473227500915527, dataloading_time : 0.0009601116180419922,forward_time :0.031286001205444336, backward_time: 0.06527304649353027, optim time :0.0072116851806640625
+[Rank 1] Step 35: loss=1.5859, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 35: loss=1.2109, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.10 | bwd_microstep: 59.45 | bwd_inner_microstep: 58.74 | bwd_allreduce_microstep: 0.66 | step_microstep: 6.78
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 59.45 | bwd_inner: 58.75 | bwd_allreduce: 0.66 | step: 6.78
+Local>>>>>> step_time: 0.10486030578613281, dataloading_time : 0.0008959770202636719,forward_time :0.03125596046447754, backward_time: 0.06555604934692383, optim time :0.007151126861572266
+Local>>>>>> step_time: 0.10487151145935059, dataloading_time : 0.000965118408203125,forward_time :0.03128933906555176, backward_time: 0.06549978256225586, optim time :0.007115602493286133
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 35.94 | bwd_microstep: 59.58 | bwd_inner_microstep: 58.78 | bwd_allreduce_microstep: 0.73 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 35.94 | bwd: 59.59 | bwd_inner: 58.80 | bwd_allreduce: 0.72 | step: 6.86
+Local>>>>>> step_time: 0.10467028617858887, dataloading_time : 0.0007293224334716797,forward_time :0.03111743927001953, backward_time: 0.06563615798950195, optim time :0.007186412811279297
+Local>>>>>> step_time: 0.10472536087036133, dataloading_time : 0.0009467601776123047,forward_time :0.031374216079711914, backward_time: 0.06520915031433105, optim time :0.0071942806243896484
+[Rank 0] time (ms) | optimizer_step: 2.55
+[Rank 0] time (ms) | fwd_microstep: 35.92 | bwd_microstep: 59.35 | bwd_inner_microstep: 58.61 | bwd_allreduce_microstep: 0.68 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 35.91 | bwd: 59.35 | bwd_inner: 58.62 | bwd_allreduce: 0.69 | step: 6.82
+Local>>>>>> step_time: 0.10433363914489746, dataloading_time : 0.0006093978881835938,forward_time :0.03109574317932129, backward_time: 0.06538653373718262, optim time :0.007241010665893555
+Local>>>>>> step_time: 0.10436797142028809, dataloading_time : 0.0007092952728271484,forward_time :0.03109002113342285, backward_time: 0.06541156768798828, optim time :0.007155179977416992
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.02 | bwd_microstep: 59.47 | bwd_inner_microstep: 58.83 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 36.01 | bwd: 59.47 | bwd_inner: 58.84 | bwd_allreduce: 0.56 | step: 6.85
+Local>>>>>> step_time: 0.10463976860046387, dataloading_time : 0.0007443428039550781,forward_time :0.031189680099487305, backward_time: 0.06552290916442871, optim time :0.007181406021118164
+Local>>>>>> step_time: 0.10474085807800293, dataloading_time : 0.0006515979766845703,forward_time :0.03117513656616211, backward_time: 0.06572723388671875, optim time :0.007186174392700195
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.09 | bwd_microstep: 59.44 | bwd_inner_microstep: 58.42 | bwd_allreduce_microstep: 0.97 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.08 | bwd: 59.44 | bwd_inner: 58.43 | bwd_allreduce: 0.97 | step: 6.82
+Local>>>>>> step_time: 0.10464978218078613, dataloading_time : 0.0007555484771728516,forward_time :0.03126263618469238, backward_time: 0.06548595428466797, optim time :0.007143974304199219
+Local>>>>>> step_time: 0.10463309288024902, dataloading_time : 0.0009038448333740234,forward_time :0.0312044620513916, backward_time: 0.06531691551208496, optim time :0.007206439971923828
+[Rank 0] Step 40: loss=1.3594, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 40: loss=1.1641, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.05 | bwd_microstep: 59.46 | bwd_inner_microstep: 58.77 | bwd_allreduce_microstep: 0.63 | step_microstep: 6.86
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 59.46 | bwd_inner: 58.78 | bwd_allreduce: 0.63 | step: 6.86
+Local>>>>>> step_time: 0.10493326187133789, dataloading_time : 0.0010035037994384766,forward_time :0.03122997283935547, backward_time: 0.06551289558410645, optim time :0.007185935974121094
+Local>>>>>> step_time: 0.10482430458068848, dataloading_time : 0.0007498264312744141,forward_time :0.031316518783569336, backward_time: 0.06556320190429688, optim time :0.007193565368652344
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.10 | bwd_microstep: 59.42 | bwd_inner_microstep: 58.77 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.78
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 59.43 | bwd_inner: 58.79 | bwd_allreduce: 0.59 | step: 6.79
+Local>>>>>> step_time: 0.10458064079284668, dataloading_time : 0.0007245540618896484,forward_time :0.03127241134643555, backward_time: 0.06547141075134277, optim time :0.007110595703125
+Local>>>>>> step_time: 0.10462784767150879, dataloading_time : 0.0005757808685302734,forward_time :0.03106236457824707, backward_time: 0.06581854820251465, optim time :0.007169961929321289
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.27 | bwd_microstep: 63.46 | bwd_inner_microstep: 58.73 | bwd_allreduce_microstep: 4.68 | step_microstep: 6.84
+Local>>>>>> step_time: 0.10869717597961426, dataloading_time : 0.0010311603546142578,forward_time :0.03141140937805176, backward_time: 0.06904983520507812, optim time :0.007203817367553711
+[Rank 0] time (ms) | fwd: 36.26 | bwd: 63.47 | bwd_inner: 58.75 | bwd_allreduce: 4.68 | step: 6.84
+Local>>>>>> step_time: 0.10883736610412598, dataloading_time : 0.0006906986236572266,forward_time :0.03147482872009277, backward_time: 0.06949210166931152, optim time :0.007178306579589844
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.02 | bwd_microstep: 62.42 | bwd_inner_microstep: 61.79 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.86
+[Rank 0] time (ms) | fwd: 36.01 | bwd: 62.42 | bwd_inner: 61.80 | bwd_allreduce: 0.57 | step: 6.86
+Local>>>>>> step_time: 0.10786151885986328, dataloading_time : 0.000988006591796875,forward_time :0.031200408935546875, backward_time: 0.0684659481048584, optim time :0.0072057247161865234
+Local>>>>>> step_time: 0.10798525810241699, dataloading_time : 0.0009605884552001953,forward_time :0.031163692474365234, backward_time: 0.06858563423156738, optim time :0.00727391242980957
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.07 | bwd_microstep: 59.02 | bwd_inner_microstep: 58.39 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.79
+[Rank 0] time (ms) | fwd: 36.07 | bwd: 59.03 | bwd_inner: 58.40 | bwd_allreduce: 0.57 | step: 6.79
+Local>>>>>> step_time: 0.10467982292175293, dataloading_time : 0.0012450218200683594,forward_time :0.0312504768371582, backward_time: 0.0650782585144043, optim time :0.007105112075805664
+Local>>>>>> step_time: 0.10463714599609375, dataloading_time : 0.0010268688201904297,forward_time :0.03109574317932129, backward_time: 0.06537866592407227, optim time :0.007135152816772461
+[Rank 0] Step 45: loss=1.8438, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 45: loss=1.2188, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.27 | bwd_microstep: 59.78 | bwd_inner_microstep: 58.73 | bwd_allreduce_microstep: 1.00 | step_microstep: 6.79
+[Rank 0] time (ms) | fwd: 36.27 | bwd: 59.79 | bwd_inner: 58.75 | bwd_allreduce: 1.00 | step: 6.79
+Local>>>>>> step_time: 0.10497164726257324, dataloading_time : 0.0009009838104248047,forward_time :0.03144693374633789, backward_time: 0.06543374061584473, optim time :0.007189035415649414
+Local>>>>>> step_time: 0.10500764846801758, dataloading_time : 0.0006077289581298828,forward_time :0.03145194053649902, backward_time: 0.06582903861999512, optim time :0.007117271423339844
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.05 | bwd_microstep: 59.23 | bwd_inner_microstep: 58.55 | bwd_allreduce_microstep: 0.63 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.05 | bwd: 59.23 | bwd_inner: 58.56 | bwd_allreduce: 0.63 | step: 6.82
+Local>>>>>> step_time: 0.10464882850646973, dataloading_time : 0.0009613037109375,forward_time :0.03126263618469238, backward_time: 0.06526350975036621, optim time :0.007159709930419922
+Local>>>>>> step_time: 0.10467767715454102, dataloading_time : 0.0008771419525146484,forward_time :0.03115367889404297, backward_time: 0.06545424461364746, optim time :0.007191658020019531
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.03 | bwd_microstep: 59.56 | bwd_inner_microstep: 58.84 | bwd_allreduce_microstep: 0.66 | step_microstep: 6.79
+[Rank 0] time (ms) | fwd: 36.02 | bwd: 59.56 | bwd_inner: 58.86 | bwd_allreduce: 0.66 | step: 6.80
+Local>>>>>> step_time: 0.10484075546264648, dataloading_time : 0.0009007453918457031,forward_time :0.031218290328979492, backward_time: 0.06559872627258301, optim time :0.007121086120605469
+Local>>>>>> step_time: 0.10482120513916016, dataloading_time : 0.0006153583526611328,forward_time :0.030968427658081055, backward_time: 0.06600403785705566, optim time :0.007232189178466797
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.24 | bwd_microstep: 59.20 | bwd_inner_microstep: 58.45 | bwd_allreduce_microstep: 0.70 | step_microstep: 6.79
+[Rank 0] time (ms) | fwd: 36.24 | bwd: 59.21 | bwd_inner: 58.46 | bwd_allreduce: 0.69 | step: 6.79
+Local>>>>>> step_time: 0.1046912670135498, dataloading_time : 0.0008943080902099609,forward_time :0.031404972076416016, backward_time: 0.06527328491210938, optim time :0.007117509841918945
+Local>>>>>> step_time: 0.10468697547912598, dataloading_time : 0.0009062290191650391,forward_time :0.03131866455078125, backward_time: 0.06532549858093262, optim time :0.007135868072509766
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.00 | bwd_microstep: 59.43 | bwd_inner_microstep: 58.69 | bwd_allreduce_microstep: 0.68 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 35.99 | bwd: 59.43 | bwd_inner: 58.71 | bwd_allreduce: 0.68 | step: 6.81
+Local>>>>>> step_time: 0.10470032691955566, dataloading_time : 0.0008821487426757812,forward_time :0.031107664108276367, backward_time: 0.0655367374420166, optim time :0.007172822952270508
+Local>>>>>> step_time: 0.10476899147033691, dataloading_time : 0.0009739398956298828,forward_time :0.031201601028442383, backward_time: 0.0654597282409668, optim time :0.007132530212402344
+[Rank 1] Step 50: loss=2.1562, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 50: loss=1.1328, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.62
+[Rank 0] time (ms) | fwd_microstep: 35.94 | bwd_microstep: 59.65 | bwd_inner_microstep: 58.78 | bwd_allreduce_microstep: 0.81 | step_microstep: 6.90
+[Rank 0] time (ms) | fwd: 35.93 | bwd: 59.66 | bwd_inner: 58.80 | bwd_allreduce: 0.81 | step: 6.91
+Local>>>>>> step_time: 0.10479021072387695, dataloading_time : 0.0007305145263671875,forward_time :0.03113245964050293, backward_time: 0.06569337844848633, optim time :0.007232189178466797
+Local>>>>>> step_time: 0.10485672950744629, dataloading_time : 0.000926971435546875,forward_time :0.0313570499420166, backward_time: 0.06530261039733887, optim time :0.007268667221069336
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.12 | bwd_microstep: 59.77 | bwd_inner_microstep: 58.60 | bwd_allreduce_microstep: 1.12 | step_microstep: 6.83
+Local>>>>>> step_time: 0.10477972030639648, dataloading_time : 0.0009160041809082031,forward_time :0.03134489059448242, backward_time: 0.06533932685852051, optim time :0.007178306579589844[Rank 0] time (ms) | fwd: 36.11 | bwd: 59.77 | bwd_inner: 58.61 | bwd_allreduce: 1.12 | step: 6.83
+
+Local>>>>>> step_time: 0.10487127304077148, dataloading_time : 0.0006012916564941406,forward_time :0.031293392181396484, backward_time: 0.06581759452819824, optim time :0.007157564163208008
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.13 | bwd_microstep: 59.49 | bwd_inner_microstep: 58.87 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.77
+[Rank 0] time (ms) | fwd: 36.13 | bwd: 59.50 | bwd_inner: 58.89 | bwd_allreduce: 0.57 | step: 6.77
+Local>>>>>> step_time: 0.10494112968444824, dataloading_time : 0.0009846687316894531,forward_time :0.031327009201049805, backward_time: 0.06553792953491211, optim time :0.007090091705322266
+Local>>>>>> step_time: 0.10508513450622559, dataloading_time : 0.0008730888366699219,forward_time :0.031189918518066406, backward_time: 0.06581759452819824, optim time :0.007203817367553711
+[Rank 0] time (ms) | optimizer_step: 2.61
+[Rank 0] time (ms) | fwd_microstep: 36.04 | bwd_microstep: 59.25 | bwd_inner_microstep: 58.61 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 59.26 | bwd_inner: 58.63 | bwd_allreduce: 0.59 | step: 6.82
+Local>>>>>> step_time: 0.10474205017089844, dataloading_time : 0.0010662078857421875,forward_time :0.0312497615814209, backward_time: 0.06528472900390625, optim time :0.007140159606933594
+Local>>>>>> step_time: 0.10465192794799805, dataloading_time : 0.0008459091186523438,forward_time :0.031063079833984375, backward_time: 0.06558942794799805, optim time :0.007151603698730469
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.41 | bwd_microstep: 59.43 | bwd_inner_microstep: 58.67 | bwd_allreduce_microstep: 0.71 | step_microstep: 9.01
+[Rank 0] time (ms) | fwd: 36.40 | bwd: 59.44 | bwd_inner: 58.69 | bwd_allreduce: 0.71 | step: 9.01
+Local>>>>>> step_time: 0.10711097717285156, dataloading_time : 0.0007140636444091797,forward_time :0.031581878662109375, backward_time: 0.06548619270324707, optim time :0.009327411651611328
+Local>>>>>> step_time: 0.1072225570678711, dataloading_time : 0.001009225845336914,forward_time :0.031389474868774414, backward_time: 0.06544876098632812, optim time :0.009373903274536133
+[Rank 0] Step 55: loss=0.9570, time=0.107s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 55: loss=1.7031, time=0.107s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.10 | bwd_microstep: 60.02 | bwd_inner_microstep: 58.58 | bwd_allreduce_microstep: 1.39 | step_microstep: 6.80
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 60.03 | bwd_inner: 58.60 | bwd_allreduce: 1.38 | step: 6.80
+Local>>>>>> step_time: 0.10517120361328125, dataloading_time : 0.0009071826934814453,forward_time :0.03130316734313965, backward_time: 0.0657951831817627, optim time :0.007164478302001953
+Local>>>>>> step_time: 0.10537528991699219, dataloading_time : 0.0008873939514160156,forward_time :0.03129386901855469, backward_time: 0.06606602668762207, optim time :0.007126808166503906
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.04 | bwd_microstep: 59.30 | bwd_inner_microstep: 58.65 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.86
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 59.31 | bwd_inner: 58.67 | bwd_allreduce: 0.59 | step: 6.86
+Local>>>>>> step_time: 0.10476970672607422, dataloading_time : 0.0009937286376953125,forward_time :0.031193971633911133, backward_time: 0.06539201736450195, optim time :0.0071887969970703125
+Local>>>>>> step_time: 0.10480117797851562, dataloading_time : 0.0007147789001464844,forward_time :0.031125545501708984, backward_time: 0.06575202941894531, optim time :0.0072078704833984375
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.12 | bwd_microstep: 59.49 | bwd_inner_microstep: 58.55 | bwd_allreduce_microstep: 0.88 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 36.11 | bwd: 59.50 | bwd_inner: 58.57 | bwd_allreduce: 0.89 | step: 6.85
+Local>>>>>> step_time: 0.10475707054138184, dataloading_time : 0.0007312297821044922,forward_time :0.0312955379486084, backward_time: 0.06554365158081055, optim time :0.007185459136962891
+Local>>>>>> step_time: 0.10482454299926758, dataloading_time : 0.0009236335754394531,forward_time :0.03130650520324707, backward_time: 0.06532716751098633, optim time :0.00726628303527832
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.00 | bwd_microstep: 59.36 | bwd_inner_microstep: 58.76 | bwd_allreduce_microstep: 0.54 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 35.99 | bwd: 59.36 | bwd_inner: 58.78 | bwd_allreduce: 0.54 | step: 6.83
+Local>>>>>> step_time: 0.10441970825195312, dataloading_time : 0.0006811618804931641,forward_time :0.031180858612060547, backward_time: 0.06540274620056152, optim time :0.007153749465942383
+Local>>>>>> step_time: 0.10437703132629395, dataloading_time : 0.0008821487426757812,forward_time :0.03109002113342285, backward_time: 0.06522941589355469, optim time :0.007174491882324219
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.81 | bwd_microstep: 59.93 | bwd_inner_microstep: 59.24 | bwd_allreduce_microstep: 0.64 | step_microstep: 6.89
+[Rank 0] time (ms) | fwd: 36.80 | bwd: 59.94 | bwd_inner: 59.25 | bwd_allreduce: 0.65 | step: 6.89
+Local>>>>>> step_time: 0.10581851005554199, dataloading_time : 0.0008428096771240234,forward_time :0.0312502384185791, backward_time: 0.06647348403930664, optim time :0.007250308990478516
+Local>>>>>> step_time: 0.10590982437133789, dataloading_time : 0.0007238388061523438,forward_time :0.03199481964111328, backward_time: 0.06597375869750977, optim time :0.007215976715087891
+[Rank 1] Step 60: loss=1.2578, time=0.106s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 60: loss=1.3984, time=0.106s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.25 | bwd_microstep: 59.63 | bwd_inner_microstep: 59.02 | bwd_allreduce_microstep: 0.55 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.24 | bwd: 59.64 | bwd_inner: 59.04 | bwd_allreduce: 0.55 | step: 6.85
+Local>>>>>> step_time: 0.10529875755310059, dataloading_time : 0.0010178089141845703,forward_time :0.03143787384033203, backward_time: 0.06567859649658203, optim time :0.007163286209106445
+Local>>>>>> step_time: 0.10532450675964355, dataloading_time : 0.0009613037109375,forward_time :0.031235694885253906, backward_time: 0.06595349311828613, optim time :0.007172822952270508
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.01 | bwd_microstep: 59.53 | bwd_inner_microstep: 58.89 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.00 | bwd: 59.53 | bwd_inner: 58.90 | bwd_allreduce: 0.59 | step: 6.84
+Local>>>>>> step_time: 0.10465669631958008, dataloading_time : 0.0007808208465576172,forward_time :0.031004905700683594, backward_time: 0.06571173667907715, optim time :0.007157564163208008
+Local>>>>>> step_time: 0.10469460487365723, dataloading_time : 0.0007686614990234375,forward_time :0.03119683265686035, backward_time: 0.06556844711303711, optim time :0.007159233093261719
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.09 | bwd_microstep: 59.87 | bwd_inner_microstep: 59.24 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.08 | bwd: 59.88 | bwd_inner: 59.25 | bwd_allreduce: 0.58 | step: 6.83
+Local>>>>>> step_time: 0.10519099235534668, dataloading_time : 0.0008411407470703125,forward_time :0.031290292739868164, backward_time: 0.0659029483795166, optim time :0.007155179977416992
+Local>>>>>> step_time: 0.10521173477172852, dataloading_time : 0.0005333423614501953,forward_time :0.03091907501220703, backward_time: 0.0666041374206543, optim time :0.007154226303100586
+[Rank 0] time (ms) | optimizer_step: 2.61
+[Rank 0] time (ms) | fwd_microstep: 36.24 | bwd_microstep: 59.39 | bwd_inner_microstep: 58.75 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.87
+Local>>>>>> step_time: 0.10476279258728027, dataloading_time : 0.0006954669952392578,forward_time :0.031111478805541992, backward_time: 0.06581282615661621, optim time :0.007141590118408203
+[Rank 0] time (ms) | fwd: 36.23 | bwd: 59.40 | bwd_inner: 58.77 | bwd_allreduce: 0.58 | step: 6.87
+Local>>>>>> step_time: 0.10486030578613281, dataloading_time : 0.0008053779602050781,forward_time :0.03142118453979492, backward_time: 0.06543278694152832, optim time :0.007199764251708984
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.09 | bwd_microstep: 59.74 | bwd_inner_microstep: 59.14 | bwd_allreduce_microstep: 0.55 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 59.75 | bwd_inner: 59.15 | bwd_allreduce: 0.55 | step: 6.83
+Local>>>>>> step_time: 0.10519933700561523, dataloading_time : 0.0009741783142089844,forward_time :0.03128194808959961, backward_time: 0.06578874588012695, optim time :0.00715327262878418
+Local>>>>>> step_time: 0.10528159141540527, dataloading_time : 0.0006670951843261719,forward_time :0.030933141708374023, backward_time: 0.06653285026550293, optim time :0.007147789001464844
+[Rank 0] Step 65: loss=1.1406, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 65: loss=1.7188, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.06 | bwd_microstep: 59.30 | bwd_inner_microstep: 58.59 | bwd_allreduce_microstep: 0.66 | step_microstep: 6.82
+Local>>>>>> step_time: 0.10424661636352539, dataloading_time : 0.0006208419799804688,forward_time :0.030928373336791992, backward_time: 0.06553864479064941, optim time :0.007157325744628906
+[Rank 0] time (ms) | fwd: 36.05 | bwd: 59.30 | bwd_inner: 58.60 | bwd_allreduce: 0.66 | step: 6.82
+Local>>>>>> step_time: 0.10434341430664062, dataloading_time : 0.0006163120269775391,forward_time :0.031237363815307617, backward_time: 0.06534719467163086, optim time :0.007140636444091797
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.14 | bwd_microstep: 59.54 | bwd_inner_microstep: 58.90 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.13 | bwd: 59.54 | bwd_inner: 58.92 | bwd_allreduce: 0.58 | step: 6.83
+Local>>>>>> step_time: 0.10496878623962402, dataloading_time : 0.0009238719940185547,forward_time :0.031081199645996094, backward_time: 0.06580615043640137, optim time :0.007155895233154297
+Local>>>>>> step_time: 0.10491704940795898, dataloading_time : 0.0008563995361328125,forward_time :0.03136253356933594, backward_time: 0.06554317474365234, optim time :0.007153749465942383
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 35.99 | bwd_microstep: 59.31 | bwd_inner_microstep: 58.67 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 35.99 | bwd: 59.31 | bwd_inner: 58.69 | bwd_allreduce: 0.58 | step: 6.82
+Local>>>>>> step_time: 0.10480618476867676, dataloading_time : 0.0009982585906982422,forward_time :0.03089427947998047, backward_time: 0.0657658576965332, optim time :0.007146596908569336
+Local>>>>>> step_time: 0.10481405258178711, dataloading_time : 0.0011248588562011719,forward_time :0.03115558624267578, backward_time: 0.06538248062133789, optim time :0.007150173187255859
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.24 | bwd_microstep: 59.54 | bwd_inner_microstep: 58.90 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.23 | bwd: 59.54 | bwd_inner: 58.92 | bwd_allreduce: 0.58 | step: 6.83
+Local>>>>>> step_time: 0.10518956184387207, dataloading_time : 0.0010068416595458984,forward_time :0.03141450881958008, backward_time: 0.06560325622558594, optim time :0.007163286209106445
+Local>>>>>> step_time: 0.10520768165588379, dataloading_time : 0.0007827281951904297,forward_time :0.031017303466796875, backward_time: 0.06623077392578125, optim time :0.0071756839752197266
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.28 | bwd_microstep: 60.36 | bwd_inner_microstep: 59.69 | bwd_allreduce_microstep: 0.61 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.27 | bwd: 60.36 | bwd_inner: 59.71 | bwd_allreduce: 0.61 | step: 6.81
+Local>>>>>> step_time: 0.10598540306091309, dataloading_time : 0.0009872913360595703,forward_time :0.03146719932556152, backward_time: 0.06640148162841797, optim time :0.007128000259399414
+Local>>>>>> step_time: 0.10601496696472168, dataloading_time : 0.0009222030639648438,forward_time :0.031107425689697266, backward_time: 0.06682014465332031, optim time :0.0071642398834228516
+[Rank 0] Step 70: loss=1.7344, time=0.106s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 70: loss=1.1172, time=0.106s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 35.99 | bwd_microstep: 59.45 | bwd_inner_microstep: 58.82 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 35.98 | bwd: 59.45 | bwd_inner: 58.83 | bwd_allreduce: 0.57 | step: 6.85
+Local>>>>>> step_time: 0.1048581600189209, dataloading_time : 0.0010182857513427734,forward_time :0.031168222427368164, backward_time: 0.06549453735351562, optim time :0.007175922393798828
+Local>>>>>> step_time: 0.1048736572265625, dataloading_time : 0.0005891323089599609,forward_time :0.03092646598815918, backward_time: 0.0661168098449707, optim time :0.0072405338287353516
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.16 | bwd_microstep: 59.33 | bwd_inner_microstep: 58.70 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 36.16 | bwd: 59.33 | bwd_inner: 58.71 | bwd_allreduce: 0.58 | step: 6.85
+Local>>>>>> step_time: 0.10473179817199707, dataloading_time : 0.0005819797515869141,forward_time :0.030847549438476562, backward_time: 0.06614804267883301, optim time :0.007152557373046875
+Local>>>>>> step_time: 0.10480976104736328, dataloading_time : 0.0009062290191650391,forward_time :0.03133964538574219, backward_time: 0.06539082527160645, optim time :0.007172346115112305
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.21 | bwd_microstep: 59.66 | bwd_inner_microstep: 59.03 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.20 | bwd: 59.66 | bwd_inner: 59.04 | bwd_allreduce: 0.58 | step: 6.82
+Local>>>>>> step_time: 0.10525059700012207, dataloading_time : 0.0010104179382324219,forward_time :0.0314028263092041, backward_time: 0.06569743156433105, optim time :0.007138490676879883
+Local>>>>>> step_time: 0.1052999496459961, dataloading_time : 0.0009570121765136719,forward_time :0.03115987777709961, backward_time: 0.06601119041442871, optim time :0.007170915603637695
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.12 | bwd_microstep: 59.40 | bwd_inner_microstep: 58.75 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.11 | bwd: 59.40 | bwd_inner: 58.76 | bwd_allreduce: 0.60 | step: 6.81
+Local>>>>>> step_time: 0.10486841201782227, dataloading_time : 0.0009789466857910156,forward_time :0.031294822692871094, backward_time: 0.06545734405517578, optim time :0.007135629653930664
+Local>>>>>> step_time: 0.10484099388122559, dataloading_time : 0.0005877017974853516,forward_time :0.03091144561767578, backward_time: 0.0661778450012207, optim time :0.007162570953369141
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 35.91 | bwd_microstep: 60.05 | bwd_inner_microstep: 58.75 | bwd_allreduce_microstep: 1.24 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 35.90 | bwd: 60.05 | bwd_inner: 58.77 | bwd_allreduce: 1.24 | step: 6.83
+Local>>>>>> step_time: 0.10538768768310547, dataloading_time : 0.0010197162628173828,forward_time :0.03111743927001953, backward_time: 0.06608963012695312, optim time :0.007159233093261719
+Local>>>>>> step_time: 0.10538411140441895, dataloading_time : 0.0011527538299560547,forward_time :0.03086256980895996, backward_time: 0.06616950035095215, optim time :0.0071980953216552734
+[Rank 0] Step 75: loss=2.0625, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 75: loss=1.7891, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.39 | bwd_microstep: 61.05 | bwd_inner_microstep: 60.31 | bwd_allreduce_microstep: 0.67 | step_microstep: 6.85
+Local>>>>>> step_time: 0.10678720474243164, dataloading_time : 0.0008795261383056641,forward_time :0.031172513961791992, backward_time: 0.06757450103759766, optim time :0.00715947151184082
+[Rank 0] time (ms) | fwd: 36.38 | bwd: 61.06 | bwd_inner: 60.34 | bwd_allreduce: 0.68 | step: 6.85
+Local>>>>>> step_time: 0.10691547393798828, dataloading_time : 0.0010590553283691406,forward_time :0.03155636787414551, backward_time: 0.06712508201599121, optim time :0.007173776626586914
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.28 | bwd_microstep: 59.47 | bwd_inner_microstep: 58.84 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.27 | bwd: 59.47 | bwd_inner: 58.85 | bwd_allreduce: 0.58 | step: 6.81
+Local>>>>>> step_time: 0.10514163970947266, dataloading_time : 0.0010118484497070312,forward_time :0.03148603439331055, backward_time: 0.06550812721252441, optim time :0.007134199142456055
+Local>>>>>> step_time: 0.10531878471374512, dataloading_time : 0.0010721683502197266,forward_time :0.03091597557067871, backward_time: 0.06611323356628418, optim time :0.007215738296508789
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.05 | bwd_microstep: 59.36 | bwd_inner_microstep: 58.63 | bwd_allreduce_microstep: 0.66 | step_microstep: 6.81
+Local>>>>>> step_time: 0.10434389114379883, dataloading_time : 0.0008466243743896484,forward_time :0.031017780303955078, backward_time: 0.06534266471862793, optim time :0.007135152816772461
+[Rank 0] time (ms) | fwd: 36.04 | bwd: 59.36 | bwd_inner: 58.66 | bwd_allreduce: 0.66 | step: 6.81
+Local>>>>>> step_time: 0.10449886322021484, dataloading_time : 0.0007345676422119141,forward_time :0.031224727630615234, backward_time: 0.06540679931640625, optim time :0.007131338119506836
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.27 | bwd_microstep: 59.22 | bwd_inner_microstep: 58.60 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 36.26 | bwd: 59.23 | bwd_inner: 58.61 | bwd_allreduce: 0.57 | step: 6.83
+Local>>>>>> step_time: 0.1048426628112793, dataloading_time : 0.0009665489196777344,forward_time :0.031464576721191406, backward_time: 0.06526350975036621, optim time :0.007146358489990234
+Local>>>>>> step_time: 0.10494232177734375, dataloading_time : 0.0011191368103027344,forward_time :0.031061172485351562, backward_time: 0.06558680534362793, optim time :0.007173776626586914
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 35.96 | bwd_microstep: 59.48 | bwd_inner_microstep: 58.82 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.88
+[Rank 0] time (ms) | fwd: 35.96 | bwd: 59.48 | bwd_inner: 58.84 | bwd_allreduce: 0.60 | step: 6.89
+Local>>>>>> step_time: 0.10435843467712402, dataloading_time : 0.0008380413055419922,forward_time :0.03089284896850586, backward_time: 0.06545329093933105, optim time :0.007172822952270508
+Local>>>>>> step_time: 0.10443353652954102, dataloading_time : 0.0005567073822021484,forward_time :0.03114914894104004, backward_time: 0.0655207633972168, optim time :0.007205486297607422
+[Rank 1] Step 80: loss=1.2500, time=0.104s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 80: loss=1.2656, time=0.104s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.09 | bwd_microstep: 59.24 | bwd_inner_microstep: 58.60 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.09 | bwd: 59.24 | bwd_inner: 58.61 | bwd_allreduce: 0.58 | step: 6.81
+Local>>>>>> step_time: 0.10451269149780273, dataloading_time : 0.0009119510650634766,forward_time :0.030984878540039062, backward_time: 0.06548666954040527, optim time :0.007127285003662109
+Local>>>>>> step_time: 0.10448575019836426, dataloading_time : 0.0007970333099365234,forward_time :0.03125190734863281, backward_time: 0.06530404090881348, optim time :0.007132053375244141
+[Rank 0] time (ms) | optimizer_step: 2.56
+[Rank 0] time (ms) | fwd_microstep: 36.20 | bwd_microstep: 59.53 | bwd_inner_microstep: 58.89 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.19 | bwd: 59.54 | bwd_inner: 58.90 | bwd_allreduce: 0.59 | step: 6.83
+Local>>>>>> step_time: 0.10466527938842773, dataloading_time : 0.0005567073822021484,forward_time :0.03136157989501953, backward_time: 0.06559085845947266, optim time :0.007154941558837891
+Local>>>>>> step_time: 0.10467767715454102, dataloading_time : 0.0005719661712646484,forward_time :0.031042814254760742, backward_time: 0.06590437889099121, optim time :0.007157325744628906
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.02 | bwd_microstep: 59.30 | bwd_inner_microstep: 58.68 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.01 | bwd: 59.30 | bwd_inner: 58.70 | bwd_allreduce: 0.55 | step: 6.84
+Local>>>>>> step_time: 0.10498976707458496, dataloading_time : 0.0012750625610351562,forward_time :0.03119945526123047, backward_time: 0.0653541088104248, optim time :0.007160186767578125
+Local>>>>>> step_time: 0.10503578186035156, dataloading_time : 0.0010025501251220703,forward_time :0.03088545799255371, backward_time: 0.0659480094909668, optim time :0.0071980953216552734
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.19 | bwd_microstep: 59.45 | bwd_inner_microstep: 58.83 | bwd_allreduce_microstep: 0.57 | step_microstep: 6.92
+Local>>>>>> step_time: 0.10504746437072754, dataloading_time : 0.0009524822235107422,forward_time :0.030899524688720703, backward_time: 0.0660712718963623, optim time :0.00712275505065918
+[Rank 0] time (ms) | fwd: 36.18 | bwd: 59.45 | bwd_inner: 58.84 | bwd_allreduce: 0.57 | step: 6.92
+Local>>>>>> step_time: 0.10523056983947754, dataloading_time : 0.001116037368774414,forward_time :0.03137779235839844, backward_time: 0.06549310684204102, optim time :0.007242918014526367
+[Rank 0] time (ms) | optimizer_step: 2.60
+[Rank 0] time (ms) | fwd_microstep: 36.28 | bwd_microstep: 59.59 | bwd_inner_microstep: 58.94 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 36.27 | bwd: 59.59 | bwd_inner: 58.95 | bwd_allreduce: 0.59 | step: 6.84
+Local>>>>>> step_time: 0.10530471801757812, dataloading_time : 0.0010449886322021484,forward_time :0.031463623046875, backward_time: 0.06563472747802734, optim time :0.007160186767578125
+Local>>>>>> step_time: 0.10545229911804199, dataloading_time : 0.0007228851318359375,forward_time :0.031164169311523438, backward_time: 0.06637763977050781, optim time :0.0071868896484375
+[Rank 0] Step 85: loss=1.4531, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 85: loss=1.3906, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.06 | bwd_microstep: 59.28 | bwd_inner_microstep: 58.60 | bwd_allreduce_microstep: 0.63 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.05 | bwd: 59.29 | bwd_inner: 58.61 | bwd_allreduce: 0.63 | step: 6.83
+Local>>>>>> step_time: 0.10424637794494629, dataloading_time : 0.0006096363067626953,forward_time :0.03103017807006836, backward_time: 0.06546592712402344, optim time :0.007139444351196289
+Local>>>>>> step_time: 0.10431218147277832, dataloading_time : 0.0005862712860107422,forward_time :0.031235933303833008, backward_time: 0.06533455848693848, optim time :0.0071544647216796875
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.00 | bwd_microstep: 59.45 | bwd_inner_microstep: 58.81 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.76
+[Rank 0] time (ms) | fwd: 35.99 | bwd: 59.45 | bwd_inner: 58.83 | bwd_allreduce: 0.59 | step: 6.76
+Local>>>>>> step_time: 0.1047220230102539, dataloading_time : 0.0009505748748779297,forward_time :0.03117537498474121, backward_time: 0.06551194190979004, optim time :0.007082700729370117
+Local>>>>>> step_time: 0.10480141639709473, dataloading_time : 0.0008389949798583984,forward_time :0.031087160110473633, backward_time: 0.06569910049438477, optim time :0.007174968719482422
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.25 | bwd_microstep: 59.61 | bwd_inner_microstep: 58.94 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.81
+[Rank 0] time (ms) | fwd: 36.25 | bwd: 59.62 | bwd_inner: 58.97 | bwd_allreduce: 0.60 | step: 6.81
+Local>>>>>> step_time: 0.10514497756958008, dataloading_time : 0.0009183883666992188,forward_time :0.03145408630371094, backward_time: 0.06564188003540039, optim time :0.007128715515136719
+Local>>>>>> step_time: 0.10508465766906738, dataloading_time : 0.0005872249603271484,forward_time :0.031061172485351562, backward_time: 0.0662691593170166, optim time :0.0071659088134765625
+[Rank 0] time (ms) | optimizer_step: 2.59
+[Rank 0] time (ms) | fwd_microstep: 36.08 | bwd_microstep: 59.13 | bwd_inner_microstep: 58.42 | bwd_allreduce_microstep: 0.66 | step_microstep: 7.62
+[Rank 0] time (ms) | fwd: 36.08 | bwd: 59.13 | bwd_inner: 58.43 | bwd_allreduce: 0.66 | step: 7.62
+Local>>>>>> step_time: 0.1054539680480957, dataloading_time : 0.0010442733764648438,forward_time :0.031258583068847656, backward_time: 0.06519460678100586, optim time :0.007955312728881836
+Local>>>>>> step_time: 0.10555267333984375, dataloading_time : 0.0009951591491699219,forward_time :0.030784130096435547, backward_time: 0.06637954711914062, optim time :0.007391214370727539
+[Rank 0] time (ms) | optimizer_step: 2.61
+[Rank 0] time (ms) | fwd_microstep: 35.92 | bwd_microstep: 60.25 | bwd_inner_microstep: 58.78 | bwd_allreduce_microstep: 1.41 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 35.91 | bwd: 60.26 | bwd_inner: 58.80 | bwd_allreduce: 1.41 | step: 6.85
+Local>>>>>> step_time: 0.10543084144592285, dataloading_time : 0.0009682178497314453,forward_time :0.03150177001953125, backward_time: 0.06576800346374512, optim time :0.00719141960144043
+Local>>>>>> step_time: 0.10557746887207031, dataloading_time : 0.0009953975677490234,forward_time :0.031115293502807617, backward_time: 0.06629228591918945, optim time :0.007173776626586914
+[Rank 1] Step 90: loss=1.4609, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 90: loss=1.1094, time=0.106s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.28 | bwd_microstep: 59.61 | bwd_inner_microstep: 58.98 | bwd_allreduce_microstep: 0.58 | step_microstep: 6.77
+[Rank 0] time (ms) | fwd: 36.27 | bwd: 59.62 | bwd_inner: 58.99 | bwd_allreduce: 0.59 | step: 6.77
+Local>>>>>> step_time: 0.10505795478820801, dataloading_time : 0.0008292198181152344,forward_time :0.03145766258239746, backward_time: 0.06567263603210449, optim time :0.0070972442626953125
+Local>>>>>> step_time: 0.10512471199035645, dataloading_time : 0.0008909702301025391,forward_time :0.03115558624267578, backward_time: 0.06590676307678223, optim time :0.0071697235107421875
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 35.63 | bwd_microstep: 59.49 | bwd_inner_microstep: 58.62 | bwd_allreduce_microstep: 0.81 | step_microstep: 6.82
+[Rank 0] time (ms) | fwd: 35.62 | bwd: 59.50 | bwd_inner: 58.64 | bwd_allreduce: 0.82 | step: 6.82
+Local>>>>>> step_time: 0.1040956974029541, dataloading_time : 0.0006029605865478516,forward_time :0.030812501907348633, backward_time: 0.06553769111633301, optim time :0.007141828536987305
+Local>>>>>> step_time: 0.10407423973083496, dataloading_time : 0.0005664825439453125,forward_time :0.03093862533569336, backward_time: 0.06537294387817383, optim time :0.007195472717285156
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 35.90 | bwd_microstep: 59.52 | bwd_inner_microstep: 58.85 | bwd_allreduce_microstep: 0.61 | step_microstep: 6.80
+[Rank 0] time (ms) | fwd: 35.89 | bwd: 59.52 | bwd_inner: 58.87 | bwd_allreduce: 0.61 | step: 6.80
+Local>>>>>> step_time: 0.10457515716552734, dataloading_time : 0.0008032321929931641,forward_time :0.03108954429626465, backward_time: 0.06555938720703125, optim time :0.007121562957763672
+Local>>>>>> step_time: 0.10453057289123535, dataloading_time : 0.0009477138519287109,forward_time :0.031016111373901367, backward_time: 0.06542778015136719, optim time :0.0071375370025634766
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.11 | bwd_microstep: 58.98 | bwd_inner_microstep: 58.14 | bwd_allreduce_microstep: 0.79 | step_microstep: 6.85
+[Rank 0] time (ms) | fwd: 36.10 | bwd: 58.98 | bwd_inner: 58.15 | bwd_allreduce: 0.79 | step: 6.85
+Local>>>>>> step_time: 0.10426187515258789, dataloading_time : 0.0008757114410400391,forward_time :0.0310516357421875, backward_time: 0.06516122817993164, optim time :0.0071718692779541016
+Local>>>>>> step_time: 0.10430765151977539, dataloading_time : 0.0008132457733154297,forward_time :0.03129982948303223, backward_time: 0.06501173973083496, optim time :0.007181882858276367
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 36.12 | bwd_microstep: 59.24 | bwd_inner_microstep: 58.59 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.83
+[Rank 0] time (ms) | fwd: 36.11 | bwd: 59.24 | bwd_inner: 58.61 | bwd_allreduce: 0.59 | step: 6.83
+Local>>>>>> step_time: 0.10472679138183594, dataloading_time : 0.0009725093841552734,forward_time :0.03129720687866211, backward_time: 0.06530237197875977, optim time :0.00715327262878418
+Local>>>>>> step_time: 0.1047663688659668, dataloading_time : 0.0009038448333740234,forward_time :0.03092169761657715, backward_time: 0.06573653221130371, optim time :0.007202863693237305
+[Rank 0] Step 95: loss=1.3281, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 1] Step 95: loss=1.4844, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] time (ms) | optimizer_step: 2.62
+[Rank 0] time (ms) | fwd_microstep: 35.92 | bwd_microstep: 59.30 | bwd_inner_microstep: 58.65 | bwd_allreduce_microstep: 0.59 | step_microstep: 6.84
+[Rank 0] time (ms) | fwd: 35.91 | bwd: 59.30 | bwd_inner: 58.67 | bwd_allreduce: 0.60 | step: 6.85
+Local>>>>>> step_time: 0.10434412956237793, dataloading_time : 0.0005505084991455078,forward_time :0.03092479705810547, backward_time: 0.06570911407470703, optim time :0.007158517837524414
+Local>>>>>> step_time: 0.10439658164978027, dataloading_time : 0.0007729530334472656,forward_time :0.03112173080444336, backward_time: 0.06533145904541016, optim time :0.007168769836425781
+[Rank 0] time (ms) | optimizer_step: 2.58
+[Rank 0] time (ms) | fwd_microstep: 36.22 | bwd_microstep: 59.46 | bwd_inner_microstep: 58.81 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.78
+[Rank 0] time (ms) | fwd: 36.21 | bwd: 59.46 | bwd_inner: 58.82 | bwd_allreduce: 0.60 | step: 6.78
+Local>>>>>> step_time: 0.10504412651062012, dataloading_time : 0.0010290145874023438,forward_time :0.0313873291015625, backward_time: 0.06552386283874512, optim time :0.0071027278900146484
+Local>>>>>> step_time: 0.10510420799255371, dataloading_time : 0.0007412433624267578,forward_time :0.031168222427368164, backward_time: 0.06602120399475098, optim time :0.007172346115112305
+[Rank 0] time (ms) | optimizer_step: 2.57
+[Rank 0] time (ms) | fwd_microstep: 35.98 | bwd_microstep: 59.35 | bwd_inner_microstep: 58.69 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.79
+[Rank 0] time (ms) | fwd: 35.98 | bwd: 59.36 | bwd_inner: 58.71 | bwd_allreduce: 0.60 | step: 6.80
+Local>>>>>> step_time: 0.10446834564208984, dataloading_time : 0.0007755756378173828,forward_time :0.03116464614868164, backward_time: 0.06539797782897949, optim time :0.007128715515136719
+Local>>>>>> step_time: 0.10446858406066895, dataloading_time : 0.0008451938629150391,forward_time :0.03096795082092285, backward_time: 0.06548547744750977, optim time :0.007169246673583984
+[Rank 0] time (ms) | optimizer_step: 2.58
+Local>>>>>> step_time: 0.10460257530212402, dataloading_time : 0.0006654262542724609,forward_time :0.030804157257080078, backward_time: 0.06595611572265625, optim time :0.0071756839752197266
+[Rank 0] time (ms) | fwd_microstep: 35.95 | bwd_microstep: 59.59 | bwd_inner_microstep: 58.94 | bwd_allreduce_microstep: 0.60 | step_microstep: 6.98
+[Rank 0] time (ms) | fwd: 35.95 | bwd: 59.60 | bwd_inner: 58.95 | bwd_allreduce: 0.60 | step: 6.98
+Local>>>>>> step_time: 0.10479164123535156, dataloading_time : 0.0006906986236572266,forward_time :0.031136035919189453, backward_time: 0.06564879417419434, optim time :0.007314920425415039
+[Rank 1] Step 99: loss=1.2344, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+[Rank 0] Step 99: loss=0.8750, time=0.105s, alloc_mem=2.44 GB, peak_mem=4.16 GB
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=1024, num_layers=12
+  Parameters: 254,655,569
+  Batch size: 8, Seq length: 512
+  Average step time: 0.125s
+  Peak memory: 4.16 GB
+  Final allocated memory: 2.44 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=254655569 peak_mem_bytes=4471451648 alloc_mem_bytes=2617018368 avg_step_time=0.1251
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=1024, num_layers=12
+  Parameters: 254,655,569
+  Batch size: 8, Seq length: 512
+  Average step time: 0.125s
+  Peak memory: 4.16 GB
+  Final allocated memory: 2.44 GB
+============================================================
+SUMMARY: config=configs/baseline.json params=254655569 peak_mem_bytes=4471451648 alloc_mem_bytes=2617018368 avg_step_time=0.1246
+Loss history saved to: logs/baseline_loss.csv
+[rank0]:[W123 15:55:45.590116213 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-23 15:55:47,257] [INFO] [launch.py:367:main] Process 2261408 exits successfully.
+[2026-01-23 15:55:47,257] [INFO] [launch.py:367:main] Process 2261407 exits successfully.

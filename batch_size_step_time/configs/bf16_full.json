@@ -27,9 +27,6 @@
         "stage3_param_persistence_threshold": 0
     },
 
-    "torch_autocast": {
-        "enabled": true,
-        "dtype": "torch.bfloat16"
-    },
+
      "wall_clock_breakdown": true
 }

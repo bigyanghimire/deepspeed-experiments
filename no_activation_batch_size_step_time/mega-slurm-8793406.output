@@ -1,0 +1,308 @@
+Wrote configs/baseline.json
+Wrote configs/bf16_full.json
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_GPUS: 2
+  NUM_LAYERS: 12
+  HIDDEN_DIM: 4096
+  BATCH_SIZE: 16
+  SEQ_LENGTH: 512
+  NUM_STEPS: 10
+  LOG_DIR: logs/20260122_141050-16
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-22 14:11:07,015] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-22 14:11:07,015] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train_gpt.py --deepspeed_config configs/baseline.json --num_layers 12 --hidden_dim 4096 --batch_size 16 --seq_length 512 --num_steps 10 --warmup_steps 5
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-22 14:11:20,546] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-22 14:11:20,546] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-22 14:11:20,546] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-22 14:11:20,546] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-22 14:11:20,546] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-22 14:11:20,547] [INFO] [launch.py:272:main] process 133107 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_gpt.py', '--local_rank=0', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '12', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '10', '--warmup_steps', '5']
+[2026-01-22 14:11:20,548] [INFO] [launch.py:272:main] process 133108 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_gpt.py', '--local_rank=1', '--deepspeed_config', 'configs/baseline.json', '--num_layers', '12', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '10', '--warmup_steps', '5']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 0] Creating model with hidden_dim=4096, num_layers=12, num_heads=16, vocab_size=50000
+[Rank 1] Creating model with hidden_dim=4096, num_layers=12, num_heads=16, vocab_size=50000
+[Rank 1] Model parameters: 124,242,432 total, 124,242,432 trainable
+[Rank 0] Model parameters: 124,242,432 total, 124,242,432 trainable
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 0.25 GB         Max_MA 0.25 GB         CA 0.26 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.76 GB, percent = 3.0%
+DeepSpeedZeRoOffload initialize [begin]
+MA 0.25 GB         Max_MA 0.39 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.8 GB, percent = 3.0%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 0.13 GB         Max_MA 0.29 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.8 GB, percent = 3.0%
+Before creating fp16 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.8 GB, percent = 3.0%
+After creating fp16 partitions: 1
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+Before creating fp32 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+After creating fp32 partitions
+MA 0.36 GB         Max_MA 0.59 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+Before initializing optimizer states
+MA 0.36 GB         Max_MA 0.36 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+[Rank 0] time (ms) | init_optimizer_state: 0.04
+After initializing optimizer states
+MA 0.36 GB         Max_MA 0.59 GB         CA 0.6 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+[Rank 1] DeepSpeed initialized with config: configs/baseline.json
+[Rank 1] Memory after init: allocated=0.57 GB, reserved=0.74 GB
+After initializing ZeRO optimizer
+MA 0.57 GB         Max_MA 0.71 GB         CA 0.74 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+[Rank 0] DeepSpeed initialized with config: configs/baseline.json
+[Rank 0] Memory after init: allocated=0.57 GB, reserved=0.74 GB
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[Rank 0] time (ms) | optimizer_step: 2.22
+[Rank 0] time (ms) | fwd_microstep: 270.06 | bwd_microstep: 131.47 | bwd_inner_microstep: 130.64 | bwd_allreduce_microstep: 0.69 | step_microstep: 32.01
+[Rank 0] time (ms) | fwd: 270.07 | bwd: 131.46 | bwd_inner: 130.66 | bwd_allreduce: 0.69 | step: 32.01
+[Rank 1] Step 0: loss=10.9813, time=0.504s, alloc_mem=2.14 GB, peak_mem=10.41 GB
+[Rank 0] Step 0: loss=10.9813, time=0.437s, alloc_mem=2.14 GB, peak_mem=10.41 GB
+[Rank 0] time (ms) | optimizer_step: 1.85
+[Rank 0] time (ms) | fwd_microstep: 161.11 | bwd_microstep: 86.09 | bwd_inner_microstep: 79.35 | bwd_allreduce_microstep: 6.69 | step_microstep: 5.73
+[Rank 0] time (ms) | fwd: 161.10 | bwd: 86.09 | bwd_inner: 79.36 | bwd_allreduce: 6.69 | step: 5.73
+[Rank 0] time (ms) | optimizer_step: 1.84
+[Rank 0] time (ms) | fwd_microstep: 34.38 | bwd_microstep: 33.97 | bwd_inner_microstep: 33.15 | bwd_allreduce_microstep: 0.77 | step_microstep: 5.69
+[Rank 0] time (ms) | fwd: 34.38 | bwd: 33.97 | bwd_inner: 33.16 | bwd_allreduce: 0.77 | step: 5.69
+[Rank 0] time (ms) | optimizer_step: 1.84
+[Rank 0] time (ms) | fwd_microstep: 34.00 | bwd_microstep: 33.74 | bwd_inner_microstep: 32.80 | bwd_allreduce_microstep: 0.89 | step_microstep: 5.66
+[Rank 0] time (ms) | fwd: 33.99 | bwd: 33.75 | bwd_inner: 32.82 | bwd_allreduce: 0.89 | step: 5.66
+[Rank 0] time (ms) | optimizer_step: 1.84
+[Rank 0] time (ms) | fwd_microstep: 33.96 | bwd_microstep: 34.07 | bwd_inner_microstep: 32.74 | bwd_allreduce_microstep: 1.27 | step_microstep: 5.65
+[Rank 0] time (ms) | fwd: 33.96 | bwd: 34.07 | bwd_inner: 32.75 | bwd_allreduce: 1.28 | step: 5.65
+[Rank 0] time (ms) | optimizer_step: 1.83
+[Rank 0] time (ms) | fwd_microstep: 33.84 | bwd_microstep: 34.25 | bwd_inner_microstep: 33.04 | bwd_allreduce_microstep: 1.16 | step_microstep: 5.64
+[Rank 0] time (ms) | fwd: 33.83 | bwd: 34.25 | bwd_inner: 33.05 | bwd_allreduce: 1.16 | step: 5.64
+[Rank 0] Step 5: loss=10.9682, time=0.074s, alloc_mem=2.14 GB, peak_mem=11.06 GB
+[Rank 1] Step 5: loss=10.9682, time=0.074s, alloc_mem=2.14 GB, peak_mem=11.06 GB
+[Rank 0] time (ms) | optimizer_step: 1.86
+[Rank 0] time (ms) | fwd_microstep: 33.84 | bwd_microstep: 34.02 | bwd_inner_microstep: 32.93 | bwd_allreduce_microstep: 1.03 | step_microstep: 5.71
+[Rank 0] time (ms) | fwd: 33.83 | bwd: 34.02 | bwd_inner: 32.95 | bwd_allreduce: 1.04 | step: 5.71
+[Rank 0] time (ms) | optimizer_step: 1.85
+[Rank 0] time (ms) | fwd_microstep: 33.99 | bwd_microstep: 33.85 | bwd_inner_microstep: 32.98 | bwd_allreduce_microstep: 0.81 | step_microstep: 5.69
+[Rank 0] time (ms) | fwd: 33.98 | bwd: 33.85 | bwd_inner: 33.00 | bwd_allreduce: 0.81 | step: 5.69
+[Rank 0] time (ms) | optimizer_step: 1.83
+[Rank 0] time (ms) | fwd_microstep: 33.78 | bwd_microstep: 34.03 | bwd_inner_microstep: 32.85 | bwd_allreduce_microstep: 1.12 | step_microstep: 5.61
+[Rank 0] time (ms) | fwd: 33.78 | bwd: 34.03 | bwd_inner: 32.87 | bwd_allreduce: 1.12 | step: 5.61
+[Rank 0] time (ms) | optimizer_step: 1.82
+[Rank 0] time (ms) | fwd_microstep: 33.66 | bwd_microstep: 33.93 | bwd_inner_microstep: 33.07 | bwd_allreduce_microstep: 0.80 | step_microstep: 5.58
+[Rank 0] time (ms) | fwd: 33.66 | bwd: 33.93 | bwd_inner: 33.09 | bwd_allreduce: 0.80 | step: 5.59
+[Rank 0] Step 9: loss=10.9594, time=0.074s, alloc_mem=2.14 GB, peak_mem=11.06 GB
+[Rank 1] Step 9: loss=10.9594, time=0.074s, alloc_mem=2.14 GB, peak_mem=11.06 GB
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 16, Seq length: 512
+  Average step time: 0.074s
+  Peak memory: 11.06 GB
+  Final allocated memory: 2.14 GB
+============================================================
+SUMMARY: config=configs/baseline.json batch_size=16 params=124242432 peak_mem_bytes=11877637632 alloc_mem_bytes=2295107584 avg_step_time=0.0739
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/baseline.json
+  Model: hidden_dim=4096, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 16, Seq length: 512
+  Average step time: 0.074s
+  Peak memory: 11.06 GB
+  Final allocated memory: 2.14 GB
+============================================================
+SUMMARY: config=configs/baseline.json batch_size=16 params=124242432 peak_mem_bytes=11877637632 alloc_mem_bytes=2295107584 avg_step_time=0.0739
+[rank0]:[W122 14:11:42.944276354 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-22 14:11:43,551] [INFO] [launch.py:367:main] Process 133107 exits successfully.
+[2026-01-22 14:11:43,551] [INFO] [launch.py:367:main] Process 133108 exits successfully.
+
+[2/2] Running BF16_FULL (bf16 master weights, gradients, and optimizer states)...
+----------------------------------------------
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-22 14:11:55,233] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2026-01-22 14:11:55,233] [INFO] [runner.py:630:main] cmd = /home/bigyang/micromamba/envs/ds-hf/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29600 --enable_each_rank_log=None --log_level=info train_gpt.py --deepspeed_config configs/bf16_full.json --num_layers 12 --hidden_dim 4096 --batch_size 16 --seq_length 512 --num_steps 10 --warmup_steps 5
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-01-22 14:12:05,472] [INFO] [launch.py:162:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2026-01-22 14:12:05,472] [INFO] [launch.py:168:main] nnodes=1, num_local_procs=2, node_rank=0
+[2026-01-22 14:12:05,472] [INFO] [launch.py:179:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2026-01-22 14:12:05,472] [INFO] [launch.py:180:main] dist_world_size=2
+[2026-01-22 14:12:05,472] [INFO] [launch.py:184:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2026-01-22 14:12:05,473] [INFO] [launch.py:272:main] process 133598 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_gpt.py', '--local_rank=0', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '12', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '10', '--warmup_steps', '5']
+[2026-01-22 14:12:05,474] [INFO] [launch.py:272:main] process 133599 spawned with command: ['/home/bigyang/micromamba/envs/ds-hf/bin/python', '-u', 'train_gpt.py', '--local_rank=1', '--deepspeed_config', 'configs/bf16_full.json', '--num_layers', '12', '--hidden_dim', '4096', '--batch_size', '16', '--seq_length', '512', '--num_steps', '10', '--warmup_steps', '5']
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[Rank 1] Creating model with hidden_dim=4096, num_layers=12, num_heads=16, vocab_size=50000
+[Rank 0] Creating model with hidden_dim=4096, num_layers=12, num_heads=16, vocab_size=50000
+[Rank 0] Model parameters: 124,242,432 total, 124,242,432 trainable
+[Rank 1] Model parameters: 124,242,432 total, 124,242,432 trainable
+/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Stage 3 initialize beginning
+MA 0.25 GB         Max_MA 0.25 GB         CA 0.26 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.77 GB, percent = 3.0%
+DeepSpeedZeRoOffload initialize [begin]
+MA 0.25 GB         Max_MA 0.39 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.81 GB, percent = 3.0%
+Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+DeepSpeedZeRoOffload initialize [end]
+MA 0.13 GB         Max_MA 0.29 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+Before creating fp16 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.41 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+After creating fp16 partitions: 1
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+Before creating fp32 partitions
+MA 0.13 GB         Max_MA 0.13 GB         CA 0.13 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+After creating fp32 partitions
+MA 0.24 GB         Max_MA 0.24 GB         CA 0.25 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+Before initializing optimizer states
+MA 0.24 GB         Max_MA 0.24 GB         CA 0.25 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+[Rank 0] time (ms) | init_optimizer_state: 0.03
+After initializing optimizer states
+MA 0.24 GB         Max_MA 0.36 GB         CA 0.37 GB         Max_CA 0 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+[Rank 1] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 1] Memory after init: allocated=0.45 GB, reserved=0.63 GB
+After initializing ZeRO optimizer
+MA 0.45 GB         Max_MA 0.6 GB         CA 0.63 GB         Max_CA 1 GB 
+CPU Virtual Memory:  used = 29.82 GB, percent = 3.0%
+[Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+[Rank 0] Memory after init: allocated=0.45 GB, reserved=0.63 GB
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+[Rank 0] time (ms) | optimizer_step: 2.09
+[Rank 1] Step 0: loss=10.9813, time=0.360s, alloc_mem=1.79 GB, peak_mem=12.27 GB
+[Rank 0] time (ms) | fwd_microstep: 167.27 | bwd_microstep: 90.14 | bwd_inner_microstep: 89.45 | bwd_allreduce_microstep: 0.59 | step_microstep: 31.80
+[Rank 0] time (ms) | fwd: 167.27 | bwd: 90.13 | bwd_inner: 89.46 | bwd_allreduce: 0.59 | step: 31.80
+[Rank 0] Step 0: loss=10.9813, time=0.292s, alloc_mem=1.79 GB, peak_mem=12.27 GB
+[Rank 0] time (ms) | optimizer_step: 1.71
+[Rank 0] time (ms) | fwd_microstep: 164.55 | bwd_microstep: 84.95 | bwd_inner_microstep: 80.90 | bwd_allreduce_microstep: 4.01 | step_microstep: 5.65
+[Rank 0] time (ms) | fwd: 164.54 | bwd: 84.96 | bwd_inner: 80.91 | bwd_allreduce: 4.01 | step: 5.66
+[Rank 0] time (ms) | optimizer_step: 1.68
+[Rank 0] time (ms) | fwd_microstep: 36.13 | bwd_microstep: 36.99 | bwd_inner_microstep: 36.43 | bwd_allreduce_microstep: 0.51 | step_microstep: 5.56
+[Rank 0] time (ms) | fwd: 36.12 | bwd: 37.00 | bwd_inner: 36.44 | bwd_allreduce: 0.51 | step: 5.57
+[Rank 0] time (ms) | optimizer_step: 1.69
+[Rank 0] time (ms) | fwd_microstep: 35.71 | bwd_microstep: 36.92 | bwd_inner_microstep: 36.34 | bwd_allreduce_microstep: 0.53 | step_microstep: 5.57
+[Rank 0] time (ms) | fwd: 35.70 | bwd: 36.93 | bwd_inner: 36.36 | bwd_allreduce: 0.53 | step: 5.57
+[Rank 0] time (ms) | optimizer_step: 1.71
+[Rank 0] time (ms) | fwd_microstep: 35.72 | bwd_microstep: 36.91 | bwd_inner_microstep: 36.34 | bwd_allreduce_microstep: 0.51 | step_microstep: 5.60
+[Rank 0] time (ms) | fwd: 35.71 | bwd: 36.91 | bwd_inner: 36.36 | bwd_allreduce: 0.51 | step: 5.61
+[Rank 0] time (ms) | optimizer_step: 1.69
+[Rank 0] time (ms) | fwd_microstep: 35.58 | bwd_microstep: 37.00 | bwd_inner_microstep: 36.43 | bwd_allreduce_microstep: 0.52 | step_microstep: 5.55
+[Rank 0] time (ms) | fwd: 35.57 | bwd: 37.01 | bwd_inner: 36.44 | bwd_allreduce: 0.52 | step: 5.55
+[Rank 1] Step 5: loss=10.9689, time=0.079s, alloc_mem=1.79 GB, peak_mem=12.70 GB
+[Rank 0] Step 5: loss=10.9689, time=0.079s, alloc_mem=1.79 GB, peak_mem=12.70 GB
+[Rank 0] time (ms) | optimizer_step: 1.68
+[Rank 0] time (ms) | fwd_microstep: 35.58 | bwd_microstep: 38.58 | bwd_inner_microstep: 36.70 | bwd_allreduce_microstep: 1.83 | step_microstep: 5.54
+[Rank 0] time (ms) | fwd: 35.57 | bwd: 38.59 | bwd_inner: 36.71 | bwd_allreduce: 1.83 | step: 5.54
+[Rank 0] time (ms) | optimizer_step: 1.70
+[Rank 0] time (ms) | fwd_microstep: 37.93 | bwd_microstep: 37.02 | bwd_inner_microstep: 36.45 | bwd_allreduce_microstep: 0.53 | step_microstep: 5.57
+[Rank 0] time (ms) | fwd: 37.92 | bwd: 37.03 | bwd_inner: 36.46 | bwd_allreduce: 0.52 | step: 5.58
+[Rank 0] time (ms) | optimizer_step: 1.68
+[Rank 0] time (ms) | fwd_microstep: 35.61 | bwd_microstep: 37.00 | bwd_inner_microstep: 36.44 | bwd_allreduce_microstep: 0.51 | step_microstep: 5.53
+[Rank 0] time (ms) | fwd: 35.61 | bwd: 37.01 | bwd_inner: 36.46 | bwd_allreduce: 0.51 | step: 5.53
+[Rank 0] time (ms) | optimizer_step: 1.70
+[Rank 0] time (ms) | fwd_microstep: 35.51 | bwd_microstep: 37.00 | bwd_inner_microstep: 36.44 | bwd_allreduce_microstep: 0.51 | step_microstep: 5.56
+[Rank 0] time (ms) | fwd: 35.51 | bwd: 37.00 | bwd_inner: 36.46 | bwd_allreduce: 0.51 | step: 5.56
+[Rank 1] Step 9: loss=10.9604, time=0.078s, alloc_mem=1.79 GB, peak_mem=12.70 GB
+[Rank 0] Step 9: loss=10.9604, time=0.078s, alloc_mem=1.79 GB, peak_mem=12.70 GB
+
+============================================================
+[Rank 1] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 16, Seq length: 512
+  Average step time: 0.079s
+  Peak memory: 12.70 GB
+  Final allocated memory: 1.79 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json batch_size=16 params=124242432 peak_mem_bytes=13632086528 alloc_mem_bytes=1922890752 avg_step_time=0.0793
+
+============================================================
+[Rank 0] FINAL RESULTS
+  Config: configs/bf16_full.json
+  Model: hidden_dim=4096, num_layers=12
+  Parameters: 124,242,432
+  Batch size: 16, Seq length: 512
+  Average step time: 0.079s
+  Peak memory: 12.70 GB
+  Final allocated memory: 1.79 GB
+============================================================
+SUMMARY: config=configs/bf16_full.json batch_size=16 params=124242432 peak_mem_bytes=13632086528 alloc_mem_bytes=1922890752 avg_step_time=0.0793
+[rank0]:[W122 14:12:24.973229401 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2026-01-22 14:12:25,476] [INFO] [launch.py:367:main] Process 133599 exits successfully.
+[2026-01-22 14:12:25,477] [INFO] [launch.py:367:main] Process 133598 exits successfully.
+
+==============================================
+All runs complete. Gathering results...
+==============================================
+================================================================================
+BF16 Low-Precision Master Weights - Memory Usage Comparison
+================================================================================
+
+Configuration                            Peak Memory     Reduction       Step Time   
+--------------------------------------------------------------------------------
+Baseline (fp32 master)                   11.06 GB        -               0.0739s     
+bf16_full (master + opt states)          12.70 GB        -14.8%          0.0793s     
+--------------------------------------------------------------------------------
+
+Detailed Results:
+----------------------------------------
+
+Baseline (fp32 master):
+  Parameters: 124,242,432
+  Peak Memory: 11.06 GB (11,877,637,632 bytes)
+  Allocated Memory: 2.14 GB (2,295,107,584 bytes)
+  Avg Step Time: 0.0739s
+
+bf16_full (master + opt states):
+  Parameters: 124,242,432
+  Peak Memory: 12.70 GB (13,632,086,528 bytes)
+  Allocated Memory: 1.79 GB (1,922,890,752 bytes)
+  Avg Step Time: 0.0793s
+
+================================================================================
+
+Markdown Table (for README):
+----------------------------------------
+
+| Configuration | Peak Memory | Memory Reduction | Avg Step Time |
+|---------------|-------------|------------------|---------------|
+| Baseline (fp32 master) | 11.06 GB | - | 0.0739s |
+| bf16_full (master + opt states) | 12.70 GB | -14.8% | 0.0793s |
+
+
+Summary saved to: logs/20260122_141050-16/summary.txt
+
+Results saved to: logs/20260122_141050-16/summary.txt
+==============================================
