@@ -1,0 +1,3193 @@
+Thu Mar  5 12:55:26 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.163.01             Driver Version: 550.163.01     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+| N/A   33C    P0             51W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-40GB          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   33C    P0             60W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   33C    P0             52W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   27C    P0             50W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_NODES: 2
+  GPUS_PER_NODE: 2
+  Total GPUs: 4
+  NUM_LAYERS: 32
+  HIDDEN_DIM: 2048
+  BATCH_SIZE: 16
+  SEQ_LENGTH: 1024
+  NUM_STEPS: 100
+  LOG_DIR: logs/20260305_125527
+  MASTER_ADDR: hades
+  MASTER_PORT: 29600
+  SLURM_JOB_ID: 878
+  SLURM_JOB_NODELIST: hades,hercules
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+0: W0305 12:55:29.700000 182711 site-packages/torch/distributed/run.py:793] 
+0: W0305 12:55:29.700000 182711 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0305 12:55:29.700000 182711 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0305 12:55:29.700000 182711 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0305 12:55:29.735000 131874 site-packages/torch/distributed/run.py:793] 
+1: W0305 12:55:29.735000 131874 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0305 12:55:29.735000 131874 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0305 12:55:29.735000 131874 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: [Rank 3] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 2] Loading wikitext dataset...
+1: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: [Rank 1] Loading wikitext dataset...
+1: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+1: [Rank 3] Dataset loaded: 39531 examples, vocab_size=50257
+1: [Rank 3] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+1: [Rank 2] Dataset loaded: 39531 examples, vocab_size=50257
+1: [Rank 2] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 1] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+1: [Rank 3] Model parameters: 1,819,464,785 total, 1,819,464,785 trainable
+1: [Rank 3] Activation checkpointing enabled
+0: [Rank 0] Model parameters: 1,819,464,785 total, 1,819,464,785 trainable
+0: [Rank 0] Activation checkpointing enabled
+1: [Rank 2] Model parameters: 1,819,464,785 total, 1,819,464,785 trainable
+1: [Rank 2] Activation checkpointing enabled
+0: [Rank 1] Model parameters: 1,819,464,785 total, 1,819,464,785 trainable
+0: [Rank 1] Activation checkpointing enabled
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: [Rank 3] DeepSpeed initialized with config: configs/baseline.json
+1: [Rank 3] Memory after init: allocated=3.58 GB, reserved=7.69 GB
+0: [Rank 1] DeepSpeed initialized with config: configs/baseline.json
+0: [Rank 1] Memory after init: allocated=3.58 GB, reserved=7.69 GB
+1: [Rank 2] DeepSpeed initialized with config: configs/baseline.json
+1: [Rank 2] Memory after init: allocated=3.58 GB, reserved=7.69 GB
+0: Before initializing optimizer states
+0: MA 3.58 GB         Max_MA 6.78 GB         CA 7.69 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 22.48 GB, percent = 2.2%
+1: 
+1: Persistent memory for layer:          72.12 MB
+1: 
+1: Peak memory for layer:          680.12 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          72.12 MB
+0: 
+0: Peak memory for layer:          680.12 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          72.12 MB
+1: 
+1: Peak memory for layer:          680.12 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: After initializing optimizer states
+0: MA 3.58 GB         Max_MA 3.58 GB         CA 7.69 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.38 GB, percent = 2.4%
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: After initializing ZeRO optimizer
+0: MA 3.58 GB         Max_MA 3.58 GB         CA 7.69 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.38 GB, percent = 2.4%
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: [Rank 0] DeepSpeed initialized with config: configs/baseline.json
+0: [Rank 0] Memory after init: allocated=3.58 GB, reserved=7.69 GB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          72.12 MB
+0: 
+0: Peak memory for layer:          680.12 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: [Rank 1] Step 0: loss=10.9375, time=9.609s, alloc_mem=5.13 GB, peak_mem=9.49 GB
+1: [Rank 2] Step 0: loss=10.9375, time=10.133s, alloc_mem=5.13 GB, peak_mem=9.49 GB
+1: [Rank 3] Step 0: loss=10.9375, time=9.643s, alloc_mem=5.13 GB, peak_mem=9.49 GB
+0: [Rank 0] Step 0: loss=10.9375, time=9.326s, alloc_mem=5.13 GB, peak_mem=9.49 GB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+1: 
+1: Persistent memory for layer:          64.00 MB
+1: 
+1: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+0: 
+0: Persistent memory for layer:          64.00 MB
+0: 
+0: Peak memory for layer:          672.00 MB
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+1: W0305 12:56:33.850000 131874 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0305 12:56:33.851000 131874 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 132011 closing signal SIGTERM
+0: slurmstepd-hades: error: *** STEP 878.0 ON hades CANCELLED AT 2026-03-05T12:56:33 ***
+0: W0305 12:56:33.852000 182711 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0305 12:56:33.853000 182711 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 182850 closing signal SIGTERM
+1: W0305 12:56:33.853000 131874 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 132012 closing signal SIGTERM

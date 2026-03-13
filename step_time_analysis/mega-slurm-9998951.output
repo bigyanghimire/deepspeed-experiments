@@ -1,0 +1,43 @@
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_GPUS: 1
+  NUM_LAYERS: 32
+  HIDDEN_DIM: 2048
+  BATCH_SIZE: 8
+  SEQ_LENGTH: 512
+  NUM_STEPS: 100
+  LOG_DIR: logs/20260225_125628
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+==============================================
+BF16 Low-Precision Master Weights Memory Test
+==============================================
+Configuration:
+  NUM_GPUS: 1
+  NUM_LAYERS: 32
+  HIDDEN_DIM: 2048
+  BATCH_SIZE: 8
+  SEQ_LENGTH: 512
+  NUM_STEPS: 100
+  LOG_DIR: logs/20260225_125628
+==============================================
+
+[1/2] Running BASELINE (bf16 with fp32 master weights/grads/optimizer states)...
+----------------------------------------------
+srun: Job 9998951 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9998951 step creation still disabled, retrying (Requested nodes are busy)

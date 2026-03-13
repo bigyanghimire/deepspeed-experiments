@@ -1,0 +1,19 @@
+1: W0311 14:05:03.139000 289704 site-packages/torch/distributed/run.py:793] 
+1: W0311 14:05:03.139000 289704 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0311 14:05:03.139000 289704 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0311 14:05:03.139000 289704 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0311 14:05:03.175000 456182 site-packages/torch/distributed/run.py:793] 
+0: W0311 14:05:03.175000 456182 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0311 14:05:03.175000 456182 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0311 14:05:03.175000 456182 site-packages/torch/distributed/run.py:793] *****************************************
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-hades: error: *** JOB 1039 ON hades CANCELLED AT 2026-03-11T14:07:03 ***
+0: slurmstepd-hades: error: *** STEP 1039.0 ON hades CANCELLED AT 2026-03-11T14:07:03 ***
+1: W0311 14:07:03.770000 289704 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0311 14:07:03.771000 289704 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289841 closing signal SIGTERM
+0: W0311 14:07:03.771000 456182 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0311 14:07:03.772000 456182 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 456320 closing signal SIGTERM
+1: W0311 14:07:03.776000 289704 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289842 closing signal SIGTERM

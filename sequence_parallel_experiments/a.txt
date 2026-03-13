@@ -1,0 +1,336 @@
+[2026-03-03 14:19:00,014] [WARNING] [real_accelerator.py:209:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2026-03-03 14:19:00,032] [WARNING] [real_accelerator.py:209:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2026-03-03 14:19:00,037] [WARNING] [real_accelerator.py:209:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2026-03-03 14:19:00,038] [WARNING] [real_accelerator.py:209:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+sequence parallel group init from attention
+
+world size in attention 4
+
+sequence parallel group init from attention
+
+world size in attention 4
+
+sequence parallel group init from attention
+
+world size in attention 4
+
+sequence parallel group init from attention
+
+world size in attention 4
+
+mpu get_sequence_parallel_world_size 2
+world size in attention 2
+mpu get_sequence_parallel_world_size 2
+
+world size in attention 2
+
+mpu get_sequence_parallel_world_size 2
+world size in attention 2
+
+mpu get_sequence_parallel_world_size 2
+world size in attention 2
+
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+sp rank is :1 
+
+sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>
+sp world size is :2
+vanilla dl batch {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+        [ 1, 60, 60, 60,  6,  6,  6,  6]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+        [0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+        [ 1, 60, 60, 60,  6,  6,  6,  6]])} from rank 1 at iter 0
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+sp rank is :0 
+
+sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>
+sp world size is :2
+vanilla dl batch {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+        [ 1, 70, 70, 70,  7,  7,  7,  7]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+        [0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+        [ 1, 70, 70, 70,  7,  7,  7,  7]])} from rank 2 at iter 0
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+sp rank is :1 
+
+sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>
+sp world size is :2
+mpu is <module 'deepspeed.runtime.sequence_parallel.parallel_state_sp' from '/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/parallel_state_sp.py'>
+sp rank is :0 
+
+sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>
+sp world size is :2
+vanilla dl batch {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+        [ 1, 80, 80, 80,  8,  8,  8,  8]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+        [0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+        [ 1, 80, 80, 80,  8,  8,  8,  8]])} from rank 3 at iter 0
+vanilla dl batch {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+        [ 1, 50, 50, 50,  5,  5,  5,  5]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+        [0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+        [ 1, 50, 50, 50,  5,  5,  5,  5]])} from rank 0 at iter 0
+batch from trainig loop {'input_ids': tensor([[ 1, 30, 30, 30],
+        [ 1, 70, 70, 70]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[30, 30, 30,  3],
+        [70, 70, 70,  7]])}
+
+batch from trainig loop {'input_ids': tensor([[3, 3, 3, 3],
+        [7, 7, 7, 7]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   3,    3,    3, -100],
+        [   7,    7,    7, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 10, 10, 10],
+        [ 1, 50, 50, 50]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[10, 10, 10,  1],
+        [50, 50, 50,  5]])}
+batch from trainig loop {'input_ids': tensor([[1, 1, 1, 1],
+        [5, 5, 5, 5]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   1,    1,    1, -100],
+        [   5,    5,    5, -100]])}
+
+
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+
+dist.get_world_size(sp_group) 4dist.get_world_size(sp_group) 4
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+dist.get_world_size(sp_group) 4
+batch from trainig loop {'input_ids': tensor([[2, 2, 2, 2],
+        [6, 6, 6, 6]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   2,    2,    2, -100],
+        [   6,    6,    6, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 40, 40, 40],
+        [ 1, 80, 80, 80]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[40, 40, 40,  4],
+        [80, 80, 80,  8]])}
+
+batch from trainig loop {'input_ids': tensor([[4, 4, 4, 4],
+        [8, 8, 8, 8]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   4,    4,    4, -100],
+        [   8,    8,    8, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 20, 20, 20],
+        [ 1, 60, 60, 60]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[20, 20, 20,  2],
+        [60, 60, 60,  6]])}
+
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+
+dist.get_world_size(sp_group) 4dist.get_world_size(sp_group) 4
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Iteration 0: loss=10.4323
+batch from trainig loop {'input_ids': tensor([[1, 1, 1, 1],
+        [5, 5, 5, 5]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   1,    1,    1, -100],
+        [   5,    5,    5, -100]])}
+batch from trainig loop {'input_ids': tensor([[ 1, 10, 10, 10],
+        [ 1, 50, 50, 50]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[10, 10, 10,  1],
+        [50, 50, 50,  5]])}
+
+
+batch from trainig loop {'input_ids': tensor([[3, 3, 3, 3],
+        [7, 7, 7, 7]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   3,    3,    3, -100],
+        [   7,    7,    7, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 30, 30, 30],
+        [ 1, 70, 70, 70]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[30, 30, 30,  3],
+        [70, 70, 70,  7]])}
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4
+batch from trainig loop {'input_ids': tensor([[2, 2, 2, 2],
+        [6, 6, 6, 6]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   2,    2,    2, -100],
+        [   6,    6,    6, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 20, 20, 20],
+        [ 1, 60, 60, 60]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[20, 20, 20,  2],
+        [60, 60, 60,  6]])}
+
+batch from trainig loop {'input_ids': tensor([[4, 4, 4, 4],
+        [8, 8, 8, 8]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   4,    4,    4, -100],
+        [   8,    8,    8, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 40, 40, 40],
+        [ 1, 80, 80, 80]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[40, 40, 40,  4],
+        [80, 80, 80,  8]])}
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4
+Iteration 1: loss=10.3553
+batch from trainig loop {'input_ids': tensor([[1, 1, 1, 1],
+        [5, 5, 5, 5]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   1,    1,    1, -100],
+        [   5,    5,    5, -100]])}
+batch from trainig loop {'input_ids': tensor([[ 1, 10, 10, 10],
+        [ 1, 50, 50, 50]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[10, 10, 10,  1],
+        [50, 50, 50,  5]])}
+
+
+batch from trainig loop {'input_ids': tensor([[ 1, 30, 30, 30],
+        [ 1, 70, 70, 70]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[30, 30, 30,  3],
+        [70, 70, 70,  7]])}
+batch from trainig loop {'input_ids': tensor([[3, 3, 3, 3],
+        [7, 7, 7, 7]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   3,    3,    3, -100],
+        [   7,    7,    7, -100]])}
+
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+
+dist.get_world_size(sp_group) 4
+dist.get_world_size(sp_group) 4
+batch from trainig loop {'input_ids': tensor([[ 1, 20, 20, 20],
+        [ 1, 60, 60, 60]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[20, 20, 20,  2],
+        [60, 60, 60,  6]])}
+
+batch from trainig loop {'input_ids': tensor([[4, 4, 4, 4],
+        [8, 8, 8, 8]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   4,    4,    4, -100],
+        [   8,    8,    8, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 40, 40, 40],
+        [ 1, 80, 80, 80]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[40, 40, 40,  4],
+        [80, 80, 80,  8]])}
+
+batch from trainig loop {'input_ids': tensor([[2, 2, 2, 2],
+        [6, 6, 6, 6]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   2,    2,    2, -100],
+        [   6,    6,    6, -100]])}
+
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+dist.get_world_size(sp_group) 4
+
+dist.get_world_size(sp_group) 4
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+dist.get_world_size(sp_group) 4
+
+dist.get_world_size(sp_group) 4
+Iteration 2: loss=10.2828
+batch from trainig loop {'input_ids': tensor([[1, 1, 1, 1],
+        [5, 5, 5, 5]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   1,    1,    1, -100],
+        [   5,    5,    5, -100]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 10, 10, 10],
+        [ 1, 50, 50, 50]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[10, 10, 10,  1],
+        [50, 50, 50,  5]])}
+
+batch from trainig loop {'input_ids': tensor([[ 1, 30, 30, 30],
+        [ 1, 70, 70, 70]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[30, 30, 30,  3],
+        [70, 70, 70,  7]])}
+
+batch from trainig loop {'input_ids': tensor([[3, 3, 3, 3],
+        [7, 7, 7, 7]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   3,    3,    3, -100],
+        [   7,    7,    7, -100]])}
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4dist.get_world_size(sp_group) 4dist.get_world_size(sp_group) 4
+
+
+batch from trainig loop {'input_ids': tensor([[2, 2, 2, 2],
+        [6, 6, 6, 6]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   2,    2,    2, -100],
+        [   6,    6,    6, -100]])}
+batch from trainig loop {'input_ids': tensor([[ 1, 20, 20, 20],
+        [ 1, 60, 60, 60]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[20, 20, 20,  2],
+        [60, 60, 60,  6]])}
+batch from trainig loop {'input_ids': tensor([[ 1, 40, 40, 40],
+        [ 1, 80, 80, 80]]), 'position_ids': tensor([[0, 1, 2, 3],
+        [0, 1, 2, 3]]), 'shift_labels': tensor([[40, 40, 40,  4],
+        [80, 80, 80,  8]])}
+
+
+
+batch from trainig loop {'input_ids': tensor([[4, 4, 4, 4],
+        [8, 8, 8, 8]]), 'position_ids': tensor([[4, 5, 6, 7],
+        [4, 5, 6, 7]]), 'shift_labels': tensor([[   4,    4,    4, -100],
+        [   8,    8,    8, -100]])}
+
+Rank 1: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f73b718b8b0>, sp_world_size=2, sp_group ranks = [0, 1]
+
+dist.get_world_size(sp_group) 4
+Rank 0: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f3078847ab0>, sp_world_size=2, sp_group ranks = [0, 1]
+Rank 3: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f765c97fab0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+
+Rank 2: sp_group=<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f519f57ecf0>, sp_world_size=2, sp_group ranks = [2, 3]
+
+dist.get_world_size(sp_group) 4
+dist.get_world_size(sp_group) 4dist.get_world_size(sp_group) 4
+
+Iteration 3: loss=10.2156

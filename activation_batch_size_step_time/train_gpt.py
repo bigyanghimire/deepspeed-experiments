@@ -200,7 +200,7 @@ def main():
     world_size = deepspeed.comm.get_world_size()
 
     device = get_accelerator().device_name(local_rank)
-    torch.cuda.set_device(local_rank)
+    #torch.cuda.set_device(local_rank)
 
     # Set seed for reproducibility
     torch.manual_seed(args.seed)

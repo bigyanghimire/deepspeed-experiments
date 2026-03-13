@@ -1,0 +1,48 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: [Rank 0] Loading wikitext dataset...
+0: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Model parameters: 6,860,104,785 total, 6,860,104,785 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: /home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 13.16 GB         Max_MA 25.56 GB         CA 25.56 GB         Max_CA 26 GB 
+0: CPU Virtual Memory:  used = 53.93 GB, percent = 21.5%
+0: E0213 13:17:58.498000 997118 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -9) local_rank: 0 (pid: 997151) of binary: /home/bigyang/micromamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/micromamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: =======================================================
+0: train2.py FAILED
+0: -------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: -------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-02-13_13:17:58
+0:   host      : node0261.palmetto.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : -9 (pid: 997151)
+0:   error_file: <N/A>
+0:   traceback : Signal 9 (SIGKILL) received by PID 997151
+0: =======================================================
+0: [2026-02-13T13:17:58.734] error: Detected 1 oom_kill event in StepId=9558811.0. Some of the step tasks have been OOM Killed.
+srun: error: node0261: task 0: Out Of Memory

@@ -1,0 +1,236 @@
+0: W0312 14:54:24.768000 472277 site-packages/torch/distributed/run.py:793] 
+0: W0312 14:54:24.768000 472277 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0312 14:54:24.768000 472277 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0312 14:54:24.768000 472277 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0312 14:54:24.864000 300745 site-packages/torch/distributed/run.py:793] 
+1: W0312 14:54:24.864000 300745 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0312 14:54:24.864000 300745 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0312 14:54:24.864000 300745 site-packages/torch/distributed/run.py:793] *****************************************
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_grouped.py", line 169, in <module>
+0: [rank0]:     model = AutoModelForCausalLM.from_pretrained(model_path)
+0: [rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/auto_factory.py", line 571, in from_pretrained
+0: [rank0]:     return model_class.from_pretrained(
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/modeling_utils.py", line 279, in _wrapper
+0: [rank0]:     return func(*args, **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/modeling_utils.py", line 4260, in from_pretrained
+0: [rank0]:     checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+0: [rank0]:                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/modeling_utils.py", line 952, in _get_resolved_checkpoint_files
+0: [rank0]:     raise EnvironmentError(
+0: [rank0]: OSError: Error no file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt.index or flax_model.msgpack found in directory /home/bigyang/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B.
+0: [rank0]:[W312 14:54:45.409301595 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0312 14:54:47.898000 472277 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 472416 closing signal SIGTERM
+0: W0312 14:54:47.900000 472277 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 472417 closing signal SIGTERM
+0: W0312 14:54:47.904000 472277 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 472418 closing signal SIGTERM
+0: E0312 14:54:49.335000 472277 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 472415) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_gpt_grouped.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-12_14:54:47
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 472415)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1
+1: [W312 14:54:49.173478198 TCPStore.cpp:131] [c10d] recvVector failed on SocketImpl(fd=4, addr=[hercules]:48460, remote=[hades]:29501): failed to recv, got 0 bytes
+1: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f462a990446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3dd18 (0x7f4686306d18 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: <unknown function> + 0x5d3e349 (0x7f4686307349 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0x5d41267 (0x7f468630a267 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x254 (0x7f4686303ae4 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f554 (0x7f468ee1c554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f468e56ab24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x558a1d892dc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x558a1d87307b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x558a1d8c2625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: <unknown function> + 0x22fc74 (0x558a1d8c2c74 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x22f6a8 (0x558a1d8c26a8 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: <unknown function> + 0x30506b (0x558a1d99806b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: <unknown function> + 0x2d05d4 (0x558a1d9635d4 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x81ca (0x7f4697a4e1ca in /lib64/libpthread.so.0)
+1: frame #20: clone + 0x43 (0x7f4696f1e8d3 in /lib64/libc.so.6)
+1: 
+1: W0312 14:54:49.993000 300745 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1331] The node 'hercules.olympus.clemson.edu_300745_0' has failed to send a keep-alive heartbeat to the rendezvous '1050' due to an error of type RendezvousConnectionError.
+1: [W312 14:54:50.194815137 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:48460, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f462a990446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f4686307029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f4686303abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f468ee1c554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f468e56ab24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x558a1d892dc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x558a1d87307b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x558a1d8c2625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyObject_FastCallDictTstate + 0x63 (0x558a1d876853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyObject_Call_Prepend + 0x69 (0x558a1d8a9e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: <unknown function> + 0x2e99b9 (0x558a1d97c9b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: PyObject_Call + 0x1ed (0x558a1d8abebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2a4d36 (0x558a1d937d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: PyEval_EvalCode + 0x9f (0x558a1d9373ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2c2f2a (0x558a1d955f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: <unknown function> + 0x2bf343 (0x558a1d952343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2d4300 (0x558a1d967300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: _PyRun_SimpleFileObject + 0x1ae (0x558a1d966c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: _PyRun_AnyFileObject + 0x44 (0x558a1d966a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: Py_RunMain + 0x2df (0x558a1d960bdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: Py_BytesMain + 0x37 (0x558a1d925f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: __libc_start_main + 0xe5 (0x7f4696f1f7e5 in /lib64/libc.so.6)
+1: frame #29: <unknown function> + 0x292e3d (0x558a1d925e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0312 14:54:50.014000 300745 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 300882 closing signal SIGTERM
+1: W0312 14:54:50.015000 300745 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 300883 closing signal SIGTERM
+1: W0312 14:54:50.022000 300745 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 300884 closing signal SIGTERM
+1: W0312 14:54:50.024000 300745 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 300885 closing signal SIGTERM
+1: [W312 14:54:51.737286852 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:48460, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f462a990446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f4686307029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f4686303abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f468ee1c554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f468e56ab24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x558a1d892dc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x558a1d87307b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x558a1d8c2625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyObject_FastCallDictTstate + 0x63 (0x558a1d876853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyObject_Call_Prepend + 0x69 (0x558a1d8a9e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: <unknown function> + 0x2e99b9 (0x558a1d97c9b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: PyObject_Call + 0x1ed (0x558a1d8abebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2a4d36 (0x558a1d937d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: PyEval_EvalCode + 0x9f (0x558a1d9373ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2c2f2a (0x558a1d955f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: <unknown function> + 0x2bf343 (0x558a1d952343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2d4300 (0x558a1d967300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: _PyRun_SimpleFileObject + 0x1ae (0x558a1d966c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: _PyRun_AnyFileObject + 0x44 (0x558a1d966a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: Py_RunMain + 0x2df (0x558a1d960bdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: Py_BytesMain + 0x37 (0x558a1d925f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: __libc_start_main + 0xe5 (0x7f4696f1f7e5 in /lib64/libc.so.6)
+1: frame #29: <unknown function> + 0x292e3d (0x558a1d925e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0312 14:54:51.558000 300745 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_300745_0' has failed to shutdown the rendezvous '1050' due to an error of type RendezvousConnectionError.
+1: [W312 14:54:51.742203036 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:48460, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f462a990446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f4686307029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f4686303abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f468ee1c554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f468e56ab24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x558a1d892dc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x558a1d87307b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x558a1d8c2625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyObject_FastCallDictTstate + 0x63 (0x558a1d876853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyObject_Call_Prepend + 0x69 (0x558a1d8a9e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: <unknown function> + 0x2e99b9 (0x558a1d97c9b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: PyObject_Call + 0x1ed (0x558a1d8abebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyFunction_Vectorcall + 0x181 (0x558a1d8a2121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x558a1d8834e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: <unknown function> + 0x2a4d36 (0x558a1d937d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: PyEval_EvalCode + 0x9f (0x558a1d9373ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2c2f2a (0x558a1d955f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: <unknown function> + 0x2bf343 (0x558a1d952343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2d4300 (0x558a1d967300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: _PyRun_SimpleFileObject + 0x1ae (0x558a1d966c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: _PyRun_AnyFileObject + 0x44 (0x558a1d966a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: Py_RunMain + 0x2df (0x558a1d960bdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: Py_BytesMain + 0x37 (0x558a1d925f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: __libc_start_main + 0xe5 (0x7f4696f1f7e5 in /lib64/libc.so.6)
+1: frame #27: <unknown function> + 0x292e3d (0x558a1d925e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0312 14:54:51.561000 300745 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_300745_0' has failed to shutdown the rendezvous '1050' due to an error of type RendezvousConnectionError.
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+1:     return getattr(self._store, store_op)(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: torch.distributed.DistNetworkError: Broken pipe
+1: 
+1: The above exception was the direct cause of the following exception:
+1: 
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+1:     result = agent.run()
+1:              ^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+1:     result = f(*args, **kwargs)
+1:              ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 696, in run
+1:     result = self._invoke_run(role)
+1:              ^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 891, in _invoke_run
+1:     num_nodes_waiting = rdzv_handler.num_nodes_waiting()
+1:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1253, in num_nodes_waiting
+1:     self._state_holder.sync()
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 423, in sync
+1:     set_response = self._backend.set_state(state_bits, self._token)
+1:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 100, in set_state
+1:     base64_state: bytes = self._call_store(
+1:                           ^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+1:     raise RendezvousConnectionError(
+1: torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: hercules: task 1: Exited with exit code 1

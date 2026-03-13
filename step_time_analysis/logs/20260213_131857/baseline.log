@@ -1,0 +1,79 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: [Rank 0] Loading wikitext dataset...
+0: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Model parameters: 6,860,104,785 total, 6,860,104,785 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: /home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 13.16 GB         Max_MA 25.56 GB         CA 25.56 GB         Max_CA 26 GB 
+0: CPU Virtual Memory:  used = 54.31 GB, percent = 21.7%
+0: After initializing optimizer states
+0: MA 13.16 GB         Max_MA 13.16 GB         CA 25.56 GB         Max_CA 26 GB 
+0: CPU Virtual Memory:  used = 79.92 GB, percent = 31.9%
+0: After initializing ZeRO optimizer
+0: MA 13.16 GB         Max_MA 13.16 GB         CA 25.56 GB         Max_CA 26 GB 
+0: CPU Virtual Memory:  used = 79.92 GB, percent = 31.9%
+0: [Rank 0] DeepSpeed initialized with config: configs/baseline.json
+0: [Rank 0] Memory after init: allocated=13.16 GB, reserved=25.56 GB
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 392, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 337, in main
+0: [rank0]:     model_engine.step()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2697, in step
+0: [rank0]:     self._take_model_step(lr_kwargs)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2591, in _take_model_step
+0: [rank0]:     self.optimizer.step()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage_1_and_2.py", line 2073, in step
+0: [rank0]:     self._optimizer_step(i)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage_1_and_2.py", line 2020, in _optimizer_step
+0: [rank0]:     self.optimizer.step()
+0: [rank0]:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+0: [rank0]:     out = func(*args, **kwargs)
+0: [rank0]:           ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+0: [rank0]:     return func(*args, **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/adam/cpu_adam.py", line 157, in step
+0: [rank0]:     state['exp_avg_sq'] = torch.zeros_like(p.data, dtype=state_dtype, device=device)
+0: [rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]: RuntimeError: [enforce fail at alloc_cpu.cpp:117] err == 0. DefaultCPUAllocator: can't allocate memory: you tried to allocate 27440419144 bytes. Error code 12 (Cannot allocate memory)
+0: [rank0]:[W213 13:20:29.215653949 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: E0213 13:20:32.610000 997785 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 997817) of binary: /home/bigyang/micromamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/micromamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train2.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-02-13_13:20:32
+0:   host      : node0261.palmetto.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 997817)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: node0261: task 0: Exited with exit code 1

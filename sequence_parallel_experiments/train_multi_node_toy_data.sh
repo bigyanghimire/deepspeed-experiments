@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH --job-name=train_bf16
+#SBATCH --nodes=2
+#SBATCH --gres=gpu:a100:4
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=128G
+#SBATCH --time=01:00:00
+# #SBATCH --partition=mri2020
+#SBATCH --output=toy_slurm_logs/standard-ulysses-%j.output
+#SBATCH --error=toy_slurm_logs/standard-ulysses-%j.err
+
+# module load cuda/11.8.0
+eval "$(micromamba shell hook --shell bash)"
+micromamba activate ds-hf 
+export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
+export MASTER_PORT=29501
+
+NUM_NODES=2
+GPUS_PER_NODE=4
+NUM_STEPS=20
+WARMUP_STEPS=5
+
+LAUNCHER="torchrun \
+    --nproc_per_node ${GPUS_PER_NODE} \
+    --nnodes ${NUM_NODES} \
+    --rdzv_id=${SLURM_JOB_ID} \
+    --rdzv_backend=c10d \
+    --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
+
+CMD="train_toy_data.py"
+export HF_TOKEN=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
+export TRANSFORMERS_OFFLINE=1
+export HF_DATASETS_OFFLINE=1
+rm -fr toy_slurm_logs
+srun -l bash -c "${LAUNCHER} ${CMD}"
+# deepspeed --num_gpus 4 train_gpt_grouped.py

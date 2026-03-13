@@ -1,0 +1,44 @@
+0: W0310 15:19:38.178000 445224 site-packages/torch/distributed/run.py:793] 
+0: W0310 15:19:38.178000 445224 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0310 15:19:38.178000 445224 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0310 15:19:38.178000 445224 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0310 15:19:38.243000 281893 site-packages/torch/distributed/run.py:793] 
+1: W0310 15:19:38.243000 281893 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0310 15:19:38.243000 281893 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0310 15:19:38.243000 281893 site-packages/torch/distributed/run.py:793] *****************************************
+1: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.49s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.57s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.48s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.52s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.53s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.53s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.44s/it]Loading checkpoint shards:
+1:   75%|███████▌  | 3/4 [00:04<00:01,  1.51s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.52s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.16s/it]
+1: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.23s/it]
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.64s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.53s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.57s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.49s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.65s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.61s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.62s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.55s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.64s/it]Loading checkpoint shards:
+1: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.23s/it]
+0:   75%|███████▌  | 3/4 [00:04<00:01,  1.62s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.63s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.59s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.12s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.30s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.11s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.27s/it]
+1: Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.53s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.25s/it]
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-hades: error: *** JOB 1032 ON hades CANCELLED AT 2026-03-10T16:19:40 DUE TO TIME LIMIT ***
+0: slurmstepd-hades: error: *** STEP 1032.0 ON hades CANCELLED AT 2026-03-10T16:19:40 DUE TO TIME LIMIT ***
+0: W0310 16:19:40.007000 445224 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0310 16:19:40.008000 445224 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 445362 closing signal SIGTERM
+1: W0310 16:19:40.007000 281893 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0310 16:19:40.010000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282030 closing signal SIGTERM
+1: W0310 16:19:40.013000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282031 closing signal SIGTERM
+0: W0310 16:19:40.011000 445224 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 445363 closing signal SIGTERM
+0: W0310 16:19:40.015000 445224 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 445364 closing signal SIGTERM
+1: W0310 16:19:40.018000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282030 closing signal SIGTERM
+0: W0310 16:19:40.017000 445224 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 445365 closing signal SIGTERM
+1: W0310 16:19:40.018000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282031 closing signal SIGTERM
+1: W0310 16:19:40.018000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282032 closing signal SIGTERM
+1: W0310 16:19:40.020000 281893 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 282033 closing signal SIGTERM

@@ -1,0 +1,304 @@
+0: W0305 12:41:57.751000 178129 site-packages/torch/distributed/run.py:793] 
+0: W0305 12:41:57.751000 178129 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0305 12:41:57.751000 178129 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0305 12:41:57.751000 178129 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0305 12:41:57.788000 129456 site-packages/torch/distributed/run.py:793] 
+1: W0305 12:41:57.788000 129456 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0305 12:41:57.788000 129456 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0305 12:41:57.788000 129456 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: 
+1: [Rank 3] Loading wikitext dataset...
+1: [Rank 2] Loading wikitext dataset...
+1: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+0: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: Could not set the permissions on the file '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd.incomplete'. Error: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd.incomplete'.
+0: Continuing without setting permissions.
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 825, in move
+0: [rank1]:     os.rename(src, real_dst)
+0: [rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd.incomplete' -> '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd'
+0: 
+0: [rank1]: During handling of the above exception, another exception occurred:
+0: 
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1900, in _copy_no_matter_what
+0: [rank1]:     shutil.copy2(src, dst)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 436, in copy2
+0: [rank1]:     copyfile(src, dst, follow_symlinks=follow_symlinks)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 256, in copyfile
+0: [rank1]:     with open(src, 'rb') as fsrc:
+0: [rank1]:          ^^^^^^^^^^^^^^^
+0: [rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd.incomplete'
+0: 
+0: [rank1]: During handling of the above exception, another exception occurred:
+0: 
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 425, in <module>
+0: [rank1]:     main()
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 251, in main
+0: [rank1]:     dataloader, actual_vocab_size = load_wikitext_data(
+0: [rank1]:                                     ^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 169, in load_wikitext_data
+0: [rank1]:     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+0: [rank1]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/tokenization_auto.py", line 628, in from_pretrained
+0: [rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+0: [rank1]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/tokenization_auto.py", line 453, in get_tokenizer_config
+0: [rank1]:     resolved_config_file = cached_file(
+0: [rank1]:                            ^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 276, in cached_file
+0: [rank1]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 507, in cached_files
+0: [rank1]:     raise e
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 419, in cached_files
+0: [rank1]:     hf_hub_download(
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+0: [rank1]:     return fn(*args, **kwargs)
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 982, in hf_hub_download
+0: [rank1]:     return _hf_hub_download_to_cache_dir(
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1198, in _hf_hub_download_to_cache_dir
+0: [rank1]:     _download_to_tmp_and_move(
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1848, in _download_to_tmp_and_move
+0: [rank1]:     _chmod_and_move(incomplete_path, destination_path)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1889, in _chmod_and_move
+0: [rank1]:     shutil.move(str(src), str(dst), copy_function=_copy_no_matter_what)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 845, in move
+0: [rank1]:     copy_function(src, real_dst)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1903, in _copy_no_matter_what
+0: [rank1]:     shutil.copyfile(src, dst)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 256, in copyfile
+0: [rank1]:     with open(src, 'rb') as fsrc:
+0: [rank1]:          ^^^^^^^^^^^^^^^
+0: [rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd.incomplete'
+0: Could not set the permissions on the file '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6.incomplete'. Error: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6.incomplete'.
+0: Continuing without setting permissions.
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 825, in move
+0: [rank0]:     os.rename(src, real_dst)
+0: [rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6.incomplete' -> '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6'
+0: 
+0: [rank0]: During handling of the above exception, another exception occurred:
+0: 
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1900, in _copy_no_matter_what
+0: [rank0]:     shutil.copy2(src, dst)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 436, in copy2
+0: [rank0]:     copyfile(src, dst, follow_symlinks=follow_symlinks)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 256, in copyfile
+0: [rank0]:     with open(src, 'rb') as fsrc:
+0: [rank0]:          ^^^^^^^^^^^^^^^
+0: [rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6.incomplete'
+0: 
+0: [rank0]: During handling of the above exception, another exception occurred:
+0: 
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 425, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 251, in main
+0: [rank0]:     dataloader, actual_vocab_size = load_wikitext_data(
+0: [rank0]:                                     ^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 169, in load_wikitext_data
+0: [rank0]:     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+0: [rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/tokenization_auto.py", line 725, in from_pretrained
+0: [rank0]:     return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/tokenization_utils_base.py", line 1719, in from_pretrained
+0: [rank0]:     resolved_vocab_files[file_id] = cached_file(
+0: [rank0]:                                     ^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 276, in cached_file
+0: [rank0]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 507, in cached_files
+0: [rank0]:     raise e
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 419, in cached_files
+0: [rank0]:     hf_hub_download(
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+0: [rank0]:     return fn(*args, **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 982, in hf_hub_download
+0: [rank0]:     return _hf_hub_download_to_cache_dir(
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1198, in _hf_hub_download_to_cache_dir
+0: [rank0]:     _download_to_tmp_and_move(
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1848, in _download_to_tmp_and_move
+0: [rank0]:     _chmod_and_move(incomplete_path, destination_path)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1889, in _chmod_and_move
+0: [rank0]:     shutil.move(str(src), str(dst), copy_function=_copy_no_matter_what)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 845, in move
+0: [rank0]:     copy_function(src, real_dst)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1903, in _copy_no_matter_what
+0: [rank0]:     shutil.copyfile(src, dst)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/shutil.py", line 256, in copyfile
+0: [rank0]:     with open(src, 'rb') as fsrc:
+0: [rank0]:          ^^^^^^^^^^^^^^^
+0: [rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.cache/huggingface/hub/models--gpt2/blobs/1f1d9aaca301414e7f6c9396df506798ff4eb9a6.incomplete'
+1: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+1: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:14, 2680.45 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:13, 2784.52 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:12, 2988.00 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:12, 2965.39 examples/s]Map:   8%|▊         | 3000/39531 [00:01<00:12, 3009.24 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:11, 3095.18 examples/s]Map:  10%|█         | 4000/39531 [00:01<00:11, 3154.36 examples/s]Map:  10%|█         | 4000/39531 [00:01<00:12, 2889.24 examples/s]Map:  13%|█▎        | 5000/39531 [00:01<00:11, 3074.41 examples/s]Map:  13%|█▎        | 5000/39531 [00:01<00:11, 2962.85 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:10, 3059.39 examples/s]Map:  15%|█▌        | 6000/39531 [00:02<00:10, 3054.94 examples/s]Map:  18%|█▊        | 7000/39531 [00:02<00:10, 3084.84 examples/s]Map:  18
+1: %|█▊        | 7000/39531 [00:02<00:10, 3024.02 examples/s]Map:  20%|██        | 8000/39531 [00:02<00:09, 3155.55 examples/s]Map:  20%|██        | 8000/39531 [00:02<00:10, 3088.31 examples/s]Map:  23%|██▎       | 9000/39531 [00:02<00:09, 3216.39 examples/s]Map:  23%|██▎       | 9000/39531 [00:02<00:10, 3047.66 examples/s]Map:  25%|██▌       | 10000/39531 [00:03<00:09, 3280.69 examples/s]Map:  25%|██▌       | 10000/39531 [00:03<00:09, 2962.96 examples/s]Map:  28%|██▊       | 11000/39531 [00:03<00:08, 3301.66 examples/s]Map:  28%|██▊       | 11000/39531 [00:03<00:09, 2979.73 examples/s]Map:  30%|███       | 12000/39531 [00:03<00:08, 3121.48 examples/s]Map:  30%|███       | 12000/39531 [00:04<00:09, 2978.44 examples/s]Map:  33%|███▎      | 13000/39531 [00:04<00:08, 3084.90 examples/s]Map:  33%|███▎      | 13000/39531 [00:04<00:08, 3036.35 examples/s]Map:  35%|███▌      | 14000/39531 [00:04<00:08, 3053.08 examples/s]M
+1: ap:  35%|███▌      | 14000/39531 [00:04<00:08, 3099.99 examples/s]Map:  38%|███▊      | 15000/39531 [00:04<00:07, 3105.87 examples/s]Map:  38%|███▊      | 15000/39531 [00:04<00:08, 3056.18 examples/s]Map:  40%|████      | 16000/39531 [00:05<00:07, 3125.54 examples/s]Map:  40%|████      | 16000/39531 [00:05<00:07, 3043.88 examples/s]Map:  43%|████▎     | 17000/39531 [00:05<00:08, 2616.73 examples/s]Map:  43%|████▎     | 17000/39531 [00:05<00:08, 2505.72 examples/s]Map:  46%|████▌     | 18000/39531 [00:05<00:07, 2835.40 examples/s]Map:  46%|████▌     | 18000/39531 [00:06<00:07, 2712.99 examples/s]Map:  48%|████▊     | 19000/39531 [00:06<00:06, 2939.05 examples/s]Map:  48%|████▊     | 19000/39531 [00:06<00:07, 2836.62 examples/s]Map:  51%|█████     | 20000/39531 [00:06<00:06, 3030.37 examples/s]Map:  51%|█████     | 20000/39531 [00:06<00:06, 2948.63 examples/s]Map:  53%|███�
+1: �█▎    | 21000/39531 [00:06<00:05, 3128.42 examples/s]Map:  53%|█████▎    | 21000/39531 [00:07<00:06, 3023.52 examples/s]Map:  56%|█████▌    | 22000/39531 [00:07<00:05, 3228.07 examples/s]Map:  56%|█████▌    | 22000/39531 [00:07<00:05, 3121.49 examples/s]Map:  58%|█████▊    | 23000/39531 [00:07<00:05, 3267.75 examples/s]Map:  58%|█████▊    | 23000/39531 [00:07<00:05, 2988.41 examples/s]Map:  61%|██████    | 24000/39531 [00:07<00:04, 3251.60 examples/s]Map:  63%|██████▎   | 25000/39531 [00:08<00:04, 3224.35 examples/s]Map:  61%|██████    | 24000/39531 [00:08<00:05, 2987.72 examples/s]Map:  66%|██████▌   | 26000/39531 [00:08<00:04, 3075.53 examples/s]Map:  63%|██████▎   | 25000/39531 [00:08<00:04, 2942.35 examples/s]Map:  66%|██████▌   | 26000/39531 [00:08<00:04, 2941.40 examples/s]Map:  68%|██████▊   | 27000/39531 [00:08<00:04, 3001.56 example
+0: [rank0]:[W305 12:42:17.024437460 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0305 12:42:17.994000 178129 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 178267 closing signal SIGTERM
+0: E0305 12:42:18.260000 178129 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 178268) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train2.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-05_12:42:17
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 1 (local_rank: 1)
+0:   exitcode  : 1 (pid: 178268)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1
+1: s/s]Map:  68%|██████▊   | 27000/39531 [00:09<00:04, 2999.40 examples/s]Map:  71%|███████   | 28000/39531 [00:09<00:03, 3000.99 examples/s]Map:  71%|███████   | 28000/39531 [00:09<00:03, 3011.40 examples/s]Map:  73%|███████▎  | 29000/39531 [00:09<00:03, 3037.57 examples/s]Map:  76%|███████▌  | 30000/39531 [00:09<00:03, 3085.03 examples/s]Map:  73%|███████▎  | 29000/39531 [00:09<00:03, 3005.16 examples/s]Map:  76%|███████▌  | 30000/39531 [00:10<00:03, 3041.96 examples/s]Map:  78%|███████▊  | 31000/39531 [00:10<00:02, 3034.38 examples/s]Map:  78%|███████▊  | 31000/39531 [00:10<00:02, 3058.24 examples/s]Map:  81%|████████  | 32000/39531 [00:10<00:02, 3052.44 examples/s]Map:  81%|████████  | 32000/39531 [00:10<00:02, 3052.03 examples/s]Map:  83%|████████▎ | 33000/39531 [00:10<00:02, 3017.00 examples/s]Map:  83%|█�
+1: �██████▎ | 33000/39531 [00:11<00:02, 3089.85 examples/s]Map:  86%|████████▌ | 34000/39531 [00:11<00:01, 3066.41 examples/s]W0305 12:42:18.912000 129456 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 129593 closing signal SIGTERM
+1: W0305 12:42:18.916000 129456 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 129594 closing signal SIGTERM
+1: [W305 12:42:19.916238800 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:42266, remote=[hades]:29600): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f9477d74446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f94d36eb029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x27e (0x7f94d36e8a6e in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x2a (0x7f94d36e8eca in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::get(std::string const&) + 0x7a (0x7f94d36e9d3a in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f99c (0x7f94dc20099c in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f94db94eb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x562ed4eaddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x562ed4e8e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x562ed4edd625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x562ed4ebd121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x562ed4ebd121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyObject_FastCallDictTstate + 0x63 (0x562ed4e91853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyObject_Call_Prepend + 0xe9 (0x562ed4ec4e89 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x2e99b9 (0x562ed4f979b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: PyObject_Call + 0x1ed (0x562ed4ec6ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: _PyFunction_Vectorcall + 0x181 (0x562ed4ebd121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2a4d36 (0x562ed4f52d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: PyEval_EvalCode + 0x9f (0x562ed4f523ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2c2f2a (0x562ed4f70f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: <unknown function> + 0x2bf343 (0x562ed4f6d343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: <unknown function> + 0x2d4300 (0x562ed4f82300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: _PyRun_SimpleFileObject + 0x1ae (0x562ed4f81c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: _PyRun_AnyFileObject + 0x44 (0x562ed4f81a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: Py_RunMain + 0x2df (0x562ed4f7bbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #29: Py_BytesMain + 0x37 (0x562ed4f40f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #30: __libc_start_main + 0xe5 (0x7f94e43037e5 in /lib64/libc.so.6)
+1: frame #31: <unknown function> + 0x292e3d (0x562ed4f40e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0305 12:42:19.738000 129456 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_129456_0' has failed to shutdown the rendezvous '875' due to an error of type RendezvousConnectionError.
+1: [W305 12:42:19.922859960 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:42266, remote=[hades]:29600): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f9477d74446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f94d36eb029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x27e (0x7f94d36e8a6e in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x2a (0x7f94d36e8eca in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::get(std::string const&) + 0x7a (0x7f94d36e9d3a in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f99c (0x7f94dc20099c in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f94db94eb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x562ed4eaddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x562ed4e8e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x562ed4edd625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x562ed4ebd121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyObject_FastCallDictTstate + 0x63 (0x562ed4e91853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyObject_Call_Prepend + 0xe9 (0x562ed4ec4e89 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: <unknown function> + 0x2e99b9 (0x562ed4f979b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: PyObject_Call + 0x1ed (0x562ed4ec6ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: _PyFunction_Vectorcall + 0x181 (0x562ed4ebd121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x562ed4e9e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2a4d36 (0x562ed4f52d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: PyEval_EvalCode + 0x9f (0x562ed4f523ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2c2f2a (0x562ed4f70f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: <unknown function> + 0x2bf343 (0x562ed4f6d343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2d4300 (0x562ed4f82300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: _PyRun_SimpleFileObject + 0x1ae (0x562ed4f81c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: _PyRun_AnyFileObject + 0x44 (0x562ed4f81a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: Py_RunMain + 0x2df (0x562ed4f7bbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: Py_BytesMain + 0x37 (0x562ed4f40f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: __libc_start_main + 0xe5 (0x7f94e43037e5 in /lib64/libc.so.6)
+1: frame #29: <unknown function> + 0x292e3d (0x562ed4f40e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0305 12:42:19.743000 129456 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_129456_0' has failed to shutdown the rendezvous '875' due to an error of type RendezvousConnectionError.
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+1:     return getattr(self._store, store_op)(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+1: 
+1: The above exception was the direct cause of the following exception:
+1: 
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+1:     result = agent.run()
+1:              ^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+1:     result = f(*args, **kwargs)
+1:              ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 696, in run
+1:     result = self._invoke_run(role)
+1:              ^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 891, in _invoke_run
+1:     num_nodes_waiting = rdzv_handler.num_nodes_waiting()
+1:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1253, in num_nodes_waiting
+1:     self._state_holder.sync()
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+1:     get_response = self._backend.get_state()
+1:                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+1:     base64_state: bytes = self._call_store("get", self._key)
+1:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+1:     raise RendezvousConnectionError(
+1: torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: hercules: task 1: Exited with exit code 1

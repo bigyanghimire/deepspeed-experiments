@@ -1,0 +1,131 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: Before initializing optimizer states
+0: MA 2.88 GB         Max_MA 4.61 GB         CA 5.18 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.27 GB, percent = 2.1%
+0: After initializing optimizer states
+0: MA 2.88 GB         Max_MA 3.46 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.27 GB, percent = 2.1%
+0: After initializing ZeRO optimizer
+0: MA 2.88 GB         Max_MA 2.88 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.27 GB, percent = 2.1%
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...[Rank 3] Loading wikitext dataset...
+0: 
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 6] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 7] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 5] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 4] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 1] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 0] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 2] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 3] Packed dataset: 345 chunks of 16000 tokens
+0: Iteration 0: loss=3.8612
+0: Step_time: 2.2073748111724854
+0: 
+0: Iteration 1: loss=12.8246
+0: Step_time: 2.2475759983062744
+0: 
+0: Iteration 2: loss=9.6171
+0: Step_time: 2.4791693687438965
+0: 
+0: Iteration 3: loss=15.1516
+0: Step_time: 2.2050187587738037
+0: 
+0: Iteration 4: loss=9.7375
+0: Step_time: 2.1982357501983643
+0: 
+0: Iteration 5: loss=12.3277
+0: Step_time: 2.165194272994995
+0: 
+0: Iteration 6: loss=11.6044
+0: Step_time: 2.1935150623321533
+0: 
+0: Iteration 7: loss=10.3047
+0: Step_time: 2.2271862030029297
+0: 
+0: Iteration 8: loss=8.8920
+0: Step_time: 2.2284233570098877
+0: 
+0: Iteration 9: loss=8.6806
+0: Step_time: 2.1719369888305664
+0: 
+0: Iteration 10: loss=8.3122
+0: Step_time: 2.1675992012023926
+0: 
+0: Iteration 11: loss=8.0731
+0: Step_time: 2.204430341720581
+0: 
+0: Iteration 12: loss=8.0153
+0: Step_time: 2.190124034881592
+0: 
+0: Iteration 13: loss=7.9187
+0: Step_time: 2.2032151222229004
+0: 
+0: Iteration 14: loss=7.9753
+0: Step_time: 2.1878104209899902
+0: 
+0: Iteration 15: loss=8.0903
+0: Step_time: 2.2061500549316406
+0: 
+0: Iteration 16: loss=8.1203
+0: Step_time: 2.1997175216674805
+0: 
+0: Iteration 17: loss=7.9452
+0: Step_time: 2.2126314640045166
+0: 
+0: Iteration 18: loss=8.0886
+0: Step_time: 2.212620973587036
+0: 
+0: Iteration 19: loss=7.8468
+0: Step_time: 2.1542184352874756
+0: 
+0: Iteration 20: loss=7.8026
+0: Step_time: 2.1823909282684326
+0: 
+0: Iteration 21: loss=7.7129
+0: Step_time: 2.1921985149383545
+0: 
+0: Iteration 22: loss=7.7850
+0: Step_time: 2.2033770084381104
+0: 
+0: Iteration 23: loss=7.8548
+0: Step_time: 2.184704542160034
+0: 
+0: Iteration 24: loss=7.6735
+0: Step_time: 2.189876079559326
+0: 
+0: Iteration 25: loss=7.6621
+0: Step_time: 2.1922569274902344
+0: 
+0: Iteration 26: loss=7.6435
+0: Step_time: 2.174670934677124
+0: 
+0: Iteration 27: loss=7.6630
+0: Step_time: 2.166841506958008
+0: 
+0: Iteration 28: loss=7.6774
+0: Step_time: 2.214128017425537
+0: 
+0: Iteration 29: loss=7.6582
+0: Step_time: 2.203176736831665
+0: 

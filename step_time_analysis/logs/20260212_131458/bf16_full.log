@@ -1,0 +1,310 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 1] Loading wikitext dataset...
+0: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+1: [Rank 1] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+1: [Rank 1] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+1: [Rank 1] Model parameters: 1,818,416,209 total, 1,818,416,209 trainable
+1: [Rank 1] Activation checkpointing enabled
+0: [Rank 0] Model parameters: 1,818,416,209 total, 1,818,416,209 trainable
+0: [Rank 0] Activation checkpointing enabled
+1: /home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 3.39 GB         Max_MA 3.39 GB         CA 3.45 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 28.19 GB, percent = 11.2%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 3.39 GB         Max_MA 3.77 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 27.69 GB, percent = 11.0%
+0: Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 1.69 GB         Max_MA 3.48 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 28.15 GB, percent = 11.2%
+0: Before creating fp16 partitions
+0: MA 1.69 GB         Max_MA 1.69 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 28.52 GB, percent = 11.4%
+0: After creating fp16 partitions: 1
+0: MA 1.69 GB         Max_MA 1.69 GB         CA 1.7 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 28.3 GB, percent = 11.3%
+0: Before creating fp32 partitions
+0: MA 1.69 GB         Max_MA 1.69 GB         CA 1.7 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 28.53 GB, percent = 11.4%
+0: After creating fp32 partitions
+0: MA 5.08 GB         Max_MA 8.47 GB         CA 8.47 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 28.75 GB, percent = 11.5%
+0: Before initializing optimizer states
+0: MA 5.08 GB         Max_MA 5.08 GB         CA 8.47 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 28.97 GB, percent = 11.6%
+0: After initializing optimizer states
+0: MA 5.08 GB         Max_MA 8.47 GB         CA 8.47 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 29.14 GB, percent = 11.6%
+1: [Rank 1] DeepSpeed initialized with config: configs/bf16_full.json
+1: [Rank 1] Memory after init: allocated=7.71 GB, reserved=8.47 GB
+0: After initializing ZeRO optimizer
+0: MA 7.71 GB         Max_MA 8.09 GB         CA 8.47 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 28.29 GB, percent = 11.3%
+0: [Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+0: [Rank 0] Memory after init: allocated=7.71 GB, reserved=8.47 GB
+0: [Rank 0] Step 0: loss=11.9375, time=1.587s, alloc_mem=14.88 GB, peak_mem=18.27 GB
+1: [Rank 1] Step 0: loss=11.7500, time=1.728s, alloc_mem=14.88 GB, peak_mem=18.27 GB
+1: Local>>>>>> step_time: 0.8081252574920654, dataloading_time : 0.0009551048278808594,forward_time :0.3033146858215332, backward_time: 0.4451160430908203, optim time :0.058737754821777344
+1: [Rank 1] Step 5: loss=3.9219, time=0.808s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.6978497505187988, dataloading_time : 0.0011417865753173828,forward_time :0.19328045845031738, backward_time: 0.4445161819458008, optim time :0.05890774726867676
+0: [Rank 0] Step 5: loss=4.9375, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.694516658782959, dataloading_time : 0.0009229183197021484,forward_time :0.19043993949890137, backward_time: 0.44437479972839355, optim time :0.0587770938873291
+0: Local>>>>>> step_time: 0.6943678855895996, dataloading_time : 0.0009462833404541016,forward_time :0.19014811515808105, backward_time: 0.4443342685699463, optim time :0.05893683433532715
+1: Local>>>>>> step_time: 0.6914970874786377, dataloading_time : 0.0008437633514404297,forward_time :0.19058012962341309, backward_time: 0.44133782386779785, optim time :0.05873298645019531
+0: Local>>>>>> step_time: 0.691368579864502, dataloading_time : 0.0009405612945556641,forward_time :0.19034934043884277, backward_time: 0.4412343502044678, optim time :0.05884265899658203
+1: Local>>>>>> step_time: 0.6985504627227783, dataloading_time : 0.0008287429809570312,forward_time :0.19207382202148438, backward_time: 0.44699645042419434, optim time :0.05865001678466797
+0: Local>>>>>> step_time: 0.6985580921173096, dataloading_time : 0.0008561611175537109,forward_time :0.19193029403686523, backward_time: 0.446913480758667, optim time :0.05885648727416992
+1: Local>>>>>> step_time: 0.6993765830993652, dataloading_time : 0.0008399486541748047,forward_time :0.19352388381958008, backward_time: 0.44584059715270996, optim time :0.05917072296142578
+0: Local>>>>>> step_time: 0.6993441581726074, dataloading_time : 0.0009124279022216797,forward_time :0.19323205947875977, backward_time: 0.4460158348083496, optim time :0.05918240547180176
+1: Local>>>>>> step_time: 0.7101645469665527, dataloading_time : 0.0008387565612792969,forward_time :0.19289135932922363, backward_time: 0.45755887031555176, optim time :0.05887413024902344
+1: [Rank 1] Step 10: loss=4.2188, time=0.710s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.7103075981140137, dataloading_time : 0.001123666763305664,forward_time :0.1964855194091797, backward_time: 0.4530763626098633, optim time :0.05962014198303223
+0: [Rank 0] Step 10: loss=4.2812, time=0.710s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.7107906341552734, dataloading_time : 0.0009479522705078125,forward_time :0.19292187690734863, backward_time: 0.45673465728759766, optim time :0.060184478759765625
+0: Local>>>>>> step_time: 0.7107589244842529, dataloading_time : 0.000997304916381836,forward_time :0.19845914840698242, backward_time: 0.4502723217010498, optim time :0.061028480529785156
+1: Local>>>>>> step_time: 0.7150037288665771, dataloading_time : 0.000881195068359375,forward_time :0.19211935997009277, backward_time: 0.4630775451660156, optim time :0.058924198150634766
+0: Local>>>>>> step_time: 0.7149543762207031, dataloading_time : 0.0009377002716064453,forward_time :0.1970202922821045, backward_time: 0.45717382431030273, optim time :0.05982065200805664
+1: Local>>>>>> step_time: 0.7156429290771484, dataloading_time : 0.0008177757263183594,forward_time :0.19217562675476074, backward_time: 0.46283888816833496, optim time :0.059808969497680664
+0: Local>>>>>> step_time: 0.7157056331634521, dataloading_time : 0.0010833740234375,forward_time :0.19887971878051758, backward_time: 0.4550330638885498, optim time :0.060707807540893555
+1: Local>>>>>> step_time: 0.720365047454834, dataloading_time : 0.0009205341339111328,forward_time :0.1917409896850586, backward_time: 0.46703433990478516, optim time :0.06066751480102539
+0: Local>>>>>> step_time: 0.720294713973999, dataloading_time : 0.0010802745819091797,forward_time :0.2029106616973877, backward_time: 0.454697847366333, optim time :0.06160378456115723
+1: Local>>>>>> step_time: 0.7150144577026367, dataloading_time : 0.0009417533874511719,forward_time :0.19299077987670898, backward_time: 0.46166539192199707, optim time :0.05941343307495117
+1: [Rank 1] Step 15: loss=3.0156, time=0.715s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.7149560451507568, dataloading_time : 0.0010540485382080078,forward_time :0.20083045959472656, backward_time: 0.4525299072265625, optim time :0.06053948402404785
+0: [Rank 0] Step 15: loss=3.3750, time=0.715s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 6.386246919631958, dataloading_time : 0.0008857250213623047,forward_time :5.886725664138794, backward_time: 0.4416768550872803, optim time :0.056957244873046875
+0: Local>>>>>> step_time: 0.6898655891418457, dataloading_time : 0.0010325908660888672,forward_time :0.19120478630065918, backward_time: 0.4407954216003418, optim time :0.05683159828186035
+1: Local>>>>>> step_time: 0.6895475387573242, dataloading_time : 0.0009491443634033203,forward_time :0.19019126892089844, backward_time: 0.4415903091430664, optim time :0.05681490898132324
+0: Local>>>>>> step_time: 0.6895701885223389, dataloading_time : 0.0009391307830810547,forward_time :0.1903548240661621, backward_time: 0.44150781631469727, optim time :0.05676674842834473
+1: Local>>>>>> step_time: 0.6892561912536621, dataloading_time : 0.0008428096771240234,forward_time :0.1914057731628418, backward_time: 0.44013285636901855, optim time :0.056873321533203125
+0: Local>>>>>> step_time: 0.6891443729400635, dataloading_time : 0.0008633136749267578,forward_time :0.19154930114746094, backward_time: 0.43993234634399414, optim time :0.05679798126220703
+1: Local>>>>>> step_time: 0.6900951862335205, dataloading_time : 0.0008628368377685547,forward_time :0.19112849235534668, backward_time: 0.441256046295166, optim time :0.05684661865234375
+0: Local>>>>>> step_time: 0.6901109218597412, dataloading_time : 0.0008852481842041016,forward_time :0.19121122360229492, backward_time: 0.4412214756011963, optim time :0.05679154396057129
+1: Local>>>>>> step_time: 0.69384765625, dataloading_time : 0.0008678436279296875,forward_time :0.19075632095336914, backward_time: 0.4453394412994385, optim time :0.056882381439208984
+0: Local>>>>>> step_time: 0.6937663555145264, dataloading_time : 0.0008718967437744141,forward_time :0.19096922874450684, backward_time: 0.4451773166656494, optim time :0.056746482849121094
+0: [Rank 0] Step 20: loss=2.6719, time=0.694s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 20: loss=3.6562, time=0.694s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6888027191162109, dataloading_time : 0.0007183551788330078,forward_time :0.1905503273010254, backward_time: 0.44060707092285156, optim time :0.056925058364868164
+0: Local>>>>>> step_time: 0.688725471496582, dataloading_time : 0.0008940696716308594,forward_time :0.19043803215026855, backward_time: 0.4405949115753174, optim time :0.056797027587890625
+1: Local>>>>>> step_time: 0.6947958469390869, dataloading_time : 0.0008227825164794922,forward_time :0.19075322151184082, backward_time: 0.44629883766174316, optim time :0.056919097900390625
+0: Local>>>>>> step_time: 0.6948223114013672, dataloading_time : 0.0008039474487304688,forward_time :0.191023588180542, backward_time: 0.44615960121154785, optim time :0.056833505630493164
+1: Local>>>>>> step_time: 0.6937651634216309, dataloading_time : 0.0008587837219238281,forward_time :0.19018316268920898, backward_time: 0.44606733322143555, optim time :0.056653738021850586
+0: Local>>>>>> step_time: 0.6937525272369385, dataloading_time : 0.0008959770202636719,forward_time :0.19020962715148926, backward_time: 0.44603443145751953, optim time :0.056610822677612305
+1: Local>>>>>> step_time: 0.6931486129760742, dataloading_time : 0.0008444786071777344,forward_time :0.1893308162689209, backward_time: 0.4461073875427246, optim time :0.056864261627197266
+0: Local>>>>>> step_time: 0.6931207180023193, dataloading_time : 0.0009560585021972656,forward_time :0.18941950798034668, backward_time: 0.44594454765319824, optim time :0.05679893493652344
+0: Local>>>>>> step_time: 0.6923789978027344, dataloading_time : 0.0009829998016357422,forward_time :0.1891331672668457, backward_time: 0.4454689025878906, optim time :0.056792259216308594
+1: Local>>>>>> step_time: 0.692462682723999, dataloading_time : 0.0007216930389404297,forward_time :0.18928170204162598, backward_time: 0.44564104080200195, optim time :0.05681657791137695
+0: [Rank 0] Step 25: loss=1.8125, time=0.692s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 25: loss=2.4062, time=0.692s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.695446252822876, dataloading_time : 0.0008103847503662109,forward_time :0.192366361618042, backward_time: 0.44538235664367676, optim time :0.0568852424621582
+0: Local>>>>>> step_time: 0.6953918933868408, dataloading_time : 0.0008141994476318359,forward_time :0.19252967834472656, backward_time: 0.4452838897705078, optim time :0.0567622184753418
+0: Local>>>>>> step_time: 0.6950640678405762, dataloading_time : 0.0009558200836181641,forward_time :0.19258332252502441, backward_time: 0.4448528289794922, optim time :0.056671142578125
+1: Local>>>>>> step_time: 0.6951260566711426, dataloading_time : 0.0008141994476318359,forward_time :0.19256806373596191, backward_time: 0.44492459297180176, optim time :0.05681753158569336
+1: Local>>>>>> step_time: 0.694061279296875, dataloading_time : 0.0008630752563476562,forward_time :0.19115734100341797, backward_time: 0.44514918327331543, optim time :0.056890249252319336
+0: Local>>>>>> step_time: 0.6940817832946777, dataloading_time : 0.00084686279296875,forward_time :0.1914808750152588, backward_time: 0.444957971572876, optim time :0.05679464340209961
+1: Local>>>>>> step_time: 0.6938183307647705, dataloading_time : 0.0008566379547119141,forward_time :0.19053268432617188, backward_time: 0.4455997943878174, optim time :0.056827545166015625
+0: Local>>>>>> step_time: 0.693833589553833, dataloading_time : 0.001107931137084961,forward_time :0.1903364658355713, backward_time: 0.4455723762512207, optim time :0.05681562423706055
+1: Local>>>>>> step_time: 0.6951231956481934, dataloading_time : 0.0008463859558105469,forward_time :0.19014477729797363, backward_time: 0.44737887382507324, optim time :0.05675172805786133
+0: Local>>>>>> step_time: 0.6951034069061279, dataloading_time : 0.0008244514465332031,forward_time :0.19026970863342285, backward_time: 0.44725584983825684, optim time :0.05675220489501953
+1: [Rank 1] Step 30: loss=2.3906, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 30: loss=2.3750, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6937868595123291, dataloading_time : 0.0007879734039306641,forward_time :0.19016551971435547, backward_time: 0.4460463523864746, optim time :0.05678558349609375
+0: Local>>>>>> step_time: 0.6936547756195068, dataloading_time : 0.0008587837219238281,forward_time :0.19016599655151367, backward_time: 0.4458887577056885, optim time :0.05673980712890625
+1: Local>>>>>> step_time: 0.6958003044128418, dataloading_time : 0.0009000301361083984,forward_time :0.19262218475341797, backward_time: 0.44561076164245605, optim time :0.056665658950805664
+0: Local>>>>>> step_time: 0.6957707405090332, dataloading_time : 0.00087738037109375,forward_time :0.19288897514343262, backward_time: 0.44536447525024414, optim time :0.05663895606994629
+1: Local>>>>>> step_time: 0.6955854892730713, dataloading_time : 0.0008008480072021484,forward_time :0.19138884544372559, backward_time: 0.4465487003326416, optim time :0.05684351921081543
+0: Local>>>>>> step_time: 0.6954870223999023, dataloading_time : 0.0009336471557617188,forward_time :0.19151878356933594, backward_time: 0.44612789154052734, optim time :0.05690503120422363
+1: Local>>>>>> step_time: 0.6897487640380859, dataloading_time : 0.0008647441864013672,forward_time :0.19054746627807617, backward_time: 0.44139695167541504, optim time :0.05693793296813965
+0: Local>>>>>> step_time: 0.689812421798706, dataloading_time : 0.0008578300476074219,forward_time :0.19100165367126465, backward_time: 0.44108009338378906, optim time :0.05687141418457031
+1: Local>>>>>> step_time: 0.8909239768981934, dataloading_time : 0.0008497238159179688,forward_time :0.38806772232055664, backward_time: 0.4451305866241455, optim time :0.05687427520751953
+0: Local>>>>>> step_time: 0.8908565044403076, dataloading_time : 0.0009887218475341797,forward_time :0.3646507263183594, backward_time: 0.4683690071105957, optim time :0.05684638023376465
+1: [Rank 1] Step 35: loss=2.4688, time=0.891s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 35: loss=1.9297, time=0.891s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6933319568634033, dataloading_time : 0.0009303092956542969,forward_time :0.1905226707458496, backward_time: 0.44504451751708984, optim time :0.05683326721191406
+0: Local>>>>>> step_time: 0.6933383941650391, dataloading_time : 0.0009026527404785156,forward_time :0.1906290054321289, backward_time: 0.44499945640563965, optim time :0.05680584907531738
+1: Local>>>>>> step_time: 0.695288896560669, dataloading_time : 0.0008170604705810547,forward_time :0.1942758560180664, backward_time: 0.44341230392456055, optim time :0.05678200721740723
+0: Local>>>>>> step_time: 0.6952862739562988, dataloading_time : 0.0009660720825195312,forward_time :0.19448423385620117, backward_time: 0.4429936408996582, optim time :0.05684089660644531
+1: Local>>>>>> step_time: 0.691105842590332, dataloading_time : 0.000989675521850586,forward_time :0.19121003150939941, backward_time: 0.4420313835144043, optim time :0.05687355995178223
+0: Local>>>>>> step_time: 0.6909964084625244, dataloading_time : 0.0008871555328369141,forward_time :0.19134736061096191, backward_time: 0.4419071674346924, optim time :0.056853532791137695
+0: Local>>>>>> step_time: 0.6921427249908447, dataloading_time : 0.000934600830078125,forward_time :0.18863868713378906, backward_time: 0.4459388256072998, optim time :0.05662846565246582
+1: Local>>>>>> step_time: 0.6922481060028076, dataloading_time : 0.0008597373962402344,forward_time :0.18859291076660156, backward_time: 0.4461383819580078, optim time :0.0566558837890625
+1: Local>>>>>> step_time: 0.6972286701202393, dataloading_time : 0.0010068416595458984,forward_time :0.19172906875610352, backward_time: 0.4477553367614746, optim time :0.05673575401306152
+0: Local>>>>>> step_time: 0.6972901821136475, dataloading_time : 0.0008571147918701172,forward_time :0.19203543663024902, backward_time: 0.4475889205932617, optim time :0.056807518005371094
+1: [Rank 1] Step 40: loss=1.9609, time=0.697s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 40: loss=2.2969, time=0.697s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6993429660797119, dataloading_time : 0.0007874965667724609,forward_time :0.19120168685913086, backward_time: 0.450653076171875, optim time :0.056699275970458984
+0: Local>>>>>> step_time: 0.6992828845977783, dataloading_time : 0.0008723735809326172,forward_time :0.19115400314331055, backward_time: 0.4505882263183594, optim time :0.05666708946228027
+1: Local>>>>>> step_time: 0.6933815479278564, dataloading_time : 0.0008063316345214844,forward_time :0.19173216819763184, backward_time: 0.4439809322357178, optim time :0.05686068534851074
+0: Local>>>>>> step_time: 0.693378210067749, dataloading_time : 0.0008821487426757812,forward_time :0.1918318271636963, backward_time: 0.4437873363494873, optim time :0.056874990463256836
+1: Local>>>>>> step_time: 0.6974225044250488, dataloading_time : 0.0008490085601806641,forward_time :0.1918931007385254, backward_time: 0.4478573799133301, optim time :0.056821346282958984
+0: Local>>>>>> step_time: 0.6973869800567627, dataloading_time : 0.0009410381317138672,forward_time :0.19181060791015625, backward_time: 0.4478268623352051, optim time :0.05680656433105469
+1: Local>>>>>> step_time: 0.7001194953918457, dataloading_time : 0.0008249282836914062,forward_time :0.1926562786102295, backward_time: 0.44975757598876953, optim time :0.05687880516052246
+0: Local>>>>>> step_time: 0.6998805999755859, dataloading_time : 0.0009739398956298828,forward_time :0.19259095191955566, backward_time: 0.44960570335388184, optim time :0.056708574295043945
+1: Local>>>>>> step_time: 0.6898612976074219, dataloading_time : 0.0008237361907958984,forward_time :0.18920111656188965, backward_time: 0.442915678024292, optim time :0.056919097900390625
+0: Local>>>>>> step_time: 0.6898329257965088, dataloading_time : 0.0009870529174804688,forward_time :0.18924713134765625, backward_time: 0.44284629821777344, optim time :0.056751251220703125
+0: [Rank 0] Step 45: loss=3.0625, time=0.690s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 45: loss=2.0938, time=0.690s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6942641735076904, dataloading_time : 0.0008397102355957031,forward_time :0.19154763221740723, backward_time: 0.4450523853302002, optim time :0.05682253837585449
+0: Local>>>>>> step_time: 0.6944167613983154, dataloading_time : 0.0008466243743896484,forward_time :0.19169950485229492, backward_time: 0.4449021816253662, optim time :0.05696678161621094
+1: Local>>>>>> step_time: 0.698051929473877, dataloading_time : 0.0008759498596191406,forward_time :0.19092154502868652, backward_time: 0.4495549201965332, optim time :0.056697845458984375
+0: Local>>>>>> step_time: 0.6979126930236816, dataloading_time : 0.0010192394256591797,forward_time :0.19069480895996094, backward_time: 0.4494915008544922, optim time :0.05670523643493652
+1: Local>>>>>> step_time: 0.6948947906494141, dataloading_time : 0.000843048095703125,forward_time :0.1900935173034668, backward_time: 0.44716548919677734, optim time :0.056791067123413086
+0: Local>>>>>> step_time: 0.6948883533477783, dataloading_time : 0.0009233951568603516,forward_time :0.1901237964630127, backward_time: 0.447052001953125, optim time :0.05678725242614746
+1: Local>>>>>> step_time: 0.6964254379272461, dataloading_time : 0.0008084774017333984,forward_time :0.19078707695007324, backward_time: 0.4479942321777344, optim time :0.05683398246765137
+0: Local>>>>>> step_time: 0.6963362693786621, dataloading_time : 0.0008807182312011719,forward_time :0.19078874588012695, backward_time: 0.44791460037231445, optim time :0.05675101280212402
+1: Local>>>>>> step_time: 0.6979119777679443, dataloading_time : 0.0008337497711181641,forward_time :0.19109439849853516, backward_time: 0.44914913177490234, optim time :0.05683255195617676
+0: Local>>>>>> step_time: 0.6978349685668945, dataloading_time : 0.0008950233459472656,forward_time :0.19119000434875488, backward_time: 0.4489939212799072, optim time :0.056754350662231445
+0: [Rank 0] Step 50: loss=2.1250, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 50: loss=3.6875, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6966919898986816, dataloading_time : 0.0007686614990234375,forward_time :0.19083547592163086, backward_time: 0.44822120666503906, optim time :0.05686473846435547
+0: Local>>>>>> step_time: 0.6966037750244141, dataloading_time : 0.0008518695831298828,forward_time :0.19087672233581543, backward_time: 0.4481663703918457, optim time :0.05670762062072754
+1: Local>>>>>> step_time: 0.695399284362793, dataloading_time : 0.0007724761962890625,forward_time :0.19162893295288086, backward_time: 0.4462454319000244, optim time :0.05675077438354492
+0: Local>>>>>> step_time: 0.6954402923583984, dataloading_time : 0.0009593963623046875,forward_time :0.19156432151794434, backward_time: 0.44616222381591797, optim time :0.05675339698791504
+1: Local>>>>>> step_time: 0.6960711479187012, dataloading_time : 0.0008635520935058594,forward_time :0.19038701057434082, backward_time: 0.4478788375854492, optim time :0.056940317153930664
+0: Local>>>>>> step_time: 0.6959342956542969, dataloading_time : 0.0009486675262451172,forward_time :0.19037938117980957, backward_time: 0.4478466510772705, optim time :0.05675768852233887
+1: Local>>>>>> step_time: 0.6931972503662109, dataloading_time : 0.0008392333984375,forward_time :0.19076323509216309, backward_time: 0.44469642639160156, optim time :0.05689692497253418
+0: Local>>>>>> step_time: 0.6933009624481201, dataloading_time : 0.000827789306640625,forward_time :0.1909797191619873, backward_time: 0.4446284770965576, optim time :0.05686306953430176
+1: Local>>>>>> step_time: 0.6983664035797119, dataloading_time : 0.0006899833679199219,forward_time :0.18973398208618164, backward_time: 0.4511117935180664, optim time :0.056828975677490234
+0: Local>>>>>> step_time: 0.6982467174530029, dataloading_time : 0.000904083251953125,forward_time :0.18960237503051758, backward_time: 0.4510066509246826, optim time :0.056732177734375
+0: [Rank 0] Step 55: loss=1.9062, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 55: loss=2.9844, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6963446140289307, dataloading_time : 0.0008132457733154297,forward_time :0.19188737869262695, backward_time: 0.44681835174560547, optim time :0.0568242073059082
+0: Local>>>>>> step_time: 0.6963677406311035, dataloading_time : 0.0008447170257568359,forward_time :0.1921079158782959, backward_time: 0.4465672969818115, optim time :0.05684638023376465
+1: Local>>>>>> step_time: 0.6949853897094727, dataloading_time : 0.0008685588836669922,forward_time :0.19242072105407715, backward_time: 0.44481801986694336, optim time :0.05687689781188965
+0: Local>>>>>> step_time: 0.6948802471160889, dataloading_time : 0.0009095668792724609,forward_time :0.1925067901611328, backward_time: 0.44469666481018066, optim time :0.05676555633544922
+1: Local>>>>>> step_time: 0.6942174434661865, dataloading_time : 0.0008296966552734375,forward_time :0.19005036354064941, backward_time: 0.4464731216430664, optim time :0.05686306953430176
+0: Local>>>>>> step_time: 0.6942691802978516, dataloading_time : 0.0008959770202636719,forward_time :0.19018936157226562, backward_time: 0.44634580612182617, optim time :0.05683636665344238
+0: Local>>>>>> step_time: 0.6942143440246582, dataloading_time : 0.0008862018585205078,forward_time :0.19132447242736816, backward_time: 0.4451732635498047, optim time :0.056829214096069336
+1: Local>>>>>> step_time: 0.6943256855010986, dataloading_time : 0.0008037090301513672,forward_time :0.1912992000579834, backward_time: 0.4453091621398926, optim time :0.05691218376159668
+1: Local>>>>>> step_time: 0.6979920864105225, dataloading_time : 0.0008118152618408203,forward_time :0.19111943244934082, backward_time: 0.4491753578186035, optim time :0.056883811950683594
+0: Local>>>>>> step_time: 0.6979737281799316, dataloading_time : 0.0008749961853027344,forward_time :0.1912376880645752, backward_time: 0.44904208183288574, optim time :0.05681729316711426
+0: [Rank 0] Step 60: loss=2.5469, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 60: loss=2.3906, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6954267024993896, dataloading_time : 0.0007741451263427734,forward_time :0.19129204750061035, backward_time: 0.446674108505249, optim time :0.05668473243713379
+0: Local>>>>>> step_time: 0.6954123973846436, dataloading_time : 0.0008642673492431641,forward_time :0.19141936302185059, backward_time: 0.4464993476867676, optim time :0.056627750396728516
+1: Local>>>>>> step_time: 0.6942224502563477, dataloading_time : 0.0008294582366943359,forward_time :0.19096827507019043, backward_time: 0.44548487663269043, optim time :0.05693817138671875
+0: Local>>>>>> step_time: 0.6941664218902588, dataloading_time : 0.0008630752563476562,forward_time :0.19104647636413574, backward_time: 0.4454057216644287, optim time :0.05684971809387207
+1: Local>>>>>> step_time: 0.6898677349090576, dataloading_time : 0.0008871555328369141,forward_time :0.18738150596618652, backward_time: 0.4447011947631836, optim time :0.05689597129821777
+0: Local>>>>>> step_time: 0.6898355484008789, dataloading_time : 0.0009007453918457031,forward_time :0.18749475479125977, backward_time: 0.44459962844848633, optim time :0.0568387508392334
+1: Local>>>>>> step_time: 0.6945891380310059, dataloading_time : 0.000982522964477539,forward_time :0.19107294082641602, backward_time: 0.44563746452331543, optim time :0.05689525604248047
+0: Local>>>>>> step_time: 0.694495439529419, dataloading_time : 0.0010776519775390625,forward_time :0.19110894203186035, backward_time: 0.44553661346435547, optim time :0.05677032470703125
+1: Local>>>>>> step_time: 0.6932857036590576, dataloading_time : 0.0008244514465332031,forward_time :0.19070792198181152, backward_time: 0.444943904876709, optim time :0.0568082332611084
+0: Local>>>>>> step_time: 0.6933703422546387, dataloading_time : 0.0010023117065429688,forward_time :0.1907052993774414, backward_time: 0.4448399543762207, optim time :0.056821346282958984
+1: [Rank 1] Step 65: loss=3.0938, time=0.693s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 65: loss=2.3281, time=0.693s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6962757110595703, dataloading_time : 0.0008242130279541016,forward_time :0.1933422088623047, backward_time: 0.4451253414154053, optim time :0.05698251724243164
+0: Local>>>>>> step_time: 0.6960985660552979, dataloading_time : 0.0008280277252197266,forward_time :0.19337964057922363, backward_time: 0.44502735137939453, optim time :0.05686187744140625
+1: Local>>>>>> step_time: 0.7005932331085205, dataloading_time : 0.0007841587066650391,forward_time :0.19150853157043457, backward_time: 0.4514591693878174, optim time :0.05684018135070801
+0: Local>>>>>> step_time: 0.7006936073303223, dataloading_time : 0.0009329319000244141,forward_time :0.19121050834655762, backward_time: 0.45171093940734863, optim time :0.05683779716491699
+1: Local>>>>>> step_time: 0.7002623081207275, dataloading_time : 0.0007953643798828125,forward_time :0.1925792694091797, backward_time: 0.4500579833984375, optim time :0.05682778358459473
+0: Local>>>>>> step_time: 0.700141429901123, dataloading_time : 0.00084686279296875,forward_time :0.19266343116760254, backward_time: 0.44987964630126953, optim time :0.05675029754638672
+1: Local>>>>>> step_time: 0.6986229419708252, dataloading_time : 0.0007991790771484375,forward_time :0.19054961204528809, backward_time: 0.4503312110900879, optim time :0.05694127082824707
+0: Local>>>>>> step_time: 0.6984598636627197, dataloading_time : 0.0009083747863769531,forward_time :0.19054484367370605, backward_time: 0.45027899742126465, optim time :0.05672621726989746
+1: Local>>>>>> step_time: 0.6952011585235596, dataloading_time : 0.0008571147918701172,forward_time :0.1902608871459961, backward_time: 0.44722485542297363, optim time :0.05685710906982422
+0: Local>>>>>> step_time: 0.6953294277191162, dataloading_time : 0.0009291172027587891,forward_time :0.1904759407043457, backward_time: 0.44709157943725586, optim time :0.05683159828186035
+1: [Rank 1] Step 70: loss=2.2344, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 70: loss=3.1875, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.6960427761077881, dataloading_time : 0.0008683204650878906,forward_time :0.19174480438232422, backward_time: 0.44661688804626465, optim time :0.05681109428405762
+1: Local>>>>>> step_time: 0.6961548328399658, dataloading_time : 0.0007619857788085938,forward_time :0.19176197052001953, backward_time: 0.4467177391052246, optim time :0.056911468505859375
+1: Local>>>>>> step_time: 0.6897120475769043, dataloading_time : 0.0008232593536376953,forward_time :0.1881258487701416, backward_time: 0.44396114349365234, optim time :0.05679965019226074
+0: Local>>>>>> step_time: 0.6896927356719971, dataloading_time : 0.0008730888366699219,forward_time :0.18831801414489746, backward_time: 0.4437692165374756, optim time :0.05673074722290039
+1: Local>>>>>> step_time: 0.7973031997680664, dataloading_time : 0.0008764266967773438,forward_time :0.18918490409851074, backward_time: 0.550421953201294, optim time :0.05681872367858887
+0: Local>>>>>> step_time: 0.7973716259002686, dataloading_time : 0.0008869171142578125,forward_time :0.3104438781738281, backward_time: 0.429154634475708, optim time :0.0568845272064209
+1: Local>>>>>> step_time: 0.8080167770385742, dataloading_time : 0.0010137557983398438,forward_time :0.30640411376953125, backward_time: 0.4436192512512207, optim time :0.05697798728942871
+0: Local>>>>>> step_time: 0.8078196048736572, dataloading_time : 0.0009207725524902344,forward_time :0.25394392013549805, backward_time: 0.49607062339782715, optim time :0.056882619857788086
+1: Local>>>>>> step_time: 0.6958661079406738, dataloading_time : 0.0009207725524902344,forward_time :0.19303011894226074, backward_time: 0.44475769996643066, optim time :0.05715584754943848
+0: Local>>>>>> step_time: 0.6958930492401123, dataloading_time : 0.0009522438049316406,forward_time :0.19304800033569336, backward_time: 0.4449141025543213, optim time :0.05697751045227051
+1: [Rank 1] Step 75: loss=3.4062, time=0.696s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 75: loss=3.9531, time=0.696s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6929576396942139, dataloading_time : 0.0008788108825683594,forward_time :0.1913902759552002, backward_time: 0.44365453720092773, optim time :0.05703234672546387
+0: Local>>>>>> step_time: 0.6929876804351807, dataloading_time : 0.0008933544158935547,forward_time :0.19147729873657227, backward_time: 0.4436075687408447, optim time :0.057007789611816406
+0: Local>>>>>> step_time: 0.702486515045166, dataloading_time : 0.0010035037994384766,forward_time :0.1913611888885498, backward_time: 0.4533853530883789, optim time :0.05673527717590332
+1: Local>>>>>> step_time: 0.7026958465576172, dataloading_time : 0.0008296966552734375,forward_time :0.19129061698913574, backward_time: 0.45368075370788574, optim time :0.056893110275268555
+0: Local>>>>>> step_time: 0.6925444602966309, dataloading_time : 0.0010228157043457031,forward_time :0.19125723838806152, backward_time: 0.4434833526611328, optim time :0.05677962303161621
+1: Local>>>>>> step_time: 0.6924998760223389, dataloading_time : 0.0009188652038574219,forward_time :0.19104909896850586, backward_time: 0.4436819553375244, optim time :0.05684828758239746
+0: Local>>>>>> step_time: 0.6931204795837402, dataloading_time : 0.00104522705078125,forward_time :0.1891336441040039, backward_time: 0.4462141990661621, optim time :0.05672574043273926
+1: Local>>>>>> step_time: 0.6932435035705566, dataloading_time : 0.0008122920989990234,forward_time :0.18922734260559082, backward_time: 0.44632601737976074, optim time :0.056876182556152344
+1: Local>>>>>> step_time: 0.6952950954437256, dataloading_time : 0.0008080005645751953,forward_time :0.19214653968811035, backward_time: 0.4454941749572754, optim time :0.05684494972229004
+0: Local>>>>>> step_time: 0.6953392028808594, dataloading_time : 0.0008585453033447266,forward_time :0.19250941276550293, backward_time: 0.44519686698913574, optim time :0.056772708892822266
+0: [Rank 0] Step 80: loss=2.6094, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: [Rank 1] Step 80: loss=2.5938, time=0.695s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6970729827880859, dataloading_time : 0.0007762908935546875,forward_time :0.1915299892425537, backward_time: 0.448009729385376, optim time :0.05675530433654785
+0: Local>>>>>> step_time: 0.6970000267028809, dataloading_time : 0.000985860824584961,forward_time :0.19144082069396973, backward_time: 0.44782471656799316, optim time :0.0567474365234375
+1: Local>>>>>> step_time: 0.6947267055511475, dataloading_time : 0.0008151531219482422,forward_time :0.19005513191223145, backward_time: 0.4468653202056885, optim time :0.05698966979980469
+0: Local>>>>>> step_time: 0.6946654319763184, dataloading_time : 0.0008428096771240234,forward_time :0.19018864631652832, backward_time: 0.44675445556640625, optim time :0.05687832832336426
+1: Local>>>>>> step_time: 0.7004139423370361, dataloading_time : 0.0008378028869628906,forward_time :0.18987345695495605, backward_time: 0.452974796295166, optim time :0.05672621726989746
+0: Local>>>>>> step_time: 0.7008395195007324, dataloading_time : 0.000957489013671875,forward_time :0.1898355484008789, backward_time: 0.4529237747192383, optim time :0.05712103843688965
+1: Local>>>>>> step_time: 0.6981637477874756, dataloading_time : 0.0008070468902587891,forward_time :0.19202017784118652, backward_time: 0.44858431816101074, optim time :0.05675053596496582
+0: Local>>>>>> step_time: 0.6977190971374512, dataloading_time : 0.0007855892181396484,forward_time :0.1917896270751953, backward_time: 0.4483497142791748, optim time :0.0567929744720459
+0: Local>>>>>> step_time: 0.6976485252380371, dataloading_time : 0.0009796619415283203,forward_time :0.19162344932556152, backward_time: 0.44827938079833984, optim time :0.056764841079711914
+1: Local>>>>>> step_time: 0.6977157592773438, dataloading_time : 0.0007481575012207031,forward_time :0.1918010711669922, backward_time: 0.4483067989349365, optim time :0.05685830116271973
+1: [Rank 1] Step 85: loss=2.9688, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 85: loss=3.0156, time=0.698s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.6995835304260254, dataloading_time : 0.000812530517578125,forward_time :0.19045424461364746, backward_time: 0.45139622688293457, optim time :0.056919097900390625
+0: Local>>>>>> step_time: 0.6996195316314697, dataloading_time : 0.0008516311645507812,forward_time :0.19061970710754395, backward_time: 0.45119500160217285, optim time :0.05695152282714844
+0: Local>>>>>> step_time: 0.6956164836883545, dataloading_time : 0.0009362697601318359,forward_time :0.19044280052185059, backward_time: 0.44756627082824707, optim time :0.05666971206665039
+1: Local>>>>>> step_time: 0.6957821846008301, dataloading_time : 0.0008234977722167969,forward_time :0.19070982933044434, backward_time: 0.44748592376708984, optim time :0.05676126480102539
+1: Local>>>>>> step_time: 0.6901631355285645, dataloading_time : 0.0008449554443359375,forward_time :0.18902993202209473, backward_time: 0.4434163570404053, optim time :0.056870222091674805
+0: Local>>>>>> step_time: 0.6902356147766113, dataloading_time : 0.0008590221405029297,forward_time :0.18920159339904785, backward_time: 0.44332361221313477, optim time :0.05684995651245117
+0: Local>>>>>> step_time: 0.6945054531097412, dataloading_time : 0.0009722709655761719,forward_time :0.19041967391967773, backward_time: 0.4463486671447754, optim time :0.0567631721496582
+1: Local>>>>>> step_time: 0.6946465969085693, dataloading_time : 0.0008740425109863281,forward_time :0.19051814079284668, backward_time: 0.4464232921600342, optim time :0.05682969093322754
+0: Local>>>>>> step_time: 0.7009024620056152, dataloading_time : 0.0008914470672607422,forward_time :0.19124126434326172, backward_time: 0.4520535469055176, optim time :0.05671501159667969
+0: [Rank 0] Step 90: loss=2.4219, time=0.701s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: Local>>>>>> step_time: 0.7010118961334229, dataloading_time : 0.0008387565612792969,forward_time :0.19115424156188965, backward_time: 0.4521923065185547, optim time :0.05682492256164551
+1: [Rank 1] Step 90: loss=3.2188, time=0.701s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.6998214721679688, dataloading_time : 0.0008628368377685547,forward_time :0.1913461685180664, backward_time: 0.4508492946624756, optim time :0.05676150321960449
+1: Local>>>>>> step_time: 0.6997992992401123, dataloading_time : 0.0008037090301513672,forward_time :0.19121694564819336, backward_time: 0.45096445083618164, optim time :0.05681276321411133
+1: Local>>>>>> step_time: 0.69661545753479, dataloading_time : 0.0008325576782226562,forward_time :0.19225049018859863, backward_time: 0.44682741165161133, optim time :0.05670309066772461
+0: Local>>>>>> step_time: 0.696575403213501, dataloading_time : 0.0008704662322998047,forward_time :0.1923694610595703, backward_time: 0.44670677185058594, optim time :0.05662727355957031
+0: Local>>>>>> step_time: 0.6967225074768066, dataloading_time : 0.0008933544158935547,forward_time :0.19161534309387207, backward_time: 0.44737958908081055, optim time :0.05683279037475586
+1: Local>>>>>> step_time: 0.6967134475708008, dataloading_time : 0.0007898807525634766,forward_time :0.19160723686218262, backward_time: 0.4474465847015381, optim time :0.05686831474304199
+1: Local>>>>>> step_time: 0.6969547271728516, dataloading_time : 0.0008399486541748047,forward_time :0.18877840042114258, backward_time: 0.4504880905151367, optim time :0.05684685707092285
+0: Local>>>>>> step_time: 0.6969726085662842, dataloading_time : 0.0008838176727294922,forward_time :0.18883776664733887, backward_time: 0.450392484664917, optim time :0.05685710906982422
+0: Local>>>>>> step_time: 0.69553542137146, dataloading_time : 0.0009274482727050781,forward_time :0.1907057762145996, backward_time: 0.4470500946044922, optim time :0.05685067176818848
+1: Local>>>>>> step_time: 0.6956377029418945, dataloading_time : 0.0008087158203125,forward_time :0.190812349319458, backward_time: 0.4471263885498047, optim time :0.056888580322265625
+1: [Rank 1] Step 95: loss=3.1562, time=0.696s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 95: loss=2.9062, time=0.696s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: Local>>>>>> step_time: 0.6942629814147949, dataloading_time : 0.0007829666137695312,forward_time :0.19045281410217285, backward_time: 0.44641757011413574, optim time :0.056607961654663086
+1: Local>>>>>> step_time: 0.6946651935577393, dataloading_time : 0.0008156299591064453,forward_time :0.19032001495361328, backward_time: 0.4465303421020508, optim time :0.05699777603149414
+0: Local>>>>>> step_time: 0.6964352130889893, dataloading_time : 0.0008804798126220703,forward_time :0.1912534236907959, backward_time: 0.4473907947540283, optim time :0.05690908432006836
+1: Local>>>>>> step_time: 0.6961069107055664, dataloading_time : 0.0008075237274169922,forward_time :0.19090890884399414, backward_time: 0.4476437568664551, optim time :0.056742191314697266
+0: Local>>>>>> step_time: 0.693345308303833, dataloading_time : 0.0008914470672607422,forward_time :0.18854761123657227, backward_time: 0.44707512855529785, optim time :0.05682969093322754
+1: Local>>>>>> step_time: 0.6933655738830566, dataloading_time : 0.0008833408355712891,forward_time :0.18837857246398926, backward_time: 0.4472384452819824, optim time :0.05686378479003906
+1: Local>>>>>> step_time: 0.6988921165466309, dataloading_time : 0.000850677490234375,forward_time :0.19109630584716797, backward_time: 0.45017218589782715, optim time :0.056771278381347656
+0: Local>>>>>> step_time: 0.6989865303039551, dataloading_time : 0.0009760856628417969,forward_time :0.1910996437072754, backward_time: 0.4500255584716797, optim time :0.056884050369262695
+1: [Rank 1] Step 99: loss=2.8438, time=0.699s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+0: [Rank 0] Step 99: loss=2.2031, time=0.699s, alloc_mem=14.88 GB, peak_mem=19.96 GB
+1: 
+1: ============================================================
+1: [Rank 1] FINAL RESULTS
+1:   Config: configs/bf16_full.json
+1:   Model: hidden_dim=2048, num_layers=32
+1:   Parameters: 1,818,416,209
+1:   Batch size: 8, Seq length: 512
+1:   Average step time: 0.762s
+1:   Peak memory: 19.96 GB
+1:   Final allocated memory: 14.88 GB
+1: ============================================================
+1: SUMMARY: config=configs/bf16_full.json params=1818416209 peak_mem_bytes=21431395328 alloc_mem_bytes=15976144384 avg_step_time=0.7619
+0: 
+0: ============================================================
+0: [Rank 0] FINAL RESULTS
+0:   Config: configs/bf16_full.json
+0:   Model: hidden_dim=2048, num_layers=32
+0:   Parameters: 1,818,416,209
+0:   Batch size: 8, Seq length: 512
+0:   Average step time: 0.701s
+0:   Peak memory: 19.96 GB
+0:   Final allocated memory: 14.88 GB
+0: ============================================================
+0: SUMMARY: config=configs/bf16_full.json params=1818416209 peak_mem_bytes=21431395328 alloc_mem_bytes=15976144384 avg_step_time=0.7007
+0: Loss history saved to: logs/bf16full_loss.csv
+1: [rank1]:[W212 13:18:41.817264407 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W212 13:18:42.808310895 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

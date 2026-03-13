@@ -1,0 +1,83 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: [Rank 0] Loading wikitext dataset...
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Model parameters: 1,818,416,209 total, 1,818,416,209 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: /home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 3.39 GB         Max_MA 3.39 GB         CA 3.45 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 27.23 GB, percent = 10.9%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 3.39 GB         Max_MA 3.77 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 27.24 GB, percent = 10.9%
+0: Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 3.39 GB         Max_MA 3.58 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 27.58 GB, percent = 11.0%
+0: Before creating fp16 partitions
+0: MA 3.39 GB         Max_MA 3.39 GB         CA 3.84 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 28.07 GB, percent = 11.2%
+0: After creating fp16 partitions: 2
+0: MA 3.39 GB         Max_MA 3.39 GB         CA 3.39 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 27.61 GB, percent = 11.0%
+0: Before creating fp32 partitions
+0: MA 3.39 GB         Max_MA 3.39 GB         CA 3.39 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 27.8 GB, percent = 11.1%
+0: After creating fp32 partitions
+0: MA 10.16 GB         Max_MA 13.93 GB         CA 13.93 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 27.65 GB, percent = 11.0%
+0: Before initializing optimizer states
+0: MA 10.16 GB         Max_MA 10.16 GB         CA 13.93 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 27.55 GB, percent = 11.0%
+0: After initializing optimizer states
+0: MA 10.16 GB         Max_MA 13.93 GB         CA 17.7 GB         Max_CA 18 GB 
+0: CPU Virtual Memory:  used = 27.77 GB, percent = 11.1%
+0: After initializing ZeRO optimizer
+0: MA 14.48 GB         Max_MA 14.86 GB         CA 17.7 GB         Max_CA 18 GB 
+0: CPU Virtual Memory:  used = 28.54 GB, percent = 11.4%
+0: [Rank 0] DeepSpeed initialized with config: configs/bf16_full.json
+0: [Rank 0] Memory after init: allocated=14.48 GB, reserved=17.70 GB
+0: [Rank 0] Step 0: loss=11.6875, time=0.698s, alloc_mem=28.43 GB, peak_mem=31.44 GB
+0: Local>>>>>> step_time: 0.541762113571167, dataloading_time : 0.001310586929321289,forward_time :0.12121701240539551, backward_time: 0.31248927116394043, optim time :0.10674238204956055
+0: [Rank 0] Step 5: loss=12.1875, time=0.542s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5382540225982666, dataloading_time : 0.0011169910430908203,forward_time :0.11780643463134766, backward_time: 0.31241941452026367, optim time :0.10690879821777344
+0: Local>>>>>> step_time: 0.5374751091003418, dataloading_time : 0.0010685920715332031,forward_time :0.11823153495788574, backward_time: 0.31139087677001953, optim time :0.10678219795227051
+0: Local>>>>>> step_time: 0.5395174026489258, dataloading_time : 0.0011920928955078125,forward_time :0.11868882179260254, backward_time: 0.31290721893310547, optim time :0.10672688484191895
+0: Local>>>>>> step_time: 0.5382339954376221, dataloading_time : 0.001058340072631836,forward_time :0.1186213493347168, backward_time: 0.31177568435668945, optim time :0.10677671432495117
+0: Local>>>>>> step_time: 0.5758821964263916, dataloading_time : 0.0012860298156738281,forward_time :0.1375424861907959, backward_time: 0.3307652473449707, optim time :0.10628604888916016
+0: [Rank 0] Step 10: loss=3.9531, time=0.576s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5809097290039062, dataloading_time : 0.0010516643524169922,forward_time :0.1393721103668213, backward_time: 0.33385658264160156, optim time :0.10662722587585449
+0: Local>>>>>> step_time: 0.5803883075714111, dataloading_time : 0.001115560531616211,forward_time :0.139298677444458, backward_time: 0.3333892822265625, optim time :0.1065828800201416
+0: Local>>>>>> step_time: 0.5804362297058105, dataloading_time : 0.0011239051818847656,forward_time :0.13802027702331543, backward_time: 0.3347036838531494, optim time :0.10658693313598633
+0: Local>>>>>> step_time: 0.5796768665313721, dataloading_time : 0.00112152099609375,forward_time :0.13808488845825195, backward_time: 0.3336637020111084, optim time :0.10680532455444336
+0: Local>>>>>> step_time: 0.5836172103881836, dataloading_time : 0.0012164115905761719,forward_time :0.14015769958496094, backward_time: 0.3352501392364502, optim time :0.10699105262756348
+0: [Rank 0] Step 15: loss=3.9375, time=0.584s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5314655303955078, dataloading_time : 0.0012278556823730469,forward_time :0.11839509010314941, backward_time: 0.3077723979949951, optim time :0.10406827926635742
+0: Local>>>>>> step_time: 0.5290226936340332, dataloading_time : 0.001125335693359375,forward_time :0.11503076553344727, backward_time: 0.30864548683166504, optim time :0.10421895980834961
+0: Local>>>>>> step_time: 0.5283229351043701, dataloading_time : 0.0011243820190429688,forward_time :0.11344456672668457, backward_time: 0.30919909477233887, optim time :0.1045536994934082
+0: Local>>>>>> step_time: 0.5280442237854004, dataloading_time : 0.0010828971862792969,forward_time :0.11380362510681152, backward_time: 0.3085954189300537, optim time :0.10456037521362305
+0: Local>>>>>> step_time: 0.5305948257446289, dataloading_time : 0.001190185546875,forward_time :0.1164851188659668, backward_time: 0.3087120056152344, optim time :0.10420584678649902
+0: [Rank 0] Step 20: loss=3.2812, time=0.531s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5316603183746338, dataloading_time : 0.0012574195861816406,forward_time :0.11829900741577148, backward_time: 0.3074803352355957, optim time :0.10462093353271484
+0: Local>>>>>> step_time: 0.5272130966186523, dataloading_time : 0.0010797977447509766,forward_time :0.1145930290222168, backward_time: 0.3073868751525879, optim time :0.10415172576904297
+0: Local>>>>>> step_time: 0.5267698764801025, dataloading_time : 0.001089334487915039,forward_time :0.11335968971252441, backward_time: 0.3080179691314697, optim time :0.10430026054382324
+0: Local>>>>>> step_time: 0.5269379615783691, dataloading_time : 0.00107574462890625,forward_time :0.11311459541320801, backward_time: 0.3084099292755127, optim time :0.10433626174926758
+0: Local>>>>>> step_time: 0.5269176959991455, dataloading_time : 0.0009942054748535156,forward_time :0.11310911178588867, backward_time: 0.30705761909484863, optim time :0.10575532913208008
+0: [Rank 0] Step 25: loss=3.5156, time=0.527s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5277061462402344, dataloading_time : 0.0010716915130615234,forward_time :0.11310768127441406, backward_time: 0.30924320220947266, optim time :0.10428214073181152
+0: Local>>>>>> step_time: 0.5278208255767822, dataloading_time : 0.0011942386627197266,forward_time :0.11296963691711426, backward_time: 0.3094601631164551, optim time :0.10419487953186035
+0: Local>>>>>> step_time: 0.5287036895751953, dataloading_time : 0.0010306835174560547,forward_time :0.11303281784057617, backward_time: 0.31059813499450684, optim time :0.10404038429260254
+0: Local>>>>>> step_time: 0.5277543067932129, dataloading_time : 0.0010628700256347656,forward_time :0.11377930641174316, backward_time: 0.3087484836578369, optim time :0.10416173934936523
+0: Local>>>>>> step_time: 0.5260708332061768, dataloading_time : 0.0010128021240234375,forward_time :0.1130826473236084, backward_time: 0.307950496673584, optim time :0.10402345657348633
+0: [Rank 0] Step 30: loss=2.9375, time=0.526s, alloc_mem=28.43 GB, peak_mem=34.07 GB
+0: Local>>>>>> step_time: 0.5278542041778564, dataloading_time : 0.0010197162628173828,forward_time :0.11416935920715332, backward_time: 0.30846238136291504, optim time :0.10420060157775879
+0: Local>>>>>> step_time: 0.5271029472351074, dataloading_time : 0.0010907649993896484,forward_time :0.11354899406433105, backward_time: 0.3081505298614502, optim time :0.10431075096130371
+0: Local>>>>>> step_time: 0.5278315544128418, dataloading_time : 0.0009655952453613281,forward_time :0.1132345199584961, backward_time: 0.3090851306915283, optim time :0.10454487800598145
+0: Local>>>>>> step_time: 0.5272150039672852, dataloading_time : 0.0010712146759033203,forward_time :0.11310243606567383, backward_time: 0.3085784912109375, optim time :0.1044614315032959
+0: [2026-02-12T14:42:53.398] error: *** STEP 9555492.1 ON node0292 CANCELLED AT 2026-02-12T14:42:53 DUE to SIGNAL Terminated ***
+0: W0212 14:42:53.399000 2453177 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0212 14:42:53.399000 2453177 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2453207 closing signal SIGTERM
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

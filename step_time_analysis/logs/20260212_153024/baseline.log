@@ -1,0 +1,89 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: [Rank 0] Loading wikitext dataset...
+0: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+0: [Rank 0] Dataset loaded: 39531 examples, vocab_size=50257
+0: [Rank 0] Creating model with hidden_dim=4096, num_layers=32, num_heads=16, vocab_size=50257
+0: [Rank 0] Model parameters: 6,860,104,785 total, 6,860,104,785 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: /home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 12.78 GB         Max_MA 12.78 GB         CA 12.79 GB         Max_CA 13 GB 
+0: CPU Virtual Memory:  used = 8.87 GB, percent = 2.4%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 12.78 GB         Max_MA 13.55 GB         CA 13.56 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 8.92 GB, percent = 2.4%
+0: Parameter Offload - Persistent parameters statistics: param_count = 0, numel = 0
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 12.78 GB         Max_MA 13.16 GB         CA 13.56 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 8.92 GB, percent = 2.4%
+0: Before creating fp16 partitions
+0: MA 12.78 GB         Max_MA 12.78 GB         CA 13.56 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 8.93 GB, percent = 2.4%
+0: After creating fp16 partitions: 7
+0: MA 12.78 GB         Max_MA 12.78 GB         CA 12.78 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 8.94 GB, percent = 2.4%
+0: Before creating fp32 partitions
+0: MA 12.78 GB         Max_MA 12.78 GB         CA 12.78 GB         Max_CA 13 GB 
+0: CPU Virtual Memory:  used = 8.94 GB, percent = 2.4%
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 392, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/step_time_analysis/train2.py", line 256, in main
+0: [rank0]:     model_engine, optimizer, _, _ = deepspeed.initialize(
+0: [rank0]:                                     ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/__init__.py", line 203, in initialize
+0: [rank0]:     engine = DeepSpeedEngine(args=args,
+0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 363, in __init__
+0: [rank0]:     self._configure_optimizer(optimizer, model_parameters)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1515, in _configure_optimizer
+0: [rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+0: [rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1899, in _configure_zero_optimizer
+0: [rank0]:     optimizer = Stage3ZeroOptimizer(
+0: [rank0]:                 ^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage3.py", line 454, in __init__
+0: [rank0]:     self._setup_for_real_optimizer()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage3.py", line 592, in _setup_for_real_optimizer
+0: [rank0]:     self._create_fp32_partitions()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage3.py", line 988, in _create_fp32_partitions
+0: [rank0]:     converted = self.fp16_partitioned_groups_flat[i].to(self.device,
+0: [rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.75 GiB. GPU 0 has a total capacity of 39.38 GiB of which 2.64 GiB is free. Including non-PyTorch memory, this process has 36.41 GiB memory in use. Of the allocated memory 35.32 GiB is allocated by PyTorch, and 40.31 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank0]:[W212 15:32:06.151354288 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: E0212 15:32:09.010000 3561982 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3562013) of binary: /home/bigyang/micromamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/micromamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/micromamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train2.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-02-12_15:32:09
+0:   host      : node2093.palmetto.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 3562013)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: node2093: task 0: Exited with exit code 1

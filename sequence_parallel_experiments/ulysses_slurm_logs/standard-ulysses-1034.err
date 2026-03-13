@@ -1,0 +1,154 @@
+1: W0311 10:37:24.294000 285729 site-packages/torch/distributed/run.py:793] 
+1: W0311 10:37:24.294000 285729 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0311 10:37:24.294000 285729 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0311 10:37:24.294000 285729 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0311 10:37:24.348000 450181 site-packages/torch/distributed/run.py:793] 
+0: W0311 10:37:24.348000 450181 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0311 10:37:24.348000 450181 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0311 10:37:24.348000 450181 site-packages/torch/distributed/run.py:793] *****************************************
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+0: [rank3]:     sp_group = groups._get_sequence_parallel_group()
+0: [rank3]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+0: [rank3]:     raise KeyError("No sequence parallel group found")
+0: [rank3]: KeyError: 'No sequence parallel group found'
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+0: [rank2]:     sp_group = groups._get_sequence_parallel_group()
+0: [rank2]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+0: [rank2]:     raise KeyError("No sequence parallel group found")
+0: [rank2]: KeyError: 'No sequence parallel group found'
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+0: [rank1]:     sp_group = groups._get_sequence_parallel_group()
+0: [rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+0: [rank1]:     raise KeyError("No sequence parallel group found")
+0: [rank1]: KeyError: 'No sequence parallel group found'
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+0: [rank0]:     sp_group = groups._get_sequence_parallel_group()
+0: [rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+0: [rank0]:     raise KeyError("No sequence parallel group found")
+0: [rank0]: KeyError: 'No sequence parallel group found'
+1: [rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+1: [rank4]:     sp_group = groups._get_sequence_parallel_group()
+1: [rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+1: [rank4]:     raise KeyError("No sequence parallel group found")
+1: [rank4]: KeyError: 'No sequence parallel group found'
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+1: [rank5]:     sp_group = groups._get_sequence_parallel_group()
+1: [rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+1: [rank5]:     raise KeyError("No sequence parallel group found")
+1: [rank5]: KeyError: 'No sequence parallel group found'
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+1: [rank7]:     sp_group = groups._get_sequence_parallel_group()
+1: [rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+1: [rank7]:     raise KeyError("No sequence parallel group found")
+1: [rank7]: KeyError: 'No sequence parallel group found'
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_gpt_ulysses.py", line 184, in <module>
+1: [rank6]:     sp_group = groups._get_sequence_parallel_group()
+1: [rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+1: [rank6]:     raise KeyError("No sequence parallel group found")
+1: [rank6]: KeyError: 'No sequence parallel group found'
+1: [rank4]:[W311 10:37:41.333890660 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f670045fc40>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+1: W0311 10:37:43.720000 285729 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285867 closing signal SIGTERM
+1: W0311 10:37:43.721000 285729 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285868 closing signal SIGTERM
+1: W0311 10:37:43.721000 285729 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285869 closing signal SIGTERM
+0: [rank0]:[W311 10:37:43.518019432 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: E0311 10:37:44.713000 285729 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 285866) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: train_gpt_ulysses.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-03-11_10:37:43
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 4 (local_rank: 0)
+1:   exitcode  : 1 (pid: 285866)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+srun: error: hercules: task 1: Exited with exit code 1
+0: W0311 10:37:46.418000 450181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 450320 closing signal SIGTERM
+0: W0311 10:37:46.419000 450181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 450321 closing signal SIGTERM
+0: W0311 10:37:46.419000 450181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 450322 closing signal SIGTERM
+0: E0311 10:37:47.285000 450181 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 450319) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-11_10:37:46
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 450319)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

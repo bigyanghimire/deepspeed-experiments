@@ -1,0 +1,418 @@
+0: W0313 09:55:07.980000 493182 site-packages/torch/distributed/run.py:793] 
+0: W0313 09:55:07.980000 493182 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0313 09:55:07.980000 493182 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0313 09:55:07.980000 493182 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0313 09:55:08.277000 316514 site-packages/torch/distributed/run.py:793] 
+1: W0313 09:55:08.277000 316514 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0313 09:55:08.277000 316514 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0313 09:55:08.277000 316514 site-packages/torch/distributed/run.py:793] *****************************************
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+0: [rank3]:     hf_hub_download(
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+0: [rank3]:     return fn(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+0: [rank3]:     return _hf_hub_download_to_cache_dir(
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+0: [rank3]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+0: [rank3]:     raise LocalEntryNotFoundError(
+0: [rank3]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+0: 
+0: [rank3]: The above exception was the direct cause of the following exception:
+0: 
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+0: [rank3]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank3]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+0: [rank3]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+0: [rank3]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+0: [rank3]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank3]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+0: [rank3]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank3]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+0: [rank3]:     resolved_config_file = cached_file(
+0: [rank3]:                            ^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+0: [rank3]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+0: [rank3]:     raise OSError(
+0: [rank3]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+0: [rank3]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+0: [rank1]:     hf_hub_download(
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+0: [rank1]:     return fn(*args, **kwargs)
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+0: [rank1]:     return _hf_hub_download_to_cache_dir(
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+0: [rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+0: [rank1]:     raise LocalEntryNotFoundError(
+0: [rank1]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+0: 
+0: [rank1]: The above exception was the direct cause of the following exception:
+0: 
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+0: [rank1]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+0: [rank1]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+0: [rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+0: [rank1]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank1]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+0: [rank1]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank1]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+0: [rank1]:     resolved_config_file = cached_file(
+0: [rank1]:                            ^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+0: [rank1]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+0: [rank1]:     raise OSError(
+0: [rank1]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+0: [rank1]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+0: [rank2]:     hf_hub_download(
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+0: [rank2]:     return fn(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+0: [rank2]:     return _hf_hub_download_to_cache_dir(
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+0: [rank2]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+0: [rank2]:     raise LocalEntryNotFoundError(
+0: [rank2]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+0: 
+0: [rank2]: The above exception was the direct cause of the following exception:
+0: 
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+0: [rank2]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank2]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+0: [rank2]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+0: [rank2]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+0: [rank2]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank2]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+0: [rank2]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank2]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+0: [rank2]:     resolved_config_file = cached_file(
+0: [rank2]:                            ^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+0: [rank2]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+0: [rank2]:     raise OSError(
+0: [rank2]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+0: [rank2]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+0: [rank0]:     hf_hub_download(
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+0: [rank0]:     return fn(*args, **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+0: [rank0]:     return _hf_hub_download_to_cache_dir(
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+0: [rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+0: [rank0]:     raise LocalEntryNotFoundError(
+0: [rank0]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+0: 
+0: [rank0]: The above exception was the direct cause of the following exception:
+0: 
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+0: [rank0]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+0: [rank0]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+0: [rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+0: [rank0]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank0]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+0: [rank0]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+0: [rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+0: [rank0]:     resolved_config_file = cached_file(
+0: [rank0]:                            ^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+0: [rank0]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+0: [rank0]:     raise OSError(
+0: [rank0]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+0: [rank0]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+1: [rank7]:     hf_hub_download(
+1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+1: [rank7]:     return fn(*args, **kwargs)
+1: [rank7]:            ^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+1: [rank7]:     return _hf_hub_download_to_cache_dir(
+1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+1: [rank7]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+1: [rank7]:     raise LocalEntryNotFoundError(
+1: [rank7]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+1: 
+1: [rank7]: The above exception was the direct cause of the following exception:
+1: 
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+1: [rank7]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank7]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+1: [rank7]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+1: [rank7]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+1: [rank7]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank7]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+1: [rank7]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank7]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+1: [rank7]:     resolved_config_file = cached_file(
+1: [rank7]:                            ^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+1: [rank7]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+1: [rank7]:     raise OSError(
+1: [rank7]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+1: [rank7]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+1: [rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+1: [rank4]:     hf_hub_download(
+1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+1: [rank4]:     return fn(*args, **kwargs)
+1: [rank4]:            ^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+1: [rank4]:     return _hf_hub_download_to_cache_dir(
+1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+1: [rank4]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+1: [rank4]:     raise LocalEntryNotFoundError(
+1: [rank4]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+1: 
+1: [rank4]: The above exception was the direct cause of the following exception:
+1: 
+1: [rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+1: [rank4]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank4]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+1: [rank4]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+1: [rank4]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+1: [rank4]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank4]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+1: [rank4]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank4]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+1: [rank4]:     resolved_config_file = cached_file(
+1: [rank4]:                            ^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+1: [rank4]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+1: [rank4]:     raise OSError(
+1: [rank4]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+1: [rank4]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+1: [rank6]:     hf_hub_download(
+1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+1: [rank6]:     return fn(*args, **kwargs)
+1: [rank6]:            ^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+1: [rank6]:     return _hf_hub_download_to_cache_dir(
+1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+1: [rank6]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+1: [rank6]:     raise LocalEntryNotFoundError(
+1: [rank6]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+1: 
+1: [rank6]: The above exception was the direct cause of the following exception:
+1: 
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+1: [rank6]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank6]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+1: [rank6]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+1: [rank6]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+1: [rank6]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank6]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+1: [rank6]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank6]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+1: [rank6]:     resolved_config_file = cached_file(
+1: [rank6]:                            ^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+1: [rank6]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+1: [rank6]:     raise OSError(
+1: [rank6]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+1: [rank6]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 424, in cached_files
+1: [rank5]:     hf_hub_download(
+1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+1: [rank5]:     return fn(*args, **kwargs)
+1: [rank5]:            ^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+1: [rank5]:     return _hf_hub_download_to_cache_dir(
+1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+1: [rank5]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1653, in _raise_on_head_call_error
+1: [rank5]:     raise LocalEntryNotFoundError(
+1: [rank5]: huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+1: 
+1: [rank5]: The above exception was the direct cause of the following exception:
+1: 
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 78, in <module>
+1: [rank5]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank5]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp.py", line 412, in register_with_transformers
+1: [rank5]:     hf_model_config = AutoConfig.from_pretrained(model_name_or_path)
+1: [rank5]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/auto/configuration_auto.py", line 1114, in from_pretrained
+1: [rank5]:     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank5]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 590, in get_config_dict
+1: [rank5]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+1: [rank5]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/configuration_utils.py", line 649, in _get_config_dict
+1: [rank5]:     resolved_config_file = cached_file(
+1: [rank5]:                            ^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 266, in cached_file
+1: [rank5]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/hub.py", line 491, in cached_files
+1: [rank5]:     raise OSError(
+1: [rank5]: OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+1: [rank5]: Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+1: W0313 09:55:16.336000 316514 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 316652 closing signal SIGTERM
+1: W0313 09:55:16.338000 316514 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 316653 closing signal SIGTERM
+1: W0313 09:55:16.339000 316514 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 316654 closing signal SIGTERM
+1: E0313 09:55:16.495000 316514 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 316655) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: train_toy_data.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-03-13_09:55:16
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 7 (local_rank: 3)
+1:   exitcode  : 1 (pid: 316655)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+srun: error: hercules: task 1: Exited with exit code 1
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f9ae4a33c40>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: W0313 09:55:21.841000 493182 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 493321 closing signal SIGTERM
+0: W0313 09:55:21.843000 493182 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 493322 closing signal SIGTERM
+0: E0313 09:55:21.958000 493182 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 493320) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_toy_data.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0: [1]:
+0:   time      : 2026-03-13_09:55:21
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 3 (local_rank: 3)
+0:   exitcode  : 1 (pid: 493323)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-13_09:55:21
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 493320)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

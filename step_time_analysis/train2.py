@@ -42,10 +42,26 @@ class SimpleTransformerBlock(nn.Module):
         )
 
     def forward(self, x):
+        torch.cuda.synchronize()
+        torch.cuda.reset_peak_memory_stats()
+        before = torch.cuda.memory_allocated()
         # Self-attention with residual
         attn_out, _ = self.attention(x, x, x)
-        x = self.norm1(x + attn_out)
+        torch.cuda.synchronize()
+        peak = torch.cuda.max_memory_allocated()
+        after = torch.cuda.memory_allocated()
+        #print("Persistent attention:", (after-before)/1024**2, "MB")
+        #print("Peak attention:", (peak-before)/1024**2, "MB")
 
+        torch.cuda.synchronize()
+        torch.cuda.reset_peak_memory_stats()
+        before_norm = torch.cuda.memory_allocated()
+        x = self.norm1(x + attn_out)
+        torch.cuda.synchronize()
+        peak_norm = torch.cuda.max_memory_allocated()
+        after_norm = torch.cuda.memory_allocated()
+        #print("Persistent norm:", (after_norm-before_norm)/1024**2, "MB")
+        #print("Peak norm:", (peak_norm-before_norm)/1024**2, "MB")
         # Feed-forward with residual
         ff_out = self.ff(x)
         x = self.norm2(x + ff_out)
@@ -78,12 +94,27 @@ class SimpleTransformerModel(nn.Module):
         positions = torch.arange(seq_len, device=input_ids.device).unsqueeze(0).expand(batch_size, -1)
 
         x = self.embedding(input_ids) + self.pos_embedding(positions)
+        
+        
+        # torch.cuda.reset_peak_memory_stats()
+        # before_norm = torch.cuda.memory_allocated(
+        # x = self.norm1(x + attn_out)
+        # torch.cuda.synchronize()
+        # peak_norm = torch.cuda.max_memory_allocated()
+        # after_norm = torch.cuda.memory_allocated()
+        # print("Persistent norm:", (after_norm-before_norm)/1024**2, "MB")
+        # print("Peak norm:", (peak_norm-before_norm)/1024**2, "MB")
 
         for layer in self.layers:
+            torch.cuda.synchronize()
+            torch.cuda.reset_peak_memory_stats()
+            before_norm = torch.cuda.memory_allocated()
             if self.activation_checkpointing:
                 x = checkpoint(layer, x, use_reentrant=False)
             else:
                 x = layer(x)
+            peak_norm = torch.cuda.max_memory_allocated()
+            after_norm = torch.cuda.memory_allocated()
 
         logits = self.output_proj(x)
         return logits
@@ -196,10 +227,11 @@ def main():
     deepspeed.init_distributed()
     local_rank = args.local_rank
     if local_rank == -1:
-        local_rank = int(deepspeed.comm.get_rank())
+        local_rank = int(os.environ.get('LOCAL_RANK', 0))
+        # local_rank = int(deepspeed.comm.get_rank())
 
     world_size = deepspeed.comm.get_world_size()
-
+    global_rank = deepspeed.comm.get_rank()
     device = get_accelerator().device_name(local_rank)
     torch.cuda.set_device(local_rank)
 
@@ -219,11 +251,11 @@ def main():
             seq_length=args.seq_length,
             batch_size=args.batch_size,
             world_size=world_size,
-            rank=local_rank
+            rank=global_rank
         )
 
     # Create model
-    print(f"[Rank {local_rank}] Creating model with hidden_dim={args.hidden_dim}, "
+    print(f"[Rank {global_rank}] Creating model with hidden_dim={args.hidden_dim}, "
           f"num_layers={args.num_layers}, num_heads={args.num_heads}, vocab_size={actual_vocab_size}")
 
     model = SimpleTransformerModel(
@@ -235,12 +267,12 @@ def main():
     )
 
     total_params, trainable_params = count_parameters(model)
-    print(f"[Rank {local_rank}] Model parameters: {total_params:,} total, {trainable_params:,} trainable")
+    print(f"[Rank {global_rank}] Model parameters: {total_params:,} total, {trainable_params:,} trainable")
 
     # Enable activation checkpointing if requested
     if args.activation_checkpointing:
         model.enable_activation_checkpointing()
-        print(f"[Rank {local_rank}] Activation checkpointing enabled")
+        print(f"[Rank {global_rank}] Activation checkpointing enabled")
 
     # Read config to check if torch_autocast is enabled
     import json
@@ -258,10 +290,10 @@ def main():
         config=args.deepspeed_config,
     )
 
-    print(f"[Rank {local_rank}] DeepSpeed initialized with config: {args.deepspeed_config}")
+    print(f"[Rank {global_rank}] DeepSpeed initialized with config: {args.deepspeed_config}")
 
     mem_after_init = get_memory_stats()
-    print(f"[Rank {local_rank}] Memory after init: allocated={format_memory(mem_after_init['allocated'])}, "
+    print(f"[Rank {global_rank}] Memory after init: allocated={format_memory(mem_after_init['allocated'])}, "
           f"reserved={format_memory(mem_after_init['reserved'])}")
 
     # Training loop
@@ -276,23 +308,23 @@ def main():
     if dataloader is not None:
         data_iter = iter(dataloader)
     config_name = os.path.splitext(os.path.basename(args.deepspeed_config))[0] 
-    with torch.profiler.profile(
-        activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
-        profile_memory=True,
-         # Enable stack tracing, adds extra profiling overhead.
-        schedule=torch.profiler.schedule(
-            wait=5, # During this phase profiler is not active.
-            warmup=5, # During this phase profiler starts tracing, but the results are discarded.
-            active=6,
-            repeat=1 # During this phase profiler traces and records data.
-        ), # Specifies an upper bound on the number of cycles.
-        on_trace_ready=torch.profiler.tensorboard_trace_handler(
-            f"./profiler_traces_{config_name}",
-            worker_name="rank0"
-        ),
-        record_shapes=True
-        
-    ) as profiler:
+    # Wrap profiler in rank check
+    if global_rank == 0:
+        profiler_context = torch.profiler.profile(
+            activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+            profile_memory=True,
+            schedule=torch.profiler.schedule(wait=5, warmup=5, active=6, repeat=1),
+            on_trace_ready=torch.profiler.tensorboard_trace_handler(
+                f"./profiler_traces_{config_name}",
+                worker_name="rank0"
+            ),
+            record_shapes=True
+        )
+    else:
+        from contextlib import nullcontext
+        profiler_context = nullcontext()
+
+    with profiler_context as profiler: 
         for step in range(args.num_steps):
             start_time = time.time()
 
@@ -334,11 +366,13 @@ def main():
             optim_start_time = time.time()
             with record_function("## optimizer ##"):
                 model_engine.step()
-            profiler.step()
+
             
             optim_time = time.time() - optim_start_time
 
             step_time = time.time() - start_time
+            if profiler is not None and global_rank == 0:
+                profiler.step()
             if step >= args.warmup_steps:
                 print(f"Local>>>>>> step_time: {step_time}, dataloading_time : {dataloading_time},forward_time :{forwardpass_time}, backward_time: {backward_time}, optim time :{optim_time}")
                 #print(profiler.key_averages().table(sort_by="cpu_time_total", row_limit=10))
@@ -349,7 +383,7 @@ def main():
 
             if step % args.log_interval == 0 or step == args.num_steps - 1:
                 mem_stats = get_memory_stats()
-                print(f"[Rank {local_rank}] Step {step}: loss={loss.item():.4f}, "
+                print(f"[Rank {global_rank}] Step {step}: loss={loss.item():.4f}, "
                     f"time={step_time:.3f}s, "
                     f"alloc_mem={format_memory(mem_stats['allocated'])}, "
                     f"peak_mem={format_memory(mem_stats['peak'])}")
@@ -358,7 +392,7 @@ def main():
     avg_step_time = sum(step_times) / len(step_times) if step_times else 0
 
     print("\n" + "=" * 60)
-    print(f"[Rank {local_rank}] FINAL RESULTS")
+    print(f"[Rank {global_rank}] FINAL RESULTS")
     print(f"  Config: {args.deepspeed_config}")
     print(f"  Model: hidden_dim={args.hidden_dim}, num_layers={args.num_layers}")
     print(f"  Parameters: {total_params:,}")
@@ -374,7 +408,7 @@ def main():
           f"avg_step_time={avg_step_time:.4f}")
 
     # Save loss history to file if requested (only rank 0)
-    if args.loss_log_file and local_rank == 0:
+    if args.loss_log_file and global_rank == 0:
         import csv
         with open(args.loss_log_file, 'w', newline='') as f:
             writer = csv.writer(f)
