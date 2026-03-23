@@ -1,0 +1,201 @@
+0: W0316 13:16:11.045000 575770 site-packages/torch/distributed/run.py:793] 
+0: W0316 13:16:11.045000 575770 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0316 13:16:11.045000 575770 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0316 13:16:11.045000 575770 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0316 13:16:11.101000 345778 site-packages/torch/distributed/run.py:793] 
+1: W0316 13:16:11.101000 345778 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0316 13:16:11.101000 345778 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0316 13:16:11.101000 345778 site-packages/torch/distributed/run.py:793] *****************************************
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 16 13:11:53 2026).
+1: Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:01, 18781.76 examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:02, 18610.87 examples/s]Packing into seq_length=16000:   8%|▊         | 3000/39531 [00:00<00:01, 19882.93 examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:01, 19119.81 examples/s]Packing into seq_length=16000:  15%|█▌        | 6000/39531 [00:00<00:01, 20278.12 examples/s]Packing into seq_length=16000:  13%|█▎        | 5000/39531 [00:00<00:01, 20459.70 examples/s]Packing into seq_length=16000:  15%|█▌        | 6000/39531 [00:00<00:01, 20188.02 examples/s]Packing into seq_length=1
+0: Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:02, 18575.63 examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:02, 17392.17 examples/s]Packing into seq_length=16000:   5%|▌         | 2000/39531 [00:00<00:02, 18682.04 examples/s]Packing into seq_length=16000:   8%|▊         | 3000/39531 [00:00<00:01, 20111.94 examples/s]Packing into seq_length=16000:  13%|█▎        | 5000/39531 [00:00<00:01, 19922.29 examples/s]Packing into seq_length=16000:  13%|█▎        | 5000/39531 [00:00<00:01, 19611.66 examples/s]Packing into seq_length=16000:  13%|█▎        | 5000/39531 [00:00<00:01, 19987.61 examples/s]Packing into seq_length=1
+0: 6000:  18%|█▊        | 7000/39531 [00:00<00:01, 20177.73 examples/s]Packing into seq_length=16000:  18%|█▊        | 7000/39531 [00:00<00:01, 19778.09 examples/s]Packing into seq_length=16000:  18%|█▊        | 7000/39531 [00:00<00:01, 19639.47 examples/s]Packing into seq_length=16000:  18%|█▊        | 7000/39531 [00:00<00:01, 19868.87 examples/s]Packing into seq_length=16000:  23%|██▎       | 9000/39531 [00:00<00:01, 19856.49 examples/s]Packing into seq_length=16000:  28%|██▊       | 11000/39531 [00:00<00:01, 20674.33 examples/s]Packing into seq_length=16000:  28%|██▊       | 11000/39531 [00:00<00:01, 20244.20 examples/s]Packing into seq_length=16000:  28%|██▊       | 11000/39531 [00:00<00:01, 20188.30 examples/s]Packing into seq_length=16000:  30%|███       | 12000/39531 [00:00<00:01, 20191.51 examples/s]Packing into seq_length=16000:  35%|███▌      | 14000/39531 [00:00<00:01, 20542.42 examples/s]Packing into seq_length=16000:  35%|███▌  
+1: 6000:  15%|█▌        | 6000/39531 [00:00<00:01, 20093.40 examples/s]Packing into seq_length=16000:  23%|██▎       | 9000/39531 [00:00<00:01, 20211.97 examples/s]Packing into seq_length=16000:  23%|██▎       | 9000/39531 [00:00<00:01, 20160.49 examples/s]Packing into seq_length=16000:  25%|██▌       | 10000/39531 [00:00<00:01, 20311.85 examples/s]Packing into seq_length=16000:  23%|██▎       | 9000/39531 [00:00<00:01, 20397.42 examples/s]Packing into seq_length=16000:  30%|███       | 12000/39531 [00:00<00:01, 20369.12 examples/s]Packing into seq_length=16000:  33%|███▎      | 13000/39531 [00:00<00:01, 20611.62 examples/s]Packing into seq_length=16000:  30%|███       | 12000/39531 [00:00<00:01, 20657.99 examples/s]Packing into seq_length=16000:  35%|███▌      | 14000/39531 [00:00<00:01, 20522.25 examples/s]Packing into seq_length=16000:  40%|████      | 16000/39531 [00:00<00:01, 20854.43 examples/s]Packing into seq_length=16000:  40%|█
+0:     | 14000/39531 [00:00<00:01, 20191.72 examples/s]Packing into seq_length=16000:  35%|███▌      | 14000/39531 [00:00<00:01, 20076.16 examples/s]Packing into seq_length=16000:  40%|████      | 16000/39531 [00:00<00:01, 20504.44 examples/s]Packing into seq_length=16000:  43%|████▎     | 17000/39531 [00:00<00:01, 20815.38 examples/s]Packing into seq_length=16000:  43%|████▎     | 17000/39531 [00:00<00:01, 20488.63 examples/s]Packing into seq_length=16000:  43%|████▎     | 17000/39531 [00:00<00:01, 20356.81 examples/s]Packing into seq_length=16000:  48%|████▊     | 19000/39531 [00:00<00:01, 20293.20 examples/s]Packing into seq_length=16000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21105.79 examples/s]Packing into seq_length=16000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20724.76 examples/s]Packing into seq_length=16000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20645.02 examples/s]Packing into seq_length=
+1: ███      | 16000/39531 [00:00<00:01, 20725.97 examples/s]Packing into seq_length=16000:  43%|████▎     | 17000/39531 [00:00<00:01, 20728.18 examples/s]Packing into seq_length=16000:  40%|████      | 16000/39531 [00:00<00:01, 20959.37 examples/s]Packing into seq_length=16000:  48%|████▊     | 19000/39531 [00:00<00:00, 20645.56 examples/s]Packing into seq_length=16000:  48%|████▊     | 19000/39531 [00:00<00:01, 20528.94 examples/s]Packing into seq_length=16000:  48%|████▊     | 19000/39531 [00:00<00:00, 20733.29 examples/s]Packing into seq_length=16000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20960.97 examples/s]Packing into seq_length=16000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21117.33 examples/s]Packing into seq_length=16000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21035.91 examples/s]Packing into seq_length=16000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21208.83 examples/s]Packing i
+0: 16000:  56%|█████▌    | 22000/39531 [00:01<00:00, 20865.17 examples/s]Packing into seq_length=16000:  61%|██████    | 24000/39531 [00:01<00:00, 20667.61 examples/s]Packing into seq_length=16000:  61%|██████    | 24000/39531 [00:01<00:00, 20602.50 examples/s]Packing into seq_length=16000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21049.93 examples/s]Packing into seq_length=16000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20575.60 examples/s]Packing into seq_length=16000:  71%|███████   | 28000/39531 [00:01<00:00, 20725.85 examples/s]Packing into seq_length=16000:  71%|███████   | 28000/39531 [00:01<00:00, 20640.34 examples/s]Packing into seq_length=16000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21062.00 examples/s]Packing into seq_length=16000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20628.46 examples/s]Packing into seq_length=16000:  81%|████████  | 32000
+1: nto seq_length=16000:  63%|██████▎   | 25000/39531 [00:01<00:00, 20937.74 examples/s]Packing into seq_length=16000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20888.19 examples/s]Packing into seq_length=16000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20862.95 examples/s]Packing into seq_length=16000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20839.05 examples/s]Packing into seq_length=16000:  73%|███████▎  | 29000/39531 [00:01<00:00, 20920.09 examples/s]Packing into seq_length=16000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20929.25 examples/s]Packing into seq_length=16000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20891.64 examples/s]Packing into seq_length=16000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20892.85 examples/s]Packing into seq_length=16000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21173.81 examples/s]Packing into seq_length=16000:  86%|█�
+0: /39531 [00:01<00:00, 20801.68 examples/s]Packing into seq_length=16000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21316.55 examples/s]Packing into seq_length=16000:  81%|████████  | 32000/39531 [00:01<00:00, 20735.92 examples/s]Packing into seq_length=16000:  86%|████████▌ | 34000/39531 [00:01<00:00, 20924.82 examples/s]Packing into seq_length=16000:  89%|████████▊ | 35000/39531 [00:01<00:00, 20673.80 examples/s]Packing into seq_length=16000:  89%|████████▊ | 35000/39531 [00:01<00:00, 20585.95 examples/s]Packing into seq_length=16000:  91%|█████████ | 36000/39531 [00:01<00:00, 20868.44 examples/s]Packing into seq_length=16000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20615.22 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20795.48 examples/s]Packing into seq_length=16000:  99%|█████████▊| 39000/39
+1: ��██████▌ | 34000/39531 [00:01<00:00, 21222.88 examples/s]Packing into seq_length=16000:  86%|████████▌ | 34000/39531 [00:01<00:00, 21153.06 examples/s]Packing into seq_length=16000:  86%|████████▌ | 34000/39531 [00:01<00:00, 21189.44 examples/s]Packing into seq_length=16000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20877.18 examples/s]Packing into seq_length=16000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20951.30 examples/s]Packing into seq_length=16000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20886.88 examples/s]Packing into seq_length=16000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20913.67 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19875.10 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19788.80 examples/s]Packing into seq_length=16000: 100%
+1: |██████████| 39531/39531 [00:01<00:00, 19950.11 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20168.07 examples/s]
+1: Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20229.49 examples/s]
+1: Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20162.45 examples/s]
+0: 531 [00:01<00:00, 20584.89 examples/s]Packing into seq_length=16000:  99%|█████████▊| 39000/39531 [00:01<00:00, 20444.15 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19593.50 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20098.67 examples/s]
+0: Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19954.35 examples/s]
+0: Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19994.35 examples/s]
+1: Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 19795.34 examples/s]Packing into seq_length=16000: 100%|██████████| 39531/39531 [00:01<00:00, 20241.07 examples/s]
+0: W0316 13:16:31.409000 575770 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 575908 closing signal SIGTERM
+0: W0316 13:16:31.410000 575770 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 575910 closing signal SIGTERM
+0: W0316 13:16:31.413000 575770 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 575911 closing signal SIGTERM
+0: E0316 13:16:32.769000 575770 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -7) local_rank: 1 (pid: 575909) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ======================================================
+0: train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-16_13:16:31
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 1 (local_rank: 1)
+0:   exitcode  : -7 (pid: 575909)
+0:   error_file: <N/A>
+0:   traceback : Signal 7 (SIGBUS) received by PID 575909
+0: ======================================================
+srun: error: hades: task 0: Exited with exit code 1
+1: W0316 13:16:33.520000 345778 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 345915 closing signal SIGTERM
+1: W0316 13:16:33.521000 345778 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 345916 closing signal SIGTERM
+1: W0316 13:16:33.527000 345778 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 345917 closing signal SIGTERM
+1: W0316 13:16:33.531000 345778 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 345918 closing signal SIGTERM
+1: [W316 13:16:35.457083361 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:52632, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f236018f446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f23bbb06029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x27e (0x7f23bbb03a6e in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x2a (0x7f23bbb03eca in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::get(std::string const&) + 0x7a (0x7f23bbb04d3a in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f99c (0x7f23c461b99c in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f23c3d69b24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x55887308edc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x55887306f07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x5588730be625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55887309e121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x55887309e121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyObject_FastCallDictTstate + 0x63 (0x558873072853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyObject_Call_Prepend + 0x69 (0x5588730a5e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x2e99b9 (0x5588731789b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: PyObject_Call + 0x1ed (0x5588730a7ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: _PyFunction_Vectorcall + 0x181 (0x55887309e121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2a4d36 (0x558873133d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: PyEval_EvalCode + 0x9f (0x5588731333ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2c2f2a (0x558873151f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: <unknown function> + 0x2bf343 (0x55887314e343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: <unknown function> + 0x2d4300 (0x558873163300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: _PyRun_SimpleFileObject + 0x1ae (0x558873162c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: _PyRun_AnyFileObject + 0x44 (0x558873162a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: Py_RunMain + 0x2df (0x55887315cbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #29: Py_BytesMain + 0x37 (0x558873121f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #30: __libc_start_main + 0xe5 (0x7f23cc71e7e5 in /lib64/libc.so.6)
+1: frame #31: <unknown function> + 0x292e3d (0x558873121e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0316 13:16:35.279000 345778 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_345778_0' has failed to shutdown the rendezvous '1114' due to an error of type RendezvousConnectionError.
+1: [W316 13:16:35.463208845 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:52632, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f236018f446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f23bbb06029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x27e (0x7f23bbb03a6e in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x2a (0x7f23bbb03eca in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::get(std::string const&) + 0x7a (0x7f23bbb04d3a in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f99c (0x7f23c461b99c in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f23c3d69b24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x55887308edc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x55887306f07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x5588730be625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55887309e121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyObject_FastCallDictTstate + 0x63 (0x558873072853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyObject_Call_Prepend + 0x69 (0x5588730a5e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: <unknown function> + 0x2e99b9 (0x5588731789b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: PyObject_Call + 0x1ed (0x5588730a7ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: _PyFunction_Vectorcall + 0x181 (0x55887309e121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x55887307f4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2a4d36 (0x558873133d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: PyEval_EvalCode + 0x9f (0x5588731333ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2c2f2a (0x558873151f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: <unknown function> + 0x2bf343 (0x55887314e343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2d4300 (0x558873163300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: _PyRun_SimpleFileObject + 0x1ae (0x558873162c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: _PyRun_AnyFileObject + 0x44 (0x558873162a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: Py_RunMain + 0x2df (0x55887315cbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: Py_BytesMain + 0x37 (0x558873121f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: __libc_start_main + 0xe5 (0x7f23cc71e7e5 in /lib64/libc.so.6)
+1: frame #29: <unknown function> + 0x292e3d (0x558873121e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0316 13:16:35.283000 345778 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_345778_0' has failed to shutdown the rendezvous '1114' due to an error of type RendezvousConnectionError.
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+1:     return getattr(self._store, store_op)(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+1: 
+1: The above exception was the direct cause of the following exception:
+1: 
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+1:     result = agent.run()
+1:              ^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+1:     result = f(*args, **kwargs)
+1:              ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 696, in run
+1:     result = self._invoke_run(role)
+1:              ^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 891, in _invoke_run
+1:     num_nodes_waiting = rdzv_handler.num_nodes_waiting()
+1:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1253, in num_nodes_waiting
+1:     self._state_holder.sync()
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+1:     get_response = self._backend.get_state()
+1:                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+1:     base64_state: bytes = self._call_store("get", self._key)
+1:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+1:     raise RendezvousConnectionError(
+1: torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: hercules: task 1: Exited with exit code 1

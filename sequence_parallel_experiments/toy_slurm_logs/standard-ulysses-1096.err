@@ -1,0 +1,175 @@
+0: W0313 15:59:19.704000 541181 site-packages/torch/distributed/run.py:793] 
+0: W0313 15:59:19.704000 541181 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0313 15:59:19.704000 541181 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0313 15:59:19.704000 541181 site-packages/torch/distributed/run.py:793] *****************************************
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 162, in <module>
+0: [rank2]:     outputs = model(**batch)
+0: [rank2]:               ^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank2]:     return self._call_impl(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank2]:     return forward_call(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank2]:     ret_val = func(*args, **kwargs)
+0: [rank2]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
+0: [rank2]:     loss = self.module(*inputs, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank2]:     return self._call_impl(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+0: [rank2]:     return inner()
+0: [rank2]:            ^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+0: [rank2]:     result = forward_call(*args, **kwargs)
+0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
+0: [rank2]:     output = func(self, *args, **kwargs)
+0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
+0: [rank2]:     return func(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 821, in forward
+0: [rank2]:     outputs: BaseModelOutputWithPast = self.model(
+0: [rank2]:                                        ^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank2]:     return self._call_impl(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank2]:     return forward_call(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
+0: [rank2]:     output = func(self, *args, **kwargs)
+0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 571, in forward
+0: [rank2]:     layer_outputs = decoder_layer(
+0: [rank2]:                     ^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank2]:     return self._call_impl(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank2]:     return forward_call(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 318, in forward
+0: [rank2]:     hidden_states, self_attn_weights = self.self_attn(
+0: [rank2]:                                        ^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank2]:     return self._call_impl(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank2]:     return forward_call(*args, **kwargs)
+0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 252, in forward
+0: [rank2]:     query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+0: [rank2]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]: RuntimeError: cannot reshape tensor of 0 elements into shape [2, 0, -1, 64] because the unspecified dimension size -1 can be any value and is ambiguous
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/sequence_parallel_experiments/train_toy_data.py", line 162, in <module>
+0: [rank3]:     outputs = model(**batch)
+0: [rank3]:               ^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank3]:     return self._call_impl(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank3]:     return forward_call(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank3]:     ret_val = func(*args, **kwargs)
+0: [rank3]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
+0: [rank3]:     loss = self.module(*inputs, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank3]:     return self._call_impl(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+0: [rank3]:     return inner()
+0: [rank3]:            ^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+0: [rank3]:     result = forward_call(*args, **kwargs)
+0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
+0: [rank3]:     output = func(self, *args, **kwargs)
+0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
+0: [rank3]:     return func(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 821, in forward
+0: [rank3]:     outputs: BaseModelOutputWithPast = self.model(
+0: [rank3]:                                        ^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank3]:     return self._call_impl(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank3]:     return forward_call(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
+0: [rank3]:     output = func(self, *args, **kwargs)
+0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 571, in forward
+0: [rank3]:     layer_outputs = decoder_layer(
+0: [rank3]:                     ^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank3]:     return self._call_impl(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank3]:     return forward_call(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 318, in forward
+0: [rank3]:     hidden_states, self_attn_weights = self.self_attn(
+0: [rank3]:                                        ^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+0: [rank3]:     return self._call_impl(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+0: [rank3]:     return forward_call(*args, **kwargs)
+0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 252, in forward
+0: [rank3]:     query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+0: [rank3]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]: RuntimeError: cannot reshape tensor of 0 elements into shape [2, 0, -1, 64] because the unspecified dimension size -1 can be any value and is ambiguous
+0: [rank2]:[W313 15:59:33.091728436 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0313 15:59:35.291000 541181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 541319 closing signal SIGTERM
+0: W0313 15:59:35.291000 541181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 541320 closing signal SIGTERM
+0: W0313 15:59:35.293000 541181 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 541321 closing signal SIGTERM
+0: E0313 15:59:36.272000 541181 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 541322) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_toy_data.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-13_15:59:35
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 3 (local_rank: 3)
+0:   exitcode  : 1 (pid: 541322)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

@@ -1,0 +1,73 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: sp rank is :0 
+1: 
+1: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f8ad96ae3f0>
+1: sp world size is :2
+1: vanilla dl batch {'input_ids': tensor([[ 1, 70, 70, 70,  7,  7,  7,  7]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 70, 70, 70,  7,  7,  7,  7]])} from rank 6 at iter 0
+1: sp rank is :1 
+1: 
+1: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f2f096c69f0>
+1: sp world size is :2
+1: sp rank is :0 
+1: 
+1: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7fc43b6b22f0>
+1: sp world size is :2
+1: sp rank is :1 
+1: 
+1: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f656b2266f0>
+1: sp world size is :2
+1: vanilla dl batch {'input_ids': tensor([[ 1, 80, 80, 80,  8,  8,  8,  8]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 80, 80, 80,  8,  8,  8,  8]])} from rank 7 at iter 0
+1: vanilla dl batch {'input_ids': tensor([[ 1, 50, 50, 50,  5,  5,  5,  5]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 50, 50, 50,  5,  5,  5,  5]])} from rank 4 at iter 0
+1: vanilla dl batch {'input_ids': tensor([[ 1, 60, 60, 60,  6,  6,  6,  6]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 60, 60, 60,  6,  6,  6,  6]])} from rank 5 at iter 0
+1: Batch Rank : 6 and batch is {'input_ids': tensor([[ 1, 70, 70, 70]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3]], device='cuda:2'), 'shift_labels': tensor([[70, 70, 70,  7]], device='cuda:2')} 
+1: 
+1: Batch Rank : 7 and batch is {'input_ids': tensor([[7, 7, 7, 7]], device='cuda:3'), 'position_ids': tensor([[4, 5, 6, 7]], device='cuda:3'), 'shift_labels': tensor([[   7,    7,    7, -100]], device='cuda:3')} 
+1: 
+1: Batch Rank : 4 and batch is {'input_ids': tensor([[ 1, 50, 50, 50]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3]], device='cuda:0'), 'shift_labels': tensor([[50, 50, 50,  5]], device='cuda:0')} 
+1: 
+1: Batch Rank : 5 and batch is {'input_ids': tensor([[5, 5, 5, 5]], device='cuda:1'), 'position_ids': tensor([[4, 5, 6, 7]], device='cuda:1'), 'shift_labels': tensor([[   5,    5,    5, -100]], device='cuda:1')} 
+1: 
+0: sp rank is :0 
+0: 
+0: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7fbe2ccf6870>
+0: sp world size is :2
+0: sp rank is :1 
+0: 
+0: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f5d2f2da570>
+0: sp world size is :2
+0: vanilla dl batch {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3]])} from rank 2 at iter 0
+0: vanilla dl batch {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2]])} from rank 1 at iter 0
+0: sp rank is :1 
+0: 
+0: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f6d703163f0>
+0: sp world size is :2
+0: vanilla dl batch {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4]])} from rank 3 at iter 0
+0: Batch Rank : 3 and batch is {'input_ids': tensor([[3, 3, 3, 3]], device='cuda:3'), 'position_ids': tensor([[4, 5, 6, 7]], device='cuda:3'), 'shift_labels': tensor([[   3,    3,    3, -100]], device='cuda:3')} 
+0: 
+0: Batch Rank : 2 and batch is {'input_ids': tensor([[ 1, 30, 30, 30]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3]], device='cuda:2'), 'shift_labels': tensor([[30, 30, 30,  3]], device='cuda:2')} 
+0: 
+0: Before initializing optimizer states
+0: MA 0.0 GB         Max_MA 0.01 GB         CA 0.02 GB         Max_CA 0 GB 
+0: CPU Virtual Memory:  used = 17.79 GB, percent = 1.8%
+0: After initializing optimizer states
+0: MA 0.0 GB         Max_MA 0.0 GB         CA 0.02 GB         Max_CA 0 GB 
+0: CPU Virtual Memory:  used = 17.79 GB, percent = 1.8%
+0: After initializing ZeRO optimizer
+0: MA 0.0 GB         Max_MA 0.0 GB         CA 0.02 GB         Max_CA 0 GB 
+0: CPU Virtual Memory:  used = 17.79 GB, percent = 1.8%
+0: sp rank is :0 
+0: 
+0: sp group is :<torch.distributed.distributed_c10d.ProcessGroup object at 0x7f9396d8bc70>
+0: sp world size is :2
+0: vanilla dl batch {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1]]), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7]]), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1]])} from rank 0 at iter 0
+0: Batch Rank : 1 and batch is {'input_ids': tensor([[1, 1, 1, 1]], device='cuda:1'), 'position_ids': tensor([[4, 5, 6, 7]], device='cuda:1'), 'shift_labels': tensor([[   1,    1,    1, -100]], device='cuda:1')} 
+0: 
+0: Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 10, 10, 10]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3]], device='cuda:0'), 'shift_labels': tensor([[10, 10, 10,  1]], device='cuda:0')} 
+0: 

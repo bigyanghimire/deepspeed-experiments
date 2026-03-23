@@ -1,6 +1,8 @@
 # train.py with batch_size > 1
 
-from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter2
+#from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+
 from deepspeed.runtime.utils import move_to_device
 from deepspeed.utils import groups
 from torch import tensor
@@ -12,12 +14,20 @@ from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data import DataLoader
 import time
 from torch.profiler import profile, record_function, ProfilerActivity
+import argparse 
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
+    args = parser.parse_args()
+
     model_name_or_path = 'meta-llama/Llama-3.2-1B'
     # model_name_or_path = 'Qwen/Qwen3-0.6B'
-    seq_length = 16000
+    #seq_length = 16000
+    seq_length = args.seq_length
+    print(f"Training with Sequence Length: {seq_length}")
     sequence_parallel_size = 8
-    micro_batch_size = 4  # CHANGED: Now batch size = 4
+    micro_batch_size = 2  # CHANGED: Now batch size = 4
 
     config_dict = {
         "train_micro_batch_size_per_gpu": micro_batch_size,  # CHANGED
@@ -200,7 +210,7 @@ def main():
         world_size=world_size,
         rank=local_rank
     )
-    dl = UlyssesSPDataLoaderAdapter(
+    dl = UlyssesSPDataLoaderAdapter2(
         dataloader_gpt,
         sp_rank=sp_rank,
         sp_group=sp_group,

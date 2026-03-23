@@ -1,0 +1,309 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Before initializing optimizer states
+0: MA 5.75 GB         Max_MA 9.21 GB         CA 10.38 GB         Max_CA 10 GB 
+0: CPU Virtual Memory:  used = 19.07 GB, percent = 1.9%
+0: After initializing optimizer states
+0: MA 5.75 GB         Max_MA 6.91 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 19.07 GB, percent = 1.9%
+0: After initializing ZeRO optimizer
+0: MA 5.75 GB         Max_MA 5.75 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 19.07 GB, percent = 1.9%
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:3')}, 1: {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:3')}, 2: {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:3')}, 3: {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:3')}})
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:0')}, 1: {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:0')}, 2: {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:0')}, 3: {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:0')}})
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:2')}, 1: {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:2')}, 2: {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:2')}, 3: {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:2')}})
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[ 1, 10, 10, 10,  1,  1,  1,  1],
+0:         [ 1, 50, 50, 50,  5,  5,  5,  5]], device='cuda:1')}, 1: {'input_ids': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[ 1, 20, 20, 20,  2,  2,  2,  2],
+0:         [ 1, 60, 60, 60,  6,  6,  6,  6]], device='cuda:1')}, 2: {'input_ids': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[ 1, 30, 30, 30,  3,  3,  3,  3],
+0:         [ 1, 70, 70, 70,  7,  7,  7,  7]], device='cuda:1')}, 3: {'input_ids': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[ 1, 40, 40, 40,  4,  4,  4,  4],
+0:         [ 1, 80, 80, 80,  8,  8,  8,  8]], device='cuda:1')}})
+0: 
+0: in Iteration 0 Batch Rank : 3 and batch is {'input_ids': tensor([[1, 1],
+0:         [5, 5]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   1, -100],
+0:         [   5, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 0 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 10],
+0:         [ 1, 50]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[10, 10],
+0:         [50, 50]], device='cuda:0')} 
+0: 
+0: in Iteration 0 Batch Rank : 2 and batch is {'input_ids': tensor([[1, 1],
+0:         [5, 5]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[1, 1],
+0:         [5, 5]], device='cuda:2')} 
+0: 
+0: in Iteration 0 Batch Rank : 1 and batch is {'input_ids': tensor([[10, 10],
+0:         [50, 50]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[10,  1],
+0:         [50,  5]], device='cuda:1')} 
+0: 
+0: Iteration 0: loss=8.9588
+0: Step_time: 0.6360137462615967
+0: 
+0: in Iteration 1 Batch Rank : 2 and batch is {'input_ids': tensor([[2, 2],
+0:         [6, 6]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[2, 2],
+0:         [6, 6]], device='cuda:2')} 
+0: 
+0: in Iteration 1 Batch Rank : 3 and batch is {'input_ids': tensor([[2, 2],
+0:         [6, 6]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   2, -100],
+0:         [   6, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 1 Batch Rank : 1 and batch is {'input_ids': tensor([[20, 20],
+0:         [60, 60]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[20,  2],
+0:         [60,  6]], device='cuda:1')} 
+0: 
+0: in Iteration 1 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 20],
+0:         [ 1, 60]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[20, 20],
+0:         [60, 60]], device='cuda:0')} 
+0: 
+0: Iteration 1: loss=31.2058
+0: Step_time: 0.24620389938354492
+0: 
+0: in Iteration 2 Batch Rank : 3 and batch is {'input_ids': tensor([[3, 3],
+0:         [7, 7]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   3, -100],
+0:         [   7, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 2 Batch Rank : 2 and batch is {'input_ids': tensor([[3, 3],
+0:         [7, 7]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[3, 3],
+0:         [7, 7]], device='cuda:2')} 
+0: 
+0: in Iteration 2 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 30],
+0:         [ 1, 70]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[30, 30],
+0:         [70, 70]], device='cuda:0')} 
+0: 
+0: in Iteration 2 Batch Rank : 1 and batch is {'input_ids': tensor([[30, 30],
+0:         [70, 70]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[30,  3],
+0:         [70,  7]], device='cuda:1')} 
+0: 
+0: Iteration 2: loss=14.6768
+0: Step_time: 0.27306175231933594
+0: 
+0: in Iteration 3 Batch Rank : 3 and batch is {'input_ids': tensor([[4, 4],
+0:         [8, 8]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   4, -100],
+0:         [   8, -100]], device='cuda:3')} 
+0: in Iteration 3 Batch Rank : 1 and batch is {'input_ids': tensor([[40, 40],
+0:         [80, 80]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[40,  4],
+0:         [80,  8]], device='cuda:1')} 
+0: 
+0: 
+0: in Iteration 3 Batch Rank : 2 and batch is {'input_ids': tensor([[4, 4],
+0:         [8, 8]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[4, 4],
+0:         [8, 8]], device='cuda:2')} 
+0: 
+0: in Iteration 3 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 40],
+0:         [ 1, 80]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[40, 40],
+0:         [80, 80]], device='cuda:0')} 
+0: 
+0: Iteration 3: loss=8.2816
+0: Step_time: 0.24411296844482422
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:3')}, 1: {'input_ids': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:3')}, 2: {'input_ids': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:3')}, 3: {'input_ids': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:3'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:3'), 'labels': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:3')}})
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:1')}, 1: {'input_ids': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:1')}, 2: {'input_ids': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:1')}, 3: {'input_ids': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:1'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:1'), 'labels': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:1')}})
+0: 
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:2')}, 1: {'input_ids': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:2')}, 2: {'input_ids': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:2')}, 3: {'input_ids': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:2'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:2'), 'labels': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:2')}})
+0: 
+0: microbatches defaultdict(<class 'dict'>, {0: {'input_ids': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[  1,  90,  90,  90,   9,   9,   9,   9],
+0:         [  1, 130, 130, 130,  13,  13,  13,  13]], device='cuda:0')}, 1: {'input_ids': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[  1, 100, 100, 100,  10,  10,  10,  10],
+0:         [  1, 140, 140, 140,  14,  14,  14,  14]], device='cuda:0')}, 2: {'input_ids': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[  1, 110, 110, 110,  11,  11,  11,  11],
+0:         [  1, 150, 150, 150,  15,  15,  15,  15]], device='cuda:0')}, 3: {'input_ids': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:0'), 'position_ids': tensor([[0, 1, 2, 3, 4, 5, 6, 7],
+0:         [0, 1, 2, 3, 4, 5, 6, 7]], device='cuda:0'), 'labels': tensor([[  1, 120, 120, 120,  12,  12,  12,  12],
+0:         [  1, 160, 160, 160,  16,  16,  16,  16]], device='cuda:0')}})
+0: 
+0: in Iteration 4 Batch Rank : 1 and batch is {'input_ids': tensor([[ 90,  90],
+0:         [130, 130]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[ 90,   9],
+0:         [130,  13]], device='cuda:1')} 
+0: 
+0: in Iteration 4 Batch Rank : 2 and batch is {'input_ids': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:2')} 
+0: in Iteration 4 Batch Rank : 3 and batch is {'input_ids': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   9, -100],
+0:         [  13, -100]], device='cuda:3')} 
+0: 
+0: 
+0: in Iteration 4 Batch Rank : 0 and batch is {'input_ids': tensor([[  1,  90],
+0:         [  1, 130]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[ 90,  90],
+0:         [130, 130]], device='cuda:0')} 
+0: 
+0: Iteration 4: loss=19.5381
+0: Step_time: 0.2436659336090088
+0: 
+0: in Iteration 5 Batch Rank : 1 and batch is {'input_ids': tensor([[100, 100],
+0:         [140, 140]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[100,  10],
+0:         [140,  14]], device='cuda:1')} 
+0: 
+0: in Iteration 5 Batch Rank : 3 and batch is {'input_ids': tensor([[10, 10],
+0:         [14, 14]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  10, -100],
+0:         [  14, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 5 Batch Rank : 2 and batch is {'input_ids': tensor([[10, 10],
+0:         [14, 14]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[10, 10],
+0:         [14, 14]], device='cuda:2')} 
+0: 
+0: in Iteration 5 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 100],
+0:         [  1, 140]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[100, 100],
+0:         [140, 140]], device='cuda:0')} 
+0: 
+0: Iteration 5: loss=12.7375
+0: Step_time: 0.2464611530303955
+0: 
+0: in Iteration 6 Batch Rank : 2 and batch is {'input_ids': tensor([[11, 11],
+0:         [15, 15]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[11, 11],
+0:         [15, 15]], device='cuda:2')} 
+0: 
+0: in Iteration 6 Batch Rank : 3 and batch is {'input_ids': tensor([[11, 11],
+0:         [15, 15]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  11, -100],
+0:         [  15, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 6 Batch Rank : 1 and batch is {'input_ids': tensor([[110, 110],
+0:         [150, 150]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[110,  11],
+0:         [150,  15]], device='cuda:1')} 
+0: in Iteration 6 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 110],
+0:         [  1, 150]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[110, 110],
+0:         [150, 150]], device='cuda:0')} 
+0: 
+0: 
+0: Iteration 6: loss=10.7298
+0: Step_time: 0.2451643943786621
+0: 
+0: in Iteration 7 Batch Rank : 2 and batch is {'input_ids': tensor([[12, 12],
+0:         [16, 16]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[12, 12],
+0:         [16, 16]], device='cuda:2')} 
+0: 
+0: in Iteration 7 Batch Rank : 1 and batch is {'input_ids': tensor([[120, 120],
+0:         [160, 160]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[120,  12],
+0:         [160,  16]], device='cuda:1')} 
+0: 
+0: in Iteration 7 Batch Rank : 3 and batch is {'input_ids': tensor([[12, 12],
+0:         [16, 16]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  12, -100],
+0:         [  16, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 7 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 120],
+0:         [  1, 160]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[120, 120],
+0:         [160, 160]], device='cuda:0')} 
+0: 
+0: Iteration 7: loss=10.8397
+0: Step_time: 0.24483847618103027
+0: 

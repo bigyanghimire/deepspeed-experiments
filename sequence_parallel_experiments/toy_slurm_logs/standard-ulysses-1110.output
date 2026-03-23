@@ -1,0 +1,3273 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: batch group size 1
+0: batch group size 1batch group size 1
+0: 
+0: batch group size 1
+0: Before initializing optimizer states
+0: MA 5.75 GB         Max_MA 9.21 GB         CA 10.38 GB         Max_CA 10 GB 
+0: CPU Virtual Memory:  used = 18.74 GB, percent = 1.9%
+0: After initializing optimizer states
+0: MA 5.75 GB         Max_MA 6.91 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 18.74 GB, percent = 1.9%
+0: After initializing ZeRO optimizer
+0: MA 5.75 GB         Max_MA 5.75 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 18.74 GB, percent = 1.9%
+0: in Iteration 0 Batch Rank : 3 and batch is {'input_ids': tensor([[1, 1],
+0:         [5, 5]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   1, -100],
+0:         [   5, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 0 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 10],
+0:         [ 1, 50]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[10, 10],
+0:         [50, 50]], device='cuda:0')} 
+0: 
+0: in Iteration 0 Batch Rank : 1 and batch is {'input_ids': tensor([[10, 10],
+0:         [50, 50]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[10,  1],
+0:         [50,  5]], device='cuda:1')} 
+0: 
+0: in Iteration 0 Batch Rank : 2 and batch is {'input_ids': tensor([[1, 1],
+0:         [5, 5]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[1, 1],
+0:         [5, 5]], device='cuda:2')} 
+0: 
+0: The time is 0.3146505355834961
+0: 
+0: The time is 0.3059420585632324
+0: 
+0: The time is 0.3065176010131836
+0: 
+0: The time is 0.3050827980041504
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 0.00010347366333007812
+0: 
+0: The time is 0.00010895729064941406
+0: 
+0: The time is 0.00010752677917480469
+0: 
+0: The time is 0.00011754035949707031
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 0.00011992454528808594
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 0.00010704994201660156
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 0.00010919570922851562
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 0.00010442733764648438
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 0.00010848045349121094
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 0.00010895729064941406
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.703636169433594e-05
+0: 
+0: The time is 0.0001068115234375
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 0.00010633468627929688
+0: 
+0: The time is 0.00010013580322265625
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.703636169433594e-05
+0: 
+0: The time is 0.00010538101196289062
+0: 
+0: The time is 0.00010895729064941406
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 0.00011324882507324219
+0: 
+0: The time is 0.00010347366333007812
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 0.00010395050048828125
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 0.00010013580322265625
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.965896606445312e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.72747802734375e-05
+0: The time is 9.34600830078125e-05
+0: 
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 0.00012183189392089844
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 0.00010347366333007812
+0: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 0.00011157989501953125
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 0.00011539459228515625
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 0.00010585784912109375
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.870529174804688e-05
+0: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 9.72747802734375e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 9.703636169433594e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: The time is 8.654594421386719e-05
+0: 
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 0.00010776519775390625
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: The time is 9.560585021972656e-05
+0: 
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 0.0001087188720703125
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 0.00011181831359863281
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 0.00010514259338378906
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 9.965896606445312e-05
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: The time is 8.869171142578125e-05
+0: 
+0: 
+0: The time is 8.559226989746094e-05
+0: The time is 8.7738037109375e-05
+0: 
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 0.00010633468627929688
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 0.00010633468627929688
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: Iteration 0: loss=8.9588
+0: Step_time: 0.6455376148223877
+0: 
+0: in Iteration 1 Batch Rank : 3 and batch is {'input_ids': tensor([[2, 2],
+0:         [6, 6]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   2, -100],
+0:         [   6, -100]], device='cuda:3')} 
+0: in Iteration 1 Batch Rank : 1 and batch is {'input_ids': tensor([[20, 20],
+0:         [60, 60]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[20,  2],
+0:         [60,  6]], device='cuda:1')} 
+0: in Iteration 1 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 20],
+0:         [ 1, 60]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[20, 20],
+0:         [60, 60]], device='cuda:0')} 
+0: in Iteration 1 Batch Rank : 2 and batch is {'input_ids': tensor([[2, 2],
+0:         [6, 6]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[2, 2],
+0:         [6, 6]], device='cuda:2')} 
+0: 
+0: 
+0: 
+0: 
+0: The time is 0.00012946128845214844
+0: 
+0: The time is 0.00012683868408203125
+0: The time is 0.0001423358917236328
+0: 
+0: 
+0: The time is 0.0001494884490966797
+0: 
+0: The time is 8.344650268554688e-05
+0: The time is 9.036064147949219e-05
+0: The time is 8.726119995117188e-05
+0: 
+0: 
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 0.00011277198791503906
+0: 
+0: The time is 0.00011491775512695312
+0: 
+0: The time is 9.72747802734375e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: The time is 8.392333984375e-05
+0: 
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 0.00010251998901367188
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 7.867813110351562e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 0.00010967254638671875
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: The time is 9.655952453613281e-05
+0: 
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 0.00010585784912109375
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 0.00011420249938964844
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 0.00010180473327636719
+0: 
+0: The time is 9.799003601074219e-05
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 0.00010275840759277344
+0: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 0.00010061264038085938
+0: The time is 8.392333984375e-05
+0: 
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 0.00018548965454101562
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 0.0001723766326904297
+0: The time is 8.082389831542969e-05
+0: 
+0: 
+0: The time is 0.0001575946807861328
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 0.00010824203491210938
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 7.796287536621094e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 7.867813110351562e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: The time is 8.821487426757812e-05
+0: 
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: The time is 8.153915405273438e-05
+0: 
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: The time is 8.749961853027344e-05
+0: 
+0: 
+0: The time is 7.915496826171875e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 7.867813110351562e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: The time is 0.00010228157043457031
+0: 
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 7.987022399902344e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: Iteration 1: loss=31.2058
+0: Step_time: 0.24672198295593262
+0: 
+0: in Iteration 2 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 30],
+0:         [ 1, 70]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[30, 30],
+0:         [70, 70]], device='cuda:0')} 
+0: 
+0: in Iteration 2 Batch Rank : 3 and batch is {'input_ids': tensor([[3, 3],
+0:         [7, 7]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   3, -100],
+0:         [   7, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 2 Batch Rank : 2 and batch is {'input_ids': tensor([[3, 3],
+0:         [7, 7]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[3, 3],
+0:         [7, 7]], device='cuda:2')} 
+0: in Iteration 2 Batch Rank : 1 and batch is {'input_ids': tensor([[30, 30],
+0:         [70, 70]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[30,  3],
+0:         [70,  7]], device='cuda:1')} 
+0: 
+0: 
+0: The time is 0.00010442733764648438
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 0.00010633468627929688
+0: 
+0: The time is 0.00011372566223144531
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.441375732421875e-05
+0: The time is 8.463859558105469e-05
+0: 
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: The time is 8.797645568847656e-05
+0: 
+0: 
+0: The time is 0.000110626220703125
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: The time is 8.273124694824219e-05
+0: 
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: The time is 8.20159912109375e-05
+0: 
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 8.96453857421875e-05
+0: The time is 8.606910705566406e-05
+0: 
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 0.00010275840759277344
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: The time is 8.845329284667969e-05
+0: 
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 0.00010061264038085938
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: The time is 8.130073547363281e-05
+0: The time is 8.749961853027344e-05
+0: 
+0: 
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: The time is 9.655952453613281e-05
+0: 
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: The time is 8.749961853027344e-05
+0: 
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.703636169433594e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 0.00010967254638671875
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 0.0001010894775390625
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: The time is 9.1552734375e-05
+0: 
+0: 
+0: The time is 8.034706115722656e-05
+0: The time is 8.440017700195312e-05
+0: 
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 7.939338684082031e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: Iteration 2: loss=14.6768
+0: Step_time: 0.27709221839904785
+0: 
+0: in Iteration 3 Batch Rank : 2 and batch is {'input_ids': tensor([[4, 4],
+0:         [8, 8]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[4, 4],
+0:         [8, 8]], device='cuda:2')} 
+0: 
+0: in Iteration 3 Batch Rank : 0 and batch is {'input_ids': tensor([[ 1, 40],
+0:         [ 1, 80]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[40, 40],
+0:         [80, 80]], device='cuda:0')} 
+0: 
+0: in Iteration 3 Batch Rank : 1 and batch is {'input_ids': tensor([[40, 40],
+0:         [80, 80]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[40,  4],
+0:         [80,  8]], device='cuda:1')} 
+0: 
+0: in Iteration 3 Batch Rank : 3 and batch is {'input_ids': tensor([[4, 4],
+0:         [8, 8]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   4, -100],
+0:         [   8, -100]], device='cuda:3')} 
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 0.00010275840759277344
+0: The time is 9.465217590332031e-05
+0: 
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 0.00017881393432617188
+0: 
+0: The time is 0.0001633167266845703
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 0.00017762184143066406
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: The time is 9.465217590332031e-05
+0: 
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: The time is 8.511543273925781e-05
+0: 
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: The time is 8.153915405273438e-05
+0: 
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 0.0001010894775390625
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 7.963180541992188e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 0.00010991096496582031
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 0.00010251998901367188
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 9.965896606445312e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 0.00015783309936523438
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 0.0001518726348876953
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 0.0001575946807861328
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: Iteration 3: loss=8.2816
+0: Step_time: 0.24852967262268066
+0: 
+0: in Iteration 4 Batch Rank : 3 and batch is {'input_ids': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[   9, -100],
+0:         [  13, -100]], device='cuda:3')} 
+0: 
+0: in Iteration 4 Batch Rank : 1 and batch is {'input_ids': tensor([[ 90,  90],
+0:         [130, 130]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[ 90,   9],
+0:         [130,  13]], device='cuda:1')} 
+0: 
+0: in Iteration 4 Batch Rank : 2 and batch is {'input_ids': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[ 9,  9],
+0:         [13, 13]], device='cuda:2')} 
+0: 
+0: in Iteration 4 Batch Rank : 0 and batch is {'input_ids': tensor([[  1,  90],
+0:         [  1, 130]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[ 90,  90],
+0:         [130, 130]], device='cuda:0')} 
+0: 
+0: The time is 0.00011181831359863281
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 0.00010395050048828125
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 0.00012254714965820312
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 0.00010180473327636719
+0: 
+0: The time is 0.00010609626770019531
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 0.00010156631469726562
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.392333984375e-05
+0: The time is 8.916854858398438e-05
+0: 
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: The time is 9.107589721679688e-05
+0: 
+0: 
+0: The time is 8.344650268554688e-05
+0: The time is 8.678436279296875e-05
+0: 
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: The time is 8.869171142578125e-05
+0: 
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: The time is 8.893013000488281e-05
+0: 
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: The time is 8.034706115722656e-05
+0: 
+0: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: The time is 9.417533874511719e-05
+0: 
+0: 
+0: The time is 0.00010180473327636719
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: The time is 9.131431579589844e-05
+0: 
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: The time is 8.654594421386719e-05
+0: 
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 0.00010466575622558594
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: The time is 8.678436279296875e-05
+0: 
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 0.00010275840759277344
+0: The time is 9.393692016601562e-05
+0: 
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 0.00010800361633300781
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 7.939338684082031e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: The time is 7.987022399902344e-05
+0: 
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: Iteration 4: loss=19.5381
+0: Step_time: 0.24824261665344238
+0: 
+0: in Iteration 5 Batch Rank : 2 and batch is {'input_ids': tensor([[10, 10],
+0:         [14, 14]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[10, 10],
+0:         [14, 14]], device='cuda:2')} 
+0: in Iteration 5 Batch Rank : 3 and batch is {'input_ids': tensor([[10, 10],
+0:         [14, 14]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  10, -100],
+0:         [  14, -100]], device='cuda:3')} 
+0: 
+0: 
+0: in Iteration 5 Batch Rank : 1 and batch is {'input_ids': tensor([[100, 100],
+0:         [140, 140]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[100,  10],
+0:         [140,  14]], device='cuda:1')} 
+0: in Iteration 5 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 100],
+0:         [  1, 140]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[100, 100],
+0:         [140, 140]], device='cuda:0')} 
+0: 
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 0.00010967254638671875
+0: The time is 0.00010895729064941406
+0: 
+0: 
+0: The time is 0.000110626220703125
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: The time is 9.012222290039062e-05
+0: 
+0: 
+0: The time is 0.00010442733764648438
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 0.00010395050048828125
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 0.0002219676971435547
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 0.00021004676818847656
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 0.00010061264038085938
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: The time is 8.606910705566406e-05
+0: 
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 0.00011205673217773438
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: The time is 8.893013000488281e-05
+0: 
+0: 
+0: The time is 9.369850158691406e-05
+0: 
+0: The time is 0.00010776519775390625
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: The time is 9.703636169433594e-05
+0: 
+0: 
+0: The time is 0.00010967254638671875
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 0.00010251998901367188
+0: 
+0: The time is 8.249282836914062e-05
+0: The time is 8.034706115722656e-05
+0: 
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: The time is 9.441375732421875e-05
+0: 
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 0.00010251998901367188
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: The time is 8.368492126464844e-05
+0: 
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 7.987022399902344e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 7.987022399902344e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 0.00010037422180175781
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 8.034706115722656e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: The time is 8.845329284667969e-05
+0: 
+0: 
+0: The time is 7.963180541992188e-05
+0: The time is 8.606910705566406e-05
+0: 
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: Iteration 5: loss=12.7375
+0: Step_time: 0.24799108505249023
+0: 
+0: in Iteration 6 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 110],
+0:         [  1, 150]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[110, 110],
+0:         [150, 150]], device='cuda:0')} 
+0: in Iteration 6 Batch Rank : 3 and batch is {'input_ids': tensor([[11, 11],
+0:         [15, 15]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  11, -100],
+0:         [  15, -100]], device='cuda:3')} 
+0: 
+0: 
+0: in Iteration 6 Batch Rank : 2 and batch is {'input_ids': tensor([[11, 11],
+0:         [15, 15]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[11, 11],
+0:         [15, 15]], device='cuda:2')} 
+0: 
+0: in Iteration 6 Batch Rank : 1 and batch is {'input_ids': tensor([[110, 110],
+0:         [150, 150]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[110,  11],
+0:         [150,  15]], device='cuda:1')} 
+0: 
+0: The time is 0.000102996826171875
+0: 
+0: The time is 0.00010657310485839844
+0: The time is 0.00010466575622558594
+0: 
+0: 
+0: The time is 0.00010752677917480469
+0: 
+0: The time is 0.00010180473327636719
+0: 
+0: The time is 8.273124694824219e-05
+0: The time is 8.726119995117188e-05
+0: 
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 0.00010323524475097656
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: The time is 0.0001087188720703125
+0: 
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: The time is 8.20159912109375e-05
+0: 
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: The time is 8.249282836914062e-05
+0: 
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: The time is 8.440017700195312e-05
+0: 
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 0.00010776519775390625
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: The time is 9.179115295410156e-05
+0: 
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: The time is 8.225440979003906e-05
+0: 
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: The time is 8.58306884765625e-05
+0: 
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 0.0001068115234375
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.989738464355469e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 8.749961853027344e-05
+0: The time is 8.630752563476562e-05
+0: 
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 0.00010657310485839844
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 0.00010538101196289062
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 0.00010061264038085938
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: The time is 8.96453857421875e-05
+0: 
+0: 
+0: The time is 8.20159912109375e-05
+0: The time is 8.630752563476562e-05
+0: 
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.512901306152344e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.1552734375e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 0.0001571178436279297
+0: 
+0: The time is 0.00010156631469726562
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: Iteration 6: loss=10.7298
+0: Step_time: 0.24896478652954102
+0: 
+0: in Iteration 7 Batch Rank : 3 and batch is {'input_ids': tensor([[12, 12],
+0:         [16, 16]], device='cuda:3'), 'position_ids': tensor([[6, 7],
+0:         [6, 7]], device='cuda:3'), 'shift_labels': tensor([[  12, -100],
+0:         [  16, -100]], device='cuda:3')} 
+0: in Iteration 7 Batch Rank : 1 and batch is {'input_ids': tensor([[120, 120],
+0:         [160, 160]], device='cuda:1'), 'position_ids': tensor([[2, 3],
+0:         [2, 3]], device='cuda:1'), 'shift_labels': tensor([[120,  12],
+0:         [160,  16]], device='cuda:1')} 
+0: 
+0: 
+0: in Iteration 7 Batch Rank : 2 and batch is {'input_ids': tensor([[12, 12],
+0:         [16, 16]], device='cuda:2'), 'position_ids': tensor([[4, 5],
+0:         [4, 5]], device='cuda:2'), 'shift_labels': tensor([[12, 12],
+0:         [16, 16]], device='cuda:2')} 
+0: 
+0: in Iteration 7 Batch Rank : 0 and batch is {'input_ids': tensor([[  1, 120],
+0:         [  1, 160]], device='cuda:0'), 'position_ids': tensor([[0, 1],
+0:         [0, 1]], device='cuda:0'), 'shift_labels': tensor([[120, 120],
+0:         [160, 160]], device='cuda:0')} 
+0: 
+0: The time is 0.0001087188720703125
+0: 
+0: The time is 0.00011348724365234375
+0: 
+0: The time is 0.0001087188720703125
+0: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 9.1552734375e-05
+0: The time is 0.00010156631469726562
+0: 
+0: 
+0: The time is 9.131431579589844e-05
+0: 
+0: The time is 0.00010156631469726562
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 0.00010848045349121094
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: The time is 9.72747802734375e-05
+0: 
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: The time is 8.296966552734375e-05
+0: 
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 0.00010347366333007812
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: The time is 9.274482727050781e-05
+0: 
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 0.00010442733764648438
+0: 
+0: The time is 8.416175842285156e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: The time is 8.440017700195312e-05
+0: 
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 0.00010514259338378906
+0: 
+0: The time is 9.560585021972656e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.320808410644531e-05
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 0.0002715587615966797
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.989738464355469e-05
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+0: The time is 0.00010323524475097656
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.058547973632812e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: The time is 9.131431579589844e-05
+0: 
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 0.00010609626770019531
+0: 
+0: The time is 8.559226989746094e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 0.00010347366333007812
+0: 
+0: The time is 0.00010728836059570312
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.440017700195312e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: The time is 8.749961853027344e-05
+0: 
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: The time is 9.512901306152344e-05
+0: 
+0: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.0108642578125e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 9.059906005859375e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 8.654594421386719e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.130073547363281e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.535385131835938e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.083747863769531e-05
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 8.869171142578125e-05
+0: 
+0: The time is 8.273124694824219e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 8.511543273925781e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 8.106231689453125e-05
+0: 
+0: The time is 8.082389831542969e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 9.965896606445312e-05
+0: 
+0: The time is 8.344650268554688e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.988380432128906e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: The time is 8.177757263183594e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+0: The time is 8.249282836914062e-05
+0: 
+0: The time is 8.702278137207031e-05
+0: 
+0: The time is 8.153915405273438e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 8.463859558105469e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.487701416015625e-05
+0: 
+0: The time is 0.0001747608184814453
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 8.225440979003906e-05
+0: 
+0: The time is 8.368492126464844e-05
+0: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 8.58306884765625e-05
+0: 
+0: The time is 0.0001609325408935547
+0: 
+0: The time is 8.392333984375e-05
+0: 
+0: The time is 8.296966552734375e-05
+0: 
+0: The time is 0.000164031982421875
+0: 
+0: The time is 8.678436279296875e-05
+0: 
+0: The time is 8.20159912109375e-05
+0: 
+0: Iteration 7: loss=10.8397
+0: Step_time: 0.24903273582458496
+0: 

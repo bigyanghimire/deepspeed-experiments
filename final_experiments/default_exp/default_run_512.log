@@ -1,0 +1,1598 @@
+1: W0319 15:19:30.520000 383998 site-packages/torch/distributed/run.py:793] 
+1: W0319 15:19:30.520000 383998 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0319 15:19:30.520000 383998 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0319 15:19:30.520000 383998 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0319 15:19:30.574000 637773 site-packages/torch/distributed/run.py:793] 
+0: W0319 15:19:30.574000 637773 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0319 15:19:30.574000 637773 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0319 15:19:30.574000 637773 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: 
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 512
+0: Training with Sequence Length: 512
+0: Training with Sequence Length: 512
+0: Training with Sequence Length: 512
+1: Training with Sequence Length: 512
+1: Training with Sequence Length: 512
+1: Training with Sequence Length: 512
+1: Training with Sequence Length: 512
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: Truegradient checkpointing enabled: True
+1: 
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.88 GB         Max_MA 4.61 GB         CA 5.18 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.59 GB, percent = 2.1%
+0: After initializing optimizer states
+0: MA 2.88 GB         Max_MA 3.46 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.59 GB, percent = 2.1%
+0: After initializing ZeRO optimizer
+0: MA 2.88 GB         Max_MA 2.88 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.61 GB, percent = 2.1%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Mar 19 11:16:16 2026).
+0: [Rank 0] Packed dataset: 11362 chunks of 512 tokens
+0: [Rank 2] Packed dataset: 11362 chunks of 512 tokens
+0: [Rank 1] Packed dataset: 11362 chunks of 512 tokens
+1: [Rank 5] Packed dataset: 11362 chunks of 512 tokens[Rank 4] Packed dataset: 11362 chunks of 512 tokens
+1: 
+1: [Rank 7] Packed dataset: 11362 chunks of 512 tokens[Rank 6] Packed dataset: 11362 chunks of 512 tokens
+1: 
+0: [Rank 3] Packed dataset: 11362 chunks of 512 tokens
+0: Iteration 0: loss=3.1125
+0: Step_time: 1.4976997375488281
+0: 
+0: Iteration 1: loss=13.1598
+0: Step_time: 1.4681453704833984
+0: 
+0: Iteration 2: loss=16.0557
+0: Step_time: 1.701683759689331
+0: 
+0: Iteration 3: loss=11.4382
+0: Step_time: 1.4171319007873535
+0: 
+0: Iteration 4: loss=18.3717
+0: Step_time: 1.427635669708252
+0: 
+0: Iteration 5: loss=11.2302
+0: Step_time: 1.4797494411468506
+0: 
+0: Iteration 6: loss=11.2361
+0: Step_time: 1.4557690620422363
+0: 
+0: Iteration 7: loss=10.0468
+0: Step_time: 1.4923312664031982
+0: 
+0: Iteration 8: loss=9.5211
+0: Step_time: 1.5017929077148438
+0: 
+0: Iteration 9: loss=8.9387
+0: Step_time: 1.4217989444732666
+0: 
+0: Iteration 10: loss=8.5649
+0: Step_time: 1.4201123714447021
+0: 
+0: Iteration 11: loss=8.9072
+0: Step_time: 1.4884276390075684
+0: 
+0: Iteration 12: loss=8.8245
+0: Step_time: 1.450209379196167
+0: 
+0: Iteration 13: loss=10.2412
+0: Step_time: 1.4303724765777588
+0: 
+0: Iteration 14: loss=9.3445
+0: Step_time: 1.4614133834838867
+0: 
+0: Iteration 15: loss=8.9882
+0: Step_time: 1.4677131175994873
+0: 
+0: Iteration 16: loss=8.7085
+0: Step_time: 1.4287757873535156
+0: 
+0: Iteration 17: loss=9.0663
+0: Step_time: 1.4305148124694824
+0: 
+0: Iteration 18: loss=9.0027
+0: Step_time: 1.481447696685791
+0: 
+0: Iteration 19: loss=8.8591
+0: Step_time: 1.4253809452056885
+0: 
+0: Iteration 20: loss=8.8802
+0: Step_time: 1.399444341659546
+0: 
+0: Iteration 21: loss=8.4255
+0: Step_time: 1.4615905284881592
+0: 
+0: Iteration 22: loss=8.7813
+0: Step_time: 1.4696745872497559
+0: 
+0: Iteration 23: loss=8.5557
+0: Step_time: 1.4415197372436523
+0: 
+0: Iteration 24: loss=8.4130
+0: Step_time: 1.4542107582092285
+0: 
+0: Iteration 25: loss=8.0632
+0: Step_time: 1.450911283493042
+0: 
+0: Iteration 26: loss=8.1771
+0: Step_time: 1.432624340057373
+0: 
+0: Iteration 27: loss=7.7881
+0: Step_time: 1.4316911697387695
+0: 
+0: Iteration 28: loss=7.8627
+0: Step_time: 1.4350764751434326
+0: 
+0: Iteration 29: loss=8.0734
+0: Step_time: 1.4297220706939697
+0: 
+0: Iteration 30: loss=7.7050
+0: Step_time: 1.4265034198760986
+0: 
+0: Iteration 31: loss=8.0793
+0: Step_time: 1.4722728729248047
+0: 
+0: Iteration 32: loss=8.1040
+0: Step_time: 1.4561331272125244
+0: 
+0: Iteration 33: loss=8.1179
+0: Step_time: 1.4499602317810059
+0: 
+0: Iteration 34: loss=8.1634
+0: Step_time: 1.4344863891601562
+0: 
+0: Iteration 35: loss=8.1761
+0: Step_time: 1.447300910949707
+0: 
+0: Iteration 36: loss=7.7486
+0: Step_time: 1.4462366104125977
+0: 
+0: Iteration 37: loss=8.2884
+0: Step_time: 1.4363884925842285
+0: 
+0: Iteration 38: loss=7.5848
+0: Step_time: 1.4209716320037842
+0: 
+0: Iteration 39: loss=7.8979
+0: Step_time: 1.4469804763793945
+0: 
+0: Iteration 40: loss=8.0221
+0: Step_time: 1.4473083019256592
+0: 
+0: Iteration 41: loss=8.2428
+0: Step_time: 1.4437360763549805
+0: 
+0: Iteration 42: loss=7.8702
+0: Step_time: 1.477829933166504
+0: 
+0: Iteration 43: loss=7.9339
+0: Step_time: 1.433314561843872
+0: 
+0: Iteration 44: loss=7.7686
+0: Step_time: 1.4242377281188965
+0: 
+0: Iteration 45: loss=7.9673
+0: Step_time: 1.456343173980713
+0: 
+0: Iteration 46: loss=8.3790
+0: Step_time: 1.423234224319458
+0: 
+0: Iteration 47: loss=8.0096
+0: Step_time: 1.4272396564483643
+0: 
+0: Iteration 48: loss=7.8112
+0: Step_time: 1.4665889739990234
+0: 
+0: Iteration 49: loss=7.4699
+0: Step_time: 1.468526840209961
+0: 
+0: Iteration 50: loss=7.7463
+0: Step_time: 1.4321887493133545
+0: 
+0: Iteration 51: loss=7.8522
+0: Step_time: 1.4307029247283936
+0: 
+0: Iteration 52: loss=7.5930
+0: Step_time: 1.5065627098083496
+0: 
+0: Iteration 53: loss=7.8751
+0: Step_time: 1.4229705333709717
+0: 
+0: Iteration 54: loss=7.7669
+0: Step_time: 1.4262909889221191
+0: 
+0: Iteration 55: loss=7.8233
+0: Step_time: 1.5093486309051514
+0: 
+0: Iteration 56: loss=7.5578
+0: Step_time: 1.4434800148010254
+0: 
+0: Iteration 57: loss=8.2407
+0: Step_time: 1.4331049919128418
+0: 
+0: Iteration 58: loss=7.4243
+0: Step_time: 1.4354612827301025
+0: 
+0: Iteration 59: loss=7.9371
+0: Step_time: 1.4708383083343506
+0: 
+0: Iteration 60: loss=7.4966
+0: Step_time: 1.4286422729492188
+0: 
+0: Iteration 61: loss=7.8841
+0: Step_time: 1.461012840270996
+0: 
+0: Iteration 62: loss=7.8185
+0: Step_time: 1.4259388446807861
+0: 
+0: Iteration 63: loss=7.5679
+0: Step_time: 1.421325922012329
+0: 
+0: Iteration 64: loss=7.7047
+0: Step_time: 1.4057862758636475
+0: 
+0: Iteration 65: loss=7.7323
+0: Step_time: 1.4089279174804688
+0: 
+0: Iteration 66: loss=8.1926
+0: Step_time: 1.4544405937194824
+0: 
+0: Iteration 67: loss=7.7751
+0: Step_time: 1.467949628829956
+0: 
+0: Iteration 68: loss=8.0722
+0: Step_time: 1.4206962585449219
+0: 
+0: Iteration 69: loss=7.5764
+0: Step_time: 1.4350581169128418
+0: 
+0: Iteration 70: loss=8.4815
+0: Step_time: 1.4480338096618652
+0: 
+0: Iteration 71: loss=7.7703
+0: Step_time: 1.4457454681396484
+0: 
+0: Iteration 72: loss=8.0186
+0: Step_time: 1.4499800205230713
+0: 
+0: Iteration 73: loss=8.0458
+0: Step_time: 1.4409692287445068
+0: 
+0: Iteration 74: loss=8.0271
+0: Step_time: 1.4273810386657715
+0: 
+0: Iteration 75: loss=7.7511
+0: Step_time: 1.4548122882843018
+0: 
+0: Iteration 76: loss=7.9799
+0: Step_time: 1.4287068843841553
+0: 
+0: Iteration 77: loss=7.7252
+0: Step_time: 1.4161252975463867
+0: 
+0: Iteration 78: loss=7.6354
+0: Step_time: 1.4298961162567139
+0: 
+0: Iteration 79: loss=7.6105
+0: Step_time: 1.4263243675231934
+0: 
+0: Iteration 80: loss=7.6333
+0: Step_time: 1.4215118885040283
+0: 
+0: Iteration 81: loss=7.7764
+0: Step_time: 1.4520025253295898
+0: 
+0: Iteration 82: loss=7.9291
+0: Step_time: 1.4510419368743896
+0: 
+0: Iteration 83: loss=7.9053
+0: Step_time: 1.4369723796844482
+0: 
+0: Iteration 84: loss=7.8126
+0: Step_time: 1.4649419784545898
+0: 
+0: Iteration 85: loss=7.5788
+0: Step_time: 1.4340791702270508
+0: 
+0: Iteration 86: loss=8.3122
+0: Step_time: 1.4529545307159424
+0: 
+0: Iteration 87: loss=8.0756
+0: Step_time: 1.424140214920044
+0: 
+0: Iteration 88: loss=7.7918
+0: Step_time: 1.4444904327392578
+0: 
+0: Iteration 89: loss=8.1021
+0: Step_time: 1.4423017501831055
+0: 
+0: Iteration 90: loss=8.1010
+0: Step_time: 1.4261438846588135
+0: 
+0: Iteration 91: loss=7.7151
+0: Step_time: 1.4040439128875732
+0: 
+0: Iteration 92: loss=7.8614
+0: Step_time: 1.4292635917663574
+0: 
+0: Iteration 93: loss=7.4954
+0: Step_time: 1.4202384948730469
+0: 
+0: Iteration 94: loss=7.7719
+0: Step_time: 1.4265801906585693
+0: 
+0: Iteration 95: loss=7.8632
+0: Step_time: 1.4316046237945557
+0: 
+0: Iteration 96: loss=8.1051
+0: Step_time: 1.4174418449401855
+0: 
+0: Iteration 97: loss=7.8440
+0: Step_time: 1.4187278747558594
+0: 
+0: Iteration 98: loss=7.9841
+0: Step_time: 1.4286231994628906
+0: 
+0: Iteration 99: loss=7.5282
+0: Step_time: 1.4439702033996582
+0: 
+0: Iteration 100: loss=7.9091
+0: Step_time: 1.4552888870239258
+0: 
+0: Iteration 101: loss=7.7656
+0: Step_time: 1.4539918899536133
+0: 
+0: Iteration 102: loss=7.9240
+0: Step_time: 1.4400908946990967
+0: 
+0: Iteration 103: loss=7.6436
+0: Step_time: 1.458376407623291
+0: 
+0: Iteration 104: loss=7.6990
+0: Step_time: 1.4055793285369873
+0: 
+0: Iteration 105: loss=7.5620
+0: Step_time: 1.4278204441070557
+0: 
+0: Iteration 106: loss=8.1594
+0: Step_time: 1.459610939025879
+0: 
+0: Iteration 107: loss=7.3528
+0: Step_time: 1.4337801933288574
+0: 
+0: Iteration 108: loss=8.0291
+0: Step_time: 1.397508144378662
+0: 
+0: Iteration 109: loss=8.0672
+0: Step_time: 1.4629390239715576
+0: 
+0: Iteration 110: loss=7.6838
+0: Step_time: 1.411055564880371
+0: 
+0: Iteration 111: loss=7.6977
+0: Step_time: 1.437570571899414
+0: 
+0: Iteration 112: loss=7.8733
+0: Step_time: 1.4613614082336426
+0: 
+0: Iteration 113: loss=8.0372
+0: Step_time: 1.4300625324249268
+0: 
+0: Iteration 114: loss=7.5787
+0: Step_time: 1.4273386001586914
+0: 
+0: Iteration 115: loss=7.8753
+0: Step_time: 1.446176528930664
+0: 
+0: Iteration 116: loss=7.7379
+0: Step_time: 1.4269475936889648
+0: 
+0: Iteration 117: loss=7.9206
+0: Step_time: 1.442253828048706
+0: 
+0: Iteration 118: loss=7.8675
+0: Step_time: 1.4242594242095947
+0: 
+0: Iteration 119: loss=7.7174
+0: Step_time: 1.4192821979522705
+0: 
+0: Iteration 120: loss=7.8344
+0: Step_time: 1.450944423675537
+0: 
+0: Iteration 121: loss=7.8156
+0: Step_time: 1.4456965923309326
+0: 
+0: Iteration 122: loss=7.8276
+0: Step_time: 1.4336986541748047
+0: 
+0: Iteration 123: loss=7.8396
+0: Step_time: 1.4440908432006836
+0: 
+0: Iteration 124: loss=7.6254
+0: Step_time: 1.4883005619049072
+0: 
+0: Iteration 125: loss=8.1475
+0: Step_time: 1.4443213939666748
+0: 
+0: Iteration 126: loss=7.8134
+0: Step_time: 1.4394662380218506
+0: 
+0: Iteration 127: loss=7.6355
+0: Step_time: 1.446225643157959
+0: 
+0: Iteration 128: loss=7.7815
+0: Step_time: 1.4585444927215576
+0: 
+0: Iteration 129: loss=7.5657
+0: Step_time: 1.4586074352264404
+0: 
+0: Iteration 130: loss=7.7813
+0: Step_time: 1.4669406414031982
+0: 
+0: Iteration 131: loss=7.5692
+0: Step_time: 1.4547648429870605
+0: 
+0: Iteration 132: loss=7.5609
+0: Step_time: 1.441990852355957
+0: 
+0: Iteration 133: loss=8.0346
+0: Step_time: 1.4463062286376953
+0: 
+0: Iteration 134: loss=7.4066
+0: Step_time: 1.453385353088379
+0: 
+0: Iteration 135: loss=7.7143
+0: Step_time: 1.4366586208343506
+0: 
+0: Iteration 136: loss=7.8109
+0: Step_time: 1.4454965591430664
+0: 
+0: Iteration 137: loss=7.7853
+0: Step_time: 1.4022419452667236
+0: 
+0: Iteration 138: loss=7.6697
+0: Step_time: 1.4540371894836426
+0: 
+0: Iteration 139: loss=7.5477
+0: Step_time: 1.4544122219085693
+0: 
+0: Iteration 140: loss=7.4971
+0: Step_time: 1.438549280166626
+0: 
+0: Iteration 141: loss=7.7471
+0: Step_time: 1.4336285591125488
+0: 
+0: Iteration 142: loss=8.2831
+0: Step_time: 1.4186596870422363
+0: 
+0: Iteration 143: loss=7.5460
+0: Step_time: 1.4799365997314453
+0: 
+0: Iteration 144: loss=7.7427
+0: Step_time: 1.4290711879730225
+0: 
+0: Iteration 145: loss=7.5685
+0: Step_time: 1.4356029033660889
+0: 
+0: Iteration 146: loss=7.2354
+0: Step_time: 1.4785025119781494
+0: 
+0: Iteration 147: loss=7.3696
+0: Step_time: 1.4583327770233154
+0: 
+0: Iteration 148: loss=7.5503
+0: Step_time: 1.4226818084716797
+0: 
+0: Iteration 149: loss=7.4448
+0: Step_time: 1.4707810878753662
+0: 
+0: Iteration 150: loss=8.0083
+0: Step_time: 1.4497413635253906
+0: 
+0: Iteration 151: loss=7.5004
+0: Step_time: 1.463918685913086
+0: 
+0: Iteration 152: loss=7.3854
+0: Step_time: 1.463766098022461
+0: 
+0: Iteration 153: loss=7.7893
+0: Step_time: 1.4283447265625
+0: 
+0: Iteration 154: loss=8.0483
+0: Step_time: 1.4221153259277344
+0: 
+0: Iteration 155: loss=7.9183
+0: Step_time: 1.4587161540985107
+0: 
+0: Iteration 156: loss=8.0673
+0: Step_time: 1.4468574523925781
+0: 
+0: Iteration 157: loss=7.7072
+0: Step_time: 1.4581756591796875
+0: 
+0: Iteration 158: loss=7.4916
+0: Step_time: 1.4315073490142822
+0: 
+0: Iteration 159: loss=7.2659
+0: Step_time: 1.4454796314239502
+0: 
+0: Iteration 160: loss=7.8126
+0: Step_time: 1.4617855548858643
+0: 
+0: Iteration 161: loss=7.3951
+0: Step_time: 1.4124138355255127
+0: 
+0: Iteration 162: loss=7.3906
+0: Step_time: 1.4454162120819092
+0: 
+0: Iteration 163: loss=7.5561
+0: Step_time: 1.4341340065002441
+0: 
+0: Iteration 164: loss=7.5775
+0: Step_time: 1.411689281463623
+0: 
+0: Iteration 165: loss=7.5659
+0: Step_time: 1.4408466815948486
+0: 
+0: Iteration 166: loss=7.4281
+0: Step_time: 1.4568707942962646
+0: 
+0: Iteration 167: loss=8.2515
+0: Step_time: 1.498652458190918
+0: 
+0: Iteration 168: loss=7.7403
+0: Step_time: 1.4335370063781738
+0: 
+0: Iteration 169: loss=7.6133
+0: Step_time: 1.4162633419036865
+0: 
+0: Iteration 170: loss=7.6981
+0: Step_time: 1.4665005207061768
+0: 
+0: Iteration 171: loss=7.7715
+0: Step_time: 1.4405996799468994
+0: 
+0: Iteration 172: loss=7.4157
+0: Step_time: 1.4400475025177002
+0: 
+0: Iteration 173: loss=7.9008
+0: Step_time: 1.4342398643493652
+0: 
+0: Iteration 174: loss=7.9664
+0: Step_time: 1.434356451034546
+0: 
+0: Iteration 175: loss=7.8703
+0: Step_time: 1.477266550064087
+0: 
+0: Iteration 176: loss=7.6221
+0: Step_time: 1.459834337234497
+0: 
+0: Iteration 177: loss=7.6499
+0: Step_time: 1.4462296962738037
+0: 
+0: Iteration 178: loss=7.6763
+0: Step_time: 1.4311158657073975
+0: 
+0: Iteration 179: loss=7.8286
+0: Step_time: 1.4305403232574463
+0: 
+0: Iteration 180: loss=7.8838
+0: Step_time: 1.4669232368469238
+0: 
+0: Iteration 181: loss=7.5994
+0: Step_time: 1.441587209701538
+0: 
+0: Iteration 182: loss=7.9329
+0: Step_time: 1.4371986389160156
+0: 
+0: Iteration 183: loss=7.6623
+0: Step_time: 1.4480869770050049
+0: 
+0: Iteration 184: loss=7.7732
+0: Step_time: 1.4670751094818115
+0: 
+0: Iteration 185: loss=7.5191
+0: Step_time: 1.438539743423462
+0: 
+0: Iteration 186: loss=7.7048
+0: Step_time: 1.456512212753296
+0: 
+0: Iteration 187: loss=7.6502
+0: Step_time: 1.454193115234375
+0: 
+0: Iteration 188: loss=8.0158
+0: Step_time: 1.4385428428649902
+0: 
+0: Iteration 189: loss=7.8540
+0: Step_time: 1.4250280857086182
+0: 
+0: Iteration 190: loss=7.4835
+0: Step_time: 1.4426732063293457
+0: 
+0: Iteration 191: loss=7.9914
+0: Step_time: 1.4426510334014893
+0: 
+0: Iteration 192: loss=7.2613
+0: Step_time: 1.4469404220581055
+0: 
+0: Iteration 193: loss=7.4804
+0: Step_time: 1.4620132446289062
+0: 
+0: Iteration 194: loss=7.7140
+0: Step_time: 1.422816514968872
+0: 
+0: Iteration 195: loss=7.4023
+0: Step_time: 1.4324898719787598
+0: 
+0: Iteration 196: loss=7.5695
+0: Step_time: 1.456951379776001
+0: 
+0: Iteration 197: loss=8.0266
+0: Step_time: 1.422961950302124
+0: 
+0: Iteration 198: loss=7.4302
+0: Step_time: 1.4550395011901855
+0: 
+0: Iteration 199: loss=7.9891
+0: Step_time: 1.4258146286010742
+0: 
+0: Iteration 200: loss=7.4355
+0: Step_time: 1.4590213298797607
+0: 
+0: Iteration 201: loss=7.6813
+0: Step_time: 1.447803020477295
+0: 
+0: Iteration 202: loss=7.7805
+0: Step_time: 1.430264949798584
+0: 
+0: Iteration 203: loss=7.7692
+0: Step_time: 1.4463427066802979
+0: 
+0: Iteration 204: loss=7.6063
+0: Step_time: 1.4914641380310059
+0: 
+0: Iteration 205: loss=7.7386
+0: Step_time: 1.4468281269073486
+0: 
+0: Iteration 206: loss=7.4716
+0: Step_time: 1.450864553451538
+0: 
+0: Iteration 207: loss=7.4310
+0: Step_time: 1.4973809719085693
+0: 
+0: Iteration 208: loss=7.2724
+0: Step_time: 1.4363737106323242
+0: 
+0: Iteration 209: loss=8.0570
+0: Step_time: 1.456817626953125
+0: 
+0: Iteration 210: loss=7.3234
+0: Step_time: 1.446861743927002
+0: 
+0: Iteration 211: loss=7.2615
+0: Step_time: 1.4831163883209229
+0: 
+0: Iteration 212: loss=7.4351
+0: Step_time: 1.411133050918579
+0: 
+0: Iteration 213: loss=7.5106
+0: Step_time: 1.4424688816070557
+0: 
+0: Iteration 214: loss=7.4903
+0: Step_time: 1.488917589187622
+0: 
+0: Iteration 215: loss=7.7370
+0: Step_time: 1.4178264141082764
+0: 
+0: Iteration 216: loss=7.2098
+0: Step_time: 1.4328842163085938
+0: 
+0: Iteration 217: loss=7.6683
+0: Step_time: 1.460388422012329
+0: 
+0: Iteration 218: loss=7.5503
+0: Step_time: 1.436894416809082
+0: 
+0: Iteration 219: loss=7.1121
+0: Step_time: 1.449709415435791
+0: 
+0: Iteration 220: loss=7.5997
+0: Step_time: 1.4376168251037598
+0: 
+0: Iteration 221: loss=7.8550
+0: Step_time: 1.4789927005767822
+0: 
+0: Iteration 222: loss=7.7157
+0: Step_time: 1.4067208766937256
+0: 
+0: Iteration 223: loss=7.5370
+0: Step_time: 1.4447357654571533
+0: 
+0: Iteration 224: loss=7.7857
+0: Step_time: 1.4206407070159912
+0: 
+0: Iteration 225: loss=8.1460
+0: Step_time: 1.4519662857055664
+0: 
+0: Iteration 226: loss=7.4737
+0: Step_time: 1.4734632968902588
+0: 
+0: Iteration 227: loss=7.6697
+0: Step_time: 1.4490482807159424
+0: 
+0: Iteration 228: loss=7.7415
+0: Step_time: 1.4477367401123047
+0: 
+0: Iteration 229: loss=7.7988
+0: Step_time: 1.4227302074432373
+0: 
+0: Iteration 230: loss=7.5949
+0: Step_time: 1.4428155422210693
+0: 
+0: Iteration 231: loss=7.6317
+0: Step_time: 1.4210882186889648
+0: 
+0: Iteration 232: loss=7.3583
+0: Step_time: 1.4161078929901123
+0: 
+0: Iteration 233: loss=7.2308
+0: Step_time: 1.4660165309906006
+0: 
+0: Iteration 234: loss=7.7861
+0: Step_time: 1.4630725383758545
+0: 
+0: Iteration 235: loss=7.4163
+0: Step_time: 1.4392504692077637
+0: 
+0: Iteration 236: loss=7.1297
+0: Step_time: 1.4485056400299072
+0: 
+0: Iteration 237: loss=7.9519
+0: Step_time: 1.4749891757965088
+0: 
+0: Iteration 238: loss=7.5622
+0: Step_time: 1.41572904586792
+0: 
+0: Iteration 239: loss=7.6053
+0: Step_time: 1.4514620304107666
+0: 
+0: Iteration 240: loss=7.2399
+0: Step_time: 1.441847562789917
+0: 
+0: Iteration 241: loss=7.8043
+0: Step_time: 1.454576015472412
+0: 
+0: Iteration 242: loss=7.2396
+0: Step_time: 1.4595234394073486
+0: 
+0: Iteration 243: loss=7.5966
+0: Step_time: 1.4432191848754883
+0: 
+0: Iteration 244: loss=7.4975
+0: Step_time: 1.446033000946045
+0: 
+0: Iteration 245: loss=7.0674
+0: Step_time: 1.4182639122009277
+0: 
+0: Iteration 246: loss=7.0269
+0: Step_time: 1.4104299545288086
+0: 
+0: Iteration 247: loss=7.1102
+0: Step_time: 1.4140355587005615
+0: 
+0: Iteration 248: loss=7.5869
+0: Step_time: 1.4850387573242188
+0: 
+0: Iteration 249: loss=7.2511
+0: Step_time: 1.4484763145446777
+0: 
+0: Iteration 250: loss=7.4712
+0: Step_time: 1.4786450862884521
+0: 
+0: Iteration 251: loss=7.5205
+0: Step_time: 1.4393811225891113
+0: 
+0: Iteration 252: loss=7.3073
+0: Step_time: 1.4190542697906494
+0: 
+0: Iteration 253: loss=6.8707
+0: Step_time: 1.416050672531128
+0: 
+0: Iteration 254: loss=7.5477
+0: Step_time: 1.4797089099884033
+0: 
+0: Iteration 255: loss=6.9010
+0: Step_time: 1.443061113357544
+0: 
+0: Iteration 256: loss=7.9218
+0: Step_time: 1.42018461227417
+0: 
+0: Iteration 257: loss=7.2278
+0: Step_time: 1.458073616027832
+0: 
+0: Iteration 258: loss=7.7246
+0: Step_time: 1.4550580978393555
+0: 
+0: Iteration 259: loss=7.1022
+0: Step_time: 1.4545133113861084
+0: 
+0: Iteration 260: loss=8.0395
+0: Step_time: 1.4488041400909424
+0: 
+0: Iteration 261: loss=7.1830
+0: Step_time: 1.4876854419708252
+0: 
+0: Iteration 262: loss=7.2503
+0: Step_time: 1.418179988861084
+0: 
+0: Iteration 263: loss=7.5194
+0: Step_time: 1.4320995807647705
+0: 
+0: Iteration 264: loss=7.4195
+0: Step_time: 1.4547407627105713
+0: 
+0: Iteration 265: loss=7.6895
+0: Step_time: 1.457108497619629
+0: 
+0: Iteration 266: loss=7.2126
+0: Step_time: 1.453383207321167
+0: 
+0: Iteration 267: loss=7.3557
+0: Step_time: 1.433548927307129
+0: 
+0: Iteration 268: loss=7.7644
+0: Step_time: 1.4456822872161865
+0: 
+0: Iteration 269: loss=7.3014
+0: Step_time: 1.4415466785430908
+0: 
+0: Iteration 270: loss=7.1044
+0: Step_time: 1.3975529670715332
+0: 
+0: Iteration 271: loss=7.2839
+0: Step_time: 1.4428975582122803
+0: 
+0: Iteration 272: loss=7.4286
+0: Step_time: 1.4497623443603516
+0: 
+0: Iteration 273: loss=7.4863
+0: Step_time: 1.4489002227783203
+0: 
+0: Iteration 274: loss=7.4674
+0: Step_time: 1.4175894260406494
+0: 
+0: Iteration 275: loss=7.5063
+0: Step_time: 1.4388093948364258
+0: 
+0: Iteration 276: loss=7.2339
+0: Step_time: 1.4440624713897705
+0: 
+0: Iteration 277: loss=6.8389
+0: Step_time: 1.4316668510437012
+0: 
+0: Iteration 278: loss=7.2579
+0: Step_time: 1.396775722503662
+0: 
+0: Iteration 279: loss=7.1609
+0: Step_time: 1.4170422554016113
+0: 
+0: Iteration 280: loss=7.1200
+0: Step_time: 1.4251418113708496
+0: 
+0: Iteration 281: loss=7.1020
+0: Step_time: 1.4500203132629395
+0: 
+0: Iteration 282: loss=7.1528
+0: Step_time: 1.4708106517791748
+0: 
+0: Iteration 283: loss=7.2695
+0: Step_time: 1.441896915435791
+0: 
+0: Iteration 284: loss=7.1333
+0: Step_time: 1.4466049671173096
+0: 
+0: Iteration 285: loss=7.4158
+0: Step_time: 1.4426698684692383
+0: 
+0: Iteration 286: loss=7.6163
+0: Step_time: 1.433182716369629
+0: 
+0: Iteration 287: loss=7.7256
+0: Step_time: 1.4326469898223877
+0: 
+0: Iteration 288: loss=6.7528
+0: Step_time: 1.4377317428588867
+0: 
+0: Iteration 289: loss=6.9863
+0: Step_time: 1.3978488445281982
+0: 
+0: Iteration 290: loss=7.3167
+0: Step_time: 1.4363071918487549
+0: 
+0: Iteration 291: loss=7.2664
+0: Step_time: 1.4382247924804688
+0: 
+0: Iteration 292: loss=6.8684
+0: Step_time: 1.4680416584014893
+0: 
+0: Iteration 293: loss=7.3536
+0: Step_time: 1.410132884979248
+0: 
+0: Iteration 294: loss=6.9083
+0: Step_time: 1.454087495803833
+0: 
+0: Iteration 295: loss=7.4591
+0: Step_time: 1.4449374675750732
+0: 
+0: Iteration 296: loss=7.0331
+0: Step_time: 1.4263041019439697
+0: 
+0: Iteration 297: loss=7.1681
+0: Step_time: 1.4090712070465088
+0: 
+0: Iteration 298: loss=6.7804
+0: Step_time: 1.4353759288787842
+0: 
+0: Iteration 299: loss=7.0514
+0: Step_time: 1.4167778491973877
+0: 
+0: Iteration 300: loss=7.1802
+0: Step_time: 1.4190680980682373
+0: 
+0: Iteration 301: loss=6.8480
+0: Step_time: 1.4238672256469727
+0: 
+0: Iteration 302: loss=7.3408
+0: Step_time: 1.443641185760498
+0: 
+0: Iteration 303: loss=7.2531
+0: Step_time: 1.425196886062622
+0: 
+0: Iteration 304: loss=7.3634
+0: Step_time: 1.4628572463989258
+0: 
+0: Iteration 305: loss=7.4924
+0: Step_time: 1.4231953620910645
+0: 
+0: Iteration 306: loss=6.7589
+0: Step_time: 1.429344892501831
+0: 
+0: Iteration 307: loss=7.2292
+0: Step_time: 1.4151597023010254
+0: 
+0: Iteration 308: loss=7.3846
+0: Step_time: 1.4026973247528076
+0: 
+0: Iteration 309: loss=6.7436
+0: Step_time: 1.4315071105957031
+0: 
+0: Iteration 310: loss=6.9185
+0: Step_time: 1.4447124004364014
+0: 
+0: Iteration 311: loss=7.3111
+0: Step_time: 1.4672565460205078
+0: 
+0: Iteration 312: loss=7.3727
+0: Step_time: 1.4405102729797363
+0: 
+0: Iteration 313: loss=7.2555
+0: Step_time: 1.4597339630126953
+0: 
+0: Iteration 314: loss=7.1730
+0: Step_time: 1.4222447872161865
+0: 
+0: Iteration 315: loss=7.3409
+0: Step_time: 1.4655203819274902
+0: 
+0: Iteration 316: loss=7.4224
+0: Step_time: 1.443108320236206
+0: 
+0: Iteration 317: loss=6.9113
+0: Step_time: 1.419302225112915
+0: 
+0: Iteration 318: loss=7.6332
+0: Step_time: 1.4163012504577637
+0: 
+0: Iteration 319: loss=7.0016
+0: Step_time: 1.4287769794464111
+0: 
+0: Iteration 320: loss=7.1485
+0: Step_time: 1.4602675437927246
+0: 
+0: Iteration 321: loss=6.8792
+0: Step_time: 1.4216725826263428
+0: 
+0: Iteration 322: loss=7.3220
+0: Step_time: 1.4293198585510254
+0: 
+0: Iteration 323: loss=6.7972
+0: Step_time: 1.4562103748321533
+0: 
+0: Iteration 324: loss=7.4572
+0: Step_time: 1.4279639720916748
+0: 
+0: Iteration 325: loss=6.9647
+0: Step_time: 1.4362962245941162
+0: 
+0: Iteration 326: loss=7.6395
+0: Step_time: 1.4462449550628662
+0: 
+0: Iteration 327: loss=7.0518
+0: Step_time: 1.425516128540039
+0: 
+0: Iteration 328: loss=7.2019
+0: Step_time: 1.4340531826019287
+0: 
+0: Iteration 329: loss=6.3321
+0: Step_time: 1.423732042312622
+0: 
+0: Iteration 330: loss=7.1975
+0: Step_time: 1.4232885837554932
+0: 
+0: Iteration 331: loss=7.2944
+0: Step_time: 1.4422121047973633
+0: 
+0: Iteration 332: loss=7.3040
+0: Step_time: 1.4088597297668457
+0: 
+0: Iteration 333: loss=6.9197
+0: Step_time: 1.4456744194030762
+0: 
+0: Iteration 334: loss=6.7441
+0: Step_time: 1.4668376445770264
+0: 
+0: Iteration 335: loss=7.1428
+0: Step_time: 1.4219772815704346
+0: 
+0: Iteration 336: loss=6.9656
+0: Step_time: 1.4357538223266602
+0: 
+0: Iteration 337: loss=6.9366
+0: Step_time: 1.4506850242614746
+0: 
+0: Iteration 338: loss=7.3560
+0: Step_time: 1.4480032920837402
+0: 
+0: Iteration 339: loss=6.5972
+0: Step_time: 1.4205150604248047
+0: 
+0: Iteration 340: loss=7.2879
+0: Step_time: 1.4267210960388184
+0: 
+0: Iteration 341: loss=7.2639
+0: Step_time: 1.4523210525512695
+0: 
+0: Iteration 342: loss=7.1142
+0: Step_time: 1.4202635288238525
+0: 
+0: Iteration 343: loss=7.4777
+0: Step_time: 1.4021179676055908
+0: 
+0: Iteration 344: loss=7.0482
+0: Step_time: 1.439619779586792
+0: 
+0: Iteration 345: loss=7.4604
+0: Step_time: 1.4570341110229492
+0: 
+0: Iteration 346: loss=7.4516
+0: Step_time: 1.4582664966583252
+0: 
+0: Iteration 347: loss=6.6890
+0: Step_time: 1.4378116130828857
+0: 
+0: Iteration 348: loss=7.2381
+0: Step_time: 1.4474880695343018
+0: 
+0: Iteration 349: loss=7.3003
+0: Step_time: 1.4361066818237305
+0: 
+0: Iteration 350: loss=7.3053
+0: Step_time: 1.4044711589813232
+0: 
+0: Iteration 351: loss=7.1661
+0: Step_time: 1.4096174240112305
+0: 
+0: Iteration 352: loss=7.1319
+0: Step_time: 1.4308030605316162
+0: 
+0: Iteration 353: loss=6.8209
+0: Step_time: 1.4169013500213623
+0: 
+0: Iteration 354: loss=7.1743
+0: Step_time: 1.4250388145446777
+0: 
+0: Iteration 355: loss=7.5605
+0: Step_time: 1.4152460098266602
+0: 
+0: Iteration 356: loss=7.1936
+0: Step_time: 1.453273057937622
+0: 
+0: Iteration 357: loss=6.9548
+0: Step_time: 1.4339373111724854
+0: 
+0: Iteration 358: loss=6.9537
+0: Step_time: 1.4433305263519287
+0: 
+0: Iteration 359: loss=6.8232
+0: Step_time: 1.451085090637207
+0: 
+0: Iteration 360: loss=6.8727
+0: Step_time: 1.4333484172821045
+0: 
+0: Iteration 361: loss=6.8498
+0: Step_time: 1.4469761848449707
+0: 
+0: Iteration 362: loss=7.3069
+0: Step_time: 1.430854320526123
+0: 
+0: Iteration 363: loss=6.3400
+0: Step_time: 1.4197845458984375
+0: 
+0: Iteration 364: loss=7.0017
+0: Step_time: 1.4710009098052979
+0: 
+0: Iteration 365: loss=6.9934
+0: Step_time: 1.4562201499938965
+0: 
+0: Iteration 366: loss=7.0841
+0: Step_time: 1.4189832210540771
+0: 
+0: Iteration 367: loss=7.1047
+0: Step_time: 1.4374027252197266
+0: 
+0: Iteration 368: loss=7.7406
+0: Step_time: 1.4226722717285156
+0: 
+0: Iteration 369: loss=7.0396
+0: Step_time: 1.451301097869873
+0: 
+0: Iteration 370: loss=6.8158
+0: Step_time: 1.449889898300171
+0: 
+0: Iteration 371: loss=6.8293
+0: Step_time: 1.4682881832122803
+0: 
+0: Iteration 372: loss=7.4771
+0: Step_time: 1.4192962646484375
+0: 
+0: Iteration 373: loss=7.1853
+0: Step_time: 1.4347960948944092
+0: 
+0: Iteration 374: loss=7.0456
+0: Step_time: 1.433795690536499
+0: 
+0: Iteration 375: loss=6.8654
+0: Step_time: 1.4493720531463623
+0: 
+0: Iteration 376: loss=6.9249
+0: Step_time: 1.4833412170410156
+0: 
+0: Iteration 377: loss=6.8455
+0: Step_time: 1.4530003070831299
+0: 
+0: Iteration 378: loss=7.0809
+0: Step_time: 1.4245026111602783
+0: 
+0: Iteration 379: loss=6.7507
+0: Step_time: 1.4659106731414795
+0: 
+0: Iteration 380: loss=6.8343
+0: Step_time: 1.4465019702911377
+0: 
+0: Iteration 381: loss=6.9527
+0: Step_time: 1.4089720249176025
+0: 
+0: Iteration 382: loss=6.4405
+0: Step_time: 1.456969976425171
+0: 
+0: Iteration 383: loss=7.3019
+0: Step_time: 1.4844403266906738
+0: 
+0: Iteration 384: loss=7.3435
+0: Step_time: 1.4027020931243896
+0: 
+0: Iteration 385: loss=7.4075
+0: Step_time: 1.4895079135894775
+0: 
+0: Iteration 386: loss=6.7883
+0: Step_time: 1.4485511779785156
+0: 
+0: Iteration 387: loss=7.1305
+0: Step_time: 1.4423611164093018
+0: 
+0: Iteration 388: loss=7.0012
+0: Step_time: 1.474778175354004
+0: 
+0: Iteration 389: loss=6.9514
+0: Step_time: 1.4671978950500488
+0: 
+0: Iteration 390: loss=6.6710
+0: Step_time: 1.4448399543762207
+0: 
+0: Iteration 391: loss=6.7848
+0: Step_time: 1.4393112659454346
+0: 
+0: Iteration 392: loss=7.0431
+0: Step_time: 1.4490013122558594
+0: 
+0: Iteration 393: loss=7.1492
+0: Step_time: 1.467818260192871
+0: 
+0: Iteration 394: loss=7.0709
+0: Step_time: 1.4437732696533203
+0: 
+0: Iteration 395: loss=6.7271
+0: Step_time: 1.4508559703826904
+0: 
+0: Iteration 396: loss=7.1941
+0: Step_time: 1.473179817199707
+0: 
+0: Iteration 397: loss=7.1329
+0: Step_time: 1.4282028675079346
+0: 
+0: Iteration 398: loss=7.3766
+0: Step_time: 1.4310734272003174
+0: 
+0: Iteration 399: loss=7.3070
+0: Step_time: 1.432978630065918
+0: 
+0: Iteration 400: loss=6.7992
+0: Step_time: 1.458164930343628
+0: 
+0: Iteration 401: loss=6.7906
+0: Step_time: 1.397247076034546
+0: 
+0: Iteration 402: loss=6.7651
+0: Step_time: 1.4277901649475098
+0: 
+0: Iteration 403: loss=7.3864
+0: Step_time: 1.4441313743591309
+0: 
+0: Iteration 404: loss=6.8448
+0: Step_time: 1.4166555404663086
+0: 
+0: Iteration 405: loss=6.9686
+0: Step_time: 1.4211249351501465
+0: 
+0: Iteration 406: loss=7.0006
+0: Step_time: 1.4431450366973877
+0: 
+0: Iteration 407: loss=6.9150
+0: Step_time: 1.4522557258605957
+0: 
+0: Iteration 408: loss=6.4024
+0: Step_time: 1.4142956733703613
+0: 
+0: Iteration 409: loss=6.8169
+0: Step_time: 1.4521753787994385
+0: 
+0: Iteration 410: loss=7.5706
+0: Step_time: 1.446765661239624
+0: 
+0: Iteration 411: loss=7.2927
+0: Step_time: 1.4186837673187256
+0: 
+0: Iteration 412: loss=6.8401
+0: Step_time: 1.4267263412475586
+0: 
+0: Iteration 413: loss=6.7375
+0: Step_time: 1.4894132614135742
+0: 
+0: Iteration 414: loss=6.7575
+0: Step_time: 1.4309942722320557
+0: 
+0: Iteration 415: loss=7.1544
+0: Step_time: 1.4613661766052246
+0: 
+0: Iteration 416: loss=6.5328
+0: Step_time: 1.4607880115509033
+0: 
+0: Iteration 417: loss=6.8793
+0: Step_time: 1.4270269870758057
+0: 
+0: Iteration 418: loss=7.0371
+0: Step_time: 1.4167025089263916
+0: 
+0: Iteration 419: loss=6.7303
+0: Step_time: 1.4914700984954834
+0: 
+0: Iteration 420: loss=6.5709
+0: Step_time: 1.46854567527771
+0: 
+0: Iteration 421: loss=6.5011
+0: Step_time: 1.4375596046447754
+0: 
+0: Iteration 422: loss=6.4144
+0: Step_time: 1.471961498260498
+0: 
+0: Iteration 423: loss=6.5838
+0: Step_time: 1.4719774723052979
+0: 
+0: Iteration 424: loss=6.6648
+0: Step_time: 1.4565720558166504
+0: 
+0: Iteration 425: loss=6.6806
+0: Step_time: 1.4580011367797852
+0: 
+0: Iteration 426: loss=7.5568
+0: Step_time: 1.4574580192565918
+0: 
+0: Iteration 427: loss=7.1848
+0: Step_time: 1.4248106479644775
+0: 
+0: Iteration 428: loss=7.3277
+0: Step_time: 1.4257044792175293
+0: 
+0: Iteration 429: loss=6.7094
+0: Step_time: 1.454390287399292
+0: 
+0: Iteration 430: loss=6.5919
+0: Step_time: 1.4326832294464111
+0: 
+0: Iteration 431: loss=6.2191
+0: Step_time: 1.4295597076416016
+0: 
+0: Iteration 432: loss=7.1110
+0: Step_time: 1.4276084899902344
+0: 
+0: Iteration 433: loss=7.2595
+0: Step_time: 1.454108476638794
+0: 
+0: Iteration 434: loss=7.2931
+0: Step_time: 1.4531009197235107
+0: 
+0: Iteration 435: loss=7.0460
+0: Step_time: 1.4294064044952393
+0: 
+0: Iteration 436: loss=6.8563
+0: Step_time: 1.4688935279846191
+0: 
+0: Iteration 437: loss=6.7867
+0: Step_time: 1.4725472927093506
+0: 
+0: Iteration 438: loss=6.4284
+0: Step_time: 1.4691441059112549
+0: 
+0: Iteration 439: loss=7.0017
+0: Step_time: 1.442634105682373
+0: 
+0: Iteration 440: loss=7.1239
+0: Step_time: 1.4642457962036133
+0: 
+0: Iteration 441: loss=6.8378
+0: Step_time: 1.4333550930023193
+0: 
+0: Iteration 442: loss=7.2320
+0: Step_time: 1.4186408519744873
+0: 
+0: Iteration 443: loss=7.0722
+0: Step_time: 1.440737247467041
+0: 
+0: Iteration 444: loss=6.8982
+0: Step_time: 1.4282355308532715
+0: 
+0: Iteration 445: loss=6.9849
+0: Step_time: 1.4322683811187744
+0: 
+0: Iteration 446: loss=6.5553
+0: Step_time: 1.4578540325164795
+0: 
+0: Iteration 447: loss=6.9679
+0: Step_time: 1.472620964050293
+0: 
+0: Iteration 448: loss=7.1673
+0: Step_time: 1.4539210796356201
+0: 
+0: Iteration 449: loss=6.8599
+0: Step_time: 1.4431755542755127
+0: 
+0: Iteration 450: loss=6.7167
+0: Step_time: 1.4656994342803955
+0: 
+0: Iteration 451: loss=7.0700
+0: Step_time: 1.4308793544769287
+0: 
+0: Iteration 452: loss=6.8407
+0: Step_time: 1.4240944385528564
+0: 
+0: Iteration 453: loss=7.1405
+0: Step_time: 1.44600510597229
+0: 
+0: Iteration 454: loss=6.7281
+0: Step_time: 1.4285800457000732
+0: 
+0: Iteration 455: loss=7.2289
+0: Step_time: 1.408581256866455
+0: 
+0: Iteration 456: loss=6.8393
+0: Step_time: 1.4599800109863281
+0: 
+0: Iteration 457: loss=7.0942
+0: Step_time: 1.459597110748291
+0: 
+0: Iteration 458: loss=7.0090
+0: Step_time: 1.4492757320404053
+0: 
+0: Iteration 459: loss=6.9962
+0: Step_time: 1.4573240280151367
+0: 
+0: Iteration 460: loss=6.7297
+0: Step_time: 1.4800024032592773
+0: 
+0: Iteration 461: loss=6.6551
+0: Step_time: 1.4203269481658936
+0: 
+0: Iteration 462: loss=6.8243
+0: Step_time: 1.4362578392028809
+0: 
+0: Iteration 463: loss=6.8760
+0: Step_time: 1.5039513111114502
+0: 
+0: Iteration 464: loss=6.5159
+0: Step_time: 1.4106721878051758
+0: 
+0: Iteration 465: loss=6.5662
+0: Step_time: 1.4445946216583252
+0: 
+0: Iteration 466: loss=6.8133
+0: Step_time: 1.4730074405670166
+0: 
+0: Iteration 467: loss=7.0396
+0: Step_time: 1.4474568367004395
+0: 
+0: Iteration 468: loss=6.2045
+0: Step_time: 1.4604809284210205
+0: 
+0: Iteration 469: loss=6.8673
+0: Step_time: 1.4413695335388184
+0: 
+0: Iteration 470: loss=6.9107
+0: Step_time: 1.4462251663208008
+0: 
+0: Iteration 471: loss=6.0588
+0: Step_time: 1.4395875930786133
+0: 
+0: Iteration 472: loss=6.7700
+0: Step_time: 1.4151580333709717
+0: 
+0: Iteration 473: loss=6.5142
+0: Step_time: 1.461723804473877
+0: 
+0: Iteration 474: loss=7.3094
+0: Step_time: 1.4584486484527588
+0: 
+0: Iteration 475: loss=7.3158
+0: Step_time: 1.4321210384368896
+0: 
+0: Iteration 476: loss=6.9022
+0: Step_time: 1.442929744720459
+0: 
+0: Iteration 477: loss=6.7556
+0: Step_time: 1.4310522079467773
+0: 
+0: Iteration 478: loss=7.0316
+0: Step_time: 1.4021408557891846
+0: 
+0: Iteration 479: loss=6.6422
+0: Step_time: 1.4149730205535889
+0: 
+0: Iteration 480: loss=7.1926
+0: Step_time: 1.4007744789123535
+0: 
+0: Iteration 481: loss=7.3535
+0: Step_time: 1.4351325035095215
+0: 
+0: Iteration 482: loss=7.0137
+0: Step_time: 1.4289734363555908
+0: 
+0: Iteration 483: loss=7.1147
+0: Step_time: 1.4593427181243896
+0: 
+0: Iteration 484: loss=6.2440
+0: Step_time: 1.415900707244873
+0: 
+0: Iteration 485: loss=6.9790
+0: Step_time: 1.4133615493774414
+0: 
+0: Iteration 486: loss=6.8123
+0: Step_time: 1.4736032485961914
+0: 
+0: Iteration 487: loss=6.9331
+0: Step_time: 1.4744906425476074
+0: 
+0: Iteration 488: loss=6.6870
+0: Step_time: 1.4100637435913086
+0: 
+0: Iteration 489: loss=7.2403
+0: Step_time: 1.4549272060394287
+0: 
+0: Iteration 490: loss=6.9037
+0: Step_time: 1.4327683448791504
+0: 
+0: Iteration 491: loss=7.0083
+0: Step_time: 1.450061321258545
+0: 
+0: Iteration 492: loss=6.8106
+0: Step_time: 1.4391310214996338
+0: 
+0: Iteration 493: loss=6.7544
+0: Step_time: 1.4554073810577393
+0: 
+0: Iteration 494: loss=6.6056
+0: Step_time: 1.4233424663543701
+0: 
+0: Iteration 495: loss=6.3725
+0: Step_time: 1.4337899684906006
+0: 
+0: Iteration 496: loss=6.8583
+0: Step_time: 1.4453766345977783
+0: 
+0: Iteration 497: loss=6.3771
+0: Step_time: 1.4277219772338867
+0: 
+0: Iteration 498: loss=6.5070
+0: Step_time: 1.4418556690216064
+0: 
+0: Iteration 499: loss=6.6311
+0: Step_time: 1.452324390411377
+0: 
+1: [rank6]:[W319 15:31:52.292577395 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W319 15:31:52.300986089 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank4]:[W319 15:31:52.304364283 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W319 15:31:52.364777234 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f49470abe20>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank0]:[W319 15:31:57.243946690 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W319 15:31:57.260067290 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank2]:[W319 15:31:57.292064689 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank3]:[W319 15:31:57.352140124 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

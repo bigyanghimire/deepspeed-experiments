@@ -32,6 +32,5 @@ CMD="train_gpt_ulysses.py"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
-rm -fr ulysses_slurm_logs
 srun -l bash -c "${LAUNCHER} ${CMD}"
 # deepspeed --num_gpus 4 train_gpt_grouped.py

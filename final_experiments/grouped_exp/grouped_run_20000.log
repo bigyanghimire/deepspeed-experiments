@@ -1,0 +1,433 @@
+0: W0323 11:56:34.514000 666685 site-packages/torch/distributed/run.py:793] 
+0: W0323 11:56:34.514000 666685 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0323 11:56:34.514000 666685 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0323 11:56:34.514000 666685 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0323 11:56:34.608000 405856 site-packages/torch/distributed/run.py:793] 
+1: W0323 11:56:34.608000 405856 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0323 11:56:34.608000 405856 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0323 11:56:34.608000 405856 site-packages/torch/distributed/run.py:793] *****************************************
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 20000
+0: Training with Sequence Length: 20000
+0: Training with Sequence Length: 20000
+1: Training with Sequence Length: 20000
+1: Training with Sequence Length: 20000
+1: Training with Sequence Length: 20000
+1: Training with Sequence Length: 20000
+0: Training with Sequence Length: 20000
+1: batch size is in reqd query shape 1
+1: 
+1: batch size is in reqd query shape 1
+1: 
+0: batch size is in reqd query shape 1
+0: 
+0: batch size is in reqd query shape 1
+0: 
+0: batch size is in reqd query shape 1
+0: 
+1: batch size is in reqd query shape 1
+1: 
+0: batch size is in reqd query shape 1
+0: 
+1: batch size is in reqd query shape 1
+1: 
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.88 GB         Max_MA 4.61 GB         CA 5.18 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.51 GB, percent = 2.1%
+0: After initializing optimizer states
+0: MA 2.88 GB         Max_MA 3.46 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.51 GB, percent = 2.1%
+0: After initializing ZeRO optimizer
+0: MA 2.88 GB         Max_MA 2.88 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.51 GB, percent = 2.1%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 23 10:39:30 2026).
+0: Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   5%|▌         | 2000/39531 [00:00<00:01, 18886.37 examples/s]Packing into seq_length=20000:   5%|▌         | 2000/39531 [00:00<00:02, 18596.35 examples/s]Packing into seq_length=20000:   5%|▌         | 2000/39531 [00:00<00:02, 18241.54 examples/s]Packing into seq_length=20000:   5%|▌         | 2000/39531 [00:00<00:02, 18435.25 examples/s]Packing into seq_length=20000:  13%|█▎        | 5000/39531 [00:00<00:01, 19762.56 examples/s]Packing into seq_length=20000:  13%|█▎        | 5000/39531 [00:00<00:01, 19890.69 examples/s]Packing into seq_length=20000:  15%|█▌        | 6000/39531 [00:00<00:01, 20278.57 examples/s]Packing into seq_length=2
+1: Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=20000:   8%|▊         | 3000/39531 [00:00<00:01, 20251.05 examples/s]Packing into seq_length=20000:   8%|▊         | 3000/39531 [00:00<00:01, 20478.60 examples/s]Packing into seq_length=20000:   5%|▌         | 2000/39531 [00:00<00:01, 19009.37 examples/s]Packing into seq_length=20000:   8%|▊         | 3000/39531 [00:00<00:01, 20234.06 examples/s]Packing into seq_length=20000:  18%|█▊        | 7000/39531 [00:00<00:01, 20332.95 examples/s]Packing into seq_length=20000:  18%|█▊        | 7000/39531 [00:00<00:01, 20464.78 examples/s]Packing into seq_length=20000:  15%|█▌        | 6000/39531 [00:00<00:01, 20491.72 examples/s]Packing into seq_length=2
+0: 0000:  18%|█▊        | 7000/39531 [00:00<00:01, 19790.66 examples/s]Packing into seq_length=20000:  15%|█▌        | 6000/39531 [00:00<00:01, 20145.06 examples/s]Packing into seq_length=20000:  18%|█▊        | 7000/39531 [00:00<00:01, 19869.90 examples/s]Packing into seq_length=20000:  23%|██▎       | 9000/39531 [00:00<00:01, 20332.72 examples/s]Packing into seq_length=20000:  23%|██▎       | 9000/39531 [00:00<00:01, 20201.06 examples/s]Packing into seq_length=20000:  25%|██▌       | 10000/39531 [00:00<00:01, 19861.30 examples/s]Packing into seq_length=20000:  28%|██▊       | 11000/39531 [00:00<00:01, 20363.73 examples/s]Packing into seq_length=20000:  30%|███       | 12000/39531 [00:00<00:01, 20661.15 examples/s]Packing into seq_length=20000:  30%|███       | 12000/39531 [00:00<00:01, 20512.72 examples/s]Packing into seq_length=20000:  33%|███▎      | 13000/39531 [00:00<00:01, 20067.98 examples/s]Packing into seq_length=20000:  35%|███▌
+1: 0000:  18%|█▊        | 7000/39531 [00:00<00:01, 20310.68 examples/s]Packing into seq_length=20000:  28%|██▊       | 11000/39531 [00:00<00:01, 20871.81 examples/s]Packing into seq_length=20000:  28%|██▊       | 11000/39531 [00:00<00:01, 20953.41 examples/s]Packing into seq_length=20000:  25%|██▌       | 10000/39531 [00:00<00:01, 20589.98 examples/s]Packing into seq_length=20000:  28%|██▊       | 11000/39531 [00:00<00:01, 20875.09 examples/s]Packing into seq_length=20000:  35%|███▌      | 14000/39531 [00:00<00:01, 20648.15 examples/s]Packing into seq_length=20000:  38%|███▊      | 15000/39531 [00:00<00:01, 20883.16 examples/s]Packing into seq_length=20000:  35%|███▌      | 14000/39531 [00:00<00:01, 20711.44 examples/s]Packing into seq_length=20000:  35%|███▌      | 14000/39531 [00:00<00:01, 20801.51 examples/s]Packing into seq_length=20000:  43%|████▎     | 17000/39531 [00:00<00:01, 20915.54 examples/s]Packing into seq_length=20000:
+0:       | 14000/39531 [00:00<00:01, 20203.62 examples/s]Packing into seq_length=20000:  40%|████      | 16000/39531 [00:00<00:01, 20954.52 examples/s]Packing into seq_length=20000:  40%|████      | 16000/39531 [00:00<00:01, 20462.01 examples/s]Packing into seq_length=20000:  40%|████      | 16000/39531 [00:00<00:01, 20758.30 examples/s]Packing into seq_length=20000:  43%|████▎     | 17000/39531 [00:00<00:01, 20447.47 examples/s]Packing into seq_length=20000:  48%|████▊     | 19000/39531 [00:00<00:00, 20757.73 examples/s]Packing into seq_length=20000:  48%|████▊     | 19000/39531 [00:00<00:01, 20097.26 examples/s]Packing into seq_length=20000:  48%|████▊     | 19000/39531 [00:00<00:00, 20533.03 examples/s]Packing into seq_length=20000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20725.16 examples/s]Packing into seq_length=20000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21327.17 examples/s]Packing into seq_length=20
+1:   43%|████▎     | 17000/39531 [00:00<00:01, 20912.84 examples/s]Packing into seq_length=20000:  43%|████▎     | 17000/39531 [00:00<00:01, 20990.73 examples/s]Packing into seq_length=20000:  48%|████▊     | 19000/39531 [00:00<00:00, 20973.41 examples/s]Packing into seq_length=20000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21237.20 examples/s]Packing into seq_length=20000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21219.24 examples/s]Packing into seq_length=20000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21258.58 examples/s]Packing into seq_length=20000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21457.17 examples/s]Packing into seq_length=20000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21162.79 examples/s]Packing into seq_length=20000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21182.62 examples/s]Packing into seq_length=20000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21203
+0: 000:  58%|█████▊    | 23000/39531 [00:01<00:00, 20593.64 examples/s]Packing into seq_length=20000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21069.76 examples/s]Packing into seq_length=20000:  61%|██████    | 24000/39531 [00:01<00:00, 20739.39 examples/s]Packing into seq_length=20000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20594.03 examples/s]Packing into seq_length=20000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21150.67 examples/s]Packing into seq_length=20000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20926.56 examples/s]Packing into seq_length=20000:  71%|███████   | 28000/39531 [00:01<00:00, 20707.32 examples/s]Packing into seq_length=20000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20690.16 examples/s]Packing into seq_length=20000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21047.09 examples/s]Packing into seq_length=20000:  76%|███████▌  | 30000/3
+1: .58 examples/s]Packing into seq_length=20000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21316.71 examples/s]Packing into seq_length=20000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21146.91 examples/s]Packing into seq_length=20000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21147.74 examples/s]Packing into seq_length=20000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21183.80 examples/s]Packing into seq_length=20000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21278.04 examples/s]Packing into seq_length=20000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21352.48 examples/s]Packing into seq_length=20000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21346.30 examples/s]Packing into seq_length=20000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21394.38 examples/s]Packing into seq_length=20000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21172.99 examples/s]Pac
+0: 9531 [00:01<00:00, 20924.78 examples/s]Packing into seq_length=20000:  81%|████████  | 32000/39531 [00:01<00:00, 20721.06 examples/s]Packing into seq_length=20000:  86%|████████▌ | 34000/39531 [00:01<00:00, 20959.43 examples/s]Packing into seq_length=20000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21001.36 examples/s]Packing into seq_length=20000:  86%|████████▌ | 34000/39531 [00:01<00:00, 21128.60 examples/s]Packing into seq_length=20000:  89%|████████▊ | 35000/39531 [00:01<00:00, 20562.12 examples/s]Packing into seq_length=20000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20879.74 examples/s]Packing into seq_length=20000:  96%|█████████▌| 38000/39531 [00:01<00:00, 20651.74 examples/s]Packing into seq_length=20000:  99%|█████████▊| 39000/39531 [00:01<00:00, 20964.87 examples/s]Packing into seq_length=20000:  96%|█████████▌| 38000/39
+1: king into seq_length=20000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20932.69 examples/s]Packing into seq_length=20000:  94%|█████████▎| 37000/39531 [00:01<00:00, 21086.96 examples/s]Packing into seq_length=20000:  94%|█████████▎| 37000/39531 [00:01<00:00, 21138.29 examples/s]Packing into seq_length=20000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21156.97 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20145.53 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20589.40 examples/s]
+1: [Rank 7] Packed dataset: 270 chunks of 20000 tokens
+1: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20500.52 examples/s]
+1: [Rank 5] Packed dataset: 270 chunks of 20000 tokens
+0: 531 [00:01<00:00, 20605.95 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20026.11 examples/s]
+0: [Rank 1] Packed dataset: 270 chunks of 20000 tokens
+1: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20025.58 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20106.00 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20358.14 examples/s]
+1: [Rank 6] Packed dataset: 270 chunks of 20000 tokens
+1: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 20402.16 examples/s]
+1: [Rank 4] Packed dataset: 270 chunks of 20000 tokens
+0: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:01<00:00, 19809.69 examples/s]Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:07<00:00, 5429.24 examples/s] 
+0: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:07<00:00, 5386.63 examples/s] 
+0: Packing into seq_length=20000: 100%|██████████| 39531/39531 [00:07<00:00, 5398.69 examples/s] 
+0: [Rank 2] Packed dataset: 270 chunks of 20000 tokens
+0: [Rank 3] Packed dataset: 270 chunks of 20000 tokens
+0: [Rank 0] Packed dataset: 270 chunks of 20000 tokens
+0: Iteration 0: loss=3.7463
+0: Step_time: 1.995069980621338
+0: 
+0: Iteration 1: loss=13.0402
+0: Step_time: 1.7733898162841797
+0: 
+0: Iteration 2: loss=12.7140
+0: Step_time: 2.0694823265075684
+0: 
+0: Iteration 3: loss=23.5539
+0: Step_time: 1.8052129745483398
+0: 
+0: Iteration 4: loss=19.8778
+0: Step_time: 1.8224663734436035
+0: 
+0: Iteration 5: loss=18.0127
+0: Step_time: 1.739722728729248
+0: 
+0: Iteration 6: loss=11.8953
+0: Step_time: 1.8039066791534424
+0: 
+0: Iteration 7: loss=11.7676
+0: Step_time: 1.7862451076507568
+0: 
+0: Iteration 8: loss=11.9776
+0: Step_time: 1.7786152362823486
+0: 
+0: Iteration 9: loss=11.3076
+0: Step_time: 1.7963190078735352
+0: 
+0: Iteration 10: loss=11.9312
+0: Step_time: 1.7803490161895752
+0: 
+0: Iteration 11: loss=12.1683
+0: Step_time: 1.781144142150879
+0: 
+0: Iteration 12: loss=12.1962
+0: Step_time: 1.8009514808654785
+0: 
+0: Iteration 13: loss=11.2098
+0: Step_time: 1.8130455017089844
+0: 
+0: Iteration 14: loss=10.7515
+0: Step_time: 1.788506269454956
+0: 
+0: Iteration 15: loss=11.2808
+0: Step_time: 1.8191487789154053
+0: 
+0: Iteration 16: loss=10.4430
+0: Step_time: 1.7878684997558594
+0: 
+0: Iteration 17: loss=10.7602
+0: Step_time: 1.796729326248169
+0: 
+0: Iteration 18: loss=10.1215
+0: Step_time: 1.8099071979522705
+0: 
+0: Iteration 19: loss=10.0765
+0: Step_time: 1.7582197189331055
+0: 
+0: Iteration 20: loss=10.2127
+0: Step_time: 1.764721155166626
+0: 
+0: Iteration 21: loss=9.4528
+0: Step_time: 1.7594130039215088
+0: 
+0: Iteration 22: loss=9.3436
+0: Step_time: 1.7825629711151123
+0: 
+0: Iteration 23: loss=9.4443
+0: Step_time: 1.764847755432129
+0: 
+0: Iteration 24: loss=9.3927
+0: Step_time: 1.7680351734161377
+0: 
+0: Iteration 25: loss=9.2756
+0: Step_time: 1.746185541152954
+0: 
+0: Iteration 26: loss=9.2319
+0: Step_time: 1.7656803131103516
+0: 
+0: Iteration 27: loss=9.6927
+0: Step_time: 1.8281853199005127
+0: 
+0: Iteration 28: loss=9.2370
+0: Step_time: 1.7719733715057373
+0: 
+0: Iteration 29: loss=9.0782
+0: Step_time: 1.8092858791351318
+0: 
+0: Iteration 30: loss=8.7358
+0: Step_time: 1.7873308658599854
+0: 
+0: Iteration 31: loss=9.0461
+0: Step_time: 1.8205289840698242
+0: 
+0: Iteration 32: loss=8.6420
+0: Step_time: 1.7590227127075195
+0: 
+0: Iteration 33: loss=8.6887
+0: Step_time: 1.8062889575958252
+0: 
+0: Iteration 34: loss=8.5940
+0: Step_time: 1.8116693496704102
+0: 
+0: Iteration 35: loss=8.6795
+0: Step_time: 1.784149408340454
+0: 
+0: Iteration 36: loss=8.4464
+0: Step_time: 1.7451367378234863
+0: 
+0: Iteration 37: loss=8.5947
+0: Step_time: 1.7730259895324707
+0: 
+0: Iteration 38: loss=8.5088
+0: Step_time: 1.8236956596374512
+0: 
+0: Iteration 39: loss=8.3024
+0: Step_time: 1.769174337387085
+0: 
+0: Iteration 40: loss=8.4965
+0: Step_time: 1.8238987922668457
+0: 
+0: Iteration 41: loss=8.5183
+0: Step_time: 1.772024393081665
+0: 
+0: Iteration 42: loss=8.6624
+0: Step_time: 1.7730700969696045
+0: 
+0: Iteration 43: loss=8.5738
+0: Step_time: 1.771308183670044
+0: 
+0: Iteration 44: loss=8.5922
+0: Step_time: 1.8112130165100098
+0: 
+0: Iteration 45: loss=8.5456
+0: Step_time: 1.7673044204711914
+0: 
+0: Iteration 46: loss=8.5112
+0: Step_time: 1.7669382095336914
+0: 
+0: Iteration 47: loss=8.4769
+0: Step_time: 1.7665746212005615
+0: 
+0: Iteration 48: loss=8.1611
+0: Step_time: 1.7696783542633057
+0: 
+0: Iteration 49: loss=8.2706
+0: Step_time: 1.8047962188720703
+0: 
+0: Iteration 50: loss=8.2856
+0: Step_time: 1.784940242767334
+0: 
+0: Iteration 51: loss=8.4400
+0: Step_time: 1.7788290977478027
+0: 
+0: Iteration 52: loss=8.6272
+0: Step_time: 1.760556936264038
+0: 
+0: Iteration 53: loss=8.1734
+0: Step_time: 1.7982745170593262
+0: 
+0: Iteration 54: loss=8.4246
+0: Step_time: 1.8195762634277344
+0: 
+0: Iteration 55: loss=8.2604
+0: Step_time: 1.7776944637298584
+0: 
+0: Iteration 56: loss=8.5781
+0: Step_time: 1.7624874114990234
+0: 
+0: Iteration 57: loss=8.2252
+0: Step_time: 1.7888233661651611
+0: 
+0: Iteration 58: loss=8.2592
+0: Step_time: 1.7834036350250244
+0: 
+0: Iteration 59: loss=8.6274
+0: Step_time: 1.7632646560668945
+0: 
+0: Iteration 60: loss=8.4709
+0: Step_time: 1.7972290515899658
+0: 
+0: Iteration 61: loss=8.2975
+0: Step_time: 1.7957570552825928
+0: 
+0: Iteration 62: loss=8.3095
+0: Step_time: 1.770094871520996
+0: 
+0: Iteration 63: loss=8.1801
+0: Step_time: 1.768906593322754
+0: 
+0: Iteration 64: loss=8.2757
+0: Step_time: 1.7847950458526611
+0: 
+0: Iteration 65: loss=8.8350
+0: Step_time: 1.7915785312652588
+0: 
+0: Iteration 66: loss=8.3422
+0: Step_time: 1.8091888427734375
+0: 
+0: Iteration 67: loss=8.3365
+0: Step_time: 1.8038420677185059
+0: 
+0: Iteration 68: loss=8.0888
+0: Step_time: 1.796619176864624
+0: 
+0: Iteration 69: loss=8.2456
+0: Step_time: 1.7900850772857666
+0: 
+0: Iteration 70: loss=8.2897
+0: Step_time: 1.7885329723358154
+0: 
+0: Iteration 71: loss=8.3892
+0: Step_time: 1.794032335281372
+0: 
+0: Iteration 72: loss=8.2526
+0: Step_time: 1.7559661865234375
+0: 
+0: Iteration 73: loss=8.5431
+0: Step_time: 1.8130662441253662
+0: 
+0: Iteration 74: loss=8.2842
+0: Step_time: 1.8007266521453857
+0: 
+0: Iteration 75: loss=8.2715
+0: Step_time: 1.8030188083648682
+0: 
+0: Iteration 76: loss=8.2562
+0: Step_time: 1.7972216606140137
+0: 
+0: Iteration 77: loss=8.1739
+0: Step_time: 1.779550313949585
+0: 
+0: Iteration 78: loss=8.1268
+0: Step_time: 1.763448715209961
+0: 
+0: Iteration 79: loss=8.4376
+0: Step_time: 1.7794106006622314
+0: 
+0: Iteration 80: loss=8.1553
+0: Step_time: 1.7636373043060303
+0: 
+0: Iteration 81: loss=8.0884
+0: Step_time: 1.7687056064605713
+0: 
+0: Iteration 82: loss=8.1187
+0: Step_time: 1.769829273223877
+0: 
+0: Iteration 83: loss=8.1776
+0: Step_time: 1.7852497100830078
+0: 
+0: Iteration 84: loss=8.2129
+0: Step_time: 1.8000755310058594
+0: 
+0: Iteration 85: loss=8.1708
+0: Step_time: 1.8126986026763916
+0: 
+0: Iteration 86: loss=8.2181
+0: Step_time: 1.7850298881530762
+0: 
+0: Iteration 87: loss=8.4393
+0: Step_time: 1.8102450370788574
+0: 
+0: Iteration 88: loss=8.2965
+0: Step_time: 1.7454326152801514
+0: 
+0: Iteration 89: loss=8.0630
+0: Step_time: 1.8104004859924316
+0: 
+0: Iteration 90: loss=8.0597
+0: Step_time: 1.844167709350586
+0: 
+0: Iteration 91: loss=8.0052
+0: Step_time: 1.7650535106658936
+0: 
+0: Iteration 92: loss=8.1427
+0: Step_time: 1.7841289043426514
+0: 
+0: Iteration 93: loss=8.2067
+0: Step_time: 1.7669165134429932
+0: 
+0: Iteration 94: loss=8.2773
+0: Step_time: 1.8078250885009766
+0: 
+0: Iteration 95: loss=8.1601
+0: Step_time: 1.7931811809539795
+0: 
+0: Iteration 96: loss=8.0979
+0: Step_time: 1.7916228771209717
+0: 
+0: Iteration 97: loss=8.2858
+0: Step_time: 1.7867631912231445
+0: 
+0: Iteration 98: loss=8.1269
+0: Step_time: 1.8075056076049805
+0: 
+0: Iteration 99: loss=8.1258
+0: Step_time: 1.813927412033081
+0: 
+1: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f8390ff7e20>
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+1:     fp16_matmul._update_autotune_table()
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+1:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+1:     cache_manager.put(autotune_table)
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+1:     os.replace(self.file_path + ".tmp", self.file_path)
+1: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+1: [rank4]:[W323 12:00:01.320590111 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f09c87abe20>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 458, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_4d_kernel", __class__._4d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle'
+0: [rank0]:[W323 12:00:06.381063900 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

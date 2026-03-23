@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=train_bf16
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --gres=gpu:a100:4
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
@@ -16,7 +16,7 @@ micromamba activate ds-hf
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
 
-NUM_NODES=2
+NUM_NODES=${SLURM_JOB_NUM_NODES:-1}
 GPUS_PER_NODE=4
 NUM_STEPS=20
 WARMUP_STEPS=5
@@ -32,6 +32,6 @@ CMD="train_toy_data.py"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
-rm -fr toy_slurm_logs
+# rm -fr toy_slurm_logs
 srun -l bash -c "${LAUNCHER} ${CMD}"
 # deepspeed --num_gpus 4 train_gpt_grouped.py

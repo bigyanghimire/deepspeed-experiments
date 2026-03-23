@@ -1,0 +1,17 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: batch group size 1
+0: batch group size 1
+0: batch group size 1
+0: batch group size 1
+0: Before initializing optimizer states
+0: MA 5.75 GB         Max_MA 9.21 GB         CA 10.38 GB         Max_CA 10 GB 
+0: CPU Virtual Memory:  used = 19.23 GB, percent = 1.9%
+0: After initializing optimizer states
+0: MA 5.75 GB         Max_MA 6.91 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 19.23 GB, percent = 1.9%
+0: After initializing ZeRO optimizer
+0: MA 5.75 GB         Max_MA 5.75 GB         CA 11.53 GB         Max_CA 12 GB 
+0: CPU Virtual Memory:  used = 19.22 GB, percent = 1.9%

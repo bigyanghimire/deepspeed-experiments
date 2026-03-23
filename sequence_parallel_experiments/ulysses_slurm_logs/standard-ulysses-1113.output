@@ -1,0 +1,817 @@
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: batch group size 1batch group size 1
+0: 
+0: batch group size 1
+0: batch group size 1
+1: batch group size 1
+1: batch group size 1
+1: batch group size 1
+1: batch group size 1
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: Before initializing optimizer states
+0: MA 2.88 GB         Max_MA 4.61 GB         CA 5.18 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.55 GB, percent = 2.1%
+0: After initializing optimizer states
+0: MA 2.88 GB         Max_MA 3.46 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.56 GB, percent = 2.1%
+0: After initializing ZeRO optimizer
+0: MA 2.88 GB         Max_MA 2.88 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 21.58 GB, percent = 2.1%
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+0: [Rank 0] Packed dataset: 159 chunks of 32000 tokens
+0: [Rank 3] Packed dataset: 159 chunks of 32000 tokens
+0: [Rank 2] Packed dataset: 159 chunks of 32000 tokens
+1: [Rank 4] Packed dataset: 159 chunks of 32000 tokens
+1: [Rank 5] Packed dataset: 159 chunks of 32000 tokens
+1: [Rank 6] Packed dataset: 159 chunks of 32000 tokens
+1: [Rank 7] Packed dataset: 159 chunks of 32000 tokens
+0: [Rank 1] Packed dataset: 159 chunks of 32000 tokens
+1: The time is 0.12188363075256348
+1: 
+0: The time is 0.10783147811889648
+0: 
+0: The time is 0.12225604057312012
+0: 
+0: The time is 0.10672688484191895
+0: 
+0: The time is 0.11147427558898926
+0: 
+1: The time is 0.10690760612487793
+1: 
+1: The time is 0.11271786689758301
+1: 
+0: The time is 0.00011563301086425781
+0: 
+1: The time is 0.00013065338134765625
+1: 
+1: The time is 0.00012087821960449219
+1: 
+1: The time is 0.10625720024108887
+1: 
+0: The time is 0.00011181831359863281
+0: 
+1: The time is 0.0001201629638671875
+1: 
+0: The time is 0.00011992454528808594
+0: 
+0: The time is 0.00011849403381347656
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 0.0001010894775390625
+0: 
+1: The time is 0.00010561943054199219
+1: 
+1: The time is 0.00010538101196289062
+1: 
+0: The time is 0.00011134147644042969
+0: The time is 0.00010156631469726562
+0: 
+0: 
+1: The time is 0.00011897087097167969
+1: 
+1: The time is 0.00020647048950195312
+1: 
+1: The time is 0.00011610984802246094
+1: 
+1: The time is 0.00010800361633300781
+1: 
+1: The time is 0.00012159347534179688
+1: 
+1: The time is 0.00011563301086425781
+1: 
+0: The time is 0.00010180473327636719
+0: 
+0: The time is 0.00011157989501953125
+0: 
+0: The time is 0.00010585784912109375
+0: 
+0: The time is 0.00010538101196289062
+0: 
+0: The time is 0.00011014938354492188
+0: 
+0: The time is 0.00010919570922851562
+0: 
+0: The time is 0.00010776519775390625
+0: 
+0: The time is 0.00010132789611816406
+0: 
+1: The time is 0.00011038780212402344
+1: 
+0: The time is 0.00010275840759277344
+0: The time is 0.00010156631469726562
+0: 
+0: 
+1: The time is 0.00011110305786132812
+1: 
+1: The time is 0.00010418891906738281
+1: 
+0: The time is 9.989738464355469e-05
+0: 
+0: The time is 0.00011515617370605469
+0: 
+1: The time is 0.00011897087097167969
+1: 
+1: The time is 0.00011754035949707031
+1: 
+1: The time is 0.00010514259338378906
+1: 
+1: The time is 0.0001049041748046875
+1: 
+1: The time is 0.00010085105895996094
+1: 
+1: The time is 9.560585021972656e-05
+1: 
+1: The time is 0.00012230873107910156
+1: 
+0: The time is 9.72747802734375e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 9.989738464355469e-05
+0: The time is 9.703636169433594e-05
+0: 
+0: 
+0: The time is 0.00010538101196289062
+0: 
+1: The time is 0.00011181831359863281
+1: 
+1: The time is 0.00011420249938964844
+1: 
+0: The time is 0.00012111663818359375
+0: 
+1: The time is 9.846687316894531e-05
+1: 
+1: The time is 0.0001125335693359375
+1: 
+1: The time is 0.00010704994201660156
+0: The time is 0.00010132789611816406
+0: 
+1: 
+0: The time is 9.560585021972656e-05
+0: 
+1: The time is 0.00011157989501953125
+1: 
+1: The time is 9.5367431640625e-05
+1: 
+1: The time is 9.584426879882812e-05
+1: 
+1: The time is 0.00010180473327636719
+1: 
+1: The time is 9.059906005859375e-05
+1: 
+1: The time is 0.00010728836059570312
+1: 
+0: The time is 0.00012040138244628906
+0: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 0.00011658668518066406
+0: 
+1: The time is 0.0001506805419921875
+1: 
+0: The time is 9.799003601074219e-05
+0: 
+1: The time is 0.00010275840759277344
+1: 
+0: The time is 9.417533874511719e-05
+0: 
+1: The time is 9.703636169433594e-05
+1: 
+1: The time is 0.00010943412780761719
+1: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.965896606445312e-05
+0: 
+1: The time is 9.679794311523438e-05
+1: 
+0: The time is 0.0001010894775390625
+0: 
+1: The time is 0.0001068115234375
+1: 
+0: The time is 0.00011181831359863281
+0: 
+1: The time is 0.00010132789611816406
+1: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 0.0001087188720703125
+0: 
+1: The time is 0.00011014938354492188
+1: 
+1: The time is 0.00012421607971191406
+1: 
+1: The time is 0.00010228157043457031
+1: 
+0: The time is 0.00011301040649414062
+0: 
+1: The time is 9.179115295410156e-05
+1: 
+0: The time is 9.512901306152344e-05
+0: 
+1: The time is 9.894371032714844e-05
+1: 
+0: The time is 0.00011968612670898438
+0: 
+1: The time is 9.799003601074219e-05
+1: 
+1: The time is 9.72747802734375e-05
+1: 
+1: The time is 8.869171142578125e-05
+1: 
+0: The time is 9.107589721679688e-05
+0: 
+1: The time is 0.00010514259338378906
+1: 
+1: The time is 9.870529174804688e-05
+1: 
+1: The time is 0.00010037422180175781
+1: 
+1: The time is 9.775161743164062e-05
+1: 
+0: The time is 9.417533874511719e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 8.821487426757812e-05
+0: 
+0: The time is 9.012222290039062e-05
+0: 
+0: The time is 0.00010585784912109375
+0: 
+0: The time is 0.00010609626770019531
+0: 
+0: The time is 0.00010442733764648438
+0: 
+1: The time is 9.655952453613281e-05
+1: 
+1: The time is 9.822845458984375e-05
+1: 
+1: The time is 9.036064147949219e-05
+1: 
+1: The time is 9.965896606445312e-05
+1: The time is 9.298324584960938e-05
+1: 
+1: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 0.00010657310485839844
+0: 
+0: The time is 0.00010228157043457031
+0: 
+1: The time is 9.799003601074219e-05
+1: 
+1: The time is 0.00010633468627929688
+1: The time is 0.00010013580322265625
+1: 
+1: 
+0: The time is 9.560585021972656e-05
+0: 
+1: The time is 9.72747802734375e-05
+1: 
+1: The time is 9.894371032714844e-05
+1: 
+1: The time is 8.916854858398438e-05
+1: 
+1: The time is 9.298324584960938e-05
+1: 
+0: The time is 9.393692016601562e-05
+0: 
+1: The time is 9.107589721679688e-05
+1: 
+0: The time is 9.036064147949219e-05
+0: 
+1: The time is 9.417533874511719e-05
+1: The time is 9.72747802734375e-05
+1: 
+1: 
+0: The time is 9.822845458984375e-05
+0: The time is 8.654594421386719e-05
+0: 
+0: 
+0: The time is 0.00011205673217773438
+1: The time is 0.00010037422180175781
+1: 
+0: 
+1: The time is 9.322166442871094e-05
+1: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: The time is 9.298324584960938e-05
+0: 
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 0.00010752677917480469
+0: 
+1: The time is 9.560585021972656e-05
+1: 
+0: The time is 9.465217590332031e-05
+0: 
+1: The time is 9.608268737792969e-05
+1: 
+0: The time is 0.00010013580322265625
+0: 
+1: The time is 0.0002243518829345703
+1: 
+0: The time is 0.00022721290588378906
+0: 
+0: The time is 9.608268737792969e-05
+0: 
+0: The time is 9.870529174804688e-05
+1: The time is 0.00010561943054199219
+1: 
+0: 
+1: The time is 0.00010538101196289062
+1: 
+1: The time is 9.036064147949219e-05
+1: 
+1: The time is 0.00021791458129882812
+1: 
+0: The time is 8.797645568847656e-05
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+1: The time is 0.00021004676818847656
+1: 
+0: The time is 0.00021386146545410156
+0: 
+1: The time is 0.0002295970916748047
+1: The time is 9.322166442871094e-05
+1: 
+1: 
+1: The time is 9.465217590332031e-05
+1: 
+0: The time is 0.00011157989501953125
+0: 
+1: The time is 0.00010085105895996094
+1: 
+0: The time is 9.441375732421875e-05
+0: 
+0: The time is 0.00024437904357910156
+0: 
+0: The time is 0.00010633468627929688
+0: 
+1: The time is 0.00011467933654785156
+1: 
+0: The time is 9.34600830078125e-05
+0: 
+1: The time is 9.989738464355469e-05
+1: 
+0: The time is 9.72747802734375e-05
+0: 
+0: The time is 0.00011110305786132812
+0: 
+1: The time is 9.799003601074219e-05
+1: 
+1: The time is 0.00010561943054199219
+1: The time is 0.00010204315185546875
+1: 
+1: 
+1: The time is 9.584426879882812e-05
+1: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 0.00011086463928222656
+0: 
+0: The time is 8.726119995117188e-05
+0: 
+0: The time is 0.00011038780212402344
+0: 
+1: The time is 0.00010204315185546875
+1: 
+0: The time is 9.965896606445312e-05
+0: 
+0: The time is 0.00010132789611816406
+0: 
+0: The time is 9.1552734375e-05
+0: 
+1: The time is 9.226799011230469e-05
+1: 
+1: The time is 9.274482727050781e-05
+1: 
+1: The time is 9.131431579589844e-05
+1: 
+0: The time is 9.107589721679688e-05
+0: 
+0: The time is 9.34600830078125e-05
+0: 
+1: The time is 9.584426879882812e-05
+1: 
+1: The time is 8.940696716308594e-05
+1: 
+1: The time is 0.00010371208190917969
+1: 
+1: The time is 9.942054748535156e-05
+1: 
+1: The time is 9.846687316894531e-05
+1: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 0.00010967254638671875
+0: The time is 0.00010204315185546875
+0: 
+0: 
+1: The time is 9.465217590332031e-05
+1: 
+1: The time is 9.655952453613281e-05
+1: 
+1: The time is 0.00010251998901367188
+1: 
+1: The time is 9.72747802734375e-05
+1: 
+1: The time is 8.988380432128906e-05
+1: 
+1: The time is 9.131431579589844e-05
+1: 
+0: The time is 9.465217590332031e-05
+0: 
+0: The time is 8.988380432128906e-05
+1: The time is 9.1552734375e-05
+1: 
+0: 
+0: The time is 9.775161743164062e-05
+0: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 0.00010633468627929688
+0: 
+0: The time is 9.679794311523438e-05
+0: 
+1: The time is 8.797645568847656e-05
+1: 
+1: The time is 9.059906005859375e-05
+1: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.846687316894531e-05
+0: 
+1: The time is 9.608268737792969e-05
+1: 
+0: The time is 9.393692016601562e-05
+0: 
+1: The time is 9.393692016601562e-05
+1: 
+1: The time is 9.012222290039062e-05
+0: The time is 0.00010013580322265625
+0: 
+0: The time is 9.107589721679688e-05
+0: The time is 9.393692016601562e-05
+0: 
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+1: 
+1: The time is 0.00010514259338378906
+1: 
+1: The time is 0.00010704994201660156
+1: 
+1: The time is 9.632110595703125e-05
+1: 
+1: The time is 9.107589721679688e-05
+1: 
+0: The time is 9.751319885253906e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+0: The time is 8.916854858398438e-05
+0: 
+1: The time is 9.179115295410156e-05
+1: 
+1: The time is 0.00010204315185546875
+1: 
+1: The time is 9.34600830078125e-05
+1: 
+0: The time is 0.00011491775512695312
+0: 
+0: The time is 8.7738037109375e-05
+0: 
+1: The time is 9.059906005859375e-05
+1: 
+1: The time is 9.965896606445312e-05
+1: 
+0: The time is 0.00011157989501953125
+0: 
+1: The time is 0.00010752677917480469
+1: 
+1: The time is 0.00010418891906738281
+1: 
+1: The time is 9.751319885253906e-05
+1: 
+0: The time is 9.34600830078125e-05
+0: 
+1: The time is 9.72747802734375e-05
+1: 
+1: The time is 0.00010609626770019531
+1: 
+1: The time is 9.036064147949219e-05
+1: 
+0: The time is 9.918212890625e-05
+0: 
+0: The time is 8.893013000488281e-05
+0: 
+0: The time is 0.00010466575622558594
+0: 
+1: The time is 9.751319885253906e-05
+1: 
+1: The time is 9.72747802734375e-05
+1: 
+0: The time is 0.00010204315185546875
+0: 
+0: The time is 9.870529174804688e-05
+0: 
+0: The time is 0.00011563301086425781
+0: The time is 8.845329284667969e-05
+0: 
+0: 
+1: The time is 9.489059448242188e-05
+1: 
+1: The time is 9.1552734375e-05
+1: 
+1: The time is 0.00010085105895996094
+1: 
+0: The time is 0.00011110305786132812
+0: The time is 9.560585021972656e-05
+0: 
+0: 
+1: The time is 9.560585021972656e-05
+1: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 0.00010561943054199219
+0: 
+1: The time is 9.965896606445312e-05
+1: 
+1: The time is 0.00010371208190917969
+1: The time is 0.00010037422180175781
+1: 
+1: 
+1: The time is 9.918212890625e-05
+1: The time is 9.131431579589844e-05
+1: 
+1: The time is 0.00010061264038085938
+1: 
+1: 
+0: The time is 9.34600830078125e-05
+0: 
+1: The time is 9.918212890625e-05
+1: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+1: The time is 9.942054748535156e-05
+1: The time is 0.00010132789611816406
+1: 
+1: 
+0: The time is 8.726119995117188e-05
+0: 
+1: The time is 9.822845458984375e-05
+1: 
+0: The time is 9.799003601074219e-05
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 9.465217590332031e-05
+0: 
+1: The time is 0.00010442733764648438
+1: 
+1: The time is 8.916854858398438e-05
+1: 
+0: The time is 0.00010371208190917969
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+0: The time is 9.250640869140625e-05
+0: 
+0: The time is 0.0001399517059326172
+0: 
+1: The time is 9.846687316894531e-05
+1: 
+1: The time is 0.0001068115234375
+1: 
+1: The time is 9.751319885253906e-05
+1: 
+1: The time is 0.00010013580322265625
+1: 
+1: The time is 9.584426879882812e-05
+1: 
+1: The time is 9.655952453613281e-05
+1: 
+1: The time is 9.989738464355469e-05
+1: The time is 9.202957153320312e-05
+1: 
+1: 
+0: The time is 9.274482727050781e-05
+0: 
+1: The time is 9.107589721679688e-05
+1: 
+0: The time is 0.00010204315185546875
+0: 
+1: The time is 8.96453857421875e-05
+1: 
+1: The time is 9.107589721679688e-05
+1: 
+1: The time is 8.96453857421875e-05
+1: 
+0: The time is 9.5367431640625e-05
+0: 
+0: The time is 8.606910705566406e-05
+0: 
+0: The time is 9.322166442871094e-05
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.632110595703125e-05
+0: 
+0: The time is 0.00010561943054199219
+0: 
+0: The time is 9.202957153320312e-05
+0: 
+0: The time is 9.298324584960938e-05
+0: 
+0: The time is 9.942054748535156e-05
+0: 
+0: The time is 0.00010347366333007812
+0: 
+1: The time is 0.00010013580322265625
+1: 
+1: The time is 9.703636169433594e-05
+1: 
+1: The time is 0.00010371208190917969
+1: 
+1: The time is 0.00010061264038085938
+1: 
+1: The time is 9.393692016601562e-05
+1: 
+0: The time is 9.393692016601562e-05
+0: 
+0: The time is 8.845329284667969e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+1: The time is 9.655952453613281e-05
+1: 
+1: The time is 0.00010538101196289062
+1: 
+1: The time is 9.298324584960938e-05
+1: 
+1: The time is 9.202957153320312e-05
+1: 
+0: The time is 9.322166442871094e-05
+0: 
+1: The time is 9.34600830078125e-05
+1: 
+0: The time is 8.630752563476562e-05
+0: 
+0: The time is 9.822845458984375e-05
+0: 
+0: The time is 9.703636169433594e-05
+0: 
+0: The time is 9.036064147949219e-05
+0: 
+1: The time is 9.059906005859375e-05
+1: 
+0: The time is 9.489059448242188e-05
+0: 
+1: The time is 8.96453857421875e-05
+1: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 9.584426879882812e-05
+0: 
+0: The time is 0.00010204315185546875
+0: 
+1: The time is 0.0001010894775390625
+1: 
+1: The time is 0.00010514259338378906
+1: 
+1: The time is 9.560585021972656e-05
+1: 
+1: The time is 9.489059448242188e-05
+1: 
+0: The time is 9.369850158691406e-05
+0: 
+1: The time is 9.846687316894531e-05
+1: 
+1: The time is 9.846687316894531e-05
+1: 
+1: The time is 9.036064147949219e-05
+1: 
+0: The time is 0.00011014938354492188
+0: 
+1: The time is 9.036064147949219e-05
+1: The time is 0.000102996826171875
+1: 
+1: 
+1: The time is 8.869171142578125e-05
+1: 
+0: The time is 9.226799011230469e-05
+0: 
+0: The time is 9.655952453613281e-05
+0: 
+0: The time is 9.393692016601562e-05
+0: 
+1: The time is 9.131431579589844e-05
+1: 
+1: The time is 0.00010275840759277344
+1: 
+0: The time is 9.846687316894531e-05
+0: The time is 9.226799011230469e-05
+0: 
+0: 
+0: The time is 8.940696716308594e-05
+0: 
+0: The time is 9.274482727050781e-05
+0: 
+0: The time is 0.00010323524475097656
+0: The time is 8.797645568847656e-05
+0: 
+0: 
+0: The time is 0.00010371208190917969
+0: 
+1: The time is 9.322166442871094e-05
+1: 
+1: The time is 0.00010538101196289062
+1: 
+1: The time is 0.00010037422180175781
+1: 
+0: The time is 9.989738464355469e-05
+0: 
+1: The time is 0.00010180473327636719
+1: 
+1: The time is 9.632110595703125e-05
+1: 
+1: The time is 8.678436279296875e-05
+1: 
+0: The time is 0.00010085105895996094
+0: 
+0: The time is 9.72747802734375e-05
+0: 
+1: The time is 0.00010085105895996094
+1: 
+1: The time is 9.942054748535156e-05
+1: 
+1: The time is 9.512901306152344e-05
+1: 
+0: The time is 9.441375732421875e-05
+0: The time is 9.894371032714844e-05
+0: 
+0: 
+0: The time is 9.489059448242188e-05
+0: 
+0: The time is 9.894371032714844e-05
+0: 
+1: The time is 9.584426879882812e-05
+1: 
+1: The time is 9.036064147949219e-05
+1: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.96453857421875e-05
+0: 
+1: The time is 0.00010061264038085938
+1: 
+0: The time is 9.34600830078125e-05
+0: 
+0: The time is 8.749961853027344e-05
+0: 
+0: The time is 9.179115295410156e-05
+0: 

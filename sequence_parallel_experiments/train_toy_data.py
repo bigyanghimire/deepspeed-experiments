@@ -1,6 +1,7 @@
 # train.py with batch_size > 1
 
-from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+#from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter, UlyssesSPDataLoaderAdapter2
 from deepspeed.runtime.utils import move_to_device
 from deepspeed.utils import groups
 from torch import tensor
@@ -10,9 +11,10 @@ import deepspeed.comm as dist
 import torch
 from torch.utils.data.distributed import DistributedSampler
 import time
-model_name_or_path = 'hf-internal-testing/tiny-random-LlamaForCausalLM'
+# model_name_or_path = 'hf-internal-testing/tiny-random-LlamaForCausalLM'
+model_name_or_path = 'meta-llama/Llama-3.2-1B'
 seq_length = 64
-sequence_parallel_size = 2
+sequence_parallel_size = 4
 micro_batch_size = 2  # CHANGED: Now batch size = 4
 
 config_dict = {
@@ -41,8 +43,24 @@ input_ids = tensor([
     [1, 60, 60, 60, 6, 6,6,6],  # sequence 5
     [1, 70, 70, 70, 7, 7,7,7],  # sequence 6
     [1, 80, 80, 80, 8, 8,8,8],  # sequence 7
+    [1, 90, 90, 90, 9, 9, 9, 9],  # sequence 8
+    [1, 100, 100, 100, 10, 10, 10, 10],  # sequence 9
+    [1, 110, 110, 110, 11, 11, 11, 11],  # sequence 10
+    [1, 120, 120, 120, 12, 12, 12, 12],  # sequence 11
+    [1, 130, 130, 130, 13, 13, 13, 13],  # sequence 12
+    [1, 140, 140, 140, 14, 14, 14, 14],  # sequence 13
+    [1, 150, 150, 150, 15, 15, 15, 15],  # sequence 14
+    [1, 160, 160, 160, 16, 16, 16, 16],  # sequence 15
 ])
 position_ids = tensor([
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
+    [0, 1, 2, 3, 4, 5,6,7],
     [0, 1, 2, 3, 4, 5,6,7],
     [0, 1, 2, 3, 4, 5,6,7],
     [0, 1, 2, 3, 4, 5,6,7],
@@ -102,9 +120,9 @@ sp_group = groups._get_sequence_parallel_group()
 # sp_group = groups._get_sequence_parallel_group()
 sp_world_size = groups._get_sequence_parallel_world_size()
 sp_rank = groups._get_sequence_parallel_rank()
-print(f"sp rank is :{sp_rank} \n")
-print(f"sp group is :{sp_group}")
-print(f"sp world size is :{sp_world_size}")
+# print(f"sp rank is :{sp_rank} \n")
+# print(f"sp group is :{sp_group}")
+# print(f"sp world size is :{sp_world_size}")
 
 # CHANGED: batch_size parameter
 # Here whole data is shared by both meaning each GPU is getting full data on batches
@@ -116,9 +134,9 @@ dl = torch.utils.data.DataLoader(
     sampler=sampler
 )
 # Normal training loop
-for iter, batch in enumerate(dl):
-    print(f"vanilla dl batch {batch} from rank {dist.get_rank()} at iter {iter}")
-dl = UlyssesSPDataLoaderAdapter(
+# for iter, batch in enumerate(dl):
+#     print(f"vanilla dl batch {batch} from rank {dist.get_rank()} at iter {iter}")
+dl = UlyssesSPDataLoaderAdapter2(
     dl,
     sp_rank=sp_rank,
     sp_group=sp_group,
@@ -130,11 +148,11 @@ num_epochs=1
 # Normal training loop
 for i in range(0,num_epochs):
     iter_count=0
-    for iter, batch in enumerate(dl):
+    for step, batch in enumerate(dl):
         if iter_count<30:
             start_time = time.time()
             batch = move_to_device(batch, model.device)
-            print(f"Batch Rank : {int(deepspeed.comm.get_rank())} and batch is {batch} \n")
+            print(f"in Iteration {step} Batch Rank : {int(deepspeed.comm.get_rank())} and batch is {batch} \n")
             # Verify shapes
             # if dist.get_rank() == 0 and iter == 0:
             #     print(f"Batch shapes:")
@@ -160,7 +178,7 @@ for i in range(0,num_epochs):
             total_good_tokens = sum(good_tokens_per_rank)
             loss              = total_loss / max(total_good_tokens, 1)
             if dist.get_rank() == 0:
-                print(f"Iteration {iter}: loss={loss.item():.4f}")
+                print(f"Iteration {step}: loss={loss.item():.4f}")
 
             model.backward(loss)
             model.step()  # Don't forget optimizer step!
