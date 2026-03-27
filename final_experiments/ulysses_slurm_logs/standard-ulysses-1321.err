@@ -1,0 +1,47 @@
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 301, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 202, in main
+0: [rank0]:     sp_group = groups._get_sequence_parallel_group()
+0: [rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/groups.py", line 667, in _get_sequence_parallel_group
+0: [rank0]:     raise KeyError("No sequence parallel group found")
+0: [rank0]: KeyError: 'No sequence parallel group found'
+0: [rank0]:[W327 15:34:15.864895304 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: E0327 15:34:16.441000 793171 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 793309) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-27_15:34:16
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 793309)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=train_bf16
 #SBATCH --nodes=2
-#SBATCH --gres=gpu:a100:4
+#SBATCH --gres=gpu:a100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
@@ -17,10 +17,10 @@ export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
 
 NUM_NODES=2
-GPUS_PER_NODE=4
+GPUS_PER_NODE=1
 NUM_STEPS=20
 WARMUP_STEPS=5
-SEQUENCE_LENGTH=1024
+SEQUENCE_LENGTH=256
 export PATH="${PATH}"
 LAUNCHER="torchrun \
     --nproc_per_node ${GPUS_PER_NODE} \
@@ -34,5 +34,5 @@ export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 mkdir -p default_exp
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "default_exp/default_run_${SEQUENCE_LENGTH}.log" 2>&1
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" 
 # deepspeed --num_gpus 4 train_gpt_grouped.py

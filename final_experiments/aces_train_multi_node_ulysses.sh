@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=2
-#SBATCH --partition=gpu  --gres=gpu:h100:2
+#SBATCH --partition=gpu  --gres=gpu:h100:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
@@ -15,7 +15,7 @@ export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
 
 NUM_NODES=2
-GPUS_PER_NODE=2
+GPUS_PER_NODE=1
 NUM_STEPS=20
 WARMUP_STEPS=5
 SEQUENCE_LENGTH=256
