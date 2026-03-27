@@ -31,7 +31,10 @@ CMD="train_gpt_ulysses.py --seq_length ${SEQUENCE_LENGTH}"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
+export HF_HUB_OFFLINE=1
 mkdir -p aces_default_exp
 export HF_HOME="/scratch/user/u.bg348806/.cache/huggingface"
+export HF_HUB_CACHE="/scratch/user/u.bg348806/.cache/huggingface"
 srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "aces_default_exp/default_run_${SEQUENCE_LENGTH}.log" 2>&1
 # deepspeed --num_gpus 4 train_gpt_grouped.py
+
