@@ -9,6 +9,7 @@
 #SBATCH --error=aces_ulysses_slurm_logs/standard-ulysses-%j.err
 
 module load CUDA/11.8.0
+module load GCC/8.3.0
 eval "$(micromamba shell hook --shell bash)"
 micromamba activate ds-hf 
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
