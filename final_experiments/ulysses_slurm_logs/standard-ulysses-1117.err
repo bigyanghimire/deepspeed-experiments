@@ -1,2 +1,0 @@
-/var/spool/slurm/d/job01117/slurm_script: line 23: SEQUENCE_LENGTH: command not found
-slurmstepd-hades: error: *** JOB 1117 ON hades CANCELLED AT 2026-03-16T14:55:36 ***

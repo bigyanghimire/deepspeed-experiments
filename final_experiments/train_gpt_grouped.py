@@ -15,6 +15,7 @@ from torch.utils.data import DataLoader
 import time
 from torch.profiler import profile, record_function, ProfilerActivity
 import argparse
+import numpy as np
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
@@ -35,7 +36,9 @@ def main():
             "stage": 2
         },
         "bf16": {
-            "enabled": True
+            "enabled": True,
+            "bf16_master_weights_and_grads": True,
+            "bf16_optimizer_states": True
         },
         "optimizer": {
             "type": "Adam",
@@ -236,52 +239,49 @@ def main():
     num_epochs=1
     with profiler_context as profiler:
     # Normal training loop
-        for i in range(0,num_epochs):
-            iter_count=0
-            for step, batch in enumerate(dl):
-                if iter_count<15:
-                    start_time = time.time()
-                    batch = move_to_device(batch, model.device)
-                    
-                    # Verify shapes
-                    # if dist.get_rank() == 0 and step == 0:
-                    #     print(f"Batch shapes:")
-                    #     print(f"  input_ids: {batch['input_ids'].shape}")  # Should be [batch_size, seq_len/sp_size]
-                    #     print(f"  position_ids: {batch['position_ids'].shape}")
-                    #     print(f"  labels: {batch.get('labels', 'N/A')}")
-                    #print(f"input_ids value rank: {dist.get_rank()} in step {step} : {batch['input_ids']}")  # Should be [batch_size, seq_len/sp_size]
-                    outputs = model(**batch)
-                    #print(f"outputs are {outputs} and logits are {outputs.logits}")
-                    # Loss calculation
-                    shift_labels = batch["shift_labels"]
-                    loss = model.module.loss_function(
-                        logits=outputs.logits,
-                        labels=None,
-                        shift_labels=shift_labels,
-                        vocab_size=model.module.config.vocab_size,
-                    )
+        WARMUP = 10
+        iter_count=0
+        step_times = []
+        for step, batch in enumerate(dl):
+            if iter_count<30:
+                torch.cuda.synchronize()
+                start_time = time.time()
+                batch = move_to_device(batch, model.device)
+                
+                outputs = model(**batch)
+                # Loss calculation
+                shift_labels = batch["shift_labels"]
+                loss = model.module.loss_function(
+                    logits=outputs.logits,
+                    labels=None,
+                    shift_labels=shift_labels,
+                    vocab_size=model.module.config.vocab_size,
+                )
+                # Aggregate loss across SP ranks
+                # losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=groups._get_data_parallel_group())
+                # differentiable weighted per-shard-loss aggregation across ranks
+                losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=sp_group)
+                # special dealing with SFT that has prompt tokens that aren't used in loss computation
+                good_tokens = (shift_labels != -100).view(-1).sum()
+                good_tokens_per_rank = torch.distributed.nn.functional.all_gather(good_tokens, group=sp_group)
+                total_loss = sum(losses_per_rank[rank] * good_tokens_per_rank[rank] for rank in range(sp_world_size))
+                total_good_tokens = sum(good_tokens_per_rank)
+                loss = total_loss / max(total_good_tokens, 1)
 
-                    # Aggregate loss across SP ranks
-                    # losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=groups._get_data_parallel_group())
-            # differentiable weighted per-shard-loss aggregation across ranks
-                    losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=sp_group)
-                    # special dealing with SFT that has prompt tokens that aren't used in loss computation
-                    good_tokens = (shift_labels != -100).view(-1).sum()
-                    good_tokens_per_rank = torch.distributed.nn.functional.all_gather(good_tokens, group=sp_group)
-                    total_loss = sum(losses_per_rank[rank] * good_tokens_per_rank[rank] for rank in range(sp_world_size))
-                    total_good_tokens = sum(good_tokens_per_rank)
-                    loss = total_loss / max(total_good_tokens, 1)
+                if dist.get_rank() == 0:
+                    print(f"Iteration {step}: loss={loss.item():.4f}")
 
-                    if dist.get_rank() == 0:
-                        print(f"Iteration {step}: loss={loss.item():.4f}")
-
-                    model.backward(loss)
-                    model.step()  # Don't forget optimizer step!
-                    step_time = time.time() - start_time
-                    if dist.get_rank() == 0:
-                        print(f"Step_time: {step_time}\n")
-                    if local_rank == 0 and profiler is not None:
-                        profiler.step()
-                    iter_count=iter_count+1
+                model.backward(loss)
+                model.step()  # Don't forget optimizer step!
+                torch.cuda.synchronize()
+                step_time = time.time() - start_time
+                if step >= WARMUP:
+                    step_times.append(step_time)
+                if local_rank == 0 and profiler is not None:
+                    profiler.step()
+                iter_count=iter_count+1
+    if dist.get_rank() == 0:
+        print(f"\n=== Summary over {len(step_times)} iterations ===")
+        print(f"Step time: {np.mean(step_times):.2f}s ± {np.std(step_times):.2f}s (min={min(step_times):.2f}s, max={max(step_times):.2f}s)")
 if __name__ == "__main__":
     main()

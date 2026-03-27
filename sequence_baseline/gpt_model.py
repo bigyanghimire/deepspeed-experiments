@@ -272,75 +272,86 @@ def main():
     step_times = []
     loss_history = []
 
-    for epoch in range(2):
-        for step, batch in enumerate(dataloader):
-            step_start_time = time.time()
-            batch = {k: v.to(model_engine.device) for k, v in batch.items()}
+    num_steps = 1000  # Set your desired total steps here
+    global_step = 0   # Initialize a counter
+
+    # for step, batch in enumerate(dataloader):
+    #     step_start_time = time.time()
+    #     batch = {k: v.to(model_engine.device) for k, v in batch.items()}
+        
+    #     outputs = model_engine(**batch)
+    #     loss = outputs.loss
+        
+    #     if global_rank == 0:
+    #         print(f"Step {global_step}: loss={loss.item():.4f}")
             
-            outputs = model_engine(**batch)
-            loss = outputs.loss
-            if global_rank == 0:
-                print(f"Iteration {step}: loss={loss.item():.4f}")
-            model_engine.backward(loss)
-            
-            model_engine.step()
-
-
-    # # Setup data iterator
-    # if dataloader is not None:
-    #     data_iter = iter(dataloader)
-
-    # for step in range(args.num_steps):
-    #     start_time = time.time()
-
-    #     # Get input data
-    #     if dataloader is not None:
-    #         try:
-    #             batch = next(data_iter)
-    #         except StopIteration:
-    #             data_iter = iter(dataloader)
-    #             batch = next(data_iter)
-    #         input_ids = batch['input_ids'].to(device)
-    #         labels = input_ids.clone()  # For language modeling, labels = input_ids
-    #     else:
-    #         # Generate random input data
-    #         input_ids = torch.randint(0, actual_vocab_size, (args.batch_size, args.seq_length), device=device)
-    #         labels = torch.randint(0, actual_vocab_size, (args.batch_size, args.seq_length), device=device)
-
-    #     # Forward pass with optional autocast
-    #     if use_autocast:
-    #         with torch.autocast(device_type="cuda", dtype=autocast_dtype):
-    #             # logits = model_engine(input_ids)
-    #             # loss = loss_fn(logits.view(-1, actual_vocab_size), labels.view(-1))
-    #             outputs = model_engine(input_ids=input_ids, labels=labels)
-    #             loss = outputs.loss
-    #     else:
-    #         # logits = model_engine(input_ids)
-    #         # loss = loss_fn(logits.view(-1, actual_vocab_size), labels.view(-1))
-    #         outputs = model_engine(input_ids=input_ids, labels=labels)
-    #         loss = outputs.loss
-    #     # Backward pass - use PyTorch-style backward
-    #     backward_start_time = time.time()
     #     model_engine.backward(loss)
-    #     backward_time = backward_start_time - time.time()
-
-    #     # Optimizer step
     #     model_engine.step()
+        
+    #     # 1. Increment the counter
+    #     global_step += 1
+    #     # 2. Check if we've reached the limit
+    #     if global_step >= num_steps:
+    #         break  # Exit the inner loop
+                
 
-    #     step_time = time.time() - start_time
 
-    #     if step >= args.warmup_steps:
-    #         step_times.append(step_time)
+    # Setup data iterator
+    if dataloader is not None:
+        data_iter = iter(dataloader)
 
-    #     # Record loss for plotting
-    #     loss_history.append((step, loss.item()))
+    for step in range(args.num_steps):
+        start_time = time.time()
 
-    #     if step % args.log_interval == 0 or step == args.num_steps - 1:
-    #         mem_stats = get_memory_stats()
-    #         print(f"[Rank {global_rank}] Step {step}: loss={loss.item():.4f}, "
-    #               f"time={step_time:.3f}s, "
-    #               f"alloc_mem={format_memory(mem_stats['allocated'])}, "
-    #               f"peak_mem={format_memory(mem_stats['peak'])}")
+        # Get input data
+        if dataloader is not None:
+            try:
+                batch = next(data_iter)
+            except StopIteration:
+                data_iter = iter(dataloader)
+                batch = next(data_iter)
+            input_ids = batch['input_ids'].to(device)
+            labels = input_ids.clone()  # For language modeling, labels = input_ids
+        else:
+            # Generate random input data
+            input_ids = torch.randint(0, actual_vocab_size, (args.batch_size, args.seq_length), device=device)
+            labels = torch.randint(0, actual_vocab_size, (args.batch_size, args.seq_length), device=device)
+
+        # Forward pass with optional autocast
+        if use_autocast:
+            with torch.autocast(device_type="cuda", dtype=autocast_dtype):
+                # logits = model_engine(input_ids)
+                # loss = loss_fn(logits.view(-1, actual_vocab_size), labels.view(-1))
+                outputs = model_engine(input_ids=input_ids, labels=labels)
+                loss = outputs.loss
+        else:
+            # logits = model_engine(input_ids)
+            # loss = loss_fn(logits.view(-1, actual_vocab_size), labels.view(-1))
+            outputs = model_engine(input_ids=input_ids, labels=labels)
+            loss = outputs.loss
+        # Backward pass - use PyTorch-style backward
+        backward_start_time = time.time()
+        model_engine.backward(loss)
+        backward_time = backward_start_time - time.time()
+
+        # Optimizer step
+        model_engine.step()
+
+        step_time = time.time() - start_time
+
+        if step >= args.warmup_steps:
+            step_times.append(step_time)
+
+        # Record loss for plotting
+        loss_history.append((step, loss.item()))
+        if global_rank == 0:
+            print(f"Step {step}: loss={loss.item():.4f}")
+        # if step % args.log_interval == 0 or step == args.num_steps - 1:
+        #     mem_stats = get_memory_stats()
+        #     print(f"[Rank {global_rank}] Step {step}: loss={loss.item():.4f}, "
+        #           f"time={step_time:.3f}s, "
+        #           f"alloc_mem={format_memory(mem_stats['allocated'])}, "
+        #           f"peak_mem={format_memory(mem_stats['peak'])}")
 
     # # Final statistics
     # final_mem = get_memory_stats()

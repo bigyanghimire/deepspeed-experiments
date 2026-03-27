@@ -1,5 +1,5 @@
 {
-    "train_micro_batch_size_per_gpu": 1,
+    "train_micro_batch_size_per_gpu": 2,
     "optimizer": {
         "type": "Adam",
         "params": {
@@ -8,7 +8,9 @@
     },
 
     "bf16": {
-        "enabled": true
+        "enabled": true,
+        "bf16_master_weights_and_grads": true,
+        "bf16_optimizer_states": true
     },
 
     "zero_optimization": {

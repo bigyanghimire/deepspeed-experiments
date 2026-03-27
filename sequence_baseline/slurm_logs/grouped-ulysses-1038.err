@@ -1,500 +1,0 @@
-0: W0311 14:00:30.294000 455079 site-packages/torch/distributed/run.py:793] 
-0: W0311 14:00:30.294000 455079 site-packages/torch/distributed/run.py:793] *****************************************
-0: W0311 14:00:30.294000 455079 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-0: W0311 14:00:30.294000 455079 site-packages/torch/distributed/run.py:793] *****************************************
-1: W0311 14:00:30.436000 288999 site-packages/torch/distributed/run.py:793] 
-1: W0311 14:00:30.436000 288999 site-packages/torch/distributed/run.py:793] *****************************************
-1: W0311 14:00:30.436000 288999 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-1: W0311 14:00:30.436000 288999 site-packages/torch/distributed/run.py:793] *****************************************
-1: Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 20205.53 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 19866.61 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 20163.18 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 20427.87 examples/s]Packing into seq_length=32000:  18%|█▊        | 7000/39531 [00:00<00:01, 20013.62 examples/s]Packing into seq_length=32000:  18%|█▊        | 7000/39531 [00:00<00:01, 20116.58 examples/s]Packing into seq_length=32000:  18%|█▊        | 7000/39531 [00:00<00:01, 19934.27 examples/s]Packing into seq_length=3
-0: Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32000:   5%|▌         | 2000/39531 [00:00<00:02, 18756.35 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 19894.15 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 19032.98 examples/s]Packing into seq_length=32000:   8%|▊         | 3000/39531 [00:00<00:01, 19968.22 examples/s]Packing into seq_length=32000:  15%|█▌        | 6000/39531 [00:00<00:01, 20172.67 examples/s]Packing into seq_length=32000:  18%|█▊        | 7000/39531 [00:00<00:01, 20050.86 examples/s]Packing into seq_length=32000:  18%|█▊        | 7000/39531 [00:00<00:01, 19911.96 examples/s]Packing into seq_length=3
-0: 2000:  18%|█▊        | 7000/39531 [00:00<00:01, 20231.46 examples/s]Packing into seq_length=32000:  25%|██▌       | 10000/39531 [00:00<00:01, 20456.38 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20480.11 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20587.92 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20651.71 examples/s]Packing into seq_length=32000:  35%|███▌      | 14000/39531 [00:00<00:01, 20411.94 examples/s]Packing into seq_length=32000:  35%|███▌      | 14000/39531 [00:00<00:01, 20706.04 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 20704.23 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 20698.60 examples/s]Packing into seq_length=32000:  43%|████▎     | 17000/39531 [00:00<00:01, 20576.58 examples/s]Packing into seq_length=32000:
-1: 2000:  18%|█▊        | 7000/39531 [00:00<00:01, 20740.39 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20662.70 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20401.23 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 20565.22 examples/s]Packing into seq_length=32000:  28%|██▊       | 11000/39531 [00:00<00:01, 21241.07 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 20734.39 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 20518.10 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 20667.53 examples/s]Packing into seq_length=32000:  38%|███▊      | 15000/39531 [00:00<00:01, 21251.58 examples/s]Packing into seq_length=32000:  48%|████▊     | 19000/39531 [00:00<00:00, 20743.80 examples/s]Packing into seq_length=32000:
-0:   43%|████▎     | 17000/39531 [00:00<00:01, 20833.83 examples/s]Packing into seq_length=32000:  48%|████▊     | 19000/39531 [00:00<00:00, 20531.06 examples/s]Packing into seq_length=32000:  48%|████▊     | 19000/39531 [00:00<00:00, 20722.23 examples/s]Packing into seq_length=32000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20825.69 examples/s]Packing into seq_length=32000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21114.08 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21131.65 examples/s]Packing into seq_length=32000:  61%|██████    | 24000/39531 [00:01<00:00, 20801.03 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21262.85 examples/s]Packing into seq_length=32000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21127.85 examples/s]Packing into seq_length=32000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20938.6
-1:   48%|████▊     | 19000/39531 [00:00<00:00, 20534.81 examples/s]Packing into seq_length=32000:  48%|████▊     | 19000/39531 [00:00<00:00, 20688.92 examples/s]Packing into seq_length=32000:  48%|████▊     | 19000/39531 [00:00<00:00, 21227.06 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21257.95 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21069.15 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21194.15 examples/s]Packing into seq_length=32000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21722.70 examples/s]Packing into seq_length=32000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21263.62 examples/s]Packing into seq_length=32000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21110.07 examples/s]Packing into seq_length=32000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21697
-0: 9 examples/s]Packing into seq_length=32000:  71%|███████   | 28000/39531 [00:01<00:00, 20873.58 examples/s]Packing into seq_length=32000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21262.41 examples/s]Packing into seq_length=32000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21215.98 examples/s]Packing into seq_length=32000:  76%|███████▌  | 30000/39531 [00:01<00:00, 21112.53 examples/s]Packing into seq_length=32000:  81%|████████  | 32000/39531 [00:01<00:00, 20966.27 examples/s]Packing into seq_length=32000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21160.71 examples/s]Packing into seq_length=32000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21213.22 examples/s]Packing into seq_length=32000:  86%|████████▌ | 34000/39531 [00:01<00:00, 21410.18 examples/s]Packing into seq_length=32000:  89%|████████▊ | 35000/39531 [00:01<00:00, 20751.45 examples/s]Packing i
-1: .99 examples/s]Packing into seq_length=32000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21194.51 examples/s]Packing into seq_length=32000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21294.87 examples/s]Packing into seq_length=32000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21728.71 examples/s]Packing into seq_length=32000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21156.42 examples/s]Packing into seq_length=32000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21228.86 examples/s]Packing into seq_length=32000:  86%|████████▌ | 34000/39531 [00:01<00:00, 21163.67 examples/s]Packing into seq_length=32000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21140.09 examples/s]Packing into seq_length=32000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21598.03 examples/s]Packing into seq_length=32000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21002.24 examples/s]Pac
-1: king into seq_length=32000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20898.49 examples/s]Packing into seq_length=32000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21165.19 examples/s]Packing into seq_length=32000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21589.58 examples/s]Packing into seq_length=32000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21049.88 examples/s]Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 20540.82 examples/s]
-1: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 19844.93 examples/s]Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 20990.53 examples/s]
-1: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 20148.55 examples/s]
-1: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 20051.52 examples/s]
-1: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.63s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.65s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.64s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.72s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.55s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.57s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.56s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.63s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.53s/it]Loading checkpoint shards:
-1:   75%|███████▌  | 3/4 [00:04<00:01,  1.54s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.58s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.62s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.24s/it]
-1: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.25s/it]
-1: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.28s/it]
-1: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.12s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.32s/it]
-0: nto seq_length=32000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21072.30 examples/s]Packing into seq_length=32000:  94%|█████████▎| 37000/39531 [00:01<00:00, 21130.05 examples/s]Packing into seq_length=32000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20975.30 examples/s]Packing into seq_length=32000:  99%|█████████▊| 39000/39531 [00:01<00:00, 20774.34 examples/s]Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 20198.96 examples/s]Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:01<00:00, 19917.29 examples/s]Packing into seq_length=32000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21052.37 examples/s]Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:12<00:00, 3206.80 examples/s] 
-0: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:12<00:00, 3227.73 examples/s] 
-0: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:12<00:00, 3210.93 examples/s] 
-0: Packing into seq_length=32000: 100%|██████████| 39531/39531 [00:12<00:00, 3209.39 examples/s] 
-0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.60s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.59s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.63s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.52s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.52s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.54s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.62s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.49s/it]Loading checkpoint shards:
-0:   75%|███████▌  | 3/4 [00:04<00:01,  1.48s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.50s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.60s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.22s/it]
-0: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.22s/it]
-0: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.23s/it]
-0: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.28s/it]
-0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
-0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
-0:   warnings.warn(
-0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-0: [rank3]: Traceback (most recent call last):
-0: [rank3]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-0: [rank3]:     main()
-0: [rank3]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-0: [rank3]:     outputs = model_engine(**batch)
-0: [rank3]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank3]:     return self._call_impl(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank3]:     return forward_call(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-0: [rank3]:     ret_val = func(*args, **kwargs)
-0: [rank3]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-0: [rank3]:     loss = self.module(*inputs, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank3]:     return self._call_impl(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-0: [rank3]:     return inner()
-0: [rank3]:            ^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-0: [rank3]:     result = forward_call(*args, **kwargs)
-0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-0: [rank3]:     output = func(self, *args, **kwargs)
-0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-0: [rank3]:     return func(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-0: [rank3]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-0: [rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank3]:     return self._call_impl(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank3]:     return forward_call(*args, **kwargs)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-0: [rank3]:     return F.linear(input, self.weight, self.bias)
-0: [rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 3 has a total capacity of 39.38 GiB of which 6.68 GiB is free. Including non-PyTorch memory, this process has 32.69 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-0: [rank1]: Traceback (most recent call last):
-0: [rank1]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-0: [rank1]:     main()
-0: [rank1]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-0: [rank1]:     outputs = model_engine(**batch)
-0: [rank1]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank1]:     return self._call_impl(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank1]:     return forward_call(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-0: [rank1]:     ret_val = func(*args, **kwargs)
-0: [rank1]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-0: [rank1]:     loss = self.module(*inputs, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank1]:     return self._call_impl(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-0: [rank1]:     return inner()
-0: [rank1]:            ^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-0: [rank1]:     result = forward_call(*args, **kwargs)
-0: [rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-0: [rank1]:     output = func(self, *args, **kwargs)
-0: [rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-0: [rank1]:     return func(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-0: [rank1]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-0: [rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank1]:     return self._call_impl(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank1]:     return forward_call(*args, **kwargs)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-0: [rank1]:     return F.linear(input, self.weight, self.bias)
-0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 1 has a total capacity of 39.38 GiB of which 6.63 GiB is free. Including non-PyTorch memory, this process has 32.74 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-0: [rank2]: Traceback (most recent call last):
-0: [rank2]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-0: [rank2]:     main()
-0: [rank2]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-0: [rank2]:     outputs = model_engine(**batch)
-0: [rank2]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank2]:     return self._call_impl(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank2]:     return forward_call(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-0: [rank2]:     ret_val = func(*args, **kwargs)
-0: [rank2]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-0: [rank2]:     loss = self.module(*inputs, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank2]:     return self._call_impl(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-0: [rank2]:     return inner()
-0: [rank2]:            ^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-0: [rank2]:     result = forward_call(*args, **kwargs)
-0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-0: [rank2]:     output = func(self, *args, **kwargs)
-0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-0: [rank2]:     return func(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-0: [rank2]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-0: [rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank2]:     return self._call_impl(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank2]:     return forward_call(*args, **kwargs)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-0: [rank2]:     return F.linear(input, self.weight, self.bias)
-0: [rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 2 has a total capacity of 39.38 GiB of which 6.63 GiB is free. Including non-PyTorch memory, this process has 32.74 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-0: [rank0]: Traceback (most recent call last):
-0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-0: [rank0]:     main()
-0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-0: [rank0]:     outputs = model_engine(**batch)
-0: [rank0]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank0]:     return self._call_impl(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank0]:     return forward_call(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-0: [rank0]:     ret_val = func(*args, **kwargs)
-0: [rank0]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-0: [rank0]:     loss = self.module(*inputs, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank0]:     return self._call_impl(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-0: [rank0]:     return inner()
-0: [rank0]:            ^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-0: [rank0]:     result = forward_call(*args, **kwargs)
-0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-0: [rank0]:     output = func(self, *args, **kwargs)
-0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-0: [rank0]:     return func(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-0: [rank0]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-0: [rank0]:     return self._call_impl(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-0: [rank0]:     return forward_call(*args, **kwargs)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-0: [rank0]:     return F.linear(input, self.weight, self.bias)
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 0 has a total capacity of 39.38 GiB of which 6.68 GiB is free. Including non-PyTorch memory, this process has 32.69 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank7]: Traceback (most recent call last):
-1: [rank7]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-1: [rank7]:     main()
-1: [rank7]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-1: [rank7]:     outputs = model_engine(**batch)
-1: [rank7]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank7]:     return self._call_impl(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank7]:     return forward_call(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-1: [rank7]:     ret_val = func(*args, **kwargs)
-1: [rank7]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-1: [rank7]:     loss = self.module(*inputs, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank7]:     return self._call_impl(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-1: [rank7]:     return inner()
-1: [rank7]:            ^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-1: [rank7]:     result = forward_call(*args, **kwargs)
-1: [rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-1: [rank7]:     output = func(self, *args, **kwargs)
-1: [rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-1: [rank7]:     return func(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-1: [rank7]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-1: [rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank7]:     return self._call_impl(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank7]:     return forward_call(*args, **kwargs)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-1: [rank7]:     return F.linear(input, self.weight, self.bias)
-1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 3 has a total capacity of 39.38 GiB of which 6.68 GiB is free. Including non-PyTorch memory, this process has 32.69 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank5]: Traceback (most recent call last):
-1: [rank5]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-1: [rank5]:     main()
-1: [rank5]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-1: [rank5]:     outputs = model_engine(**batch)
-1: [rank5]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank5]:     return self._call_impl(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank5]:     return forward_call(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-1: [rank5]:     ret_val = func(*args, **kwargs)
-1: [rank5]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-1: [rank5]:     loss = self.module(*inputs, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank5]:     return self._call_impl(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-1: [rank5]:     return inner()
-1: [rank5]:            ^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-1: [rank5]:     result = forward_call(*args, **kwargs)
-1: [rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-1: [rank5]:     output = func(self, *args, **kwargs)
-1: [rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-1: [rank5]:     return func(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-1: [rank5]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-1: [rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank5]:     return self._call_impl(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank5]:     return forward_call(*args, **kwargs)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-1: [rank5]:     return F.linear(input, self.weight, self.bias)
-1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 1 has a total capacity of 39.38 GiB of which 6.63 GiB is free. Including non-PyTorch memory, this process has 32.74 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank6]: Traceback (most recent call last):
-1: [rank6]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-1: [rank6]:     main()
-1: [rank6]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-1: [rank6]:     outputs = model_engine(**batch)
-1: [rank6]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank6]:     return self._call_impl(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank6]:     return forward_call(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-1: [rank6]:     ret_val = func(*args, **kwargs)
-1: [rank6]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-1: [rank6]:     loss = self.module(*inputs, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank6]:     return self._call_impl(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-1: [rank6]:     return inner()
-1: [rank6]:            ^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-1: [rank6]:     result = forward_call(*args, **kwargs)
-1: [rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-1: [rank6]:     output = func(self, *args, **kwargs)
-1: [rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-1: [rank6]:     return func(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-1: [rank6]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-1: [rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank6]:     return self._call_impl(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank6]:     return forward_call(*args, **kwargs)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-1: [rank6]:     return F.linear(input, self.weight, self.bias)
-1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 2 has a total capacity of 39.38 GiB of which 6.63 GiB is free. Including non-PyTorch memory, this process has 32.74 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank4]: Traceback (most recent call last):
-1: [rank4]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 378, in <module>
-1: [rank4]:     main()
-1: [rank4]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 280, in main
-1: [rank4]:     outputs = model_engine(**batch)
-1: [rank4]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank4]:     return self._call_impl(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank4]:     return forward_call(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-1: [rank4]:     ret_val = func(*args, **kwargs)
-1: [rank4]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2316, in forward
-1: [rank4]:     loss = self.module(*inputs, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank4]:     return self._call_impl(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
-1: [rank4]:     return inner()
-1: [rank4]:            ^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
-1: [rank4]:     result = forward_call(*args, **kwargs)
-1: [rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/generic.py", line 965, in wrapper
-1: [rank4]:     output = func(self, *args, **kwargs)
-1: [rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/utils/deprecation.py", line 172, in wrapped_func
-1: [rank4]:     return func(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/transformers/src/transformers/models/llama/modeling_llama.py", line 837, in forward
-1: [rank4]:     logits = self.lm_head(hidden_states[:, slice_indices, :])
-1: [rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
-1: [rank4]:     return self._call_impl(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
-1: [rank4]:     return forward_call(*args, **kwargs)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
-1: [rank4]:     return F.linear(input, self.weight, self.bias)
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.65 GiB. GPU 0 has a total capacity of 39.38 GiB of which 6.68 GiB is free. Including non-PyTorch memory, this process has 32.69 GiB memory in use. Of the allocated memory 27.51 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank4]:[W311 14:01:08.322844680 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
-1: W0311 14:01:11.043000 288999 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289136 closing signal SIGTERM
-1: W0311 14:01:11.044000 288999 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289138 closing signal SIGTERM
-1: W0311 14:01:11.045000 288999 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289139 closing signal SIGTERM
-1: E0311 14:01:11.610000 288999 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 289137) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
-1: Traceback (most recent call last):
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
-1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
-1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-1:     return f(*args, **kwargs)
-1:            ^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
-1:     run(args)
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
-1:     elastic_launch(
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-1:     return launch_agent(self._config, self._entrypoint, list(args))
-1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-1:     raise ChildFailedError(
-1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-1: ============================================================
-1: gpt_model.py FAILED
-1: ------------------------------------------------------------
-1: Failures:
-1:   <NO_OTHER_FAILURES>
-1: ------------------------------------------------------------
-1: Root Cause (first observed failure):
-1: [0]:
-1:   time      : 2026-03-11_14:01:11
-1:   host      : hercules.olympus.clemson.edu
-1:   rank      : 5 (local_rank: 1)
-1:   exitcode  : 1 (pid: 289137)
-1:   error_file: <N/A>
-1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-1: ============================================================
-srun: error: hercules: task 1: Exited with exit code 1
-0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f5a35806f20>
-0: Traceback (most recent call last):
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
-0:     fp16_matmul._update_autotune_table()
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
-0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
-0:     cache_manager.put(autotune_table)
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
-0:     os.replace(self.file_path + ".tmp", self.file_path)
-0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
-0: [rank0]:[W311 14:01:12.204412471 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
-0: W0311 14:01:13.650000 455079 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 455217 closing signal SIGTERM
-0: W0311 14:01:13.652000 455079 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 455218 closing signal SIGTERM
-0: W0311 14:01:13.652000 455079 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 455219 closing signal SIGTERM
-0: E0311 14:01:14.230000 455079 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 455220) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
-0: Traceback (most recent call last):
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
-0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
-0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-0:     return f(*args, **kwargs)
-0:            ^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
-0:     run(args)
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
-0:     elastic_launch(
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-0:     return launch_agent(self._config, self._entrypoint, list(args))
-0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-0:     raise ChildFailedError(
-0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-0: ============================================================
-0: gpt_model.py FAILED
-0: ------------------------------------------------------------
-0: Failures:
-0:   <NO_OTHER_FAILURES>
-0: ------------------------------------------------------------
-0: Root Cause (first observed failure):
-0: [0]:
-0:   time      : 2026-03-11_14:01:13
-0:   host      : hades.olympus.clemson.edu
-0:   rank      : 3 (local_rank: 3)
-0:   exitcode  : 1 (pid: 455220)
-0:   error_file: <N/A>
-0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-0: ============================================================
-srun: error: hades: task 0: Exited with exit code 1
