@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --nodes=2
-#SBATCH --partition=gpu  --gres=gpu:h100:1
+#SBATCH --nodes=4
+#SBATCH --partition=gpu  --gres=gpu:h100:4
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
@@ -15,11 +15,11 @@ micromamba activate ds-hf
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
 
-NUM_NODES=2
-GPUS_PER_NODE=1
+NUM_NODES=4
+GPUS_PER_NODE=4
 NUM_STEPS=20
 WARMUP_STEPS=5
-SEQUENCE_LENGTH=256
+SEQUENCE_LENGTH=64000
 export PATH="${PATH}"
 LAUNCHER="torchrun \
     --nproc_per_node ${GPUS_PER_NODE} \

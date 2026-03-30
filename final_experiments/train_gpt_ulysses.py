@@ -29,7 +29,7 @@ def main():
     
     print(f"Training with Sequence Length: {seq_length}")
     # model_name_or_path = 'Qwen/Qwen3-0.6B'
-    sequence_parallel_size = 2
+    sequence_parallel_size = 16
     micro_batch_size = 2  # CHANGED: Now batch size = 4
 
     config_dict = {
