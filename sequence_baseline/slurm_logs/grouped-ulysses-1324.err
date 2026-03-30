@@ -1,0 +1,64 @@
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 30 13:58:06 2026).
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.89it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.97it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.15it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.66it/s]
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 389, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 255, in main
+0: [rank0]:     model_engine, optimizer, _, _ = deepspeed.initialize(
+0: [rank0]:                                     ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/__init__.py", line 214, in initialize
+0: [rank0]:     engine = DeepSpeedEngine(args=args,
+0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 364, in __init__
+0: [rank0]:     self._configure_optimizer(optimizer, model_parameters)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1586, in _configure_optimizer
+0: [rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+0: [rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1974, in _configure_zero_optimizer
+0: [rank0]:     optimizer = Stage3ZeroOptimizer(
+0: [rank0]:                 ^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage3.py", line 459, in __init__
+0: [rank0]:     self._setup_for_real_optimizer()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage3.py", line 625, in _setup_for_real_optimizer
+0: [rank0]:     self.grad_partitions_flat_buffer: Tensor = torch.zeros(sum(p.partition_numel() for p in all_params),
+0: [rank0]:                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.96 GiB. GPU 0 has a total capacity of 39.38 GiB of which 6.43 GiB is free. Including non-PyTorch memory, this process has 32.94 GiB memory in use. Of the allocated memory 30.85 GiB is allocated by PyTorch, and 1.04 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank0]:[W330 13:59:16.302774247 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: E0330 13:59:18.268000 806524 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 806662) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: gpt_model.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-30_13:59:18
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 806662)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

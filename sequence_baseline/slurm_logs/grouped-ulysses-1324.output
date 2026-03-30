@@ -1,0 +1,36 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: local rank 0
+0: 
+0: [Rank 0] Loading wikitext dataset...
+0: [Rank 0] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 0] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=128000
+0: [Rank 0] Model parameters: 8,030,261,248 total, 8,030,261,248 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: Stage 3 initialize beginning
+0: MA 14.96 GB         Max_MA 14.96 GB         CA 15.08 GB         Max_CA 15 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 14.96 GB         Max_MA 16.91 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: Parameter Offload - Persistent parameters statistics: param_count = 65, numel = 266240
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 14.96 GB         Max_MA 15.94 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 15.22 GB, percent = 1.5%
+0: Before creating fp16 partitions
+0: MA 14.96 GB         Max_MA 14.96 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 15.22 GB, percent = 1.5%
+0: After creating fp16 partitions: 8
+0: MA 14.96 GB         Max_MA 14.96 GB         CA 14.96 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: Before creating fp32 partitions
+0: MA 14.96 GB         Max_MA 14.96 GB         CA 14.96 GB         Max_CA 15 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: After creating fp32 partitions
+0: MA 29.92 GB         Max_MA 29.92 GB         CA 29.93 GB         Max_CA 30 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: Before initializing optimizer states
+0: MA 29.92 GB         Max_MA 29.92 GB         CA 29.93 GB         Max_CA 30 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%
+0: After initializing optimizer states
+0: MA 29.92 GB         Max_MA 31.87 GB         CA 31.89 GB         Max_CA 32 GB 
+0: CPU Virtual Memory:  used = 15.21 GB, percent = 1.5%

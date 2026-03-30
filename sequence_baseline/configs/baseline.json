@@ -1,5 +1,5 @@
 {
-    "train_micro_batch_size_per_gpu": 2,
+    "train_micro_batch_size_per_gpu": 1,
     "optimizer": {
         "type": "Adam",
         "params": {
@@ -14,7 +14,7 @@
     },
 
     "zero_optimization": {
-        "stage": 2
+        "stage": 3
     }
 }
 

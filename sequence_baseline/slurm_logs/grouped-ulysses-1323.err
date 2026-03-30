@@ -1,0 +1,66 @@
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri Mar 27 15:35:43 2026).
+0: Packing into seq_length=256:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=256:   5%|▌         | 2000/39531 [00:00<00:02, 18273.60 examples/s]Packing into seq_length=256:  13%|█▎        | 5000/39531 [00:00<00:01, 19467.41 examples/s]Packing into seq_length=256:  18%|█▊        | 7000/39531 [00:00<00:01, 19306.67 examples/s]Packing into seq_length=256:  23%|██▎       | 9000/39531 [00:00<00:01, 19483.41 examples/s]Packing into seq_length=256:  30%|███       | 12000/39531 [00:00<00:01, 19858.41 examples/s]Packing into seq_length=256:  35%|███▌      | 14000/39531 [00:00<00:01, 19800.78 examples/s]Packing into seq_length=256:  43%|████▎     | 17000/39531 [00:00<00:01, 19967.54 examples/s]Packing into seq_length=256:  48%|████▊     | 19000/39531 [00:00<00:01, 19876.12 examples/s]Packing into seq_length=256:  56%|█████▌    | 22000/39531 [00:01<00:00, 20568.19 examples/s]Packing into seq_length=256:  66%|█████�
+0: ��▌   | 26000/39531 [00:01<00:00, 20227.21 examples/s]Packing into seq_length=256:  76%|███████▌  | 30000/39531 [00:01<00:00, 19079.11 examples/s]Packing into seq_length=256:  86%|████████▌ | 34000/39531 [00:01<00:00, 19670.56 examples/s]Packing into seq_length=256:  91%|█████████ | 36000/39531 [00:01<00:00, 19466.78 examples/s]Packing into seq_length=256:  96%|█████████▌| 38000/39531 [00:01<00:00, 19572.62 examples/s]Packing into seq_length=256: 100%|██████████| 39531/39531 [00:02<00:00, 19341.09 examples/s]
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.49it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.04it/s]
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 389, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/sequence_baseline/gpt_model.py", line 255, in main
+0: [rank0]:     model_engine, optimizer, _, _ = deepspeed.initialize(
+0: [rank0]:                                     ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/__init__.py", line 214, in initialize
+0: [rank0]:     engine = DeepSpeedEngine(args=args,
+0: [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 364, in __init__
+0: [rank0]:     self._configure_optimizer(optimizer, model_parameters)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1586, in _configure_optimizer
+0: [rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+0: [rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 1894, in _configure_zero_optimizer
+0: [rank0]:     optimizer = Stage1And2ZeroOptimizer(
+0: [rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage_1_and_2.py", line 637, in __init__
+0: [rank0]:     self.initialize_optimizer_states()
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/zero/stage_1_and_2.py", line 789, in initialize_optimizer_states
+0: [rank0]:     single_grad_partition = torch.zeros(int(self.partition_size[i]),
+0: [rank0]:                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.96 GiB. GPU 0 has a total capacity of 39.38 GiB of which 8.40 GiB is free. Including non-PyTorch memory, this process has 30.97 GiB memory in use. Of the allocated memory 29.92 GiB is allocated by PyTorch, and 4.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank0]:[W330 13:58:11.710911022 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: E0330 13:58:13.252000 805573 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 805711) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: gpt_model.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-30_13:58:13
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 805711)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

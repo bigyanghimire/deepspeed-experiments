@@ -1,0 +1,11 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: local rank 0
+0: 
+0: [Rank 0] Loading wikitext dataset...
+0: [Rank 0] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 0] Creating model with hidden_dim=2048, num_layers=32, num_heads=16, vocab_size=128000
+0: [Rank 0] Model parameters: 8,030,261,248 total, 8,030,261,248 trainable
+0: [Rank 0] Activation checkpointing enabled
+0: Before initializing optimizer states
+0: MA 29.92 GB         Max_MA 29.92 GB         CA 29.92 GB         Max_CA 30 GB 
+0: CPU Virtual Memory:  used = 15.27 GB, percent = 1.5%
