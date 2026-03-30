@@ -5,9 +5,9 @@ import os
 
 os.environ['HF_HOME'] = '/scratch/user/u.bg348806/.cache/huggingface'
 os.environ['HF_HUB_CACHE'] = '/scratch/user/u.bg348806/.cache/huggingface'
-os.environ['HF_DATASETS_OFFLINE'] = 1
-os.environ['HF_HUB_OFFLINE'] = 1
-os.environ['TRANSFORMERS_OFFLINE'] = 1
+os.environ['HF_DATASETS_OFFLINE'] = '1'
+os.environ['HF_HUB_OFFLINE'] = '1'
+os.environ['TRANSFORMERS_OFFLINE'] = '1'
 
 
 
