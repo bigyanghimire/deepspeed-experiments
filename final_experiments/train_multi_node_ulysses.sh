@@ -33,6 +33,7 @@ CMD="train_gpt_ulysses.py --seq_length ${SEQUENCE_LENGTH}"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
+
 mkdir -p default_exp
 srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" 
 # deepspeed --num_gpus 4 train_gpt_grouped.py

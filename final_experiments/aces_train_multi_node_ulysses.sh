@@ -36,6 +36,7 @@ export HF_HUB_OFFLINE=1
 mkdir -p aces_default_exp
 export HF_HOME="/scratch/user/u.bg348806/.cache/huggingface"
 export HF_HUB_CACHE="/scratch/user/u.bg348806/.cache/huggingface"
+export HF_DATASETS_CACHE="/scratch/user/u.bg348806/.cache/huggingface/datasets"
 srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "aces_default_exp/default_run_${SEQUENCE_LENGTH}.log" 2>&1
 # deepspeed --num_gpus 4 train_gpt_grouped.py
 
