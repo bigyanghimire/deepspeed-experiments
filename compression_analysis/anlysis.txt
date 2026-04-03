@@ -1,9 +1,0 @@
-[Rank 0] time (ms) | optimizer_allgather: 1.51 | optimizer_gradients: 0.47 | optimizer_step: 1.49
-[Rank 0] time (ms) | fwd_microstep: 56.63 | bwd_microstep: 128.03 | bwd_inner_microstep: 127.17 | bwd_allreduce_microstep: 0.81 | step_microstep: 5.25
-[Rank 0] time (ms) | fwd: 56.63 | bwd: 128.04 | bwd_inner: 127.19 | bwd_allreduce: 0.81 | step: 5.25
-
-
-
-[Rank 0] time (ms) | optimizer_allgather: 1.49 | optimizer_gradients: 0.91 | optimizer_step: 1.45
-[Rank 0] time (ms) | fwd_microstep: 43.30 | bwd_microstep: 97.86 | bwd_inner_microstep: 97.06 | bwd_allreduce_microstep: 0.75 | step_microstep: 5.65
-[Rank 0] time (ms) | fwd: 43.29 | bwd: 97.87 | bwd_inner: 97.07 | bwd_allreduce: 0.76 | step: 5.65
