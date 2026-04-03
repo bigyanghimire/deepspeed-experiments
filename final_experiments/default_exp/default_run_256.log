@@ -1,6 +1,111 @@
-0: W0327 15:20:32.949000 789965 site-packages/torch/distributed/run.py:793] 
-0: W0327 15:20:32.949000 789965 site-packages/torch/distributed/run.py:793] *****************************************
-0: W0327 15:20:32.949000 789965 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-0: W0327 15:20:32.949000 789965 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0403 16:12:16.345000 868090 site-packages/torch/distributed/run.py:793] 
+0: W0403 16:12:16.345000 868090 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0403 16:12:16.345000 868090 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0403 16:12:16.345000 868090 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0403 16:12:16.402000 538220 site-packages/torch/distributed/run.py:793] 
+1: W0403 16:12:16.402000 538220 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0403 16:12:16.402000 538220 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0403 16:12:16.402000 538220 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 256 Sequence parallel size: 8
+0: Training with Sequence Length: 256 Sequence parallel size: 8
+0: Training with Sequence Length: 256 Sequence parallel size: 8
+0: Training with Sequence Length: 256 Sequence parallel size: 8
+1: Training with Sequence Length: 256 Sequence parallel size: 8
+1: Training with Sequence Length: 256 Sequence parallel size: 8
+1: Training with Sequence Length: 256 Sequence parallel size: 8
+1: Training with Sequence Length: 256 Sequence parallel size: 8
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.73 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.74 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.74 GB, percent = 2.2%
+1: [Rank 5] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:36:00 2026).
+1: [Rank 5] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 3] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 1] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 2] Packed dataset: 22744 chunks of 256 tokens
+1: [Rank 6] Packed dataset: 22744 chunks of 256 tokens
+1: [Rank 4] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 0] Packed dataset: 22744 chunks of 256 tokens
+1: [Rank 7] Packed dataset: 22744 chunks of 256 tokens
+0: Iteration 0: loss=3.1324
+0: Iteration 1: loss=14.2546
+0: Iteration 2: loss=9.8841
+0: Iteration 3: loss=12.4242
+0: Iteration 4: loss=30.0573
+0: Iteration 5: loss=9.0958
+0: Iteration 6: loss=11.5610
+0: Iteration 7: loss=12.1409
+0: Iteration 8: loss=11.4777
+0: Iteration 9: loss=10.5621
+0: [rank0]:[W403 16:12:46.505091241 CPUAllocator.cpp:249] Memory block of unknown size was allocated before the profiling started, profiler results will not include the deallocation event
+0: Iteration 10: loss=9.3534
+0: Iteration 11: loss=8.5858
+0: Iteration 12: loss=8.7738
+0: Iteration 13: loss=8.7713
+0: Iteration 14: loss=9.7713
+0: Iteration 15: loss=9.2969
+0: Iteration 16: loss=9.3316
+0: Iteration 17: loss=9.4059
+0: Iteration 18: loss=8.6749
+0: Iteration 19: loss=9.9419
+0: Iteration 20: loss=8.9904
+0: Iteration 21: loss=9.4501
 srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-0: slurmstepd-hades: error: *** STEP 1318.0 ON hades CANCELLED AT 2026-03-27T15:22:27 ***
+1: W0403 16:13:10.341000 538220 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0403 16:13:10.341000 538220 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 538357 closing signal SIGTERM
+1: W0403 16:13:10.342000 538220 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 538358 closing signal SIGTERM
+0: slurmstepd-hades: error: *** STEP 1364.0 ON hades CANCELLED AT 2026-04-03T16:13:10 ***
+0: W0403 16:13:10.343000 868090 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0403 16:13:10.344000 868090 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 868228 closing signal SIGTERM
+0: W0403 16:13:10.347000 868090 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 868229 closing signal SIGTERM
+1: W0403 16:13:10.346000 538220 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 538359 closing signal SIGTERM

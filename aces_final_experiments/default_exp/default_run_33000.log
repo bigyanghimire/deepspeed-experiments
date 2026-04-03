@@ -1,221 +1,0 @@
-0: W0324 14:46:05.077000 746672 site-packages/torch/distributed/run.py:793] 
-0: W0324 14:46:05.077000 746672 site-packages/torch/distributed/run.py:793] *****************************************
-0: W0324 14:46:05.077000 746672 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-0: W0324 14:46:05.077000 746672 site-packages/torch/distributed/run.py:793] *****************************************
-1: W0324 14:46:05.124000 457777 site-packages/torch/distributed/run.py:793] 
-1: W0324 14:46:05.124000 457777 site-packages/torch/distributed/run.py:793] *****************************************
-1: W0324 14:46:05.124000 457777 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-1: W0324 14:46:05.124000 457777 site-packages/torch/distributed/run.py:793] *****************************************
-0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-0: Training with Sequence Length: 33000
-0: Training with Sequence Length: 33000
-0: Training with Sequence Length: 33000
-0: Training with Sequence Length: 33000
-1: Training with Sequence Length: 33000
-1: Training with Sequence Length: 33000
-1: Training with Sequence Length: 33000
-1: Training with Sequence Length: 33000
-0: gradient checkpointing enabled: True
-0: gradient checkpointing enabled: Truegradient checkpointing enabled: True
-0: 
-0: gradient checkpointing enabled: True
-1: gradient checkpointing enabled: True
-1: gradient checkpointing enabled: True
-1: gradient checkpointing enabled: True
-1: gradient checkpointing enabled: True
-0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
-0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
-0:   warnings.warn(
-1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
-1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
-1:   warnings.warn(
-0: Before initializing optimizer states
-0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
-0: CPU Virtual Memory:  used = 21.64 GB, percent = 2.1%
-0: After initializing optimizer states
-0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
-0: CPU Virtual Memory:  used = 21.64 GB, percent = 2.1%
-0: After initializing ZeRO optimizer
-0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
-0: CPU Virtual Memory:  used = 21.66 GB, percent = 2.2%
-1: [Rank 7] Loading wikitext dataset...
-1: [Rank 5] Loading wikitext dataset...
-0: [Rank 1] Loading wikitext dataset...[Rank 3] Loading wikitext dataset...[Rank 2] Loading wikitext dataset...
-0: 
-0: 
-1: [Rank 6] Loading wikitext dataset...
-1: [Rank 4] Loading wikitext dataset...
-0: [Rank 0] Loading wikitext dataset...
-1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
-0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:43:24 2026).
-0: Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   5%|▌         | 2000/39531 [00:00<00:01, 18847.33 examples/s]Packing into seq_length=33000:   8%|▊         | 3000/39531 [00:00<00:01, 20186.21 examples/s]Packing into seq_length=33000:   8%|▊         | 3000/39531 [00:00<00:01, 20427.00 examples/s]Packing into seq_length=33000:   8%|▊         | 3000/39531 [00:00<00:01, 20078.59 examples/s]Packing into seq_length=33000:  13%|█▎        | 5000/39531 [00:00<00:01, 20058.57 examples/s]Packing into seq_length=33000:  15%|█▌        | 6000/39531 [00:00<00:01, 20141.68 examples/s]Packing into seq_length=33000:  18%|█▊        | 7000/39531 [00:00<00:01, 19986.43 examples/s]Packing into seq_length=3
-1: Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=33000:   5%|▌         | 2000/39531 [00:00<00:01, 19174.36 examples/s]Packing into seq_length=33000:   8%|▊         | 3000/39531 [00:00<00:01, 19899.85 examples/s]Packing into seq_length=33000:   5%|▌         | 2000/39531 [00:00<00:01, 19217.84 examples/s]Packing into seq_length=33000:   5%|▌         | 2000/39531 [00:00<00:02, 18268.55 examples/s]Packing into seq_length=33000:  13%|█▎        | 5000/39531 [00:00<00:01, 20306.42 examples/s]Packing into seq_length=33000:  15%|█▌        | 6000/39531 [00:00<00:01, 20598.91 examples/s]Packing into seq_length=33000:  18%|█▊        | 7000/39531 [00:00<00:01, 20208.91 examples/s]Packing into seq_length=3
-0: 3000:  18%|█▊        | 7000/39531 [00:00<00:01, 20212.05 examples/s]Packing into seq_length=33000:  18%|█▊        | 7000/39531 [00:00<00:01, 20474.59 examples/s]Packing into seq_length=33000:  23%|██▎       | 9000/39531 [00:00<00:01, 20188.03 examples/s]Packing into seq_length=33000:  28%|██▊       | 11000/39531 [00:00<00:01, 20889.25 examples/s]Packing into seq_length=33000:  28%|██▊       | 11000/39531 [00:00<00:01, 20679.56 examples/s]Packing into seq_length=33000:  28%|██▊       | 11000/39531 [00:00<00:01, 20586.94 examples/s]Packing into seq_length=33000:  30%|███       | 12000/39531 [00:00<00:01, 20494.92 examples/s]Packing into seq_length=33000:  35%|███▌      | 14000/39531 [00:00<00:01, 20696.25 examples/s]Packing into seq_length=33000:  35%|███▌      | 14000/39531 [00:00<00:01, 20494.65 examples/s]Packing into seq_length=33000:  38%|███▊      | 15000/39531 [00:00<00:01, 20668.40 examples/s]Packing into seq_length=33000:  40%|█�
-1: 3000:  13%|█▎        | 5000/39531 [00:00<00:01, 19874.88 examples/s]Packing into seq_length=33000:  18%|█▊        | 7000/39531 [00:00<00:01, 19866.72 examples/s]Packing into seq_length=33000:  23%|██▎       | 9000/39531 [00:00<00:01, 20216.51 examples/s]Packing into seq_length=33000:  28%|██▊       | 11000/39531 [00:00<00:01, 20722.93 examples/s]Packing into seq_length=33000:  25%|██▌       | 10000/39531 [00:00<00:01, 20765.55 examples/s]Packing into seq_length=33000:  30%|███       | 12000/39531 [00:00<00:01, 20412.37 examples/s]Packing into seq_length=33000:  28%|██▊       | 11000/39531 [00:00<00:01, 20418.15 examples/s]Packing into seq_length=33000:  35%|███▌      | 14000/39531 [00:00<00:01, 20940.39 examples/s]Packing into seq_length=33000:  38%|███▊      | 15000/39531 [00:00<00:01, 20762.10 examples/s]Packing into seq_length=33000:  35%|███▌      | 14000/39531 [00:00<00:01, 20333.29 examples/s]Packing into seq_length=33000:  40%|█�
-0: ��██      | 16000/39531 [00:00<00:01, 20710.11 examples/s]Packing into seq_length=33000:  43%|████▎     | 17000/39531 [00:00<00:01, 20647.74 examples/s]Packing into seq_length=33000:  46%|████▌     | 18000/39531 [00:00<00:01, 20973.62 examples/s]Packing into seq_length=33000:  48%|████▊     | 19000/39531 [00:00<00:00, 20738.88 examples/s]Packing into seq_length=33000:  48%|████▊     | 19000/39531 [00:00<00:01, 20523.25 examples/s]Packing into seq_length=33000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21230.98 examples/s]Packing into seq_length=33000:  53%|█████▎    | 21000/39531 [00:01<00:00, 21034.30 examples/s]Packing into seq_length=33000:  56%|█████▌    | 22000/39531 [00:01<00:00, 21109.53 examples/s]Packing into seq_length=33000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21313.60 examples/s]Packing into seq_length=33000:  61%|██████    | 24000/39531 [00:01<00:00, 21270.14 examples/s]Packin
-1: ��██      | 16000/39531 [00:00<00:01, 20584.21 examples/s]Packing into seq_length=33000:  46%|████▌     | 18000/39531 [00:00<00:01, 21033.24 examples/s]Packing into seq_length=33000:  48%|████▊     | 19000/39531 [00:00<00:00, 20863.58 examples/s]Packing into seq_length=33000:  43%|████▎     | 17000/39531 [00:00<00:01, 20470.24 examples/s]Packing into seq_length=33000:  48%|████▊     | 19000/39531 [00:00<00:01, 20401.67 examples/s]Packing into seq_length=33000:  53%|█████▎    | 21000/39531 [00:00<00:00, 21283.59 examples/s]Packing into seq_length=33000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21466.16 examples/s]Packing into seq_length=33000:  53%|█████▎    | 21000/39531 [00:01<00:00, 20864.32 examples/s]Packing into seq_length=33000:  58%|█████▊    | 23000/39531 [00:01<00:00, 21018.61 examples/s]Packing into seq_length=33000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21354.47 examples/s]Pack
-0: g into seq_length=33000:  63%|██████▎   | 25000/39531 [00:01<00:00, 21068.11 examples/s]Packing into seq_length=33000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20883.55 examples/s]Packing into seq_length=33000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21174.14 examples/s]Packing into seq_length=33000:  71%|███████   | 28000/39531 [00:01<00:00, 21321.29 examples/s]Packing into seq_length=33000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21058.00 examples/s]Packing into seq_length=33000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20888.15 examples/s]Packing into seq_length=33000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21106.09 examples/s]Packing into seq_length=33000:  81%|████████  | 32000/39531 [00:01<00:00, 21369.65 examples/s]Packing into seq_length=33000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21211.03 examples/s]Packing into seq_length=33000:  86%|�
-1: ing into seq_length=33000:  68%|██████▊   | 27000/39531 [00:01<00:00, 21380.18 examples/s]Packing into seq_length=33000:  66%|██████▌   | 26000/39531 [00:01<00:00, 20894.96 examples/s]Packing into seq_length=33000:  63%|██████▎   | 25000/39531 [00:01<00:00, 20948.69 examples/s]Packing into seq_length=33000:  73%|███████▎  | 29000/39531 [00:01<00:00, 21381.85 examples/s]Packing into seq_length=33000:  78%|███████▊  | 31000/39531 [00:01<00:00, 21389.99 examples/s]Packing into seq_length=33000:  76%|███████▌  | 30000/39531 [00:01<00:00, 20774.89 examples/s]Packing into seq_length=33000:  73%|███████▎  | 29000/39531 [00:01<00:00, 20972.62 examples/s]Packing into seq_length=33000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21560.76 examples/s]Packing into seq_length=33000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21120.07 examples/s]Packing into seq_length=33000: 
-1:  86%|████████▌ | 34000/39531 [00:01<00:00, 20983.84 examples/s]Packing into seq_length=33000:  83%|████████▎ | 33000/39531 [00:01<00:00, 21125.66 examples/s]Packing into seq_length=33000:  94%|█████████▎| 37000/39531 [00:01<00:00, 21251.58 examples/s]Packing into seq_length=33000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21109.13 examples/s]Packing into seq_length=33000:  96%|█████████▌| 38000/39531 [00:01<00:00, 20610.03 examples/s]Packing into seq_length=33000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20816.38 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20619.09 examples/s]
-1: [Rank 7] Packed dataset: 157 chunks of 33000 tokens
-0: ��███████▌ | 34000/39531 [00:01<00:00, 21075.96 examples/s]Packing into seq_length=33000:  89%|████████▊ | 35000/39531 [00:01<00:00, 21133.87 examples/s]Packing into seq_length=33000:  89%|████████▊ | 35000/39531 [00:01<00:00, 20888.60 examples/s]Packing into seq_length=33000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20812.83 examples/s]Packing into seq_length=33000:  94%|█████████▎| 37000/39531 [00:01<00:00, 20725.10 examples/s]Packing into seq_length=33000:  99%|█████████▊| 39000/39531 [00:01<00:00, 21122.70 examples/s]Packing into seq_length=33000:  99%|█████████▊| 39000/39531 [00:01<00:00, 20812.98 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20154.74 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20552.95 examples/s]
-0: [Rank 3] Packed dataset: 157 chunks of 33000 tokens
-0: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20440.90 examples/s]
-0: [Rank 2] Packed dataset: 157 chunks of 33000 tokens
-0: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20358.87 examples/s]
-0: [Rank 1] Packed dataset: 157 chunks of 33000 tokens
-1: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20504.06 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20727.97 examples/s]
-1: [Rank 6] Packed dataset: 157 chunks of 33000 tokens
-1: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20245.87 examples/s]
-1: [Rank 5] Packed dataset: 157 chunks of 33000 tokens
-1: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 19945.74 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 20133.86 examples/s]
-1: [Rank 4] Packed dataset: 157 chunks of 33000 tokens
-0: Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:01<00:00, 19823.25 examples/s]Packing into seq_length=33000: 100%|██████████| 39531/39531 [00:06<00:00, 5673.13 examples/s] 
-0: [Rank 0] Packed dataset: 157 chunks of 33000 tokens
-0: Iteration 0: loss=4.6745
-0: Iteration 1: loss=12.3001
-0: Iteration 2: loss=16.0703
-0: [rank0]: Traceback (most recent call last):
-0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 301, in <module>
-0: [rank0]:     main()
-0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 285, in main
-0: [rank0]:     model.backward(loss)
-0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-0: [rank0]:     ret_val = func(*args, **kwargs)
-0: [rank0]:               ^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2583, in backward
-0: [rank0]:     loss.backward(**backward_kwargs)
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
-0: [rank0]:     torch.autograd.backward(
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
-0: [rank0]:     _engine_run_backward(
-0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
-0: [rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.94 GiB. GPU 0 has a total capacity of 39.38 GiB of which 3.55 GiB is free. Process 746811 has 416.00 MiB memory in use. Including non-PyTorch memory, this process has 34.58 GiB memory in use. Process 746813 has 416.00 MiB memory in use. Process 746812 has 416.00 MiB memory in use. Of the allocated memory 28.04 GiB is allocated by PyTorch, and 5.22 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank4]: Traceback (most recent call last):
-1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 301, in <module>
-1: [rank4]:     main()
-1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 285, in main
-1: [rank4]:     model.backward(loss)
-1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
-1: [rank4]:     ret_val = func(*args, **kwargs)
-1: [rank4]:               ^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2583, in backward
-1: [rank4]:     loss.backward(**backward_kwargs)
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
-1: [rank4]:     torch.autograd.backward(
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
-1: [rank4]:     _engine_run_backward(
-1: [rank4]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
-1: [rank4]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1: [rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.94 GiB. GPU 0 has a total capacity of 39.38 GiB of which 3.40 GiB is free. Process 457916 has 416.00 MiB memory in use. Including non-PyTorch memory, this process has 34.73 GiB memory in use. Process 457915 has 416.00 MiB memory in use. Process 457917 has 416.00 MiB memory in use. Of the allocated memory 28.04 GiB is allocated by PyTorch, and 5.37 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-1: [rank4]:[W324 14:46:33.583635400 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
-1: W0324 14:46:35.264000 457777 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 457915 closing signal SIGTERM
-1: W0324 14:46:35.265000 457777 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 457916 closing signal SIGTERM
-1: W0324 14:46:35.267000 457777 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 457917 closing signal SIGTERM
-1: E0324 14:46:36.962000 457777 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 457914) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
-1: Traceback (most recent call last):
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
-1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
-1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-1:     return f(*args, **kwargs)
-1:            ^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
-1:     run(args)
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
-1:     elastic_launch(
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-1:     return launch_agent(self._config, self._entrypoint, list(args))
-1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-1:     raise ChildFailedError(
-1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-1: ============================================================
-1: train_gpt_ulysses.py FAILED
-1: ------------------------------------------------------------
-1: Failures:
-1:   <NO_OTHER_FAILURES>
-1: ------------------------------------------------------------
-1: Root Cause (first observed failure):
-1: [0]:
-1:   time      : 2026-03-24_14:46:35
-1:   host      : hercules.olympus.clemson.edu
-1:   rank      : 4 (local_rank: 0)
-1:   exitcode  : 1 (pid: 457914)
-1:   error_file: <N/A>
-1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-1: ============================================================
-srun: error: hercules: task 1: Exited with exit code 1
-0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f53138af060>
-0: Traceback (most recent call last):
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
-0:     fp16_matmul._update_autotune_table()
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
-0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
-0:     cache_manager.put(autotune_table)
-0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
-0:     os.replace(self.file_path + ".tmp", self.file_path)
-0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
-0: [rank0]:[W324 14:46:38.480547246 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
-0: W0324 14:46:40.666000 746672 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 746811 closing signal SIGTERM
-0: W0324 14:46:40.668000 746672 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 746812 closing signal SIGTERM
-0: W0324 14:46:40.671000 746672 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 746813 closing signal SIGTERM
-0: E0324 14:46:42.316000 746672 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 746810) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
-0: Traceback (most recent call last):
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
-0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
-0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-0:     return f(*args, **kwargs)
-0:            ^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
-0:     run(args)
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
-0:     elastic_launch(
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-0:     return launch_agent(self._config, self._entrypoint, list(args))
-0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-0:     raise ChildFailedError(
-0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-0: ============================================================
-0: train_gpt_ulysses.py FAILED
-0: ------------------------------------------------------------
-0: Failures:
-0:   <NO_OTHER_FAILURES>
-0: ------------------------------------------------------------
-0: Root Cause (first observed failure):
-0: [0]:
-0:   time      : 2026-03-24_14:46:40
-0:   host      : hades.olympus.clemson.edu
-0:   rank      : 0 (local_rank: 0)
-0:   exitcode  : 1 (pid: 746810)
-0:   error_file: <N/A>
-0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-0: ============================================================
-srun: error: hades: task 0: Exited with exit code 1

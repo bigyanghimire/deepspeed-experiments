@@ -20,7 +20,7 @@ NUM_NODES=2
 GPUS_PER_NODE=4
 NUM_STEPS=20
 WARMUP_STEPS=5
-SEQUENCE_LENGTH=256
+SEQUENCE_LENGTH=32000
 export PATH="${PATH}"
 LAUNCHER="torchrun \
     --nproc_per_node ${GPUS_PER_NODE} \
@@ -37,5 +37,5 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 mkdir -p default_exp
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" 
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "default_exp/default_run_${SEQUENCE_LENGTH}.log" 2>&1
 # deepspeed --num_gpus 4 train_gpt_grouped.py
