@@ -1,0 +1,108 @@
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+1: [rank1]: Traceback (most recent call last):
+1: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 301, in <module>
+1: [rank1]:     main()
+1: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 211, in main
+1: [rank1]:     dataloader_gpt, actual_vocab_size = load_wikitext_data_packed(
+1: [rank1]:                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 57, in load_wikitext_data_packed
+1: [rank1]:     from datasets import load_dataset
+1: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/__init__.py", line 26, in <module>
+1: [rank1]:     from .inspect import (
+1: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/inspect.py", line 26, in <module>
+1: [rank1]:     from .load import (
+1: [rank1]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/load.py", line 917
+1: [rank1]:     elif path.endswith(filename):
+1: [rank1]:     ^^^^
+1: [rank1]: SyntaxError: invalid syntax
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 301, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 211, in main
+0: [rank0]:     dataloader_gpt, actual_vocab_size = load_wikitext_data_packed(
+0: [rank0]:                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 57, in load_wikitext_data_packed
+0: [rank0]:     from datasets import load_dataset
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/__init__.py", line 26, in <module>
+0: [rank0]:     from .inspect import (
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/inspect.py", line 26, in <module>
+0: [rank0]:     from .load import (
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/datasets/load.py", line 917
+0: [rank0]:     elif path.endswith(filename):
+0: [rank0]:     ^^^^
+0: [rank0]: SyntaxError: invalid syntax
+1: [rank1]:[W330 14:34:43.297574013 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W330 14:34:43.064691645 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: E0330 14:34:44.978000 496743 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 496880) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: train_gpt_ulysses.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-03-30_14:34:44
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 1 (local_rank: 0)
+1:   exitcode  : 1 (pid: 496880)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+0: E0330 14:34:45.374000 808519 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 808658) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-30_14:34:45
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 808658)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hercules: task 1: Exited with exit code 1
+srun: error: hades: task 0: Exited with exit code 1

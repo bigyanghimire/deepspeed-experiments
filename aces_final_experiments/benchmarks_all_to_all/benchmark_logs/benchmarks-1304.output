@@ -1,0 +1,23 @@
+0: in benchmarks
+1: in benchmarks
+0: in benchmarks
+0: in benchmarks
+1: in benchmarks
+1: in benchmarks
+1: in benchmarks
+0: in benchmarks
+0: World size: 8
+0: 
+0: Message size: 1 MB
+0: Full: 0.805 ms | 8.49 GB/s
+0: Grouped(4): 0.050 ms | 58.11 GB/s
+0: 
+0: Message size: 10 MB
+0: Full: 6.367 ms | 10.74 GB/s
+0: Grouped(4): 0.212 ms | 138.32 GB/s
+0: 
+0: Message size: 50 MB
+0: Full: 30.036 ms | 11.38 GB/s
+0: Grouped(4): 0.841 ms | 174.24 GB/s
+0: 
+0: Saved to alltoall_benchmark_1304.json

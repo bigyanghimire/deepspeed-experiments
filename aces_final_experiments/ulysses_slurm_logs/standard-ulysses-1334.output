@@ -1,0 +1,72 @@
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 256
+1: Training with Sequence Length: 256
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: Before initializing optimizer states
+0: MA 3.45 GB         Max_MA 4.61 GB         CA 5.76 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 15.44 GB, percent = 1.5%
+0: After initializing optimizer states
+0: MA 3.45 GB         Max_MA 4.6 GB         CA 6.91 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 15.44 GB, percent = 1.5%
+0: After initializing ZeRO optimizer
+0: MA 3.45 GB         Max_MA 3.45 GB         CA 6.91 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 15.44 GB, percent = 1.5%
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 1] Loading wikitext dataset...
+1: data dir is None 
+1: cache dir is None 
+1: in path is elifwikitext https://huggingface.co
+1: execption as e1
+1: execption as e1 in CachedDatasetModuleFactory None wikitext
+1: config cache dir finally /home/bigyang/.cache/huggingface/datasets
+1: self cache dir finally None
+1: cache dir finally /home/bigyang/.cache/huggingface/datasets
+1: cache relative path wikitext
+1: cached_directory_paths ['/home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3']
+0: data dir is None 
+0: cache dir is None 
+0: in path is elifwikitext https://huggingface.co
+0: execption as e1
+0: execption as e1 in CachedDatasetModuleFactory None wikitext
+0: config cache dir finally /home/bigyang/.cache/huggingface/datasets
+0: self cache dir finally None
+0: cache dir finally /home/bigyang/.cache/huggingface/datasets
+0: cache relative path wikitext
+0: cached_directory_paths ['/home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3']
+1: [Rank 1] Packed dataset: 22744 chunks of 256 tokens
+0: [Rank 0] Packed dataset: 22744 chunks of 256 tokens
+0: Iteration 0: loss=2.9567
+0: Iteration 1: loss=13.1678
+0: Iteration 2: loss=22.1047
+0: Iteration 3: loss=12.0993
+0: Iteration 4: loss=8.6674
+0: Iteration 5: loss=8.1981
+0: Iteration 6: loss=8.6379
+0: Iteration 7: loss=8.8444
+0: Iteration 8: loss=8.4387
+0: Iteration 9: loss=8.7080
+0: Iteration 10: loss=8.4887
+0: Iteration 11: loss=8.4690
+0: Iteration 12: loss=8.4180
+0: Iteration 13: loss=8.1672
+0: Iteration 14: loss=8.7472
+0: Iteration 15: loss=7.8690
+0: Iteration 16: loss=8.0583
+0: Iteration 17: loss=8.8007
+0: Iteration 18: loss=8.2833
+0: Iteration 19: loss=8.7267
+0: Iteration 20: loss=8.3912
+0: Iteration 21: loss=8.9830
+0: Iteration 22: loss=8.8624
+0: Iteration 23: loss=8.2138
+0: Iteration 24: loss=8.3100
+0: Iteration 25: loss=9.1015
+0: Iteration 26: loss=8.5544
+0: Iteration 27: loss=8.4784
+0: Iteration 28: loss=8.1895
+0: Iteration 29: loss=7.9538
+0: 
+0: === Summary over 20 iterations ===
+0: Step time: 1.69s ± 0.03s (min=1.65s, max=1.78s)

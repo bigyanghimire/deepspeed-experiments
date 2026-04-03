@@ -1,0 +1,17 @@
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 30 13:58:06 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Mar 30 13:58:06 2026).
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-hades: error: *** JOB 1325 ON hades CANCELLED AT 2026-03-30T14:28:51 ***
+1: W0330 14:28:51.439000 496173 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0330 14:28:51.440000 496173 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 496313 closing signal SIGTERM
+0: slurmstepd-hades: error: *** STEP 1325.0 ON hades CANCELLED AT 2026-03-30T14:28:51 ***
+0: W0330 14:28:51.442000 807538 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0330 14:28:51.442000 807538 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 807676 closing signal SIGTERM

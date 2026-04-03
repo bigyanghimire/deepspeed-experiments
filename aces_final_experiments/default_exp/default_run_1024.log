@@ -1,0 +1,264 @@
+1: W0326 16:32:38.291000 482006 site-packages/torch/distributed/run.py:793] 
+1: W0326 16:32:38.291000 482006 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0326 16:32:38.291000 482006 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0326 16:32:38.291000 482006 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0326 16:32:38.291000 785397 site-packages/torch/distributed/run.py:793] 
+0: W0326 16:32:38.291000 785397 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0326 16:32:38.291000 785397 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0326 16:32:38.291000 785397 site-packages/torch/distributed/run.py:793] *****************************************
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 1024
+0: Training with Sequence Length: 1024
+0: Training with Sequence Length: 1024
+0: Training with Sequence Length: 1024
+1: Training with Sequence Length: 1024
+1: Training with Sequence Length: 1024
+1: Training with Sequence Length: 1024
+1: Training with Sequence Length: 1024
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.68 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.68 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.7 GB, percent = 2.2%
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 14:57:43 2026).
+1: [Rank 4] Packed dataset: 5671 chunks of 1024 tokens
+1: [Rank 7] Packed dataset: 5671 chunks of 1024 tokens
+1: [Rank 5] Packed dataset: 5671 chunks of 1024 tokens
+0: [Rank 2] Packed dataset: 5671 chunks of 1024 tokens
+0: [Rank 3] Packed dataset: 5671 chunks of 1024 tokens
+0: [Rank 0] Packed dataset: 5671 chunks of 1024 tokens
+1: [Rank 6] Packed dataset: 5671 chunks of 1024 tokens
+0: [Rank 1] Packed dataset: 5671 chunks of 1024 tokens
+0: loss None
+1: loss None
+0: loss None
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+0: [rank3]:     main()
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+0: [rank3]:     model.backward(loss)
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank3]:     ret_val = func(*args, **kwargs)
+0: [rank3]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+0: [rank3]:     assert maybe_loss_for_backward(
+0: [rank3]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+1: loss None
+1: loss None
+0: loss None
+1: loss None
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+0: [rank2]:     main()
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+0: [rank2]:     model.backward(loss)
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank2]:     ret_val = func(*args, **kwargs)
+0: [rank2]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+0: [rank2]:     assert maybe_loss_for_backward(
+0: [rank2]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+1: [rank6]:     main()
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+1: [rank6]:     model.backward(loss)
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+1: [rank6]:     ret_val = func(*args, **kwargs)
+1: [rank6]:               ^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+1: [rank6]:     assert maybe_loss_for_backward(
+1: [rank6]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+0: loss None
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+1: [rank5]:     main()
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+1: [rank5]:     model.backward(loss)
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+1: [rank5]:     ret_val = func(*args, **kwargs)
+1: [rank5]:               ^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+1: [rank5]:     assert maybe_loss_for_backward(
+1: [rank5]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+0: [rank1]:     main()
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+0: [rank1]:     model.backward(loss)
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank1]:     ret_val = func(*args, **kwargs)
+0: [rank1]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+0: [rank1]:     assert maybe_loss_for_backward(
+0: [rank1]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+1: [rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+1: [rank4]:     main()
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+1: [rank4]:     model.backward(loss)
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+1: [rank4]:     ret_val = func(*args, **kwargs)
+1: [rank4]:               ^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+1: [rank4]:     assert maybe_loss_for_backward(
+1: [rank4]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 273, in main
+0: [rank0]:     print(f"Iteration before {step}: loss before={loss.item():.4f}")
+0: [rank0]:                                                   ^^^^^^^^^
+0: [rank0]: AttributeError: 'NoneType' object has no attribute 'item'
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 304, in <module>
+1: [rank7]:     main()
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/final_experiments/train_gpt_ulysses.py", line 288, in main
+1: [rank7]:     model.backward(loss)
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+1: [rank7]:     ret_val = func(*args, **kwargs)
+1: [rank7]:               ^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2559, in backward
+1: [rank7]:     assert maybe_loss_for_backward(
+1: [rank7]: AssertionError: loss must be a scalar tensor. If you need to pass output gradients, backward() of output tensors
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7fa57133fec0>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank0]:[W326 16:32:53.712879657 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank4]:[W326 16:32:53.182760507 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W326 16:32:54.238409057 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W326 16:32:54.288573032 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W326 16:32:54.335455187 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0326 16:32:55.918000 785397 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 785536 closing signal SIGTERM
+0: W0326 16:32:55.918000 785397 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 785537 closing signal SIGTERM
+0: W0326 16:32:55.920000 785397 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 785538 closing signal SIGTERM
+1: W0326 16:32:55.926000 482006 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 482144 closing signal SIGTERM
+1: W0326 16:32:55.926000 482006 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 482145 closing signal SIGTERM
+1: W0326 16:32:55.926000 482006 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 482146 closing signal SIGTERM
+1: E0326 16:32:56.924000 482006 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 482143) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: train_gpt_ulysses.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-03-26_16:32:55
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 4 (local_rank: 0)
+1:   exitcode  : 1 (pid: 482143)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+0: E0326 16:32:57.539000 785397 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 785535) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-03-26_16:32:55
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 785535)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1
+srun: error: hercules: task 1: Exited with exit code 1

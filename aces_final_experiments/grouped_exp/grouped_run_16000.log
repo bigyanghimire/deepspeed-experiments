@@ -1,0 +1,248 @@
+0: W0324 13:44:38.452000 720989 site-packages/torch/distributed/run.py:793] 
+0: W0324 13:44:38.452000 720989 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0324 13:44:38.452000 720989 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0324 13:44:38.452000 720989 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0324 13:44:38.508000 441213 site-packages/torch/distributed/run.py:793] 
+1: W0324 13:44:38.508000 441213 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0324 13:44:38.508000 441213 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0324 13:44:38.508000 441213 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16000
+0: Training with Sequence Length: 16000
+0: Training with Sequence Length: 16000
+0: Training with Sequence Length: 16000
+1: Training with Sequence Length: 16000
+1: Training with Sequence Length: 16000
+1: Training with Sequence Length: 16000
+1: Training with Sequence Length: 16000
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.65 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.65 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.67 GB, percent = 2.2%
+0: [Rank 1] Loading wikitext dataset...[Rank 3] Loading wikitext dataset...
+0: 
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Mar 24 13:36:31 2026).
+0: [Rank 1] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 3] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 5] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 2] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 6] Packed dataset: 345 chunks of 16000 tokens
+0: [Rank 0] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 4] Packed dataset: 345 chunks of 16000 tokens
+1: [Rank 7] Packed dataset: 345 chunks of 16000 tokens
+0: Iteration 0: loss=3.7528
+0: Step_time: 1.893589735031128
+0: 
+0: Iteration 1: loss=11.6731
+0: Step_time: 1.6020305156707764
+0: 
+0: Iteration 2: loss=13.7208
+0: Step_time: 1.9449305534362793
+0: 
+0: Iteration 3: loss=9.6567
+0: Step_time: 1.7216360569000244
+0: 
+0: Iteration 4: loss=8.4880
+0: Step_time: 1.703348159790039
+0: 
+0: Iteration 5: loss=8.6917
+0: Step_time: 1.6810619831085205
+0: 
+0: Iteration 6: loss=8.5668
+0: Step_time: 1.6634130477905273
+0: 
+0: Iteration 7: loss=8.1923
+0: Step_time: 1.6885044574737549
+0: 
+0: Iteration 8: loss=8.0188
+0: Step_time: 1.649404525756836
+0: 
+0: Iteration 9: loss=7.8502
+0: Step_time: 1.6768486499786377
+0: 
+0: Iteration 10: loss=8.0497
+0: Step_time: 1.6764984130859375
+0: 
+0: Iteration 11: loss=8.1530
+0: Step_time: 1.7022204399108887
+0: 
+0: Iteration 12: loss=8.0268
+0: Step_time: 1.6465106010437012
+0: 
+0: Iteration 13: loss=7.8015
+0: Step_time: 1.7175841331481934
+0: 
+0: Iteration 14: loss=7.8635
+0: Step_time: 1.676539659500122
+0: 
+0: Iteration 15: loss=7.8354
+0: Step_time: 1.659346342086792
+0: 
+0: Iteration 16: loss=7.7935
+0: Step_time: 1.701889991760254
+0: 
+0: Iteration 17: loss=8.0138
+0: Step_time: 1.6547892093658447
+0: 
+0: Iteration 18: loss=7.8720
+0: Step_time: 1.6598691940307617
+0: 
+0: Iteration 19: loss=7.7788
+0: Step_time: 1.671943187713623
+0: 
+0: Iteration 20: loss=7.6004
+0: Step_time: 1.7075319290161133
+0: 
+0: Iteration 21: loss=7.4931
+0: Step_time: 1.715533971786499
+0: 
+0: Iteration 22: loss=7.5847
+0: Step_time: 1.6670725345611572
+0: 
+0: Iteration 23: loss=7.7647
+0: Step_time: 1.6667029857635498
+0: 
+0: Iteration 24: loss=7.7015
+0: Step_time: 1.6966869831085205
+0: 
+0: Iteration 25: loss=7.5003
+0: Step_time: 1.6470348834991455
+0: 
+0: Iteration 26: loss=7.7801
+0: Step_time: 1.6596033573150635
+0: 
+0: Iteration 27: loss=7.5972
+0: Step_time: 1.6839940547943115
+0: 
+0: Iteration 28: loss=7.6108
+0: Step_time: 1.6876704692840576
+0: 
+0: Iteration 29: loss=7.5461
+0: Step_time: 1.6472842693328857
+0: 
+1: [rank4]:[W324 13:45:55.502417365 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7fdfa7453e20>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank0]:[W324 13:46:01.437994364 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: W0324 13:46:04.745000 441213 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1331] The node 'hercules.olympus.clemson.edu_441213_0' has failed to send a keep-alive heartbeat to the rendezvous '1265' due to an error of type RendezvousTimeoutError.
+1: [W324 13:46:04.931619419 TCPStore.cpp:131] [c10d] recvVector failed on SocketImpl(fd=4, addr=[hercules]:53386, remote=[hades]:29501): failed to recv, got 0 bytes
+1: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7fdfef964446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3dd18 (0x7fe04b2dad18 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: <unknown function> + 0x5d3e349 (0x7fe04b2db349 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0x5d41267 (0x7fe04b2de267 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x254 (0x7fe04b2d7ae4 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f554 (0x7fe053df0554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7fe05353eb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x55cd20fcadc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x55cd20fab07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x55cd20ffa625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55cd20fda121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x55cd20fda121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyObject_FastCallDictTstate + 0x63 (0x55cd20fae853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyObject_Call_Prepend + 0x69 (0x55cd20fe1e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x2e99b9 (0x55cd210b49b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: PyObject_Call + 0x1ed (0x55cd20fe3ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: _PyFunction_Vectorcall + 0x181 (0x55cd20fda121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2a4d36 (0x55cd2106fd36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: PyEval_EvalCode + 0x9f (0x55cd2106f3ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2c2f2a (0x55cd2108df2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: <unknown function> + 0x2bf343 (0x55cd2108a343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: <unknown function> + 0x2d4300 (0x55cd2109f300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: _PyRun_SimpleFileObject + 0x1ae (0x55cd2109ec5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: _PyRun_AnyFileObject + 0x44 (0x55cd2109ea44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: Py_RunMain + 0x2df (0x55cd21098bdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #29: Py_BytesMain + 0x37 (0x55cd2105df97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #30: __libc_start_main + 0xe5 (0x7fe05bef37e5 in /lib64/libc.so.6)
+1: frame #31: <unknown function> + 0x292e3d (0x55cd2105de3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0324 13:46:04.752000 441213 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_441213_0' has failed to shutdown the rendezvous '1265' due to an error of type RendezvousConnectionError.
+1: [W324 13:46:04.935789486 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=4, addr=[hercules]:53386, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7fdfef964446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7fe04b2db029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7fe04b2d7abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7fe053df0554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7fe05353eb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x55cd20fcadc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x55cd20fab07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x55cd20ffa625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x55cd20fda121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyObject_FastCallDictTstate + 0x63 (0x55cd20fae853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyObject_Call_Prepend + 0x69 (0x55cd20fe1e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: <unknown function> + 0x2e99b9 (0x55cd210b49b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: PyObject_Call + 0x1ed (0x55cd20fe3ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyFunction_Vectorcall + 0x181 (0x55cd20fda121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x55cd20fbb4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: <unknown function> + 0x2a4d36 (0x55cd2106fd36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: PyEval_EvalCode + 0x9f (0x55cd2106f3ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2c2f2a (0x55cd2108df2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: <unknown function> + 0x2bf343 (0x55cd2108a343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2d4300 (0x55cd2109f300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: _PyRun_SimpleFileObject + 0x1ae (0x55cd2109ec5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: _PyRun_AnyFileObject + 0x44 (0x55cd2109ea44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: Py_RunMain + 0x2df (0x55cd21098bdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: Py_BytesMain + 0x37 (0x55cd2105df97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: __libc_start_main + 0xe5 (0x7fe05bef37e5 in /lib64/libc.so.6)
+1: frame #27: <unknown function> + 0x292e3d (0x55cd2105de3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0324 13:46:04.755000 441213 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_441213_0' has failed to shutdown the rendezvous '1265' due to an error of type RendezvousConnectionError.
