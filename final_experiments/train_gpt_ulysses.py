@@ -250,15 +250,7 @@ def main():
                 start_time = time.time()
                 batch = move_to_device(batch, model.device)
                 
-                # Verify shapes
-                # if dist.get_rank() == 0 and step == 0:
-                #     print(f"Batch shapes:")
-                #     print(f"  input_ids: {batch['input_ids'].shape}")  # Should be [batch_size, seq_len/sp_size]
-                #     print(f"  position_ids: {batch['position_ids'].shape}")
-                #     print(f"  labels: {batch.get('labels', 'N/A')}")
-                #print(f"input_ids value rank: {dist.get_rank()} in step {step} : {batch['input_ids']}")  # Should be [batch_size, seq_len/sp_size]
                 outputs = model(**batch)
-                #print(f"outputs are {outputs} and logits are {outputs.logits}")
                 # Loss calculation
                 shift_labels = batch["shift_labels"]
                 loss = model.module.loss_function(
