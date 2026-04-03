@@ -19,14 +19,16 @@ import numpy as np
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
+    parser.add_argument('--seq_parallel_size', type=int, default=8, help='sequence parallel size')
     args = parser.parse_args()
 
     model_name_or_path = 'meta-llama/Llama-3.2-1B'
     
     # Use the value from the command line argument
     seq_length = args.seq_length
+    sequence_parallel_size = args.seq_parallel_size
     
-    print(f"Training with Sequence Length: {seq_length}")
+    print(f"Training with Sequence Length: {seq_length} Sequence parallel size: {sequence_parallel_size}")
     sequence_parallel_size = 8
     micro_batch_size = 2  # CHANGED: Now batch size = 4
 
