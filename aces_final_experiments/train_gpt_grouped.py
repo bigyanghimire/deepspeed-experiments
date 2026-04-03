@@ -29,7 +29,6 @@ def main():
     sequence_parallel_size = args.seq_parallel_size
     
     print(f"Training with Sequence Length: {seq_length} Sequence parallel size: {sequence_parallel_size}")
-    sequence_parallel_size = 8
     micro_batch_size = 2  # CHANGED: Now batch size = 4
 
     config_dict = {
