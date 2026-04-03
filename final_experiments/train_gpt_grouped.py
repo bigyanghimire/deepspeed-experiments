@@ -16,6 +16,7 @@ import time
 from torch.profiler import profile, record_function, ProfilerActivity
 import argparse
 import numpy as np
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
