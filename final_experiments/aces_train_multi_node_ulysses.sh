@@ -3,8 +3,8 @@
 #SBATCH --partition=gpu  --gres=gpu:h100:4
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=128G
-#SBATCH --time=01:00:00
+#SBATCH --mem=64G
+#SBATCH --time=00:10:00
 #SBATCH --output=aces_ulysses_slurm_logs/standard-ulysses-%j.output
 #SBATCH --error=aces_ulysses_slurm_logs/standard-ulysses-%j.err
 

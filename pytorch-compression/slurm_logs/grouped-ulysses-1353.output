@@ -1,0 +1,230 @@
+0: Starting FSDP2 training on 8 GPUs
+0: Model: meta-llama/Llama-3.1-8B
+0: Sequence Length: 512
+0: Batch Size per GPU: 1
+0: Effective Batch Size: 8
+0: Loading model...
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Applying FSDP2...
+0: Loading dataset...
+0: Dataset loaded: 29647 batches
+1: Epoch 0 | Step 1 | Loss: 2.6328 | Tokens/sec: 271
+0: Epoch 0 | Step 1 | Loss: 3.0446 | Tokens/sec: 555
+1: Epoch 0 | Step 1 | Loss: 2.5959 | Tokens/sec: 308
+1: Epoch 0 | Step 1 | Loss: 2.6605 | Tokens/sec: 421
+0: Epoch 0 | Step 1 | Loss: 2.9086 | Tokens/sec: 555
+1: Epoch 0 | Step 1 | Loss: 2.1905 | Tokens/sec: 367
+0: Epoch 0 | Step 1 | Loss: 2.1879 | Tokens/sec: 550
+1: Epoch 0 | Step 2 | Loss: 12.5187 | Tokens/sec: 490
+1: Epoch 0 | Step 2 | Loss: 12.5849 | Tokens/sec: 434
+0: Epoch 0 | Step 2 | Loss: 12.6428 | Tokens/sec: 632
+0: Epoch 0 | Step 2 | Loss: 12.6886 | Tokens/sec: 629
+0: Epoch 0 | Step 2 | Loss: 12.8257 | Tokens/sec: 632
+1: Epoch 0 | Step 2 | Loss: 12.5467 | Tokens/sec: 396
+1: Epoch 0 | Step 2 | Loss: 12.5474 | Tokens/sec: 535
+0: Epoch 0 | Step 3 | Loss: 31.9680 | Tokens/sec: 662
+1: Epoch 0 | Step 3 | Loss: 30.9623 | Tokens/sec: 550
+1: Epoch 0 | Step 3 | Loss: 31.9762 | Tokens/sec: 467
+1: Epoch 0 | Step 3 | Loss: 30.8584 | Tokens/sec: 502
+1: Epoch 0 | Step 3 | Loss: 30.5739 | Tokens/sec: 588
+0: Epoch 0 | Step 3 | Loss: 31.7003 | Tokens/sec: 659
+0: Epoch 0 | Step 3 | Loss: 33.3405 | Tokens/sec: 662
+0: Epoch 0 | Step 4 | Loss: 35.3198 | Tokens/sec: 678
+1: Epoch 0 | Step 4 | Loss: 36.1144 | Tokens/sec: 513
+1: Epoch 0 | Step 4 | Loss: 38.7305 | Tokens/sec: 545
+0: Epoch 0 | Step 4 | Loss: 36.8447 | Tokens/sec: 676
+1: Epoch 0 | Step 4 | Loss: 35.3496 | Tokens/sec: 586
+0: Epoch 0 | Step 4 | Loss: 37.0582 | Tokens/sec: 678
+1: Epoch 0 | Step 4 | Loss: 37.4425 | Tokens/sec: 618
+0: Epoch 0 | Step 5 | Loss: 10.4623 | Tokens/sec: 687
+1: Epoch 0 | Step 5 | Loss: 10.3010 | Tokens/sec: 546Epoch 0 | Step 5 | Loss: 10.7837 | Tokens/sec: 610
+1: 
+1: Epoch 0 | Step 5 | Loss: 10.8076 | Tokens/sec: 574
+0: Epoch 0 | Step 5 | Loss: 10.8201 | Tokens/sec: 687Epoch 0 | Step 5 | Loss: 11.0662 | Tokens/sec: 686
+0: 
+1: Epoch 0 | Step 5 | Loss: 10.9000 | Tokens/sec: 637
+0: Epoch 0 | Step 6 | Loss: 11.5764 | Tokens/sec: 694
+1: Epoch 0 | Step 6 | Loss: 13.5549 | Tokens/sec: 569
+1: Epoch 0 | Step 6 | Loss: 11.5897 | Tokens/sec: 595
+1: Epoch 0 | Step 6 | Loss: 12.0187 | Tokens/sec: 651
+0: Epoch 0 | Step 6 | Loss: 11.6106 | Tokens/sec: 693
+1: Epoch 0 | Step 6 | Loss: 11.4690 | Tokens/sec: 627
+0: Epoch 0 | Step 6 | Loss: 12.7542 | Tokens/sec: 694
+0: Epoch 0 | Step 7 | Loss: 11.6690 | Tokens/sec: 699
+1: Epoch 0 | Step 7 | Loss: 10.8409 | Tokens/sec: 588
+1: Epoch 0 | Step 7 | Loss: 10.1465 | Tokens/sec: 611
+1: Epoch 0 | Step 7 | Loss: 11.2468 | Tokens/sec: 661
+1: Epoch 0 | Step 7 | Loss: 10.8536 | Tokens/sec: 640
+0: Epoch 0 | Step 7 | Loss: 10.8704 | Tokens/sec: 698
+0: Epoch 0 | Step 7 | Loss: 10.3837 | Tokens/sec: 699
+1: Epoch 0 | Step 8 | Loss: 9.9305 | Tokens/sec: 603
+0: Epoch 0 | Step 8 | Loss: 10.9260 | Tokens/sec: 703
+1: Epoch 0 | Step 8 | Loss: 10.0112 | Tokens/sec: 624
+0: Epoch 0 | Step 8 | Loss: 10.1596 | Tokens/sec: 702
+1: Epoch 0 | Step 8 | Loss: 10.4886 | Tokens/sec: 669
+1: Epoch 0 | Step 8 | Loss: 10.7945 | Tokens/sec: 650
+0: Epoch 0 | Step 8 | Loss: 10.9081 | Tokens/sec: 703
+1: Epoch 0 | Step 9 | Loss: 11.2588 | Tokens/sec: 676
+0: Epoch 0 | Step 9 | Loss: 10.2726 | Tokens/sec: 706
+1: Epoch 0 | Step 9 | Loss: 10.9350 | Tokens/sec: 615
+1: Epoch 0 | Step 9 | Loss: 10.9438 | Tokens/sec: 634
+0: Epoch 0 | Step 9 | Loss: 10.4848 | Tokens/sec: 706
+1: Epoch 0 | Step 9 | Loss: 11.7973 | Tokens/sec: 658
+0: Epoch 0 | Step 9 | Loss: 10.1465 | Tokens/sec: 705
+0: Epoch 0 | Step 10 | Loss: 11.6136 | Tokens/sec: 708
+1: Epoch 0 | Step 10 | Loss: 11.3552 | Tokens/sec: 625
+1: Epoch 0 | Step 10 | Loss: 12.1641 | Tokens/sec: 643
+1: Epoch 0 | Step 10 | Loss: 11.6282 | Tokens/sec: 681
+0: Epoch 0 | Step 10 | Loss: 12.3096 | Tokens/sec: 707
+1: Epoch 0 | Step 10 | Loss: 11.2736 | Tokens/sec: 665
+0: Epoch 0 | Step 10 | Loss: 11.4840 | Tokens/sec: 708
+0: Epoch 0 | Step 11 | Loss: 10.4035 | Tokens/sec: 710
+1: Epoch 0 | Step 11 | Loss: 10.1258 | Tokens/sec: 633
+1: Epoch 0 | Step 11 | Loss: 10.2612 | Tokens/sec: 649
+1: Epoch 0 | Step 11 | Loss: 10.2663 | Tokens/sec: 684
+0: Epoch 0 | Step 11 | Loss: 10.7731 | Tokens/sec: 710
+0: Epoch 0 | Step 11 | Loss: 9.9298 | Tokens/sec: 709
+1: Epoch 0 | Step 11 | Loss: 11.8015 | Tokens/sec: 670
+0: Epoch 0 | Step 12 | Loss: 14.2565 | Tokens/sec: 711
+1: Epoch 0 | Step 12 | Loss: 13.9231 | Tokens/sec: 688
+1: Epoch 0 | Step 12 | Loss: 13.9869 | Tokens/sec: 675
+0: Epoch 0 | Step 12 | Loss: 14.1093 | Tokens/sec: 711
+1: Epoch 0 | Step 12 | Loss: 13.8209 | Tokens/sec: 640
+1: Epoch 0 | Step 12 | Loss: 14.0471 | Tokens/sec: 655
+0: Epoch 0 | Step 12 | Loss: 13.7913 | Tokens/sec: 711
+1: Epoch 0 | Step 13 | Loss: 11.2282 | Tokens/sec: 691
+0: Epoch 0 | Step 13 | Loss: 12.1172 | Tokens/sec: 713
+1: Epoch 0 | Step 13 | Loss: 12.4795 | Tokens/sec: 679
+0: Epoch 0 | Step 13 | Loss: 12.4781 | Tokens/sec: 713
+1: Epoch 0 | Step 13 | Loss: 12.1315 | Tokens/sec: 661
+0: Epoch 0 | Step 13 | Loss: 11.0422 | Tokens/sec: 712
+1: Epoch 0 | Step 13 | Loss: 11.8116 | Tokens/sec: 646
+1: Epoch 0 | Step 14 | Loss: 13.1254 | Tokens/sec: 694
+0: Epoch 0 | Step 14 | Loss: 13.2783 | Tokens/sec: 714
+1: Epoch 0 | Step 14 | Loss: 12.2783 | Tokens/sec: 682
+0: Epoch 0 | Step 14 | Loss: 12.4028 | Tokens/sec: 714
+1: Epoch 0 | Step 14 | Loss: 12.8710 | Tokens/sec: 665
+0: Epoch 0 | Step 14 | Loss: 12.3805 | Tokens/sec: 713
+1: Epoch 0 | Step 14 | Loss: 12.7591 | Tokens/sec: 651
+0: Epoch 0 | Step 15 | Loss: 10.6105 | Tokens/sec: 715
+1: Epoch 0 | Step 15 | Loss: 10.3052 | Tokens/sec: 656Epoch 0 | Step 15 | Loss: 10.7255 | Tokens/sec: 669
+1: 
+0: Epoch 0 | Step 15 | Loss: 10.6613 | Tokens/sec: 715
+1: Epoch 0 | Step 15 | Loss: 10.4991 | Tokens/sec: 696
+0: Epoch 0 | Step 15 | Loss: 10.4471 | Tokens/sec: 715
+1: Epoch 0 | Step 15 | Loss: 10.5571 | Tokens/sec: 685
+0: Epoch 0 | Step 16 | Loss: 11.2365 | Tokens/sec: 716
+1: Epoch 0 | Step 16 | Loss: 11.6594 | Tokens/sec: 660
+1: Epoch 0 | Step 16 | Loss: 11.5328 | Tokens/sec: 673
+0: Epoch 0 | Step 16 | Loss: 11.2590 | Tokens/sec: 716
+0: Epoch 0 | Step 16 | Loss: 10.9284 | Tokens/sec: 716
+1: Epoch 0 | Step 16 | Loss: 10.9997 | Tokens/sec: 688
+1: Epoch 0 | Step 16 | Loss: 11.5100 | Tokens/sec: 698
+0: Epoch 0 | Step 17 | Loss: 15.6335 | Tokens/sec: 717
+1: Epoch 0 | Step 17 | Loss: 15.8581 | Tokens/sec: 664
+1: Epoch 0 | Step 17 | Loss: 15.9613 | Tokens/sec: 676
+0: Epoch 0 | Step 17 | Loss: 15.9461 | Tokens/sec: 717
+0: Epoch 0 | Step 17 | Loss: 16.0374 | Tokens/sec: 716
+1: Epoch 0 | Step 17 | Loss: 15.7838 | Tokens/sec: 700
+1: Epoch 0 | Step 17 | Loss: 16.0133 | Tokens/sec: 690
+0: Epoch 0 | Step 18 | Loss: 13.6918 | Tokens/sec: 718
+1: Epoch 0 | Step 18 | Loss: 15.2622 | Tokens/sec: 667
+1: Epoch 0 | Step 18 | Loss: 14.2168 | Tokens/sec: 679
+1: Epoch 0 | Step 18 | Loss: 14.5277 | Tokens/sec: 702
+0: Epoch 0 | Step 18 | Loss: 15.0250 | Tokens/sec: 717
+1: Epoch 0 | Step 18 | Loss: 13.9783 | Tokens/sec: 692
+0: Epoch 0 | Step 18 | Loss: 14.7148 | Tokens/sec: 718
+0: Epoch 0 | Step 19 | Loss: 15.5720 | Tokens/sec: 718
+0: Epoch 0 | Step 19 | Loss: 13.7295 | Tokens/sec: 718
+1: Epoch 0 | Step 19 | Loss: 13.8444 | Tokens/sec: 694
+1: Epoch 0 | Step 19 | Loss: 14.1396 | Tokens/sec: 670
+1: Epoch 0 | Step 19 | Loss: 13.5413 | Tokens/sec: 703Epoch 0 | Step 19 | Loss: 13.3620 | Tokens/sec: 681
+1: 
+0: Epoch 0 | Step 19 | Loss: 13.4627 | Tokens/sec: 718
+0: Epoch 0 | Step 20 | Loss: 15.5956 | Tokens/sec: 719
+1: Epoch 0 | Step 20 | Loss: 13.3388 | Tokens/sec: 673
+1: Epoch 0 | Step 20 | Loss: 14.3971 | Tokens/sec: 684
+0: Epoch 0 | Step 20 | Loss: 13.5293 | Tokens/sec: 719
+0: Epoch 0 | Step 20 | Loss: 14.0262 | Tokens/sec: 719
+1: Epoch 0 | Step 20 | Loss: 13.4287 | Tokens/sec: 696
+1: Epoch 0 | Step 20 | Loss: 13.5341 | Tokens/sec: 705
+1: Epoch 0 | Step 21 | Loss: 11.7222 | Tokens/sec: 706
+0: Epoch 0 | Step 21 | Loss: 13.1810 | Tokens/sec: 719
+1: Epoch 0 | Step 21 | Loss: 14.4170 | Tokens/sec: 697
+0: Epoch 0 | Step 21 | Loss: 12.8677 | Tokens/sec: 719
+1: Epoch 0 | Step 21 | Loss: 12.2420 | Tokens/sec: 676
+1: Epoch 0 | Step 21 | Loss: 12.8244 | Tokens/sec: 686
+0: Epoch 0 | Step 21 | Loss: 12.7302 | Tokens/sec: 719
+1: Epoch 0 | Step 22 | Loss: 11.9789 | Tokens/sec: 706
+0: Epoch 0 | Step 22 | Loss: 11.4962 | Tokens/sec: 720
+1: Epoch 0 | Step 22 | Loss: 13.8915 | Tokens/sec: 699
+0: Epoch 0 | Step 22 | Loss: 12.2296 | Tokens/sec: 720
+1: Epoch 0 | Step 22 | Loss: 11.2574 | Tokens/sec: 678
+1: Epoch 0 | Step 22 | Loss: 10.6606 | Tokens/sec: 687
+0: Epoch 0 | Step 22 | Loss: 11.3960 | Tokens/sec: 719
+1: Epoch 0 | Step 23 | Loss: 11.2651 | Tokens/sec: 707
+0: Epoch 0 | Step 23 | Loss: 12.0239 | Tokens/sec: 720
+1: Epoch 0 | Step 23 | Loss: 11.5925 | Tokens/sec: 700
+1: Epoch 0 | Step 23 | Loss: 10.7522 | Tokens/sec: 680
+0: Epoch 0 | Step 23 | Loss: 10.8860 | Tokens/sec: 720
+1: Epoch 0 | Step 23 | Loss: 11.5972 | Tokens/sec: 689
+0: Epoch 0 | Step 23 | Loss: 12.3237 | Tokens/sec: 720
+1: Epoch 0 | Step 24 | Loss: 12.1993 | Tokens/sec: 708
+0: Epoch 0 | Step 24 | Loss: 10.5534 | Tokens/sec: 720
+1: Epoch 0 | Step 24 | Loss: 11.4715 | Tokens/sec: 701
+0: Epoch 0 | Step 24 | Loss: 13.8963 | Tokens/sec: 720
+1: Epoch 0 | Step 24 | Loss: 11.2173 | Tokens/sec: 682
+1: Epoch 0 | Step 24 | Loss: 11.3133 | Tokens/sec: 691
+0: Epoch 0 | Step 24 | Loss: 10.9695 | Tokens/sec: 720
+0: Epoch 0 | Step 25 | Loss: 10.4558 | Tokens/sec: 721
+1: Epoch 0 | Step 25 | Loss: 10.7217 | Tokens/sec: 684
+1: Epoch 0 | Step 25 | Loss: 9.9584 | Tokens/sec: 692
+0: Epoch 0 | Step 25 | Loss: 10.8580 | Tokens/sec: 721
+1: Epoch 0 | Step 25 | Loss: 10.9118 | Tokens/sec: 709
+0: Epoch 0 | Step 25 | Loss: 10.3964 | Tokens/sec: 721
+1: Epoch 0 | Step 25 | Loss: 10.1342 | Tokens/sec: 702
+0: Epoch 0 | Step 26 | Loss: 9.5510 | Tokens/sec: 721Epoch 0 | Step 26 | Loss: 9.6386 | Tokens/sec: 721
+0: 
+1: Epoch 0 | Step 26 | Loss: 10.6314 | Tokens/sec: 703
+1: Epoch 0 | Step 26 | Loss: 10.7863 | Tokens/sec: 710
+1: Epoch 0 | Step 26 | Loss: 9.3281 | Tokens/sec: 685
+1: Epoch 0 | Step 26 | Loss: 10.0928 | Tokens/sec: 694
+0: Epoch 0 | Step 26 | Loss: 10.5399 | Tokens/sec: 721
+1: Epoch 0 | Step 27 | Loss: 9.6766 | Tokens/sec: 711
+0: Epoch 0 | Step 27 | Loss: 8.9479 | Tokens/sec: 722
+0: Epoch 0 | Step 27 | Loss: 9.5785 | Tokens/sec: 722
+1: Epoch 0 | Step 27 | Loss: 10.2184 | Tokens/sec: 687
+1: Epoch 0 | Step 27 | Loss: 9.9342 | Tokens/sec: 695
+1: Epoch 0 | Step 27 | Loss: 9.9483 | Tokens/sec: 704
+0: Epoch 0 | Step 27 | Loss: 8.9543 | Tokens/sec: 721
+1: Epoch 0 | Step 28 | Loss: 8.9514 | Tokens/sec: 712
+0: Epoch 0 | Step 28 | Loss: 9.1860 | Tokens/sec: 722
+0: Epoch 0 | Step 28 | Loss: 9.1624 | Tokens/sec: 722
+1: Epoch 0 | Step 28 | Loss: 8.9949 | Tokens/sec: 688Epoch 0 | Step 28 | Loss: 9.1538 | Tokens/sec: 705Epoch 0 | Step 28 | Loss: 9.3755 | Tokens/sec: 696
+1: 
+1: 
+0: Epoch 0 | Step 28 | Loss: 9.4438 | Tokens/sec: 722
+1: Epoch 0 | Step 29 | Loss: 8.6788 | Tokens/sec: 712
+1: Epoch 0 | Step 29 | Loss: 8.5119 | Tokens/sec: 706
+0: Epoch 0 | Step 29 | Loss: 8.7180 | Tokens/sec: 722
+0: Epoch 0 | Step 29 | Loss: 8.7655 | Tokens/sec: 722
+1: Epoch 0 | Step 29 | Loss: 8.8343 | Tokens/sec: 690
+1: Epoch 0 | Step 29 | Loss: 9.0727 | Tokens/sec: 697
+0: Epoch 0 | Step 29 | Loss: 8.7306 | Tokens/sec: 722
+1: Epoch 0 | Step 30 | Loss: 8.8932 | Tokens/sec: 713
+0: Epoch 0 | Step 30 | Loss: 8.4917 | Tokens/sec: 723
+1: Epoch 0 | Step 30 | Loss: 8.5619 | Tokens/sec: 707
+0: Epoch 0 | Step 30 | Loss: 7.9939 | Tokens/sec: 723
+1: Epoch 0 | Step 30 | Loss: 8.6170 | Tokens/sec: 691
+1: Epoch 0 | Step 30 | Loss: 9.0518 | Tokens/sec: 698
+0: Epoch 0 | Step 30 | Loss: 8.7698 | Tokens/sec: 722
+0: Epoch 0 completed | Average Loss: 0.0126
+0: Saving final checkpoint...
+0: Training completed!

@@ -1,0 +1,350 @@
+1: W0402 16:35:31.371000 528376 site-packages/torch/distributed/run.py:793] 
+1: W0402 16:35:31.371000 528376 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0402 16:35:31.371000 528376 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0402 16:35:31.371000 528376 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0402 16:35:31.435000 855264 site-packages/torch/distributed/run.py:793] 
+0: W0402 16:35:31.435000 855264 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0402 16:35:31.435000 855264 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0402 16:35:31.435000 855264 site-packages/torch/distributed/run.py:793] *****************************************
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 101.18it/s]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.23it/s]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.06it/s]
+1: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.93it/s]
+1: Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.42it/s]
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 100.25it/s]
+1: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.16it/s]
+1: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.38it/s]
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:33:24 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:33:24 2026).
+0: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:33:24 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:35:42 2026).
+0: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:07, 5216.97 examples/s]Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:35:42 2026).
+1: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:07, 4858.80 examples/s]Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:35:43 2026).
+1: Map:   5%|▌         | 2000/39531 [00:00<00:06, 5483.87 examples/s]Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:35:43 2026).
+1: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Apr  2 16:35:43 2026).
+0: Map:   3%|▎         | 1000/39531 [00:00<00:08, 4316.24 examples/s]Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:06, 5692.43 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:07, 4846.55 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:07, 4806.84 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:06, 5551.96 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:06, 5612.62 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:08, 4377.46 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:07, 5181.67 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:06, 6000.62 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5518.60 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:07, 4994.19 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5149.90 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:05, 6019.23 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:06, 5742.17 examples/s]M
+1: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:06, 5634.20 examples/s]Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:07, 5109.41 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:07, 4902.29 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5706.08 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:06, 5684.35 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:08, 4677.44 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:05, 5783.11 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:06, 5393.41 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:06, 5929.80 examples/s]Map:   5%|▌         | 2000/39531 [00:00<00:06, 5393.48 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 5854.64 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:06, 5621.71 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5825.55 examples/s]Map:   8%|▊ 
+0: ap:   8%|▊         | 3000/39531 [00:00<00:06, 5459.74 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:05, 6100.95 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:06, 5210.30 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 5862.26 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5607.41 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 5894.48 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 5809.02 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:06, 5187.92 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:06, 5620.05 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 5606.60 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5647.02 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:06, 5299.51 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 5656.93 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5577.53 examples/s]Map:  23%|██▎       | 9000/39
+1:         | 3000/39531 [00:00<00:06, 5529.43 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5829.62 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 5837.29 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:06, 5677.18 examples/s]Map:  10%|█         | 4000/39531 [00:00<00:06, 5398.95 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:05, 5967.33 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5806.29 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 5711.46 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:06, 5597.05 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:05, 6164.81 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5925.14 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 5738.75 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 6083.44 examples/s]Map:  15%|█▌        | 6000/39531 [00:01<00:06, 5467.57 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<0
+0: 531 [00:01<00:05, 5571.48 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5278.18 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:05, 5576.97 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5698.16 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5618.62 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5327.14 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5622.93 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5852.85 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5774.52 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:05, 5404.53 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5325.33 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:04, 5900.99 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:04, 5553.79 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5760.44 examples/s]Map:  28%|██▊       | 11000/39
+1: 0:05, 5883.26 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5779.89 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5717.19 examples/s]Map:  18%|█▊        | 7000/39531 [00:01<00:06, 5380.54 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:04, 5904.87 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5748.94 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5820.94 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:04, 5912.01 examples/s]Map:  20%|██        | 8000/39531 [00:01<00:05, 5435.48 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5816.12 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5750.08 examples/s]Map:  23%|██▎       | 9000/39531 [00:01<00:05, 5617.25 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5819.73 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:04, 5883.28 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<
+0: 531 [00:02<00:05, 5348.97 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:04, 5966.12 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5480.43 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:05, 5645.06 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:05, 5468.74 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5878.76 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5515.96 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5550.17 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:05, 5489.60 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5905.89 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5639.37 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5533.42 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5308.65 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5756.61 examples/s]Map:  
+1: 00:04, 5772.92 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:05, 5568.59 examples/s]Map:  25%|██▌       | 10000/39531 [00:01<00:05, 5458.95 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:04, 5832.29 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5694.45 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:04, 5596.65 examples/s]Map:  28%|██▊       | 11000/39531 [00:02<00:05, 5303.05 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5765.92 examples/s]Map:  33%|███▎      | 13000/39531 [00:02<00:04, 5664.36 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:04, 5666.89 examples/s]Map:  30%|███       | 12000/39531 [00:02<00:05, 5376.40 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5858.39 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5771.10 examples/s]Map:  43%|████▎     | 17000/39531 [00:02<00:03, 5725.38 examples/s]Map:  33%|███
+0: 35%|███▌      | 14000/39531 [00:02<00:04, 5519.56 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5390.13 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:04, 5394.47 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:04, 5882.02 examples/s]Map:  43%|████▎     | 17000/39531 [00:03<00:04, 5515.10 examples/s]Map:  40%|████      | 16000/39531 [00:03<00:04, 5416.83 examples/s]Map:  43%|████▎     | 17000/39531 [00:02<00:03, 6017.62 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 4998.96 examples/s]Map:  43%|████▎     | 17000/39531 [00:03<00:04, 5367.52 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:04, 5238.89 examples/s]Map:  43%|████▎     | 17000/39531 [00:03<00:04, 5473.68 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:04, 4413.24 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 4042.68 examples/s]Map:  48%|████▊     
+1: ▎      | 13000/39531 [00:02<00:04, 5565.81 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5881.54 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5783.10 examples/s]Map:  35%|███▌      | 14000/39531 [00:02<00:04, 5584.75 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:03, 5969.20 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:03, 5899.94 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 4237.55 examples/s]Map:  43%|████▎     | 17000/39531 [00:02<00:03, 5927.45 examples/s]Map:  38%|███▊      | 15000/39531 [00:02<00:04, 5346.67 examples/s]Map:  43%|████▎     | 17000/39531 [00:02<00:03, 6022.22 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4544.05 examples/s]Map:  40%|████      | 16000/39531 [00:02<00:04, 5416.01 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:03, 4889.23 examples/s]Map:  43%|████▎     | 17000/39531 [
+0: | 19000/39531 [00:03<00:04, 4407.12 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4638.84 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 3966.51 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:03, 4884.18 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:04, 4624.87 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4353.01 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 4019.58 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:04, 4544.57 examples/s]Map:  53%|█████▎    | 21000/39531 [00:04<00:03, 4676.78 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4350.70 examples/s]Map:  53%|█████▎    | 21000/39531 [00:03<00:03, 4766.22 examples/s]Map:  53%|█████▎    | 21000/39531 [00:04<00:03, 4761.41 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:04, 4609.19 examples/s]Map:  56%|█████▌    | 
+1: 00:03<00:03, 5684.34 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 4173.28 examples/s]Map:  46%|████▌     | 18000/39531 [00:03<00:05, 4303.08 examples/s]Map:  53%|█████▎    | 21000/39531 [00:03<00:03, 5261.20 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4472.70 examples/s]Map:  48%|████▊     | 19000/39531 [00:03<00:04, 4736.24 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 5195.26 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:04, 4775.40 examples/s]Map:  51%|█████     | 20000/39531 [00:03<00:03, 4972.96 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 5230.87 examples/s]Map:  53%|█████▎    | 21000/39531 [00:03<00:03, 5114.51 examples/s]Map:  53%|█████▎    | 21000/39531 [00:03<00:03, 5345.62 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:02, 5294.16 examples/s]Map:  46%|████▌     | 18000/39531
+0: 22000/39531 [00:04<00:03, 4931.91 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 4805.24 examples/s]Map:  53%|█████▎    | 21000/39531 [00:04<00:03, 4818.03 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 4858.47 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 4947.61 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 4967.36 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 5009.64 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 5008.25 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:03, 5056.45 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:03, 5053.51 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 5115.92 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5354.80 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5197.06 examples/s]Map:  61%|█�
+1:  [00:03<00:07, 2961.55 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 5331.97 examples/s]Map:  56%|█████▌    | 22000/39531 [00:03<00:03, 5623.34 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5342.36 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 5431.35 examples/s]Map:  48%|████▊     | 19000/39531 [00:04<00:06, 3323.63 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:02, 5783.95 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5250.87 examples/s]Map:  51%|█████     | 20000/39531 [00:04<00:05, 3783.58 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:02, 5755.62 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:02, 5259.27 examples/s]Map:  68%|██████▊   | 27000/39531 [00:04<00:02, 5330.35 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5487.73 examples/s]Map:  63%|█████
+0: ��████    | 24000/39531 [00:04<00:03, 4986.05 examples/s]Map:  61%|██████    | 24000/39531 [00:04<00:03, 5140.68 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5284.25 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5209.88 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5169.43 examples/s]Map:  68%|██████▊   | 27000/39531 [00:04<00:02, 5378.86 examples/s]Map:  63%|██████▎   | 25000/39531 [00:04<00:02, 5218.80 examples/s]Map:  66%|██████▌   | 26000/39531 [00:05<00:02, 5247.23 examples/s]Map:  68%|██████▊   | 27000/39531 [00:05<00:02, 5240.75 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5412.24 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5297.55 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5298.11 examples/s]Map:  68%|██████▊   | 27000/39531 [00:05<00:
+1: █▎   | 25000/39531 [00:04<00:02, 5685.73 examples/s]Map:  53%|█████▎    | 21000/39531 [00:04<00:04, 4112.86 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5227.21 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5610.21 examples/s]Map:  66%|██████▌   | 26000/39531 [00:04<00:02, 5422.94 examples/s]Map:  56%|█████▌    | 22000/39531 [00:04<00:03, 4485.35 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5311.75 examples/s]Map:  68%|██████▊   | 27000/39531 [00:04<00:02, 5432.07 examples/s]Map:  68%|██████▊   | 27000/39531 [00:04<00:02, 5503.20 examples/s]Map:  58%|█████▊    | 23000/39531 [00:04<00:03, 4693.15 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5247.51 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5434.26 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5303.
+0: 02, 5281.99 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5420.97 examples/s]Map:  68%|██████▊   | 27000/39531 [00:05<00:02, 5299.88 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5381.02 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5301.81 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5390.88 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5389.24 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5276.04 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5348.81 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5347.90 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5310.70 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5341.38 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5308.10 examples/s
+1: 69 examples/s]Map:  61%|██████    | 24000/39531 [00:05<00:03, 4556.19 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5314.43 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5454.69 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5458.67 examples/s]Map:  63%|██████▎   | 25000/39531 [00:05<00:03, 4726.23 examples/s]Map:  81%|████████  | 32000/39531 [00:05<00:01, 5382.50 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5458.86 examples/s]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5483.27 examples/s]Map:  66%|██████▌   | 26000/39531 [00:05<00:02, 4931.65 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5430.63 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5430.36 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5398.28 examples/s]Map:  6
+0: ]Map:  76%|███████▌  | 30000/39531 [00:05<00:01, 5438.22 examples/s]Map:  81%|████████  | 32000/39531 [00:05<00:01, 5369.07 examples/s]Map:  78%|███████▊  | 31000/39531 [00:06<00:01, 5333.14 examples/s]Map:  81%|████████  | 32000/39531 [00:06<00:01, 5285.78 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5429.62 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5479.44 examples/s]Map:  78%|███████▊  | 31000/39531 [00:05<00:01, 5342.81 examples/s]Map:  81%|████████  | 32000/39531 [00:06<00:01, 5427.39 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5402.25 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5490.55 examples/s]Map:  81%|████████  | 32000/39531 [00:06<00:01, 5178.95 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5243.84 examples/s]Map:
+1: 8%|██████▊   | 27000/39531 [00:05<00:02, 5105.04 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5436.48 examples/s]Map:  81%|████████  | 32000/39531 [00:05<00:01, 5380.82 examples/s]Map:  81%|████████  | 32000/39531 [00:05<00:01, 5281.43 examples/s]Map:  71%|███████   | 28000/39531 [00:05<00:02, 5352.75 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5451.98 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5361.33 examples/s]Map:  83%|████████▎ | 33000/39531 [00:05<00:01, 5352.12 examples/s]Map:  73%|███████▎  | 29000/39531 [00:05<00:01, 5549.15 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5310.46 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5394.45 examples/s]Map:  76%|███████▌  | 30000/39531 [00:06<00:01, 5640.43 examples/s]Map:  86%|█�
+0:   86%|████████▌ | 34000/39531 [00:06<00:01, 5391.21 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5295.15 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5310.34 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 4967.67 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5295.85 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5301.36 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5236.64 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5215.37 examples/s]Map:  94%|█████████▎| 37000/39531 [00:07<00:00, 5401.47 examples/s]Map:  94%|█████████▎| 37000/39531 [00:06<00:00, 5429.29 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5296.96 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5223.27 exam
+1: �██████▌ | 34000/39531 [00:06<00:01, 5365.81 examples/s]Map:  94%|█████████▎| 37000/39531 [00:06<00:00, 5343.74 examples/s]Map:  78%|███████▊  | 31000/39531 [00:06<00:01, 5565.07 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5404.33 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5247.57 examples/s]Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5295.48 examples/s]Map:  81%|████████  | 32000/39531 [00:06<00:01, 5464.27 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5423.69 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5276.18 examples/s]Map:  94%|█████████▎| 37000/39531 [00:06<00:00, 5472.45 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5317.48 examples/s]Map:  83%|████████▎ | 33000/39531 [00:06<00:01, 5459.62 examples/s]Map
+0: ples/s]Map:  94%|█████████▎| 37000/39531 [00:07<00:00, 5410.02 examples/s]Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5363.86 examples/s]Map:  91%|█████████ | 36000/39531 [00:06<00:00, 5295.83 examples/s]Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5109.52 examples/s]Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5263.22 examples/s]Map:  94%|█████████▎| 37000/39531 [00:07<00:00, 5286.04 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5185.57 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5072.23 examples/s]Map: 100%|██████████| 39531/39531 [00:07<00:00, 5137.90 examples/s]Map: 100%|██████████| 39531/39531 [00:07<00:00, 4763.03 examples/s]Map: 100%|██████████| 39531/39531 [00:07<00:00, 5323.88 examples/s]
+1: :  94%|█████████▎| 37000/39531 [00:06<00:00, 5406.38 examples/s]Map:  96%|█████████▌| 38000/39531 [00:06<00:00, 5464.37 examples/s]Map:  86%|████████▌ | 34000/39531 [00:06<00:01, 5470.48 examples/s]Map:  96%|█████████▌| 38000/39531 [00:06<00:00, 5425.46 examples/s]Map: 100%|██████████| 39531/39531 [00:07<00:00, 5307.17 examples/s]
+0: Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5285.37 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5181.12 examples/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+0: To disable this warning, you can either:
+0: 	- Avoid using `tokenizers` before the fork if possible
+0: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+0: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+0: To disable this warning, you can either:
+0: 	- Avoid using `tokenizers` before the fork if possible
+0: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+0: Map: 100%|██████████| 39531/39531 [00:07<00:00, 5189.64 examples/s][rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 356, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 299, in main
+0: [rank0]:     loss = train_step(model, batch, optimizer, device)
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 192, in train_step
+0: [rank0]:     labels = batch["labels"].to(device)
+0: [rank0]:              ~~~~~^^^^^^^^^^
+0: [rank0]: KeyError: 'labels'
+1: Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5421.68 examples/s]Map:  89%|████████▊ | 35000/39531 [00:06<00:00, 5395.63 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5354.65 examples/s][rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 356, in <module>
+1: [rank4]:     main()
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 299, in main
+1: [rank4]:     loss = train_step(model, batch, optimizer, device)
+1: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 192, in train_step
+1: [rank4]:     labels = batch["labels"].to(device)
+1: [rank4]:              ~~~~~^^^^^^^^^^
+1: [rank4]: KeyError: 'labels'
+1: Map: 100%|██████████| 39531/39531 [00:07<00:00, 5449.79 examples/s]
+1: Map: 100%|██████████| 39531/39531 [00:07<00:00, 5376.29 examples/s]
+1: Map:  91%|█████████ | 36000/39531 [00:07<00:00, 5353.83 examples/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 356, in <module>
+1: [rank5]:     main()
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 299, in main
+1: [rank5]:     loss = train_step(model, batch, optimizer, device)
+1: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 192, in train_step
+1: [rank5]:     labels = batch["labels"].to(device)
+1: [rank5]:              ~~~~~^^^^^^^^^^
+1: [rank5]: KeyError: 'labels'
+0: Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5382.83 examples/s]W0402 16:35:50.854000 855264 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 855402 closing signal SIGTERM
+0: W0402 16:35:50.855000 855264 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 855403 closing signal SIGTERM
+0: W0402 16:35:50.857000 855264 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 855404 closing signal SIGTERM
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 356, in <module>
+1: [rank6]:     main()
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 299, in main
+1: [rank6]:     loss = train_step(model, batch, optimizer, device)
+1: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 192, in train_step
+1: [rank6]:     labels = batch["labels"].to(device)
+1: [rank6]:              ~~~~~^^^^^^^^^^
+1: [rank6]: KeyError: 'labels'
+1: Map:  94%|█████████▎| 37000/39531 [00:07<00:00, 5267.93 examples/s]Map:  96%|█████████▌| 38000/39531 [00:07<00:00, 5296.23 examples/s]Map:  99%|█████████▊| 39000/39531 [00:07<00:00, 5439.73 examples/s]Map: 100%|██████████| 39531/39531 [00:07<00:00, 4992.66 examples/s]
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+1: To disable this warning, you can either:
+1: 	- Avoid using `tokenizers` before the fork if possible
+1: 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 356, in <module>
+1: [rank7]:     main()
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 299, in main
+1: [rank7]:     loss = train_step(model, batch, optimizer, device)
+1: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/pytorch-compression/train.py", line 192, in train_step
+1: [rank7]:     labels = batch["labels"].to(device)
+1: [rank7]:              ~~~~~^^^^^^^^^^
+1: [rank7]: KeyError: 'labels'
+1: W0402 16:35:51.707000 528376 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 528514 closing signal SIGTERM
+1: W0402 16:35:51.710000 528376 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 528515 closing signal SIGTERM
+1: W0402 16:35:51.714000 528376 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 528516 closing signal SIGTERM
+0: E0402 16:35:51.839000 855264 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -7) local_rank: 3 (pid: 855405) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ======================================================
+0: train.py FAILED
+0: ------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-04-02_16:35:50
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 3 (local_rank: 3)
+0:   exitcode  : -7 (pid: 855405)
+0:   error_file: <N/A>
+0:   traceback : Signal 7 (SIGBUS) received by PID 855405
+0: ======================================================
+1: [W402 16:35:52.190326775 TCPStore.cpp:131] [c10d] recvVector failed on SocketImpl(fd=5, addr=[hercules]:55734, remote=[hades]:29501): failed to recv, got 0 bytes
+1: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f6fe0ef5446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3dd18 (0x7f703c86bd18 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: <unknown function> + 0x5d3e349 (0x7f703c86c349 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0x5d41267 (0x7f703c86f267 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x254 (0x7f703c868ae4 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: <unknown function> + 0xd7f554 (0x7f7045381554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #6: <unknown function> + 0x4cdb24 (0x7f7044acfb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #7: <unknown function> + 0x1ffdc6 (0x55fa54e5ddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyObject_MakeTpCall + 0x25b (0x55fa54e3e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: <unknown function> + 0x22f625 (0x55fa54e8d625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: <unknown function> + 0x22fc74 (0x55fa54e8dc74 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x22f6a8 (0x55fa54e8d6a8 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: <unknown function> + 0x30506b (0x55fa54f6306b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: <unknown function> + 0x2d05d4 (0x55fa54f2e5d4 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x81ca (0x7f704dfb31ca in /lib64/libpthread.so.0)
+1: frame #20: clone + 0x43 (0x7f704d4838d3 in /lib64/libc.so.6)
+1: 
+1: W0402 16:35:52.011000 528376 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1331] The node 'hercules.olympus.clemson.edu_528376_0' has failed to send a keep-alive heartbeat to the rendezvous '1356' due to an error of type RendezvousConnectionError.
+srun: error: hades: task 0: Exited with exit code 1
+1: E0402 16:35:52.704000 528376 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 528513) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: [W402 16:35:52.888704625 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=5, addr=[hercules]:55734, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f6fe0ef5446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f703c86c029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f703c868abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f7045381554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f7044acfb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x55fa54e5ddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x55fa54e3e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x55fa54e8d625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyObject_FastCallDictTstate + 0x63 (0x55fa54e41853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyObject_Call_Prepend + 0x69 (0x55fa54e74e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: <unknown function> + 0x2e99b9 (0x55fa54f479b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: PyObject_Call + 0x1ed (0x55fa54e76ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2a4d36 (0x55fa54f02d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: PyEval_EvalCode + 0x9f (0x55fa54f023ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2c2f2a (0x55fa54f20f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: <unknown function> + 0x2bf343 (0x55fa54f1d343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: <unknown function> + 0x2d4300 (0x55fa54f32300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: _PyRun_SimpleFileObject + 0x1ae (0x55fa54f31c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: _PyRun_AnyFileObject + 0x44 (0x55fa54f31a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: Py_RunMain + 0x2df (0x55fa54f2bbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #29: Py_BytesMain + 0x37 (0x55fa54ef0f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #30: __libc_start_main + 0xe5 (0x7f704d4847e5 in /lib64/libc.so.6)
+1: frame #31: <unknown function> + 0x292e3d (0x55fa54ef0e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0402 16:35:52.709000 528376 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_528376_0' has failed to shutdown the rendezvous '1356' due to an error of type RendezvousConnectionError.
+1: [W402 16:35:52.893192413 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=5, addr=[hercules]:55734, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f6fe0ef5446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f703c86c029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f703c868abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f7045381554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f7044acfb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x55fa54e5ddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x55fa54e3e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x55fa54e8d625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: _PyObject_FastCallDictTstate + 0x63 (0x55fa54e41853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: _PyObject_Call_Prepend + 0x69 (0x55fa54e74e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: <unknown function> + 0x2e99b9 (0x55fa54f479b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: PyObject_Call + 0x1ed (0x55fa54e76ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2a4d36 (0x55fa54f02d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: PyEval_EvalCode + 0x9f (0x55fa54f023ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2c2f2a (0x55fa54f20f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: <unknown function> + 0x2bf343 (0x55fa54f1d343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: <unknown function> + 0x2d4300 (0x55fa54f32300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: _PyRun_SimpleFileObject + 0x1ae (0x55fa54f31c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: _PyRun_AnyFileObject + 0x44 (0x55fa54f31a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: Py_RunMain + 0x2df (0x55fa54f2bbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #27: Py_BytesMain + 0x37 (0x55fa54ef0f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #28: __libc_start_main + 0xe5 (0x7f704d4847e5 in /lib64/libc.so.6)
+1: frame #29: <unknown function> + 0x292e3d (0x55fa54ef0e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0402 16:35:52.712000 528376 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_528376_0' has failed to shutdown the rendezvous '1356' due to an error of type RendezvousConnectionError.
+1: [W402 16:35:52.896156393 TCPStore.cpp:122] [c10d] sendBytes failed on SocketImpl(fd=5, addr=[hercules]:55734, remote=[hades]:29501): Broken pipe
+1: Exception raised from sendBytes at /opt/conda/conda-bld/pytorch_1729647369228/work/torch/csrc/distributed/c10d/Utils.hpp:645 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f6fe0ef5446 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x5d3e029 (0x7f703c86c029 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::compareSet(std::string const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x22d (0x7f703c868abd in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: <unknown function> + 0xd7f554 (0x7f7045381554 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #4: <unknown function> + 0x4cdb24 (0x7f7044acfb24 in /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #5: <unknown function> + 0x1ffdc6 (0x55fa54e5ddc6 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #6: _PyObject_MakeTpCall + 0x25b (0x55fa54e3e07b in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #7: <unknown function> + 0x22f625 (0x55fa54e8d625 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #8: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #9: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #10: _PyObject_FastCallDictTstate + 0x63 (0x55fa54e41853 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #11: _PyObject_Call_Prepend + 0x69 (0x55fa54e74e09 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #12: <unknown function> + 0x2e99b9 (0x55fa54f479b9 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #13: PyObject_Call + 0x1ed (0x55fa54e76ebd in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #14: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #15: _PyFunction_Vectorcall + 0x181 (0x55fa54e6d121 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #16: _PyEval_EvalFrameDefault + 0x4327 (0x55fa54e4e4e7 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #17: <unknown function> + 0x2a4d36 (0x55fa54f02d36 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #18: PyEval_EvalCode + 0x9f (0x55fa54f023ef in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #19: <unknown function> + 0x2c2f2a (0x55fa54f20f2a in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #20: <unknown function> + 0x2bf343 (0x55fa54f1d343 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #21: <unknown function> + 0x2d4300 (0x55fa54f32300 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #22: _PyRun_SimpleFileObject + 0x1ae (0x55fa54f31c5e in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #23: _PyRun_AnyFileObject + 0x44 (0x55fa54f31a44 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #24: Py_RunMain + 0x2df (0x55fa54f2bbdf in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #25: Py_BytesMain + 0x37 (0x55fa54ef0f97 in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: frame #26: __libc_start_main + 0xe5 (0x7f704d4847e5 in /lib64/libc.so.6)
+1: frame #27: <unknown function> + 0x292e3d (0x55fa54ef0e3d in /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python)
+1: 
+1: W0402 16:35:52.715000 528376 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1282] The node 'hercules.olympus.clemson.edu_528376_0' has failed to shutdown the rendezvous '1356' due to an error of type RendezvousConnectionError.
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: train.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-04-02_16:35:51
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 4 (local_rank: 0)
+1:   exitcode  : 1 (pid: 528513)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+srun: error: hercules: task 1: Exited with exit code 1
