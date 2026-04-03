@@ -31,10 +31,11 @@ LAUNCHER="torchrun \
     --rdzv_id=${SLURM_JOB_ID} \
     --rdzv_backend=c10d \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
-
-CMD="train_gpt_grouped.py --seq_length ${SEQUENCE_LENGTH}"
+    
+SEQ_PARALLEL_SIZE=$((NUM_NODES * GPUS_PER_NODE))
+CMD="train_gpt_ulysses.py --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE}"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 mkdir -p grouped_exp
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "grouped_exp/grouped_run_${SEQUENCE_LENGTH}.log" 2>&1
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}"

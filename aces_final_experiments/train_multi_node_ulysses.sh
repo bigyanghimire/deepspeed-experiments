@@ -29,7 +29,8 @@ LAUNCHER="torchrun \
     --rdzv_backend=c10d \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
 
-CMD="train_gpt_ulysses.py --seq_length ${SEQUENCE_LENGTH}"
+SEQ_PARALLEL_SIZE=$((NUM_NODES * GPUS_PER_NODE))
+CMD="train_gpt_ulysses.py --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE}"
 export HF_TOKEN=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
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
