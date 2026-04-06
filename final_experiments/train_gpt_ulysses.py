@@ -1,7 +1,7 @@
 # train.py with batch_size > 1
 
 #from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter2
-from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+# from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
 
 from deepspeed.runtime.utils import move_to_device
 from deepspeed.utils import groups
@@ -19,12 +19,19 @@ import numpy as np
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--type', type=str, default="ulysses", help='Type of SP')
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
     parser.add_argument('--seq_parallel_size', type=int, default=8, help='sequence parallel size')
     args = parser.parse_args()
 
     model_name_or_path = 'meta-llama/Llama-3.2-1B'
-    
+    if args.type == "ulysses":
+        from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
+        profiler_dir =  f"./ulysses_profiler_traces_{args.seq_parallel_size}_{args.seq_length}"
+    else:
+        from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF
+        from deepspeed.runtime.sequence_parallel.ulysses_sp import GroupedUlyssesSPDataLoaderAdapter as UlyssesSPDataLoaderAdapter
+        profiler_dir =  f"./grouped_profiler_traces_{args.seq_parallel_size}_{args.seq_length}"
     # Use the value from the command line argument
     seq_length = args.seq_length
     sequence_parallel_size = args.seq_parallel_size
@@ -229,7 +236,7 @@ def main():
             profile_memory=True,
             schedule=torch.profiler.schedule(wait=5, warmup=5, active=6, repeat=1),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
-                f"./ulysses_profiler_traces_{sequence_parallel_size}",
+                profiler_dir,
                 worker_name="rank0"
             ),
             record_shapes=True
@@ -245,7 +252,7 @@ def main():
         iter_count=0
         step_times = []
         for step, batch in enumerate(dl):
-            if iter_count<30:
+            if iter_count<20:
                 torch.cuda.synchronize()
                 start_time = time.time()
                 batch = move_to_device(batch, model.device)

@@ -29,7 +29,7 @@ MODE=$1  # Accept 'grouped' or 'ulysses' as first argument
 
 # --- Logic Gate ---
 if [ "$MODE" == "grouped" ]; then
-    SCRIPT_NAME="train_gpt_grouped.py"
+    SCRIPT_NAME="train_gpt_ulysses.py"
     LOG_DIR="grouped_exp"
 elif [ "$MODE" == "ulysses" ]; then
     SCRIPT_NAME="train_gpt_ulysses.py"
@@ -50,7 +50,7 @@ LAUNCHER="torchrun \
     --rdzv_backend=c10d \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
 
-CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE}"
+CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE}"
 
 echo "Running in ${MODE} mode using ${SCRIPT_NAME}..."
 
