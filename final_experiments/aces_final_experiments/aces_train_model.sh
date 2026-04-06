@@ -54,7 +54,7 @@ LAUNCHER="torchrun \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
 
 
-CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE}"
+CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE}"
 
 echo "Running in ${MODE} mode using ${SCRIPT_NAME}..."
 
