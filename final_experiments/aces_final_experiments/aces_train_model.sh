@@ -33,10 +33,10 @@ MODE=$1  # Accept 'grouped' or 'ulysses' as first argument
 
 # --- Logic Gate ---
 if [ "$MODE" == "grouped" ]; then
-    SCRIPT_NAME="train_gpt_grouped.py"
+    SCRIPT_NAME="../train_gpt_ulysses.py"
     LOG_DIR="grouped_exp"
 elif [ "$MODE" == "ulysses" ]; then
-    SCRIPT_NAME="train_gpt_ulysses.py"
+    SCRIPT_NAME="../train_gpt_ulysses.py"
     LOG_DIR="default_exp"
 else
     echo "Error: Please specify 'grouped' or 'ulysses' (e.g., sbatch train_multi_node.sh ulysses)"
