@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=train_bf16
-#SBATCH --nodes=2
-#SBATCH --gres=gpu:a100:4
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:a100:2
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=128G
@@ -16,8 +16,8 @@ micromamba activate ds-hf
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
 
-NUM_NODES=2
-GPUS_PER_NODE=4
+NUM_NODES=1
+GPUS_PER_NODE=2
 NUM_STEPS=20
 WARMUP_STEPS=5
 SEQUENCE_LENGTH=32000

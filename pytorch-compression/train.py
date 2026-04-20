@@ -261,22 +261,22 @@ def main():
     if is_main:
         print("Loading dataset...")
     
-    # train_dataloader = get_wikitext_dataloader(
-    #     tokenizer,
-    #     split="train",
-    #     seq_length=SEQ_LENGTH,
-    #     batch_size=BATCH_SIZE,
-    #     rank=rank,
-    #     world_size=world_size,
-    # )
-
-    train_dataloader, actual_vocab_size = load_wikitext_data(
-        tokenizer_name=MODEL_NAME,
+    train_dataloader = get_wikitext_dataloader(
+        tokenizer,
+        split="train",
         seq_length=SEQ_LENGTH,
         batch_size=BATCH_SIZE,
+        rank=rank,
         world_size=world_size,
-        rank=rank
     )
+
+    # train_dataloader, actual_vocab_size = load_wikitext_data(
+    #     tokenizer_name=MODEL_NAME,
+    #     seq_length=SEQ_LENGTH,
+    #     batch_size=BATCH_SIZE,
+    #     world_size=world_size,
+    #     rank=rank
+    # )
 
     if is_main:
         print(f"Dataset loaded: {len(train_dataloader)} batches")

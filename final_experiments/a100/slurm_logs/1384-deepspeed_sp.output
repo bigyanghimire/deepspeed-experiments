@@ -1,0 +1,1 @@
+Error: Please specify 'grouped' or 'ulysses' (e.g., sbatch train_multi_node.sh ulysses)

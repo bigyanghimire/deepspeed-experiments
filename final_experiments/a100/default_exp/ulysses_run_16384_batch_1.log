@@ -1,0 +1,199 @@
+0: W0409 15:07:27.572000 977286 site-packages/torch/distributed/run.py:793] 
+0: W0409 15:07:27.572000 977286 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0409 15:07:27.572000 977286 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0409 15:07:27.572000 977286 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0409 15:07:27.604000 614902 site-packages/torch/distributed/run.py:793] 
+1: W0409 15:07:27.604000 614902 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0409 15:07:27.604000 614902 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0409 15:07:27.604000 614902 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8Training with Sequence Length: 16384 Sequence parallel size: 8
+1: 
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.88 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.88 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.91 GB, percent = 2.2%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: [Rank 1] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 7] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 3] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 5] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 4] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 0] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 2] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 6] Packed dataset: 336 chunks of 16384 tokens
+0: Iteration 0: loss=3.7552
+0: Iteration 1: loss=12.7476
+0: Iteration 2: loss=14.4658
+0: Iteration 3: loss=10.7393
+0: Iteration 4: loss=13.4982
+0: Iteration 5: loss=39.2259
+0: Iteration 6: loss=22.5268
+0: Iteration 7: loss=14.5893
+0: Iteration 8: loss=13.7370
+0: Iteration 9: loss=11.9577
+0: [rank0]:[W409 15:08:01.967311827 CPUAllocator.cpp:249] Memory block of unknown size was allocated before the profiling started, profiler results will not include the deallocation event
+0: Iteration 10: loss=11.5695
+0: Iteration 11: loss=11.0632
+0: Iteration 12: loss=10.8988
+0: Iteration 13: loss=10.3647
+0: Iteration 14: loss=10.4736
+0: Iteration 15: loss=10.8693
+0: Iteration 16: loss=11.5531
+0: Iteration 17: loss=10.3897
+0: Iteration 18: loss=10.0351
+0: Iteration 19: loss=9.4509
+0: Iteration 20: loss=10.0885
+0: Iteration 21: loss=9.8915
+0: Iteration 22: loss=9.9292
+0: Iteration 23: loss=9.6492
+0: Iteration 24: loss=9.5495
+0: Iteration 25: loss=9.6836
+0: Iteration 26: loss=9.4437
+0: Iteration 27: loss=9.2017
+0: Iteration 28: loss=9.2802
+0: Iteration 29: loss=9.4725
+0: Iteration 30: loss=9.6728
+0: Iteration 31: loss=9.6808
+0: Iteration 32: loss=8.8959
+0: Iteration 33: loss=9.2676
+0: Iteration 34: loss=9.0978
+0: Iteration 35: loss=9.3589
+0: Iteration 36: loss=8.8970
+0: Iteration 37: loss=9.1604
+0: Iteration 38: loss=9.1598
+0: Iteration 39: loss=8.5548
+0: Iteration 40: loss=9.0089
+0: Iteration 41: loss=9.2182
+0: Iteration 42: loss=8.8528
+0: Iteration 43: loss=8.8643
+0: Iteration 44: loss=8.8057
+0: Iteration 45: loss=8.7627
+0: Iteration 46: loss=8.8704
+0: Iteration 47: loss=9.0133
+0: Iteration 48: loss=8.5643
+0: Iteration 49: loss=8.5281
+0: Iteration 50: loss=8.5051
+0: Iteration 51: loss=8.5880
+0: Iteration 52: loss=8.8355
+0: Iteration 53: loss=8.5080
+0: Iteration 54: loss=8.4590
+0: Iteration 55: loss=8.7596
+0: Iteration 56: loss=8.6927
+0: Iteration 57: loss=8.2763
+0: Iteration 58: loss=8.7031
+0: Iteration 59: loss=8.3378
+0: Iteration 60: loss=8.1061
+0: Iteration 61: loss=8.7847
+0: Iteration 62: loss=8.2805
+0: Iteration 63: loss=8.1859
+0: Iteration 64: loss=8.2231
+0: Iteration 65: loss=8.3940
+0: Iteration 66: loss=8.1366
+0: Iteration 67: loss=8.3110
+0: Iteration 68: loss=8.4162
+0: Iteration 69: loss=8.5042
+0: Iteration 70: loss=8.2723
+0: Iteration 71: loss=8.2634
+0: Iteration 72: loss=8.1530
+0: Iteration 73: loss=8.1809
+0: Iteration 74: loss=8.4336
+0: Iteration 75: loss=7.9989
+0: Iteration 76: loss=8.1670
+0: Iteration 77: loss=8.0536
+0: Iteration 78: loss=8.1760
+0: Iteration 79: loss=8.3292
+0: Iteration 80: loss=8.1848
+0: Iteration 81: loss=7.9299
+0: Iteration 82: loss=8.0159
+0: Iteration 83: loss=8.1640
+0: Iteration 84: loss=8.1840
+0: Iteration 85: loss=7.9912
+0: Iteration 86: loss=7.9520
+0: Iteration 87: loss=8.1998
+0: Iteration 88: loss=8.2575
+0: Iteration 89: loss=8.1937
+0: Iteration 90: loss=8.0538
+0: Iteration 91: loss=7.9233
+0: Iteration 92: loss=7.8546
+0: Iteration 93: loss=8.0584
+0: Iteration 94: loss=8.0916
+0: Iteration 95: loss=8.2216
+0: Iteration 96: loss=7.9017
+0: Iteration 97: loss=8.1879
+0: Iteration 98: loss=8.1323
+0: Iteration 99: loss=8.1484
+0: 
+0: === Summary over 90 iterations ===
+0: Step time: 1.57s ± 0.02s (min=1.52s, max=1.63s)
+1: [rank7]:[W409 15:10:28.937715374 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank4]:[W409 15:10:28.984947678 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W409 15:10:28.031172694 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W409 15:10:28.083328887 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7fd85844f1a0>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank1]:[W409 15:10:33.655340353 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank3]:[W409 15:10:33.712518547 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank2]:[W409 15:10:34.773428605 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W409 15:10:35.826370879 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

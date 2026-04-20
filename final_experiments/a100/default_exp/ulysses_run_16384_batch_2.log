@@ -1,0 +1,621 @@
+1: W0409 19:44:35.613000 618470 site-packages/torch/distributed/run.py:793] 
+1: W0409 19:44:35.613000 618470 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0409 19:44:35.613000 618470 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0409 19:44:35.613000 618470 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0409 19:44:35.657000 982506 site-packages/torch/distributed/run.py:793] 
+0: W0409 19:44:35.657000 982506 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0409 19:44:35.657000 982506 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0409 19:44:35.657000 982506 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: 
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16384 Sequence parallel size: 8Training with Sequence Length: 16384 Sequence parallel size: 8
+0: 
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.84 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.84 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.85 GB, percent = 2.2%
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:27:51 2026).
+1: [Rank 5] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 0] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 2] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 6] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 1] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 3] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 4] Packed dataset: 336 chunks of 16384 tokens
+1: [Rank 7] Packed dataset: 336 chunks of 16384 tokens
+0: Iteration 0: loss=3.5615
+0: Iteration 1: loss=13.0852
+0: Iteration 2: loss=20.7226
+0: Iteration 3: loss=9.1963
+0: Iteration 4: loss=16.0077
+0: Iteration 5: loss=9.3931
+0: Iteration 6: loss=8.8436
+0: Iteration 7: loss=8.3946
+0: Iteration 8: loss=8.2991
+0: Iteration 9: loss=8.1390
+0: [rank0]:[W409 19:45:11.595265732 CPUAllocator.cpp:249] Memory block of unknown size was allocated before the profiling started, profiler results will not include the deallocation event
+0: Iteration 10: loss=8.0464
+0: Iteration 11: loss=8.0178
+0: Iteration 12: loss=8.0408
+0: Iteration 13: loss=8.2908
+0: Iteration 14: loss=8.2492
+0: Iteration 15: loss=8.2293
+0: Iteration 16: loss=7.9768
+0: Iteration 17: loss=8.1915
+0: Iteration 18: loss=8.0225
+0: Iteration 19: loss=8.0371
+0: Iteration 20: loss=7.8390
+0: Iteration 21: loss=7.9392
+0: Iteration 22: loss=7.9741
+0: Iteration 23: loss=7.7537
+0: Iteration 24: loss=7.7368
+0: Iteration 25: loss=7.6395
+0: Iteration 26: loss=7.8410
+0: Iteration 27: loss=7.7672
+0: Iteration 28: loss=7.6436
+0: Iteration 29: loss=7.7726
+0: Iteration 30: loss=7.5886
+0: Iteration 31: loss=7.6867
+0: Iteration 32: loss=7.6018
+0: Iteration 33: loss=7.5831
+0: Iteration 34: loss=7.5508
+0: Iteration 35: loss=7.5188
+0: Iteration 36: loss=7.5465
+0: Iteration 37: loss=7.5901
+0: Iteration 38: loss=7.5898
+0: Iteration 39: loss=7.5938
+0: Iteration 40: loss=7.6921
+0: Iteration 41: loss=7.5365
+0: Iteration 42: loss=7.5595
+0: Iteration 43: loss=7.5238
+0: Iteration 44: loss=7.5549
+0: Iteration 45: loss=7.4483
+0: Iteration 46: loss=7.4612
+0: Iteration 47: loss=7.6981
+0: Iteration 48: loss=7.5027
+0: Iteration 49: loss=7.4854
+0: Iteration 50: loss=7.6021
+0: Iteration 51: loss=7.5795
+0: Iteration 52: loss=7.5355
+0: Iteration 53: loss=7.5280
+0: Iteration 54: loss=7.5496
+0: Iteration 55: loss=7.3888
+0: Iteration 56: loss=7.6309
+0: Iteration 57: loss=7.4211
+0: Iteration 58: loss=7.5178
+0: Iteration 59: loss=7.6378
+0: Iteration 60: loss=7.4750
+0: Iteration 61: loss=7.5764
+0: Iteration 62: loss=7.4639
+0: Iteration 63: loss=7.2230
+0: Iteration 64: loss=7.4609
+0: Iteration 65: loss=7.4244
+0: Iteration 66: loss=7.6918
+0: Iteration 67: loss=7.4326
+0: Iteration 68: loss=7.5780
+0: Iteration 69: loss=7.4833
+0: Iteration 70: loss=7.5606
+0: Iteration 71: loss=7.4315
+0: Iteration 72: loss=7.4921
+0: Iteration 73: loss=7.5310
+0: Iteration 74: loss=7.5892
+0: Iteration 75: loss=7.5328
+0: Iteration 76: loss=7.4923
+0: Iteration 77: loss=7.4831
+0: Iteration 78: loss=7.4950
+0: Iteration 79: loss=7.6166
+0: Iteration 80: loss=7.7010
+0: Iteration 81: loss=7.4291
+0: Iteration 82: loss=7.3969
+0: Iteration 83: loss=7.7039
+0: Iteration 84: loss=7.5563
+0: Iteration 85: loss=7.4808
+0: Iteration 86: loss=7.4746
+0: Iteration 87: loss=7.4553
+0: Iteration 88: loss=7.4728
+0: Iteration 89: loss=7.4964
+0: Iteration 90: loss=7.4972
+0: Iteration 91: loss=7.5473
+0: Iteration 92: loss=7.3832
+0: Iteration 93: loss=7.4481
+0: Iteration 94: loss=7.4546
+0: Iteration 95: loss=7.6424
+0: Iteration 96: loss=7.4091
+0: Iteration 97: loss=7.4513
+0: Iteration 98: loss=7.4546
+0: Iteration 99: loss=7.4948
+0: Iteration 100: loss=7.5477
+0: Iteration 101: loss=7.6411
+0: Iteration 102: loss=7.3869
+0: Iteration 103: loss=7.4885
+0: Iteration 104: loss=7.4924
+0: Iteration 105: loss=7.6385
+0: Iteration 106: loss=7.3430
+0: Iteration 107: loss=7.5096
+0: Iteration 108: loss=7.3374
+0: Iteration 109: loss=7.4503
+0: Iteration 110: loss=7.5072
+0: Iteration 111: loss=7.4376
+0: Iteration 112: loss=7.4409
+0: Iteration 113: loss=7.3918
+0: Iteration 114: loss=7.3460
+0: Iteration 115: loss=7.8479
+0: Iteration 116: loss=7.5465
+0: Iteration 117: loss=7.4642
+0: Iteration 118: loss=7.4767
+0: Iteration 119: loss=7.3501
+0: Iteration 120: loss=7.4458
+0: Iteration 121: loss=7.5226
+0: Iteration 122: loss=7.5209
+0: Iteration 123: loss=7.3745
+0: Iteration 124: loss=7.3667
+0: Iteration 125: loss=7.6614
+0: Iteration 126: loss=7.4820
+0: Iteration 127: loss=7.4975
+0: Iteration 128: loss=7.3807
+0: Iteration 129: loss=7.5688
+0: Iteration 130: loss=7.4803
+0: Iteration 131: loss=7.5627
+0: Iteration 132: loss=7.5474
+0: Iteration 133: loss=7.4633
+0: Iteration 134: loss=7.5858
+0: Iteration 135: loss=7.1973
+0: Iteration 136: loss=7.3955
+0: Iteration 137: loss=7.6692
+0: Iteration 138: loss=7.5379
+0: Iteration 139: loss=7.3965
+0: Iteration 140: loss=7.4589
+0: Iteration 141: loss=7.5661
+0: Iteration 142: loss=7.4653
+0: Iteration 143: loss=7.6649
+0: Iteration 144: loss=7.4306
+0: Iteration 145: loss=7.4967
+0: Iteration 146: loss=7.5868
+0: Iteration 147: loss=7.4630
+0: Iteration 148: loss=7.4664
+0: Iteration 149: loss=7.2982
+0: Iteration 150: loss=7.5410
+0: Iteration 151: loss=7.5458
+0: Iteration 152: loss=7.4975
+0: Iteration 153: loss=7.4724
+0: Iteration 154: loss=7.4188
+0: Iteration 155: loss=7.4133
+0: Iteration 156: loss=7.4574
+0: Iteration 157: loss=7.3774
+0: Iteration 158: loss=7.6163
+0: Iteration 159: loss=7.4521
+0: Iteration 160: loss=7.4628
+0: Iteration 161: loss=7.3585
+0: Iteration 162: loss=7.4640
+0: Iteration 163: loss=7.4175
+0: Iteration 164: loss=7.6502
+0: Iteration 165: loss=7.6626
+0: Iteration 166: loss=7.4462
+0: Iteration 167: loss=7.5889
+0: Iteration 168: loss=7.4125
+0: Iteration 169: loss=7.4284
+0: Iteration 170: loss=7.4023
+0: Iteration 171: loss=7.3519
+0: Iteration 172: loss=7.4404
+0: Iteration 173: loss=7.3466
+0: Iteration 174: loss=7.3813
+0: Iteration 175: loss=7.4645
+0: Iteration 176: loss=7.4996
+0: Iteration 177: loss=7.3743
+0: Iteration 178: loss=7.3533
+0: Iteration 179: loss=7.2992
+0: Iteration 180: loss=7.2970
+0: Iteration 181: loss=7.4304
+0: Iteration 182: loss=7.3993
+0: Iteration 183: loss=7.3444
+0: Iteration 184: loss=7.3361
+0: Iteration 185: loss=7.3758
+0: Iteration 186: loss=7.3439
+0: Iteration 187: loss=7.3923
+0: Iteration 188: loss=7.3269
+0: Iteration 189: loss=7.4061
+0: Iteration 190: loss=7.4357
+0: Iteration 191: loss=7.2946
+0: Iteration 192: loss=7.2976
+0: Iteration 193: loss=7.2455
+0: Iteration 194: loss=7.3440
+0: Iteration 195: loss=7.2697
+0: Iteration 196: loss=7.1152
+0: Iteration 197: loss=7.3432
+0: Iteration 198: loss=7.1501
+0: Iteration 199: loss=7.2624
+0: Iteration 200: loss=7.2218
+0: Iteration 201: loss=7.2560
+0: Iteration 202: loss=7.1915
+0: Iteration 203: loss=7.2080
+0: Iteration 204: loss=7.2636
+0: Iteration 205: loss=7.2767
+0: Iteration 206: loss=7.2809
+0: Iteration 207: loss=7.2502
+0: Iteration 208: loss=7.3710
+0: Iteration 209: loss=7.1943
+0: Iteration 210: loss=7.2386
+0: Iteration 211: loss=7.1611
+0: Iteration 212: loss=7.2091
+0: Iteration 213: loss=7.1363
+0: Iteration 214: loss=7.1467
+0: Iteration 215: loss=7.3384
+0: Iteration 216: loss=7.1326
+0: Iteration 217: loss=7.1593
+0: Iteration 218: loss=7.2564
+0: Iteration 219: loss=7.2287
+0: Iteration 220: loss=7.1894
+0: Iteration 221: loss=7.2026
+0: Iteration 222: loss=7.1609
+0: Iteration 223: loss=7.0389
+0: Iteration 224: loss=7.2959
+0: Iteration 225: loss=7.0932
+0: Iteration 226: loss=7.1775
+0: Iteration 227: loss=7.2844
+0: Iteration 228: loss=7.2472
+0: Iteration 229: loss=7.4489
+0: Iteration 230: loss=7.1165
+0: Iteration 231: loss=7.1936
+0: Iteration 232: loss=7.2320
+0: Iteration 233: loss=7.2776
+0: Iteration 234: loss=7.3602
+0: Iteration 235: loss=7.2532
+0: Iteration 236: loss=7.3450
+0: Iteration 237: loss=7.1320
+0: Iteration 238: loss=7.3058
+0: Iteration 239: loss=7.1365
+0: Iteration 240: loss=7.1458
+0: Iteration 241: loss=7.2454
+0: Iteration 242: loss=7.2505
+0: Iteration 243: loss=7.1661
+0: Iteration 244: loss=7.1967
+0: Iteration 245: loss=7.1750
+0: Iteration 246: loss=7.1213
+0: Iteration 247: loss=7.2852
+0: Iteration 248: loss=7.3462
+0: Iteration 249: loss=7.0891
+0: Iteration 250: loss=7.0930
+0: Iteration 251: loss=7.3401
+0: Iteration 252: loss=7.1566
+0: Iteration 253: loss=7.1534
+0: Iteration 254: loss=7.1431
+0: Iteration 255: loss=7.0897
+0: Iteration 256: loss=7.1161
+0: Iteration 257: loss=7.1447
+0: Iteration 258: loss=7.1415
+0: Iteration 259: loss=7.1751
+0: Iteration 260: loss=7.0181
+0: Iteration 261: loss=7.0552
+0: Iteration 262: loss=7.1046
+0: Iteration 263: loss=7.2727
+0: Iteration 264: loss=6.9879
+0: Iteration 265: loss=7.0508
+0: Iteration 266: loss=7.0034
+0: Iteration 267: loss=7.1215
+0: Iteration 268: loss=7.0817
+0: Iteration 269: loss=7.1379
+0: Iteration 270: loss=6.9917
+0: Iteration 271: loss=7.0024
+0: Iteration 272: loss=7.0444
+0: Iteration 273: loss=7.1798
+0: Iteration 274: loss=6.9118
+0: Iteration 275: loss=7.1016
+0: Iteration 276: loss=6.8336
+0: Iteration 277: loss=7.0140
+0: Iteration 278: loss=6.9998
+0: Iteration 279: loss=6.9526
+0: Iteration 280: loss=7.0663
+0: Iteration 281: loss=6.8484
+0: Iteration 282: loss=6.8136
+0: Iteration 283: loss=7.3012
+0: Iteration 284: loss=7.0599
+0: Iteration 285: loss=6.9110
+0: Iteration 286: loss=7.0635
+0: Iteration 287: loss=6.8201
+0: Iteration 288: loss=6.8885
+0: Iteration 289: loss=7.0077
+0: Iteration 290: loss=6.9377
+0: Iteration 291: loss=6.8413
+0: Iteration 292: loss=6.7902
+0: Iteration 293: loss=7.1334
+0: Iteration 294: loss=6.9253
+0: Iteration 295: loss=6.9597
+0: Iteration 296: loss=6.8139
+0: Iteration 297: loss=6.9819
+0: Iteration 298: loss=6.8345
+0: Iteration 299: loss=6.9738
+0: Iteration 300: loss=6.9327
+0: Iteration 301: loss=6.9020
+0: Iteration 302: loss=6.9785
+0: Iteration 303: loss=6.5670
+0: Iteration 304: loss=6.8708
+0: Iteration 305: loss=7.0274
+0: Iteration 306: loss=7.0143
+0: Iteration 307: loss=6.8054
+0: Iteration 308: loss=6.8786
+0: Iteration 309: loss=6.9561
+0: Iteration 310: loss=6.9026
+0: Iteration 311: loss=7.0702
+0: Iteration 312: loss=6.8145
+0: Iteration 313: loss=6.8827
+0: Iteration 314: loss=7.0046
+0: Iteration 315: loss=6.8110
+0: Iteration 316: loss=6.8331
+0: Iteration 317: loss=6.7679
+0: Iteration 318: loss=7.0029
+0: Iteration 319: loss=7.0592
+0: Iteration 320: loss=6.9920
+0: Iteration 321: loss=6.8940
+0: Iteration 322: loss=6.8581
+0: Iteration 323: loss=6.8417
+0: Iteration 324: loss=6.8413
+0: Iteration 325: loss=6.7503
+0: Iteration 326: loss=6.9546
+0: Iteration 327: loss=6.8103
+0: Iteration 328: loss=6.8607
+0: Iteration 329: loss=6.7398
+0: Iteration 330: loss=6.8061
+0: Iteration 331: loss=6.7311
+0: Iteration 332: loss=6.9332
+0: Iteration 333: loss=6.9799
+0: Iteration 334: loss=6.7336
+0: Iteration 335: loss=6.9911
+0: Iteration 336: loss=6.8473
+0: Iteration 337: loss=6.9224
+0: Iteration 338: loss=6.8244
+0: Iteration 339: loss=6.7677
+0: Iteration 340: loss=6.8577
+0: Iteration 341: loss=6.7805
+0: Iteration 342: loss=6.7483
+0: Iteration 343: loss=6.8519
+0: Iteration 344: loss=6.9462
+0: Iteration 345: loss=6.7757
+0: Iteration 346: loss=6.7280
+0: Iteration 347: loss=6.6608
+0: Iteration 348: loss=6.6176
+0: Iteration 349: loss=6.7914
+0: Iteration 350: loss=6.8701
+0: Iteration 351: loss=6.7349
+0: Iteration 352: loss=6.6400
+0: Iteration 353: loss=6.8041
+0: Iteration 354: loss=6.8110
+0: Iteration 355: loss=6.8485
+0: Iteration 356: loss=6.7520
+0: Iteration 357: loss=6.8766
+0: Iteration 358: loss=6.9083
+0: Iteration 359: loss=6.7621
+0: Iteration 360: loss=6.7479
+0: Iteration 361: loss=6.7109
+0: Iteration 362: loss=6.7825
+0: Iteration 363: loss=6.8343
+0: Iteration 364: loss=6.5421
+0: Iteration 365: loss=6.8794
+0: Iteration 366: loss=6.5661
+0: Iteration 367: loss=6.7394
+0: Iteration 368: loss=6.6710
+0: Iteration 369: loss=6.7505
+0: Iteration 370: loss=6.6972
+0: Iteration 371: loss=6.7342
+0: Iteration 372: loss=6.6966
+0: Iteration 373: loss=6.6983
+0: Iteration 374: loss=6.7029
+0: Iteration 375: loss=6.6379
+0: Iteration 376: loss=6.7948
+0: Iteration 377: loss=6.6087
+0: Iteration 378: loss=6.7203
+0: Iteration 379: loss=6.6118
+0: Iteration 380: loss=6.6971
+0: Iteration 381: loss=6.6430
+0: Iteration 382: loss=6.6323
+0: Iteration 383: loss=6.8107
+0: Iteration 384: loss=6.6294
+0: Iteration 385: loss=6.5820
+0: Iteration 386: loss=6.7642
+0: Iteration 387: loss=6.6367
+0: Iteration 388: loss=6.7146
+0: Iteration 389: loss=6.6579
+0: Iteration 390: loss=6.5624
+0: Iteration 391: loss=6.4569
+0: Iteration 392: loss=6.7904
+0: Iteration 393: loss=6.5871
+0: Iteration 394: loss=6.6372
+0: Iteration 395: loss=6.7094
+0: Iteration 396: loss=6.6002
+0: Iteration 397: loss=6.7647
+0: Iteration 398: loss=6.6147
+0: Iteration 399: loss=6.3477
+0: Iteration 400: loss=6.5490
+0: Iteration 401: loss=6.5765
+0: Iteration 402: loss=6.9046
+0: Iteration 403: loss=6.5436
+0: Iteration 404: loss=6.8001
+0: Iteration 405: loss=6.5465
+0: Iteration 406: loss=6.6712
+0: Iteration 407: loss=6.5318
+0: Iteration 408: loss=6.5645
+0: Iteration 409: loss=6.6089
+0: Iteration 410: loss=6.7270
+0: Iteration 411: loss=6.6116
+0: Iteration 412: loss=6.6461
+0: Iteration 413: loss=6.6379
+0: Iteration 414: loss=6.5726
+0: Iteration 415: loss=6.7217
+0: Iteration 416: loss=6.7970
+0: Iteration 417: loss=6.5343
+0: Iteration 418: loss=6.4974
+0: Iteration 419: loss=6.7837
+0: Iteration 420: loss=6.5727
+0: Iteration 421: loss=6.6494
+0: Iteration 422: loss=6.4537
+0: Iteration 423: loss=6.5709
+0: Iteration 424: loss=6.5572
+0: Iteration 425: loss=6.5185
+0: Iteration 426: loss=6.6204
+0: Iteration 427: loss=6.6261
+0: Iteration 428: loss=6.3879
+0: Iteration 429: loss=6.5175
+0: Iteration 430: loss=6.5469
+0: Iteration 431: loss=6.7331
+0: Iteration 432: loss=6.4270
+0: Iteration 433: loss=6.5169
+0: Iteration 434: loss=6.4577
+0: Iteration 435: loss=6.5994
+0: Iteration 436: loss=6.5042
+0: Iteration 437: loss=6.5313
+0: Iteration 438: loss=6.4495
+0: Iteration 439: loss=6.5267
+0: Iteration 440: loss=6.5460
+0: Iteration 441: loss=6.6568
+0: Iteration 442: loss=6.4215
+0: Iteration 443: loss=6.5616
+0: Iteration 444: loss=6.3677
+0: Iteration 445: loss=6.5442
+0: Iteration 446: loss=6.5111
+0: Iteration 447: loss=6.5367
+0: Iteration 448: loss=6.6579
+0: Iteration 449: loss=6.3263
+0: Iteration 450: loss=6.3614
+0: Iteration 451: loss=6.8912
+0: Iteration 452: loss=6.5797
+0: Iteration 453: loss=6.4653
+0: Iteration 454: loss=6.5363
+0: Iteration 455: loss=6.3671
+0: Iteration 456: loss=6.4289
+0: Iteration 457: loss=6.5650
+0: Iteration 458: loss=6.5340
+0: Iteration 459: loss=6.3787
+0: Iteration 460: loss=6.3060
+0: Iteration 461: loss=6.6728
+0: Iteration 462: loss=6.5299
+0: Iteration 463: loss=6.4998
+0: Iteration 464: loss=6.4322
+0: Iteration 465: loss=6.4804
+0: Iteration 466: loss=6.4388
+0: Iteration 467: loss=6.5534
+0: Iteration 468: loss=6.4757
+0: Iteration 469: loss=6.4557
+0: Iteration 470: loss=6.5424
+0: Iteration 471: loss=6.0828
+0: Iteration 472: loss=6.4469
+0: Iteration 473: loss=6.6390
+0: Iteration 474: loss=6.5306
+0: Iteration 475: loss=6.3640
+0: Iteration 476: loss=6.4637
+0: Iteration 477: loss=6.5090
+0: Iteration 478: loss=6.5024
+0: Iteration 479: loss=6.6905
+0: Iteration 480: loss=6.4270
+0: Iteration 481: loss=6.5331
+0: Iteration 482: loss=6.5990
+0: Iteration 483: loss=6.3429
+0: Iteration 484: loss=6.4185
+0: Iteration 485: loss=6.1970
+0: Iteration 486: loss=6.5095
+0: Iteration 487: loss=6.4955
+0: Iteration 488: loss=6.4446
+0: Iteration 489: loss=6.3924
+0: Iteration 490: loss=6.4687
+0: Iteration 491: loss=6.3820
+0: Iteration 492: loss=6.4071
+0: Iteration 493: loss=6.3108
+0: Iteration 494: loss=6.5665
+0: Iteration 495: loss=6.3852
+0: Iteration 496: loss=6.4414
+0: Iteration 497: loss=6.3091
+0: Iteration 498: loss=6.3868
+0: Iteration 499: loss=6.3176
+0: 
+0: === Summary over 490 iterations ===
+0: Step time: 1.81s ± 0.02s (min=1.73s, max=1.88s)
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f1473053100>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f4189c6f100>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 458, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_4d_kernel", __class__._4d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle'
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f7280daf100>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank2]:[W409 20:00:06.378970557 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W409 20:00:06.852616975 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W409 20:00:06.853829413 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank3]:[W409 20:00:06.393906056 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W409 20:00:06.419964653 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank4]:[W409 20:00:06.888325213 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W409 20:00:06.897605163 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W409 20:00:07.572987663 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

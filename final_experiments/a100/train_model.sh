@@ -22,17 +22,18 @@ export HF_DATASETS_OFFLINE=1
 # --- Constants & Args ---
 NUM_NODES=2
 GPUS_PER_NODE=4
-SEQUENCE_LENGTH=${SEQUENCE_LENGTH:-32000}
+SEQUENCE_LENGTH=${SEQUENCE_LENGTH:-32768}
 SEQ_PARALLEL_SIZE=$((NUM_NODES * GPUS_PER_NODE))
+BATCH_SIZE=2
 
 MODE=$1  # Accept 'grouped' or 'ulysses' as first argument
 
 # --- Logic Gate ---
 if [ "$MODE" == "grouped" ]; then
-    SCRIPT_NAME="train_gpt_ulysses.py"
+    SCRIPT_NAME="../train_gpt_ulysses.py"
     LOG_DIR="grouped_exp"
 elif [ "$MODE" == "ulysses" ]; then
-    SCRIPT_NAME="train_gpt_ulysses.py"
+    SCRIPT_NAME="../train_gpt_ulysses.py"
     LOG_DIR="default_exp"
 else
     echo "Error: Please specify 'grouped' or 'ulysses' (e.g., sbatch train_multi_node.sh ulysses)"
@@ -50,8 +51,8 @@ LAUNCHER="torchrun \
     --rdzv_backend=c10d \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
 
-CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE}"
+CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE} --batch_size ${BATCH_SIZE}"
 
 echo "Running in ${MODE} mode using ${SCRIPT_NAME}..."
 
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "${LOG_DIR}/${MODE}_run_${SEQUENCE_LENGTH}.log" 2>&1
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "${LOG_DIR}/${MODE}_run_${SEQUENCE_LENGTH}_batch_${BATCH_SIZE}.log" 2>&1

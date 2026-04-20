@@ -59,55 +59,55 @@ def benchmark_alltoall(world_size, message_size_mb, iterations=100):
     }
 
 
-def benchmark_grouped(world_size, group_size=4, message_size_mb=1, iterations=100):
-    rank = dist.get_rank()
-    assert world_size % group_size == 0
+# def benchmark_grouped(world_size, group_size=4, message_size_mb=1, iterations=100):
+#     rank = dist.get_rank()
+#     assert world_size % group_size == 0
 
-    num_groups = world_size // group_size
-    group_id = rank // group_size
+#     num_groups = world_size // group_size
+#     group_id = rank // group_size
 
-    # create groups
-    groups = []
-    for g in range(num_groups):
-        ranks = list(range(g * group_size, (g + 1) * group_size))
-        groups.append(dist.new_group(ranks=ranks))
+#     # create groups
+#     groups = []
+#     for g in range(num_groups):
+#         ranks = list(range(g * group_size, (g + 1) * group_size))
+#         groups.append(dist.new_group(ranks=ranks))
 
-    group = groups[group_id]
+#     group = groups[group_id]
 
-    elements_per_pair = int(message_size_mb * 1024 * 1024 / 4)
-    total_elements = group_size * elements_per_pair
+#     elements_per_pair = int(message_size_mb * 1024 * 1024 / 4)
+#     total_elements = group_size * elements_per_pair
 
-    input_tensor = torch.randn(total_elements, device='cuda')
-    output_tensor = torch.empty_like(input_tensor)
+#     input_tensor = torch.randn(total_elements, device='cuda')
+#     output_tensor = torch.empty_like(input_tensor)
 
-    # warmup
-    for _ in range(10):
-        dist.all_to_all_single(output_tensor, input_tensor, group=group)
+#     # warmup
+#     for _ in range(10):
+#         dist.all_to_all_single(output_tensor, input_tensor, group=group)
 
-    torch.cuda.synchronize()
-    dist.barrier()
+#     torch.cuda.synchronize()
+#     dist.barrier()
 
-    start = time.perf_counter()
+#     start = time.perf_counter()
 
-    for _ in range(iterations):
-        dist.all_to_all_single(output_tensor, input_tensor, group=group)
+#     for _ in range(iterations):
+#         dist.all_to_all_single(output_tensor, input_tensor, group=group)
 
-    torch.cuda.synchronize()
-    dist.barrier()
-    end = time.perf_counter()
+#     torch.cuda.synchronize()
+#     dist.barrier()
+#     end = time.perf_counter()
 
-    avg_ms = (end - start) / iterations * 1000
-    total_data_mb = message_size_mb * (group_size - 1)
-    bandwidth = (total_data_mb / 1024) / (avg_ms / 1000)
+#     avg_ms = (end - start) / iterations * 1000
+#     total_data_mb = message_size_mb * (group_size - 1)
+#     bandwidth = (total_data_mb / 1024) / (avg_ms / 1000)
 
-    return {
-        "type": "grouped_4",
-        "world_size": world_size,
-        "group_size": group_size,
-        "message_size_mb": message_size_mb,
-        "time_ms": avg_ms,
-        "bandwidth_gbps": bandwidth
-    }
+#     return {
+#         "type": "grouped_4",
+#         "world_size": world_size,
+#         "group_size": group_size,
+#         "message_size_mb": message_size_mb,
+#         "time_ms": avg_ms,
+#         "bandwidth_gbps": bandwidth
+#     }
 
 
 def main():
@@ -123,7 +123,7 @@ def main():
             print("Need at least 2 GPUs")
         return
 
-    message_sizes = [1, 10, 50]
+    message_sizes = [1, 10, 50, 100, 200, 250]
 
     results = []
 
@@ -142,12 +142,12 @@ def main():
             print(f"Full: {res_full['time_ms']:.3f} ms | {res_full['bandwidth_gbps']:.2f} GB/s")
 
         # grouped (4 GPUs)
-        if world_size >= 4 and world_size % 4 == 0:
-            res_grp = benchmark_grouped(world_size, 4, msg)
-            results.append(res_grp)
+        # if world_size >= 4 and world_size % 4 == 0:
+        #     res_grp = benchmark_grouped(world_size, 4, msg)
+        #     results.append(res_grp)
 
-            if rank == 0:
-                print(f"Grouped(4): {res_grp['time_ms']:.3f} ms | {res_grp['bandwidth_gbps']:.2f} GB/s")
+        #     if rank == 0:
+        #         print(f"Grouped(4): {res_grp['time_ms']:.3f} ms | {res_grp['bandwidth_gbps']:.2f} GB/s")
 
     if rank == 0:
         with open(args.output, "w") as f:

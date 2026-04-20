@@ -17,27 +17,46 @@ from torch.profiler import profile, record_function, ProfilerActivity
 import argparse
 import numpy as np
 
+
+def format_memory(bytes_val):
+    """Format bytes to human readable string."""
+    gb = bytes_val / (1024 ** 3)
+    return f"{gb:.2f} GB"
+
+def get_memory_stats():
+    """Get current GPU memory statistics."""
+    if not torch.cuda.is_available():
+        return {"allocated": 0, "reserved": 0, "peak": 0}
+
+    return {
+        "allocated": torch.cuda.memory_allocated(),
+        "reserved": torch.cuda.memory_reserved(),
+        "peak": torch.cuda.max_memory_allocated(),
+    }    
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--type', type=str, default="ulysses", help='Type of SP')
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
     parser.add_argument('--seq_parallel_size', type=int, default=8, help='sequence parallel size')
+    parser.add_argument('--batch_size', type=int, default=2, help='Batch Size')
+
     args = parser.parse_args()
 
     model_name_or_path = 'meta-llama/Llama-3.2-1B'
     if args.type == "ulysses":
         from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
-        profiler_dir =  f"./ulysses_profiler_traces_{args.seq_parallel_size}_{args.seq_length}"
+        profiler_dir =  f"./ulysses_profiler_traces_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
     else:
         from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF
         from deepspeed.runtime.sequence_parallel.ulysses_sp import GroupedUlyssesSPDataLoaderAdapter as UlyssesSPDataLoaderAdapter
-        profiler_dir =  f"./grouped_profiler_traces_{args.seq_parallel_size}_{args.seq_length}"
+        profiler_dir =  f"./grouped_profiler_traces_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
     # Use the value from the command line argument
     seq_length = args.seq_length
     sequence_parallel_size = args.seq_parallel_size
     
     print(f"Training with Sequence Length: {seq_length} Sequence parallel size: {sequence_parallel_size}")
-    micro_batch_size = 2  # CHANGED: Now batch size = 4
+    micro_batch_size = args.batch_size  # CHANGED: Now batch size = 4
 
     config_dict = {
         "train_micro_batch_size_per_gpu": micro_batch_size,  # CHANGED
@@ -205,6 +224,8 @@ def main():
         model_parameters=model.parameters(),
         mpu=mpu
     )
+    mem_after_init = get_memory_stats()
+    model.train()
     # UlyssesSPDataLoaderAdapter injection
     sp_group = groups._get_sequence_parallel_group()
     sp_world_size = groups._get_sequence_parallel_world_size()
@@ -245,17 +266,23 @@ def main():
         from contextlib import nullcontext
         profiler_context = nullcontext()
     # Normal training loop
-    num_epochs=1
+    num_epochs=10
     with profiler_context as profiler:
-    # Normal training loop
+        # Normal training loop
         WARMUP = 10
-        iter_count=0
+        MAX_ITERATIONS = 100  # Set your desired max iterations
+        iter_count = 0
         step_times = []
-        for step, batch in enumerate(dl):
-            if iter_count<20:
+        
+        for i in range(num_epochs):
+            for step, batch in enumerate(dl):
+                if iter_count >= MAX_ITERATIONS:
+                    break  # Exit inner loop
+                
                 torch.cuda.synchronize()
                 start_time = time.time()
                 batch = move_to_device(batch, model.device)
+                v = batch["input_ids"]
                 
                 outputs = model(**batch)
                 # Loss calculation
@@ -266,33 +293,38 @@ def main():
                     shift_labels=shift_labels,
                     vocab_size=model.module.config.vocab_size,
                 )
-
+                
                 # Aggregate loss across SP ranks
-                # losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=groups._get_data_parallel_group())
-        # differentiable weighted per-shard-loss aggregation across ranks
                 losses_per_rank = torch.distributed.nn.functional.all_gather(loss, group=sp_group)
-                # special dealing with SFT that has prompt tokens that aren't used in loss computation
                 good_tokens = (shift_labels != -100).view(-1).sum()
                 good_tokens_per_rank = torch.distributed.nn.functional.all_gather(good_tokens, group=sp_group)
                 total_loss = sum(losses_per_rank[rank] * good_tokens_per_rank[rank] for rank in range(sp_world_size))
                 total_good_tokens = sum(good_tokens_per_rank)
                 loss = total_loss / max(total_good_tokens, 1)
-
+                
                 if dist.get_rank() == 0:
-                    print(f"Iteration {step}: loss={loss.item():.4f}")
-
+                    mem_stats = get_memory_stats()
+                    print(f"peak_mem={format_memory(mem_stats['peak'])}")
+                    print(f"Iteration {iter_count}: loss={loss.item():.4f}")
+                
                 model.backward(loss)
-                model.step()  # Don't forget optimizer step!
+                model.step()
+                
                 torch.cuda.synchronize()
                 step_time = time.time() - start_time
-                if step >= WARMUP:
+                if iter_count >= WARMUP:
                     step_times.append(step_time)
-                # if dist.get_rank() == 0:
-                #     print(f"Step_time: {step_time}\n")
+                
                 if local_rank == 0 and profiler is not None:
                     profiler.step()
-                iter_count=iter_count+1
+                
+                iter_count += 1
+            
+            if iter_count >= MAX_ITERATIONS:
+                break  # Exit outer loop
     if dist.get_rank() == 0:
+        final_mem = get_memory_stats()
+        print(f"final peak_mem={format_memory(final_mem['peak'])}")
         print(f"\n=== Summary over {len(step_times)} iterations ===")
         print(f"Step time: {np.mean(step_times):.2f}s ± {np.std(step_times):.2f}s (min={min(step_times):.2f}s, max={max(step_times):.2f}s)")
 

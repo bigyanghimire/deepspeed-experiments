@@ -1,0 +1,23 @@
+[
+  {
+    "type": "full",
+    "world_size": 3,
+    "message_size_mb": 1,
+    "time_ms": 0.048229433596134186,
+    "bandwidth_gbps": 40.496536126780306
+  },
+  {
+    "type": "full",
+    "world_size": 3,
+    "message_size_mb": 10,
+    "time_ms": 0.2547251619398594,
+    "bandwidth_gbps": 76.67577812596043
+  },
+  {
+    "type": "full",
+    "world_size": 3,
+    "message_size_mb": 50,
+    "time_ms": 1.1916556023061275,
+    "bandwidth_gbps": 81.95006158743575
+  }
+]

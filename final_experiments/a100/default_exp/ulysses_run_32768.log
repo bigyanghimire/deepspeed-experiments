@@ -1,0 +1,135 @@
+0: W0406 14:26:27.388000 923595 site-packages/torch/distributed/run.py:793] 
+0: W0406 14:26:27.388000 923595 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0406 14:26:27.388000 923595 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0406 14:26:27.388000 923595 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0406 14:26:27.444000 576509 site-packages/torch/distributed/run.py:793] 
+1: W0406 14:26:27.444000 576509 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0406 14:26:27.444000 576509 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0406 14:26:27.444000 576509 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: 
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Training with Sequence Length: 32768 Sequence parallel size: 8Training with Sequence Length: 32768 Sequence parallel size: 8
+1: 
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Before initializing optimizer states
+0: MA 2.59 GB         Max_MA 4.61 GB         CA 4.61 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.81 GB, percent = 2.2%
+0: After initializing optimizer states
+0: MA 2.59 GB         Max_MA 2.88 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.81 GB, percent = 2.2%
+0: After initializing ZeRO optimizer
+0: MA 2.59 GB         Max_MA 2.59 GB         CA 4.9 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 21.82 GB, percent = 2.2%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Mon Apr  6 14:00:06 2026).
+0: Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   5%|▌         | 2000/39531 [00:00<00:02, 18458.29 examples/s]Packing into seq_length=32768:   5%|▌         | 2000/39531 [00:00<00:02, 18756.52 examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20172.49 examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20038.81 examples/s]Packing into seq_length=32768:  15%|█▌        | 6000/39531 [00:00<00:01, 20210.72 examples/s]Packing into seq_length=32768:  15%|█▌        | 6000/39531 [00:00<00:01, 19960.24 examples/s]Packing into seq_length=32768:  18%|█▊        | 7000/39531 [00:00<00:01, 20349.68 examples/s]Packing into seq_length=3
+1: Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20592.68 examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20321.80 examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20282.69 examples/s]Packing into seq_length=32768:   8%|▊         | 3000/39531 [00:00<00:01, 20103.07 examples/s]Packing into seq_length=32768:  18%|█▊        | 7000/39531 [00:00<00:01, 20768.88 examples/s]Packing into seq_length=32768:  18%|█▊        | 7000/39531 [00:00<00:01, 20505.83 examples/s]Packing into seq_length=32768:  18%|█▊        | 7000/39531 [00:00<00:01, 20568.45 examples/s]Packing into seq_length=3
+0: 2768:  18%|█▊        | 7000/39531 [00:00<00:01, 20261.20 examples/s]Packing into seq_length=32768:  23%|██▎       | 9000/39531 [00:00<00:01, 20032.26 examples/s]Packing into seq_length=32768:  25%|██▌       | 10000/39531 [00:00<00:01, 20362.55 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 20813.69 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 20660.21 examples/s]Packing into seq_length=32768:  30%|███       | 12000/39531 [00:00<00:01, 20330.75 examples/s]Packing into seq_length=32768:  35%|███▌      | 14000/39531 [00:00<00:01, 20463.02 examples/s]Packing into seq_length=32768:  35%|███▌      | 14000/39531 [00:00<00:01, 20507.53 examples/s]Packing into seq_length=32768:  38%|███▊      | 15000/39531 [00:00<00:01, 20687.13 examples/s]Packing into seq_length=32768:  40%|████      | 16000/39531 [00:00<00:01, 20489.62 examples/s]Packing into seq_length=32768:  43%
+1: 2768:  18%|█▊        | 7000/39531 [00:00<00:01, 20366.60 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 21186.69 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 20839.99 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 21022.98 examples/s]Packing into seq_length=32768:  28%|██▊       | 11000/39531 [00:00<00:01, 20699.27 examples/s]Packing into seq_length=32768:  38%|███▊      | 15000/39531 [00:00<00:01, 21163.41 examples/s]Packing into seq_length=32768:  38%|███▊      | 15000/39531 [00:00<00:01, 20843.71 examples/s]Packing into seq_length=32768:  38%|███▊      | 15000/39531 [00:00<00:01, 21023.90 examples/s]Packing into seq_length=32768:  38%|███▊      | 15000/39531 [00:00<00:01, 20710.85 examples/s]Packing into seq_length=32768:  48%|████▊     | 19000/39531 [00:00<00:00, 21117.63 examples/s]Packing into seq_length=32768:
+0: |████▎     | 17000/39531 [00:00<00:01, 20643.79 examples/s]Packing into seq_length=32768:  43%|████▎     | 17000/39531 [00:00<00:01, 20687.47 examples/s]Packing into seq_length=32768:  48%|████▊     | 19000/39531 [00:00<00:00, 20657.75 examples/s]Packing into seq_length=32768:  48%|████▊     | 19000/39531 [00:00<00:01, 20218.73 examples/s]Packing into seq_length=32768:  53%|█████▎    | 21000/39531 [00:01<00:00, 20801.11 examples/s]Packing into seq_length=32768:  53%|█████▎    | 21000/39531 [00:01<00:00, 20911.92 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 21256.64 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 20896.16 examples/s]Packing into seq_length=32768:  63%|██████▎   | 25000/39531 [00:01<00:00, 20960.89 examples/s]Packing into seq_length=32768:  63%|██████▎   | 25000/39531 [00:01<00:00, 21035.39 examp
+1:   48%|████▊     | 19000/39531 [00:00<00:00, 20797.77 examples/s]Packing into seq_length=32768:  48%|████▊     | 19000/39531 [00:00<00:00, 20965.06 examples/s]Packing into seq_length=32768:  48%|████▊     | 19000/39531 [00:00<00:00, 20561.93 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 21657.97 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 21325.18 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 21534.90 examples/s]Packing into seq_length=32768:  58%|█████▊    | 23000/39531 [00:01<00:00, 21137.67 examples/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 21623.17 examples/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 21288.31 examples/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 21421
+0: les/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 21243.64 examples/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 20860.13 examples/s]Packing into seq_length=32768:  71%|███████   | 28000/39531 [00:01<00:00, 20918.11 examples/s]Packing into seq_length=32768:  73%|███████▎  | 29000/39531 [00:01<00:00, 21086.92 examples/s]Packing into seq_length=32768:  76%|███████▌  | 30000/39531 [00:01<00:00, 21100.35 examples/s]Packing into seq_length=32768:  78%|███████▊  | 31000/39531 [00:01<00:00, 20805.16 examples/s]Packing into seq_length=32768:  81%|████████  | 32000/39531 [00:01<00:00, 21037.96 examples/s]Packing into seq_length=32768:  83%|████████▎ | 33000/39531 [00:01<00:00, 21219.31 examples/s]Packing into seq_length=32768:  86%|████████▌ | 34000/39531 [00:01<00:00, 21378.81 examples/s]Packing into seq_len
+1: .43 examples/s]Packing into seq_length=32768:  68%|██████▊   | 27000/39531 [00:01<00:00, 21121.71 examples/s]Packing into seq_length=32768:  78%|███████▊  | 31000/39531 [00:01<00:00, 21644.23 examples/s]Packing into seq_length=32768:  78%|███████▊  | 31000/39531 [00:01<00:00, 21354.28 examples/s]Packing into seq_length=32768:  78%|███████▊  | 31000/39531 [00:01<00:00, 21365.39 examples/s]Packing into seq_length=32768:  78%|███████▊  | 31000/39531 [00:01<00:00, 21169.58 examples/s]Packing into seq_length=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 21494.31 examples/s]Packing into seq_length=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 21229.28 examples/s]Packing into seq_length=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 21201.81 examples/s]Packing into seq_length=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 21053.86 examples/s]Pac
+1: king into seq_length=32768:  96%|█████████▌| 38000/39531 [00:01<00:00, 21164.75 examples/s]Packing into seq_length=32768:  99%|█████████▊| 39000/39531 [00:01<00:00, 21431.46 examples/s]Packing into seq_length=32768:  99%|█████████▊| 39000/39531 [00:01<00:00, 21128.46 examples/s]Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20830.69 examples/s]
+1: [Rank 5] Packed dataset: 158 chunks of 32768 tokens
+1: Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20682.65 examples/s]
+1: [Rank 6] Packed dataset: 158 chunks of 32768 tokens
+1: Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20649.91 examples/s]
+1: [Rank 4] Packed dataset: 158 chunks of 32768 tokens
+1: Packing into seq_length=32768:  99%|█████████▊| 39000/39531 [00:01<00:00, 21053.50 examples/s]Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20452.03 examples/s]
+1: [Rank 7] Packed dataset: 158 chunks of 32768 tokens
+0: gth=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 20797.10 examples/s]Packing into seq_length=32768:  89%|████████▊ | 35000/39531 [00:01<00:00, 20612.16 examples/s]Packing into seq_length=32768:  94%|█████████▎| 37000/39531 [00:01<00:00, 21058.52 examples/s]Packing into seq_length=32768:  94%|█████████▎| 37000/39531 [00:01<00:00, 20924.91 examples/s]Packing into seq_length=32768:  96%|█████████▌| 38000/39531 [00:01<00:00, 20640.98 examples/s]Packing into seq_length=32768:  99%|█████████▊| 39000/39531 [00:01<00:00, 20769.34 examples/s]Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20516.49 examples/s]Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:01<00:00, 20370.98 examples/s]Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:12<00:00, 3229.47 examples/s] 
+0: Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:12<00:00, 3237.68 examples/s] 
+0: Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:12<00:00, 3234.75 examples/s] 
+0: Packing into seq_length=32768: 100%|██████████| 39531/39531 [00:12<00:00, 3233.09 examples/s] 
+0: [Rank 0] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 1] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 2] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 3] Packed dataset: 158 chunks of 32768 tokens
+0: Iteration 0: loss=4.3934
+0: Iteration 1: loss=12.5966
+0: Iteration 2: loss=11.6471
+0: Iteration 3: loss=18.5302
+0: Iteration 4: loss=9.5297
+0: Iteration 5: loss=8.7003
+0: Iteration 6: loss=8.5382
+0: Iteration 7: loss=8.5767
+0: Iteration 8: loss=8.0048
+0: Iteration 9: loss=7.9665
+0: [rank0]:[W406 14:27:21.029988281 CPUAllocator.cpp:249] Memory block of unknown size was allocated before the profiling started, profiler results will not include the deallocation event
+0: Iteration 10: loss=8.0282
+0: Iteration 11: loss=7.9024
+0: Iteration 12: loss=7.8605
+0: Iteration 13: loss=7.7432
+0: Iteration 14: loss=7.7331
+0: Iteration 15: loss=7.7171
+0: Iteration 16: loss=7.6849
+0: Iteration 17: loss=7.8456
+0: Iteration 18: loss=7.6872
+0: Iteration 19: loss=7.6292
+0: 
+0: === Summary over 10 iterations ===
+0: Step time: 2.38s ± 0.02s (min=2.35s, max=2.40s)
+1: [rank4]:[W406 14:27:51.594812861 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W406 14:27:51.641223665 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W406 14:27:51.698972063 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W406 14:27:51.708916583 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f17a15bb2e0>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank2]:[W406 14:27:56.217362997 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank3]:[W406 14:27:56.237318930 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W406 14:27:56.353487092 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W406 14:27:57.372702918 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

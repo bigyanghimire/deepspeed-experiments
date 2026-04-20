@@ -1,0 +1,44 @@
+[
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 1,
+    "time_ms": 0.05164880305528641,
+    "bandwidth_gbps": 56.723240940626944
+  },
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 10,
+    "time_ms": 0.2225208282470703,
+    "bandwidth_gbps": 131.65902370033857
+  },
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 50,
+    "time_ms": 0.8973681926727295,
+    "bandwidth_gbps": 163.2377614852936
+  },
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 100,
+    "time_ms": 1.681063286960125,
+    "bandwidth_gbps": 174.27585997061232
+  },
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 200,
+    "time_ms": 3.0868693068623543,
+    "bandwidth_gbps": 189.81610225525733
+  },
+  {
+    "type": "full",
+    "world_size": 4,
+    "message_size_mb": 250,
+    "time_ms": 3.8387424126267433,
+    "bandwidth_gbps": 190.7973487855947
+  }
+]
