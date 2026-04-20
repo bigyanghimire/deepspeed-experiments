@@ -10,12 +10,17 @@
 
 module load CUDA/11.8.0
 module load GCC/9.3.0
+PROJECT_DIR="$SCRATCH/bigyan_project"
+MICROMAMBA_DIR="$PROJECT_DIR/.local/bin"
+eval "$("$MICROMAMBA_DIR/micromamba" shell hook -s bash)"
 eval "$(micromamba shell hook --shell bash)"
 micromamba activate ds-hf 
 
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
-export HF_TOKEN=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
+set -a          # auto-export variables
+source ../../.env
+set +a
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 export HF_HUB_OFFLINE=1
