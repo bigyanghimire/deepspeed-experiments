@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -A myGPUallocation       # allocation name
+#SBATCH -A cis250981-gpu       # allocation name
 #SBATCH --nodes=1
 #SBATCH --gpus-per-node=2     # Number of GPUs per node
 #SBATCH --ntasks-per-node=1
