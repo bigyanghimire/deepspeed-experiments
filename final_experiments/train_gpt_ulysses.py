@@ -40,10 +40,13 @@ def main():
     parser.add_argument('--seq_length', type=int, default=16000, help='Input sequence length')
     parser.add_argument('--seq_parallel_size', type=int, default=8, help='sequence parallel size')
     parser.add_argument('--batch_size', type=int, default=2, help='Batch Size')
+    parser.add_argument('--model_name', type=str, default="meta-llama/Llama-3.2-1B", help='Model name')
 
     args = parser.parse_args()
 
-    model_name_or_path = 'meta-llama/Llama-3.2-1B'
+    model_name_or_path = args.model_name
+    #model_name_or_path = 'Qwen/Qwen2-7B'
+    
     if args.type == "ulysses":
         from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
         profiler_dir =  f"./ulysses_profiler_traces_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
@@ -61,7 +64,7 @@ def main():
     config_dict = {
         "train_micro_batch_size_per_gpu": micro_batch_size,  # CHANGED
         "zero_optimization": {
-            "stage": 2
+            "stage": 3
         },
         "bf16": {
             "enabled": True,
@@ -217,7 +220,6 @@ def main():
     model.gradient_checkpointing_enable(
         gradient_checkpointing_kwargs={"use_reentrant": False}
     )
-    print(f"gradient checkpointing enabled: {model.is_gradient_checkpointing}")  
     model, _, _, _ = deepspeed.initialize(
         config=config_dict,
         model=model,
@@ -270,7 +272,7 @@ def main():
     with profiler_context as profiler:
         # Normal training loop
         WARMUP = 10
-        MAX_ITERATIONS = 100  # Set your desired max iterations
+        MAX_ITERATIONS = 30  # Set your desired max iterations
         iter_count = 0
         step_times = []
         

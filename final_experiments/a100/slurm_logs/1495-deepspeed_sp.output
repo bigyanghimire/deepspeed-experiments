@@ -1,0 +1,376 @@
+Running in ulysses mode using ../train_gpt_ulysses.py...
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+1: gradient checkpointing enabled: True
+0: gradient checkpointing enabled: True
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+0: Stage 3 initialize beginning
+0: MA 5.98 GB         Max_MA 5.98 GB         CA 6.03 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 24.52 GB, percent = 2.4%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 5.98 GB         Max_MA 7.45 GB         CA 7.5 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 24.6 GB, percent = 2.4%
+0: Parameter Offload - Persistent parameters statistics: param_count = 57, numel = 175104
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 0.75 GB         Max_MA 6.08 GB         CA 7.55 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.57 GB, percent = 2.4%
+0: Before creating fp16 partitions
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 7.55 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.57 GB, percent = 2.4%
+0: After creating fp16 partitions: 1
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 0.75 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: Before creating fp32 partitions
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 0.75 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After creating fp32 partitions
+0: MA 1.5 GB         Max_MA 1.5 GB         CA 1.5 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: Before initializing optimizer states
+0: MA 1.5 GB         Max_MA 1.5 GB         CA 1.5 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After initializing optimizer states
+0: MA 1.5 GB         Max_MA 2.24 GB         CA 2.25 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After initializing ZeRO optimizer
+0: MA 4.11 GB         Max_MA 4.84 GB         CA 4.84 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 24.47 GB, percent = 2.4%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+0: [Rank 3] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 2] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 0] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 1] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 7] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 4] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 6] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 5] Packed dataset: 158 chunks of 32768 tokens
+0: peak_mem=16.14 GB
+0: Iteration 0: loss=7.0018
+0: peak_mem=20.05 GB
+0: Iteration 1: loss=13.9367
+0: peak_mem=22.73 GB
+0: Iteration 2: loss=9.8716
+0: peak_mem=22.73 GB
+0: Iteration 3: loss=11.4699

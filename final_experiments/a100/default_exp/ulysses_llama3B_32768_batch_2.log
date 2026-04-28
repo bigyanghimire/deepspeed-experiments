@@ -1,0 +1,464 @@
+0: W0428 15:10:38.754000 1088059 site-packages/torch/distributed/run.py:793] 
+0: W0428 15:10:38.754000 1088059 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0428 15:10:38.754000 1088059 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0428 15:10:38.754000 1088059 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0428 15:10:38.786000 699579 site-packages/torch/distributed/run.py:793] 
+1: W0428 15:10:38.786000 699579 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0428 15:10:38.786000 699579 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0428 15:10:38.786000 699579 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.49s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.14it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.03it/s]
+0: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.44s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.72s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.75s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.18it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.07it/s]
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+1: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.71s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.76s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.08s/it]
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.02it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.12s/it]
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.13s/it]
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.13s/it]
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+0: gradient checkpointing enabled: True
+1: gradient checkpointing enabled: True
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.14s/it]
+1: attn head count is LlamaConfig {
+1:   "_attn_implementation_autoset": true,
+1:   "architectures": [
+1:     "LlamaForCausalLM"
+1:   ],
+1:   "attention_bias": false,
+1:   "attention_dropout": 0.0,
+1:   "bos_token_id": 128000,
+1:   "eos_token_id": 128001,
+1:   "head_dim": 128,
+1:   "hidden_act": "silu",
+1:   "hidden_size": 3072,
+1:   "initializer_range": 0.02,
+1:   "intermediate_size": 8192,
+1:   "max_position_embeddings": 131072,
+1:   "mlp_bias": false,
+1:   "model_type": "llama",
+1:   "num_attention_heads": 24,
+1:   "num_hidden_layers": 28,
+1:   "num_key_value_heads": 8,
+1:   "pretraining_tp": 1,
+1:   "rms_norm_eps": 1e-05,
+1:   "rope_scaling": {
+1:     "factor": 32.0,
+1:     "high_freq_factor": 4.0,
+1:     "low_freq_factor": 1.0,
+1:     "original_max_position_embeddings": 8192,
+1:     "rope_type": "llama3"
+1:   },
+1:   "rope_theta": 500000.0,
+1:   "tie_word_embeddings": true,
+1:   "torch_dtype": "float32",
+1:   "transformers_version": "4.51.3",
+1:   "use_cache": true,
+1:   "vocab_size": 128256
+1: }
+1: 
+1: gradient checkpointing enabled: True
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.16s/it]
+0: attn head count is LlamaConfig {
+0:   "_attn_implementation_autoset": true,
+0:   "architectures": [
+0:     "LlamaForCausalLM"
+0:   ],
+0:   "attention_bias": false,
+0:   "attention_dropout": 0.0,
+0:   "bos_token_id": 128000,
+0:   "eos_token_id": 128001,
+0:   "head_dim": 128,
+0:   "hidden_act": "silu",
+0:   "hidden_size": 3072,
+0:   "initializer_range": 0.02,
+0:   "intermediate_size": 8192,
+0:   "max_position_embeddings": 131072,
+0:   "mlp_bias": false,
+0:   "model_type": "llama",
+0:   "num_attention_heads": 24,
+0:   "num_hidden_layers": 28,
+0:   "num_key_value_heads": 8,
+0:   "pretraining_tp": 1,
+0:   "rms_norm_eps": 1e-05,
+0:   "rope_scaling": {
+0:     "factor": 32.0,
+0:     "high_freq_factor": 4.0,
+0:     "low_freq_factor": 1.0,
+0:     "original_max_position_embeddings": 8192,
+0:     "rope_type": "llama3"
+0:   },
+0:   "rope_theta": 500000.0,
+0:   "tie_word_embeddings": true,
+0:   "torch_dtype": "float32",
+0:   "transformers_version": "4.51.3",
+0:   "use_cache": true,
+0:   "vocab_size": 128256
+0: }
+0: 
+0: gradient checkpointing enabled: True
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 5.98 GB         Max_MA 5.98 GB         CA 6.03 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 24.55 GB, percent = 2.4%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 5.98 GB         Max_MA 7.45 GB         CA 7.5 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 24.63 GB, percent = 2.4%
+0: Parameter Offload - Persistent parameters statistics: param_count = 57, numel = 175104
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 0.75 GB         Max_MA 6.08 GB         CA 7.55 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.64 GB, percent = 2.4%
+0: Before creating fp16 partitions
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 7.55 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 24.64 GB, percent = 2.4%
+0: After creating fp16 partitions: 1
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 0.75 GB         Max_CA 8 GB 
+0: CPU Virtual Memory:  used = 25.22 GB, percent = 2.5%
+0: Before creating fp32 partitions
+0: MA 0.75 GB         Max_MA 0.75 GB         CA 0.75 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After creating fp32 partitions
+0: MA 1.5 GB         Max_MA 1.5 GB         CA 1.5 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: Before initializing optimizer states
+0: MA 1.5 GB         Max_MA 1.5 GB         CA 1.5 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After initializing optimizer states
+0: MA 1.5 GB         Max_MA 2.24 GB         CA 2.25 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 24.43 GB, percent = 2.4%
+0: After initializing ZeRO optimizer
+0: MA 4.11 GB         Max_MA 4.84 GB         CA 4.84 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 24.47 GB, percent = 2.4%
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Tue Apr 28 15:01:34 2026).
+1: [Rank 4] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 6] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 5] Packed dataset: 158 chunks of 32768 tokens
+1: [Rank 7] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 0] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 2] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 1] Packed dataset: 158 chunks of 32768 tokens
+0: [Rank 3] Packed dataset: 158 chunks of 32768 tokens
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: peak_mem=16.14 GB
+0: Iteration 0: loss=7.0018
+0: peak_mem=20.05 GB
+0: Iteration 1: loss=13.9368
+0: peak_mem=22.73 GB
+0: Iteration 2: loss=9.8613
+0: peak_mem=22.73 GB
+0: Iteration 3: loss=11.4679
+0: peak_mem=22.73 GB
+0: Iteration 4: loss=9.5713
+0: peak_mem=22.73 GB
+0: Iteration 5: loss=8.7503
+0: peak_mem=22.73 GB
+0: Iteration 6: loss=8.1791
+0: peak_mem=22.73 GB
+0: Iteration 7: loss=8.3777
+0: peak_mem=22.73 GB
+0: Iteration 8: loss=8.1632
+0: peak_mem=22.73 GB
+0: Iteration 9: loss=8.0375
+0: [rank0]:[W428 15:11:56.012151221 CPUAllocator.cpp:249] Memory block of unknown size was allocated before the profiling started, profiler results will not include the deallocation event
+0: peak_mem=22.73 GB
+0: Iteration 10: loss=8.0935
+0: peak_mem=22.73 GB
+0: Iteration 11: loss=8.0197
+0: peak_mem=22.73 GB
+0: Iteration 12: loss=8.0104
+0: peak_mem=22.73 GB
+0: Iteration 13: loss=7.9319
+0: peak_mem=22.73 GB
+0: Iteration 14: loss=7.8431
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: slurmstepd-hades: error: *** STEP 1496.0 ON hades CANCELLED AT 2026-04-28T15:12:20 ***
+1: W0428 15:12:20.071000 699579 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+1: W0428 15:12:20.071000 699579 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 699716 closing signal SIGTERM
+0: W0428 15:12:20.071000 1088059 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received 15 death signal, shutting down workers
+0: W0428 15:12:20.072000 1088059 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1088197 closing signal SIGTERM
+1: W0428 15:12:20.075000 699579 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 699717 closing signal SIGTERM

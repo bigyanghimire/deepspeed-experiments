@@ -25,7 +25,8 @@ GPUS_PER_NODE=4
 SEQUENCE_LENGTH=${SEQUENCE_LENGTH:-32768}
 SEQ_PARALLEL_SIZE=$((NUM_NODES * GPUS_PER_NODE))
 BATCH_SIZE=2
-
+MODEL_NAME="meta-llama/Llama-3.2-3B"
+MODEL_NAME_SHORT="llama3B"
 MODE=$1  # Accept 'grouped' or 'ulysses' as first argument
 
 # --- Logic Gate ---
@@ -40,7 +41,7 @@ else
     exit 1
 fi
 
-mkdir -p $LOG_DIR
+mkdir -p "${LOG_DIR}/${MODEL_NAME_SHORT}"
 mkdir -p slurm_logs
 
 # --- Execution ---
@@ -51,8 +52,8 @@ LAUNCHER="torchrun \
     --rdzv_backend=c10d \
     --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT}"
 
-CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE} --batch_size ${BATCH_SIZE}"
+CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PARALLEL_SIZE} --type ${MODE} --batch_size ${BATCH_SIZE} --model_name ${MODEL_NAME}"
 
 echo "Running in ${MODE} mode using ${SCRIPT_NAME}..."
 
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "${LOG_DIR}/${MODE}_run_${SEQUENCE_LENGTH}_batch_${BATCH_SIZE}.log" 2>&1
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "${LOG_DIR}/${MODEL_NAME_SHORT}/${MODE}_${SEQUENCE_LENGTH}_batch_${BATCH_SIZE}.log" 2>&1

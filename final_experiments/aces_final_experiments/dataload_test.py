@@ -15,7 +15,7 @@ dataset = load_dataset(
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name_or_path = "meta-llama/Llama-3.2-1B"
+model_name_or_path = "meta-llama/Llama-3.2-3B"
 hub_cache_path = os.path.join(project_dir, '.cache/huggingface/hub')
 
 tokenizer = AutoTokenizer.from_pretrained(
