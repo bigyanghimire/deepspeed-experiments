@@ -1,15 +1,16 @@
 #!/bin/bash
-#SBATCH --nodes=2
-#SBATCH --partition=gpu  --gres=gpu:h100:1
+#SBATCH -A myGPUallocation       # allocation name
+#SBATCH --nodes=1
+#SBATCH --gpus-per-node=2     # Number of GPUs per node
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=64G
 #SBATCH --time=00:10:00
+#SBATCH -p gpu  
 #SBATCH --output=slurm_logs/%j-%x.output
 #SBATCH --error=slurm_logs/%j-%x.err
-
-module load CUDA/11.8.0
-module load GCC/9.3.0
+module purge
+module load modtree/gpu
+module load cuda/11.8.0
+module load gcc/9.3.0
 PROJECT_DIR="$SCRATCH/bigyan_project"
 MICROMAMBA_DIR="$PROJECT_DIR/.local/bin"
 eval "$("$MICROMAMBA_DIR/micromamba" shell hook -s bash)"
@@ -29,8 +30,8 @@ export HF_HUB_CACHE="${PROJECT_DIR}/.cache/huggingface/hub"
 export HF_DATASETS_CACHE="${PROJECT_DIR}/.cache/huggingface/datasets"
 export PATH="${PATH}"
 
-NUM_NODES=2
-GPUS_PER_NODE=1
+NUM_NODES=1
+GPUS_PER_NODE=2
 SEQUENCE_LENGTH=${SEQUENCE_LENGTH:-512}
 SEQ_PARALLEL_SIZE=$((NUM_NODES * GPUS_PER_NODE))
 BATCH_SIZE=2
