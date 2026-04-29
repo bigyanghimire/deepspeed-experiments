@@ -10,7 +10,8 @@
 module purge
 module load modtree/gpu
 module load cuda/11.8.0
-module load gcc/10.2.0
+gcc --version
+#module load gcc/10.2.0
 PROJECT_DIR="$SCRATCH/bigyan_project"
 MICROMAMBA_DIR="$PROJECT_DIR/.local/bin"
 eval "$("$MICROMAMBA_DIR/micromamba" shell hook -s bash)"
