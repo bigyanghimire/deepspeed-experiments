@@ -10,13 +10,13 @@
 module purge
 module load modtree/gpu
 module load cuda/11.8.0
-gcc --version
+
 #module load gcc/10.2.0
 PROJECT_DIR="$SCRATCH/bigyan_project"
 MICROMAMBA_DIR="$PROJECT_DIR/.local/bin"
 eval "$("$MICROMAMBA_DIR/micromamba" shell hook -s bash)"
-eval "$(micromamba shell hook --shell bash)"
-micromamba activate ds-hf2 
+#eval "$(micromamba shell hook --shell bash)"
+micromamba activate ds-hf3 
 
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29501
