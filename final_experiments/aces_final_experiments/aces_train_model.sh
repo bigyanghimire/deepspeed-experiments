@@ -67,4 +67,4 @@ CMD="${SCRIPT_NAME} --seq_length ${SEQUENCE_LENGTH} --seq_parallel_size ${SEQ_PA
 
 echo "Running in ${MODE} mode using ${SCRIPT_NAME}..."
 
-srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" > "${LOG_DIR}/${MODEL_NAME_SHORT}/${MODE}_${SEQUENCE_LENGTH}_batch_${BATCH_SIZE}.log" 2>&1
+srun --export=ALL -l bash -c "${LAUNCHER} ${CMD}" 
