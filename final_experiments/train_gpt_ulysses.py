@@ -205,7 +205,7 @@ def main():
     # Ulysses injection into HF Transformers
     mpu = UlyssesSPAttentionHF.register_with_transformers(
         model_name_or_path=model_name_or_path,
-        core_attn_implementation="flash_attention_2",
+        core_attn_implementation="sdpa",
         sequence_parallel_size=sequence_parallel_size,
         micro_batch_size=micro_batch_size,
         seq_length=seq_length,
