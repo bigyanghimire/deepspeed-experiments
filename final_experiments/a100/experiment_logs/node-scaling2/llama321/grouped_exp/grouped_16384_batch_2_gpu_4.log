@@ -1,0 +1,102 @@
+0: W0505 15:46:43.939000 1233230 site-packages/torch/distributed/run.py:793] 
+0: W0505 15:46:43.939000 1233230 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0505 15:46:43.939000 1233230 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0505 15:46:43.939000 1233230 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16384 Sequence parallel size: 4
+0: Training with Sequence Length: 16384 Sequence parallel size: 4
+0: Training with Sequence Length: 16384 Sequence parallel size: 4
+0: Training with Sequence Length: 16384 Sequence parallel size: 4
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 2.3 GB         Max_MA 2.3 GB         CA 2.3 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 21.52 GB, percent = 2.1%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 2.3 GB         Max_MA 3.28 GB         CA 3.28 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: Parameter Offload - Persistent parameters statistics: param_count = 33, numel = 67584
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 0.58 GB         Max_MA 2.43 GB         CA 3.3 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 21.54 GB, percent = 2.1%
+0: Before creating fp16 partitions
+0: MA 0.58 GB         Max_MA 0.58 GB         CA 3.3 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 21.54 GB, percent = 2.1%
+0: After creating fp16 partitions: 1
+0: MA 0.58 GB         Max_MA 0.58 GB         CA 0.58 GB         Max_CA 3 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: Before creating fp32 partitions
+0: MA 0.58 GB         Max_MA 0.58 GB         CA 0.58 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: After creating fp32 partitions
+0: MA 1.15 GB         Max_MA 1.15 GB         CA 1.15 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: Before initializing optimizer states
+0: MA 1.15 GB         Max_MA 1.15 GB         CA 1.15 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: After initializing optimizer states
+0: MA 1.15 GB         Max_MA 1.73 GB         CA 1.73 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 21.53 GB, percent = 2.1%
+0: After initializing ZeRO optimizer
+0: MA 3.59 GB         Max_MA 4.08 GB         CA 4.08 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 21.58 GB, percent = 2.1%
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: [Rank 3] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 1] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 0] Packed dataset: 336 chunks of 16384 tokens
+0: [Rank 2] Packed dataset: 336 chunks of 16384 tokens
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: Iteration 0: loss=3.9115
+0: Iteration 1: loss=13.0323
+0: Iteration 2: loss=20.8256
+0: Iteration 3: loss=11.9816
+0: Iteration 4: loss=9.4047
+0: Iteration 5: loss=8.7003
+0: Iteration 6: loss=8.2093
+0: Iteration 7: loss=8.0491
+0: Iteration 8: loss=8.3652
+0: Iteration 9: loss=8.1071
+0: Iteration 10: loss=7.9052
+0: Iteration 11: loss=7.8367
+0: Iteration 12: loss=7.9567
+0: Iteration 13: loss=8.2419
+0: Iteration 14: loss=8.0949
+0: Iteration 15: loss=7.9165
+0: Iteration 16: loss=7.6527
+0: Iteration 17: loss=7.9852
+0: Iteration 18: loss=7.9049
+0: Iteration 19: loss=7.7376
+0: Iteration 20: loss=7.8015
+0: Iteration 21: loss=7.8921
+0: Iteration 22: loss=7.8262
+0: Iteration 23: loss=7.8096
+0: Iteration 24: loss=7.7519
+0: Iteration 25: loss=7.6528
+0: Iteration 26: loss=7.5774
+0: Iteration 27: loss=7.7148
+0: Iteration 28: loss=7.5205
+0: Iteration 29: loss=7.6200
+0: final peak_mem=20.97 GB
+0: 
+0: === Summary over 20 iterations ===
+0: Step time: 0.88s ± 0.06s (min=0.85s, max=1.03s)
+0: [rank2]:[W505 15:47:29.228292443 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W505 15:47:29.290180242 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

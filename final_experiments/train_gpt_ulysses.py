@@ -41,6 +41,7 @@ def main():
     parser.add_argument('--seq_parallel_size', type=int, default=8, help='sequence parallel size')
     parser.add_argument('--batch_size', type=int, default=2, help='Batch Size')
     parser.add_argument('--model_name', type=str, default="meta-llama/Llama-3.2-1B", help='Model name')
+    parser.add_argument('--exp_name', type=str, default="node", help='Exp name')
 
     args = parser.parse_args()
 
@@ -49,11 +50,11 @@ def main():
     
     if args.type == "ulysses":
         from deepspeed.runtime.sequence_parallel.ulysses_sp2 import UlyssesSPAttentionHF, UlyssesSPDataLoaderAdapter
-        profiler_dir =  f"./ulysses_profiler_traces_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
+        profiler_dir =  f"./traces/{args.exp_name}/{args.model_name}/ulysses_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
     else:
         from deepspeed.runtime.sequence_parallel.ulysses_sp import UlyssesSPAttentionHF
         from deepspeed.runtime.sequence_parallel.ulysses_sp import GroupedUlyssesSPDataLoaderAdapter as UlyssesSPDataLoaderAdapter
-        profiler_dir =  f"./grouped_profiler_traces_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
+        profiler_dir =  f"./traces/{args.exp_name}/{args.model_name}/basp_{args.seq_parallel_size}_{args.seq_length}_batch_{args.batch_size}"
     # Use the value from the command line argument
     seq_length = args.seq_length
     sequence_parallel_size = args.seq_parallel_size
@@ -255,7 +256,7 @@ def main():
 
     if local_rank == 0:
         profiler_context = torch.profiler.profile(
-            activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+            activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
             profile_memory=True,
             schedule=torch.profiler.schedule(wait=5, warmup=5, active=6, repeat=1),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
@@ -272,7 +273,7 @@ def main():
     with profiler_context as profiler:
         # Normal training loop
         WARMUP = 10
-        MAX_ITERATIONS = 30  # Set your desired max iterations
+        MAX_ITERATIONS = 1000  # Set your desired max iterations
         iter_count = 0
         step_times = []
         
@@ -306,7 +307,7 @@ def main():
                 
                 if dist.get_rank() == 0:
                     mem_stats = get_memory_stats()
-                    print(f"peak_mem={format_memory(mem_stats['peak'])}")
+                    #print(f"peak_mem={format_memory(mem_stats['peak'])}")
                     print(f"Iteration {iter_count}: loss={loss.item():.4f}")
                 
                 model.backward(loss)

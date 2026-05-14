@@ -1,0 +1,183 @@
+1: W0501 15:52:00.358000 752532 site-packages/torch/distributed/run.py:793] 
+1: W0501 15:52:00.358000 752532 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0501 15:52:00.358000 752532 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0501 15:52:00.358000 752532 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0501 15:52:00.404000 1194305 site-packages/torch/distributed/run.py:793] 
+0: W0501 15:52:00.404000 1194305 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0501 15:52:00.404000 1194305 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0501 15:52:00.404000 1194305 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+1: Training with Sequence Length: 32768 Sequence parallel size: 8
+0: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+0: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.04it/s]
+0: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+0: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+0: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+1: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+1: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+1: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+1: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+1: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.33s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.40s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.40s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.08s/it]
+0: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.38s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.40s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.40s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.04s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]
+1: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.04s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]
+0: Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.14s/it]
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+1: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+1: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+1:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 5.85 GB         Max_MA 5.85 GB         CA 6.0 GB         Max_CA 6 GB 
+0: CPU Virtual Memory:  used = 25.18 GB, percent = 2.5%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 5.85 GB         Max_MA 7.01 GB         CA 7.16 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 25.25 GB, percent = 2.5%
+0: Parameter Offload - Persistent parameters statistics: param_count = 181, numel = 241664
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 0.72 GB         Max_MA 5.93 GB         CA 7.16 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 25.27 GB, percent = 2.5%
+0: Before creating fp16 partitions
+0: MA 0.72 GB         Max_MA 0.72 GB         CA 7.16 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 25.27 GB, percent = 2.5%
+0: After creating fp16 partitions: 1
+0: MA 0.72 GB         Max_MA 0.72 GB         CA 0.72 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 25.08 GB, percent = 2.5%
+0: Before creating fp32 partitions
+0: MA 0.72 GB         Max_MA 0.72 GB         CA 0.72 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 25.08 GB, percent = 2.5%
+0: After creating fp32 partitions
+0: MA 1.44 GB         Max_MA 1.44 GB         CA 1.44 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 25.08 GB, percent = 2.5%
+0: Before initializing optimizer states
+0: MA 1.44 GB         Max_MA 1.44 GB         CA 1.44 GB         Max_CA 1 GB 
+0: CPU Virtual Memory:  used = 25.08 GB, percent = 2.5%
+0: After initializing optimizer states
+0: MA 1.44 GB         Max_MA 2.16 GB         CA 2.16 GB         Max_CA 2 GB 
+0: CPU Virtual Memory:  used = 25.08 GB, percent = 2.5%
+0: After initializing ZeRO optimizer
+0: MA 4.02 GB         Max_MA 4.6 GB         CA 4.6 GB         Max_CA 5 GB 
+0: CPU Virtual Memory:  used = 25.13 GB, percent = 2.5%
+0: [Rank 2] Loading wikitext dataset...[Rank 3] Loading wikitext dataset...
+0: 
+0: [Rank 1] Loading wikitext dataset...
+1: [Rank 4] Loading wikitext dataset...
+1: [Rank 7] Loading wikitext dataset...
+1: [Rank 5] Loading wikitext dataset...
+1: [Rank 6] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+1: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 15:48:47 2026).
+0: [Rank 2] Packed dataset: 160 chunks of 32768 tokens
+1: [Rank 6] Packed dataset: 160 chunks of 32768 tokens
+0: [Rank 1] Packed dataset: 160 chunks of 32768 tokens
+0: [Rank 3] Packed dataset: 160 chunks of 32768 tokens
+0: [Rank 0] Packed dataset: 160 chunks of 32768 tokens
+1: [Rank 4] Packed dataset: 160 chunks of 32768 tokens
+1: [Rank 7] Packed dataset: 160 chunks of 32768 tokens
+1: [Rank 5] Packed dataset: 160 chunks of 32768 tokens
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: Iteration 0: loss=2.0762
+0: Iteration 1: loss=15.5266
+0: [2026-05-01 15:52:36,558] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 2: loss=18.2124
+0: [2026-05-01 15:52:42,394] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 3: loss=39.0491
+0: [2026-05-01 15:52:48,120] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 4: loss=12.7856
+0: [2026-05-01 15:52:53,825] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 5: loss=17.9813
+0: [2026-05-01 15:53:00,082] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 6: loss=25.6541
+0: [2026-05-01 15:53:05,801] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 7: loss=15.6012
+0: [2026-05-01 15:53:11,849] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 8: loss=11.1371
+0: [2026-05-01 15:53:17,542] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 9: loss=11.3904
+0: [2026-05-01 15:53:23,480] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 10: loss=10.6664
+0: [2026-05-01 15:53:29,142] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 11: loss=11.1946
+0: [2026-05-01 15:53:35,390] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 12: loss=11.2342
+0: [2026-05-01 15:53:41,484] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 13: loss=11.4468
+0: [2026-05-01 15:53:47,515] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 14: loss=11.1624
+0: [2026-05-01 15:53:53,614] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 15: loss=11.6468
+0: [2026-05-01 15:53:59,648] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 16: loss=11.2669
+0: [2026-05-01 15:54:08,966] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 17: loss=11.0949
+0: [2026-05-01 15:54:14,977] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 18: loss=11.1396
+0: [2026-05-01 15:54:21,475] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 19: loss=11.1542
+0: [2026-05-01 15:54:27,556] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: final peak_mem=24.85 GB
+0: 
+0: === Summary over 10 iterations ===
+0: Step time: 6.07s ± 0.20s (min=5.66s, max=6.50s)
+1: [rank5]:[W501 15:54:27.148437136 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W501 15:54:28.214835592 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W501 15:54:28.261514604 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank4]:[W501 15:54:28.313486289 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f758e2ef6a0>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 457, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_2d_kernel.pickle'
+0: [rank3]:[W501 15:54:33.065106146 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank2]:[W501 15:54:33.094094992 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W501 15:54:33.194939388 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W501 15:54:33.373539692 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

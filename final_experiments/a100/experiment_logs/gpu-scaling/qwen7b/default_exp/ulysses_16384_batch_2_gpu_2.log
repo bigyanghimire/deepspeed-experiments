@@ -1,0 +1,123 @@
+0: W0430 15:46:26.733000 1136890 site-packages/torch/distributed/run.py:793] 
+0: W0430 15:46:26.733000 1136890 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0430 15:46:26.733000 1136890 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0430 15:46:26.733000 1136890 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16384 Sequence parallel size: 2
+0: Training with Sequence Length: 16384 Sequence parallel size: 2
+0: Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.96s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.92s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.90s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.80s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.84s/it]
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.21s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.23s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.19s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.22s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.19s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.17s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.19s/it]
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 14.23 GB         Max_MA 14.23 GB         CA 14.35 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 18.92 GB, percent = 1.9%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 14.23 GB         Max_MA 16.26 GB         CA 16.38 GB         Max_CA 16 GB 
+0: CPU Virtual Memory:  used = 18.92 GB, percent = 1.9%
+0: Parameter Offload - Persistent parameters statistics: param_count = 141, numel = 333312
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 7.12 GB         Max_MA 14.73 GB         CA 16.38 GB         Max_CA 16 GB 
+0: CPU Virtual Memory:  used = 18.93 GB, percent = 1.9%
+0: Before creating fp16 partitions
+0: MA 7.12 GB         Max_MA 7.12 GB         CA 16.38 GB         Max_CA 16 GB 
+0: CPU Virtual Memory:  used = 18.93 GB, percent = 1.9%
+0: After creating fp16 partitions: 4
+0: MA 7.09 GB         Max_MA 7.12 GB         CA 7.1 GB         Max_CA 16 GB 
+0: CPU Virtual Memory:  used = 24.96 GB, percent = 2.5%
+0: Before creating fp32 partitions
+0: MA 7.09 GB         Max_MA 7.09 GB         CA 7.1 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 17.32 GB, percent = 1.7%
+0: After creating fp32 partitions
+0: MA 14.19 GB         Max_MA 14.19 GB         CA 14.19 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 17.32 GB, percent = 1.7%
+0: Before initializing optimizer states
+0: MA 14.19 GB         Max_MA 14.19 GB         CA 14.19 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 17.32 GB, percent = 1.7%
+0: After initializing optimizer states
+0: MA 14.19 GB         Max_MA 16.09 GB         CA 16.09 GB         Max_CA 16 GB 
+0: CPU Virtual Memory:  used = 17.32 GB, percent = 1.7%
+0: After initializing ZeRO optimizer
+0: MA 23.14 GB         Max_MA 24.16 GB         CA 24.2 GB         Max_CA 24 GB 
+0: CPU Virtual Memory:  used = 17.34 GB, percent = 1.7%
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Wed Apr 29 13:12:59 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Wed Apr 29 13:12:59 2026).
+0: Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   0%|          | 0/39531 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:03, 9824.27 examples/s]Map:   3%|▎         | 1000/39531 [00:00<00:04, 8949.70 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:03, 11230.33 examples/s]Map:   8%|▊         | 3000/39531 [00:00<00:03, 10821.79 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:03, 11095.84 examples/s]Map:  13%|█▎        | 5000/39531 [00:00<00:03, 11034.38 examples/s]Map:  18%|█▊        | 7000/39531 [00:00<00:02, 10847.40 examples/s]Map:  18%|█▊        | 7000/39531 [00:00<00:03, 10793.40 examples/s]Map:  23%|██▎       | 9000/39531 [00:00<00:02, 10654.26 examples/s]Map:  23%|██▎       | 9000/39531 [00:00<00:02, 10727.18 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:02, 10864.23 examples/s]Map:  28%|██▊       | 11000/39531 [00:01<00:02, 10945.00 examples/s]Map:  33%|███▎      | 13000/39531 [00:01<00
+0: :02, 10905.38 examples/s]Map:  33%|███▎      | 13000/39531 [00:01<00:02, 10930.27 examples/s]Map:  38%|███▊      | 15000/39531 [00:01<00:02, 8594.28 examples/s] Map:  38%|███▊      | 15000/39531 [00:01<00:03, 8154.25 examples/s] Map:  43%|████▎     | 17000/39531 [00:01<00:02, 9035.23 examples/s]Map:  43%|████▎     | 17000/39531 [00:01<00:02, 8975.33 examples/s]Map:  48%|████▊     | 19000/39531 [00:01<00:02, 9429.20 examples/s]Map:  48%|████▊     | 19000/39531 [00:01<00:02, 9528.06 examples/s]Map:  53%|█████▎    | 21000/39531 [00:02<00:01, 10013.26 examples/s]Map:  53%|█████▎    | 21000/39531 [00:02<00:01, 9721.08 examples/s]Map:  58%|█████▊    | 23000/39531 [00:02<00:01, 10191.79 examples/s]Map:  58%|█████▊    | 23000/39531 [00:02<00:01, 10069.79 examples/s]Map:  63%|██████▎   | 25000/39531 [00:02<00:01, 10290.57 examples/s]Map:  63%|██████▎   | 25000/39531 [
+0: 00:02<00:01, 10104.87 examples/s]Map:  68%|██████▊   | 27000/39531 [00:02<00:01, 10463.65 examples/s]Map:  68%|██████▊   | 27000/39531 [00:02<00:01, 10116.66 examples/s]Map:  73%|███████▎  | 29000/39531 [00:02<00:00, 10685.41 examples/s]Map:  73%|███████▎  | 29000/39531 [00:02<00:01, 10242.54 examples/s]Map:  78%|███████▊  | 31000/39531 [00:03<00:00, 10779.30 examples/s]Map:  78%|███████▊  | 31000/39531 [00:03<00:00, 10340.84 examples/s]Map:  83%|████████▎ | 33000/39531 [00:03<00:00, 11064.70 examples/s]Map:  83%|████████▎ | 33000/39531 [00:03<00:00, 10555.32 examples/s]Map:  89%|████████▊ | 35000/39531 [00:03<00:00, 10941.47 examples/s]Map:  89%|████████▊ | 35000/39531 [00:03<00:00, 9841.74 examples/s] Map:  94%|█████████▎| 37000/39531 [00:03<00:00, 10691.73 examples/s]Map:  91%|█████████ | 36000/3
+0: 9531 [00:03<00:00, 9781.34 examples/s]Map:  99%|█████████▊| 39000/39531 [00:03<00:00, 10627.67 examples/s]Map:  96%|█████████▌| 38000/39531 [00:03<00:00, 10139.91 examples/s]Map: 100%|██████████| 39531/39531 [00:03<00:00, 10127.14 examples/s]
+0: Map: 100%|██████████| 39531/39531 [00:03<00:00, 9790.66 examples/s] Packing into seq_length=16384:   0%|          | 0/39531 [00:00<?, ? examples/s]Map: 100%|██████████| 39531/39531 [00:03<00:00, 9922.81 examples/s]
+0: Packing into seq_length=16384:   0%|          | 0/39531 [00:00<?, ? examples/s]Packing into seq_length=16384:   5%|▌         | 2000/39531 [00:00<00:02, 18004.78 examples/s]Packing into seq_length=16384:   5%|▌         | 2000/39531 [00:00<00:02, 18584.85 examples/s]Packing into seq_length=16384:  13%|█▎        | 5000/39531 [00:00<00:01, 19446.78 examples/s]Packing into seq_length=16384:  13%|█▎        | 5000/39531 [00:00<00:01, 19349.27 examples/s]Packing into seq_length=16384:  18%|█▊        | 7000/39531 [00:00<00:01, 19340.49 examples/s]Packing into seq_length=16384:  23%|██▎       | 9000/39531 [00:00<00:01, 19430.23 examples/s]Packing into seq_length=16384:  18%|█▊        | 7000/39531 [00:00<00:01, 19126.87 examples/s]Packing into seq_length=16384:  23%|██▎       | 9000/39531 [00:00<00:01, 19133.67 examples/s]Packing into seq_length=16384:  30%|███       | 12000/39531 [00:00<00:01, 19790.41 examples/s]Packing into seq_length=16384:  35%|███▌      | 14
+0: 000/39531 [00:00<00:01, 19757.29 examples/s]Packing into seq_length=16384:  30%|███       | 12000/39531 [00:00<00:01, 19387.70 examples/s]Packing into seq_length=16384:  35%|███▌      | 14000/39531 [00:00<00:01, 19329.33 examples/s]Packing into seq_length=16384:  43%|████▎     | 17000/39531 [00:00<00:01, 19926.09 examples/s]Packing into seq_length=16384:  48%|████▊     | 19000/39531 [00:00<00:01, 19816.06 examples/s]Packing into seq_length=16384:  43%|████▎     | 17000/39531 [00:00<00:01, 19475.90 examples/s]Packing into seq_length=16384:  48%|████▊     | 19000/39531 [00:00<00:01, 19383.03 examples/s]Packing into seq_length=16384:  56%|█████▌    | 22000/39531 [00:01<00:00, 20562.92 examples/s]Packing into seq_length=16384:  56%|█████▌    | 22000/39531 [00:01<00:00, 20120.20 examples/s]Packing into seq_length=16384:  66%|██████▌   | 26000/39531 [00:01<00:00, 20232.81 examples/s]Packing into seq_length=16384:  
+0: 63%|██████▎   | 25000/39531 [00:01<00:00, 19772.45 examples/s]Packing into seq_length=16384:  76%|███████▌  | 30000/39531 [00:01<00:00, 20269.97 examples/s]Packing into seq_length=16384:  71%|███████   | 28000/39531 [00:01<00:00, 19856.33 examples/s]Packing into seq_length=16384:  76%|███████▌  | 30000/39531 [00:01<00:00, 19791.44 examples/s]Packing into seq_length=16384:  86%|████████▌ | 34000/39531 [00:01<00:00, 20533.79 examples/s]Packing into seq_length=16384:  86%|████████▌ | 34000/39531 [00:01<00:00, 20096.85 examples/s]Packing into seq_length=16384:  96%|█████████▌| 38000/39531 [00:01<00:00, 20135.36 examples/s]Packing into seq_length=16384: 100%|██████████| 39531/39531 [00:02<00:00, 19582.81 examples/s]
+0: [Rank 1] Packed dataset: 347 chunks of 16384 tokens
+0: Packing into seq_length=16384:  96%|█████████▌| 38000/39531 [00:01<00:00, 19757.19 examples/s]Packing into seq_length=16384: 100%|██████████| 39531/39531 [00:02<00:00, 19148.81 examples/s]
+0: [Rank 0] Packed dataset: 347 chunks of 16384 tokens
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 292, in main
+0: [rank0]:     loss = model.module.loss_function(
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/bigyan_project/transformers/src/transformers/loss/loss_utils.py", line 51, in ForCausalLMLoss
+0: [rank0]:     logits = logits.float()
+0: [rank0]:              ^^^^^^^^^^^^^^
+0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.28 GiB. GPU 0 has a total capacity of 39.38 GiB of which 2.25 GiB is free. Process 1137029 has 414.00 MiB memory in use. Including non-PyTorch memory, this process has 36.71 GiB memory in use. Of the allocated memory 32.31 GiB is allocated by PyTorch, and 2.75 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank1]:     main()
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 292, in main
+0: [rank1]:     loss = model.module.loss_function(
+0: [rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/bigyan_project/transformers/src/transformers/loss/loss_utils.py", line 51, in ForCausalLMLoss
+0: [rank1]:     logits = logits.float()
+0: [rank1]:              ^^^^^^^^^^^^^^
+0: [rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.28 GiB. GPU 1 has a total capacity of 39.38 GiB of which 1.98 GiB is free. Including non-PyTorch memory, this process has 37.39 GiB memory in use. Of the allocated memory 32.31 GiB is allocated by PyTorch, and 3.44 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank0]:[W430 15:47:07.925237379 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W430 15:47:07.944944097 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0430 15:47:08.521000 1136890 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1137029 closing signal SIGTERM
+0: E0430 15:47:08.835000 1136890 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1137028) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: ../train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-04-30_15:47:08
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 1137028)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

@@ -1,0 +1,142 @@
+0: W0501 14:37:57.655000 1184871 site-packages/torch/distributed/run.py:793] 
+0: W0501 14:37:57.655000 1184871 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0501 14:37:57.655000 1184871 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0501 14:37:57.655000 1184871 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 8192 Sequence parallel size: 4Training with Sequence Length: 8192 Sequence parallel size: 4
+0: 
+0: Training with Sequence Length: 8192 Sequence parallel size: 4
+0: Training with Sequence Length: 8192 Sequence parallel size: 4
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.69s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.64s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.62s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.12s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]
+0: Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.53s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.53s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.53s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.56s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.50s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.53s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.53s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.56s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.48s/it]Loading checkpoint shards:
+0:   75%|███████▌  | 3/4 [00:04<00:01,  1.53s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.52s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.55s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.04s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.21s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.22s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.24s/it]
+0: Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.26s/it]
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: /home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/utils/cpp_extension.py:1964: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+0: If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+0:   warnings.warn(
+0: Stage 3 initialize beginning
+0: MA 14.96 GB         Max_MA 14.96 GB         CA 15.08 GB         Max_CA 15 GB 
+0: CPU Virtual Memory:  used = 23.71 GB, percent = 2.4%
+0: DeepSpeedZeRoOffload initialize [begin]
+0: MA 14.96 GB         Max_MA 16.91 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 23.75 GB, percent = 2.4%
+0: Parameter Offload - Persistent parameters statistics: param_count = 65, numel = 266240
+0: DeepSpeedZeRoOffload initialize [end]
+0: MA 3.74 GB         Max_MA 15.2 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 23.72 GB, percent = 2.4%
+0: Before creating fp16 partitions
+0: MA 3.74 GB         Max_MA 3.74 GB         CA 17.04 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 23.72 GB, percent = 2.4%
+0: After creating fp16 partitions: 2
+0: MA 3.74 GB         Max_MA 3.74 GB         CA 3.74 GB         Max_CA 17 GB 
+0: CPU Virtual Memory:  used = 23.52 GB, percent = 2.3%
+0: Before creating fp32 partitions
+0: MA 3.74 GB         Max_MA 3.74 GB         CA 3.74 GB         Max_CA 4 GB 
+0: CPU Virtual Memory:  used = 23.52 GB, percent = 2.3%
+0: After creating fp32 partitions
+0: MA 7.48 GB         Max_MA 7.48 GB         CA 7.48 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 23.52 GB, percent = 2.3%
+0: Before initializing optimizer states
+0: MA 7.48 GB         Max_MA 7.48 GB         CA 7.48 GB         Max_CA 7 GB 
+0: CPU Virtual Memory:  used = 23.52 GB, percent = 2.3%
+0: After initializing optimizer states
+0: MA 7.48 GB         Max_MA 9.35 GB         CA 9.36 GB         Max_CA 9 GB 
+0: CPU Virtual Memory:  used = 23.52 GB, percent = 2.3%
+0: After initializing ZeRO optimizer
+0: MA 13.08 GB         Max_MA 14.06 GB         CA 14.07 GB         Max_CA 14 GB 
+0: CPU Virtual Memory:  used = 23.56 GB, percent = 2.3%
+0: [Rank 2] Loading wikitext dataset...
+0: [Rank 3] Loading wikitext dataset...
+0: [Rank 1] Loading wikitext dataset...
+0: [Rank 0] Loading wikitext dataset...
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 14:27:59 2026).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 14:27:59 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 14:27:59 2026).
+0: Using the latest cached version of the dataset since wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+0: Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /home/bigyang/.cache/huggingface/datasets/wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri May  1 14:27:59 2026).
+0: [Rank 3] Packed dataset: 692 chunks of 8192 tokens
+0: [Rank 0] Packed dataset: 692 chunks of 8192 tokens
+0: [Rank 2] Packed dataset: 692 chunks of 8192 tokens
+0: [Rank 1] Packed dataset: 692 chunks of 8192 tokens
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+0: Iteration 0: loss=2.1015
+0: [2026-05-01 14:38:30,705] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 1: loss=11.3476
+0: [2026-05-01 14:38:33,644] [WARNING] [stage3.py:2274:step] 4 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+0: Iteration 2: loss=24.0952
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 312, in main
+0: [rank0]:     model.backward(loss)
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+0: [rank0]:     ret_val = func(*args, **kwargs)
+0: [rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/engine.py", line 2583, in backward
+0: [rank0]:     loss.backward(**backward_kwargs)
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
+0: [rank0]:     torch.autograd.backward(
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
+0: [rank0]:     _engine_run_backward(
+0: [rank0]:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+0: [rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+0: [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 0 has a total capacity of 39.38 GiB of which 1.89 GiB is free. Including non-PyTorch memory, this process has 36.25 GiB memory in use. Process 1185010 has 414.00 MiB memory in use. Process 1185012 has 414.00 MiB memory in use. Process 1185011 has 414.00 MiB memory in use. Of the allocated memory 28.50 GiB is allocated by PyTorch, and 3.59 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0: [rank0]:[W501 14:38:34.685739637 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: W0501 14:38:36.241000 1184871 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1185010 closing signal SIGTERM
+0: W0501 14:38:36.242000 1184871 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1185011 closing signal SIGTERM
+0: W0501 14:38:36.245000 1184871 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1185012 closing signal SIGTERM
+0: E0501 14:38:37.863000 1184871 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1185009) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: ../train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-05-01_14:38:36
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 1185009)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hades: task 0: Exited with exit code 1

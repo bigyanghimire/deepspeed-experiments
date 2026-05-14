@@ -2,7 +2,31 @@ import re
 import argparse
 import matplotlib.pyplot as plt
 import os
+from cycler import cycler
+# Global styling for a professional academic look
 
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Nimbus Sans"],
+    "font.size": 9,
+    "axes.labelsize": 9,
+    "axes.titlesize": 9,
+    "legend.fontsize": 9,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 9,
+    
+    # Other styling
+    "grid.alpha": 0.3,
+    "savefig.dpi": 300
+})
+plt.rcParams.update({
+    'legend.frameon': False,
+    'lines.linewidth': 1,
+    'axes.prop_cycle': cycler(color=['#645DD7', '#FF4242']),
+})
+plt.rcParams['axes.spines.top'] = False
+plt.rcParams['axes.spines.right'] = False
+plt.rcParams['axes.grid'] = False
 def parse_and_plot(file_paths):
     plt.figure(figsize=(10, 6))
     
@@ -29,7 +53,7 @@ def parse_and_plot(file_paths):
                 continue
 
             # Plot this file's data; use the filename as the label
-            label_name = os.path.basename(path)
+            label_name = os.path.splitext(os.path.basename(path))[0]
             plt.plot(iterations, losses, marker='.', linestyle='-', label=f'Loss: {label_name}')
             data_plotted = True
             print(f"Parsed {len(iterations)} points from {path}.")
@@ -47,8 +71,8 @@ def parse_and_plot(file_paths):
         plt.legend()
         
         # Save and show
-        save_name = "comparison_plot.png"
-        plt.savefig(save_name, dpi=150)
+        save_name = "comparison_plot.pdf"
+        plt.savefig(save_name, dpi=300)
         print(f"Plot saved as {save_name}. Opening window...")
         plt.show()
 

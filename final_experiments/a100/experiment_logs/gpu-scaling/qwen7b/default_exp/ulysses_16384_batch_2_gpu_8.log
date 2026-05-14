@@ -1,0 +1,224 @@
+0: W0430 15:53:08.766000 1139897 site-packages/torch/distributed/run.py:793] 
+0: W0430 15:53:08.766000 1139897 site-packages/torch/distributed/run.py:793] *****************************************
+0: W0430 15:53:08.766000 1139897 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+0: W0430 15:53:08.766000 1139897 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0430 15:53:09.135000 717111 site-packages/torch/distributed/run.py:793] 
+1: W0430 15:53:09.135000 717111 site-packages/torch/distributed/run.py:793] *****************************************
+1: W0430 15:53:09.135000 717111 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+1: W0430 15:53:09.135000 717111 site-packages/torch/distributed/run.py:793] *****************************************
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1: Warning: The cache directory for DeepSpeed Triton autotune, /home/bigyang/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+1: Training with Sequence Length: 16384 Sequence parallel size: 8
+0: [rank3]: Traceback (most recent call last):
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank3]:     main()
+0: [rank3]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+0: [rank3]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank3]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+0: [rank3]:     uattn = UlyssesSPAttentionHF(
+0: [rank3]:             ^^^^^^^^^^^^^^^^^^^^^
+0: [rank3]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+0: [rank3]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+0: [rank3]: ValueError: Attention head count 28 is not divisible by SP size 8
+1: [rank4]: Traceback (most recent call last):
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+1: [rank4]:     main()
+1: [rank4]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+1: [rank4]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank4]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+1: [rank4]:     uattn = UlyssesSPAttentionHF(
+1: [rank4]:             ^^^^^^^^^^^^^^^^^^^^^
+1: [rank4]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+1: [rank4]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+1: [rank4]: ValueError: Attention head count 28 is not divisible by SP size 8
+0: [rank2]: Traceback (most recent call last):
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank2]:     main()
+0: [rank2]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+0: [rank2]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank2]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+0: [rank2]:     uattn = UlyssesSPAttentionHF(
+0: [rank2]:             ^^^^^^^^^^^^^^^^^^^^^
+0: [rank2]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+0: [rank2]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+0: [rank2]: ValueError: Attention head count 28 is not divisible by SP size 8
+1: [rank5]: Traceback (most recent call last):
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+1: [rank5]:     main()
+1: [rank5]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+1: [rank5]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank5]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+1: [rank5]:     uattn = UlyssesSPAttentionHF(
+1: [rank5]:             ^^^^^^^^^^^^^^^^^^^^^
+1: [rank5]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+1: [rank5]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+1: [rank5]: ValueError: Attention head count 28 is not divisible by SP size 8
+1: [rank7]: Traceback (most recent call last):
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+1: [rank7]:     main()
+1: [rank7]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+1: [rank7]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank7]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+1: [rank7]:     uattn = UlyssesSPAttentionHF(
+1: [rank7]:             ^^^^^^^^^^^^^^^^^^^^^
+1: [rank7]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+1: [rank7]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+1: [rank7]: ValueError: Attention head count 28 is not divisible by SP size 8
+0: [rank1]: Traceback (most recent call last):
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank1]:     main()
+0: [rank1]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+0: [rank1]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+0: [rank1]:     uattn = UlyssesSPAttentionHF(
+0: [rank1]:             ^^^^^^^^^^^^^^^^^^^^^
+0: [rank1]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+0: [rank1]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+0: [rank1]: ValueError: Attention head count 28 is not divisible by SP size 8
+1: [rank6]: Traceback (most recent call last):
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+1: [rank6]:     main()
+1: [rank6]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+1: [rank6]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+1: [rank6]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+1: [rank6]:     uattn = UlyssesSPAttentionHF(
+1: [rank6]:             ^^^^^^^^^^^^^^^^^^^^^
+1: [rank6]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+1: [rank6]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+1: [rank6]: ValueError: Attention head count 28 is not divisible by SP size 8
+0: [rank0]: Traceback (most recent call last):
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 334, in <module>
+0: [rank0]:     main()
+0: [rank0]:   File "/home/bigyang/llm-training/experiments/final_experiments/a100/../train_gpt_ulysses.py", line 206, in main
+0: [rank0]:     mpu = UlyssesSPAttentionHF.register_with_transformers(
+0: [rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 436, in register_with_transformers
+0: [rank0]:     uattn = UlyssesSPAttentionHF(
+0: [rank0]:             ^^^^^^^^^^^^^^^^^^^^^
+0: [rank0]:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/runtime/sequence_parallel/ulysses_sp2.py", line 141, in __init__
+0: [rank0]:     raise ValueError(f"Attention head count {attn_head_count} is not divisible by SP size {self.world_size}")
+0: [rank0]: ValueError: Attention head count 28 is not divisible by SP size 8
+0: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7ff2ba63f6a0>
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+0:     fp16_matmul._update_autotune_table()
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 458, in _update_autotune_table
+0:     TritonMatmul._update_autotune_table(__class__.__name__ + "_4d_kernel", __class__._4d_kernel)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+0:     cache_manager.put(autotune_table)
+0:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+0:     os.replace(self.file_path + ".tmp", self.file_path)
+0: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle'
+1: Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f6c9b77f6a0>
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+1:     fp16_matmul._update_autotune_table()
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 458, in _update_autotune_table
+1:     TritonMatmul._update_autotune_table(__class__.__name__ + "_4d_kernel", __class__._4d_kernel)
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 186, in _update_autotune_table
+1:     cache_manager.put(autotune_table)
+1:   File "/home/bigyang/llm-training/DeepSpeed/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 105, in put
+1:     os.replace(self.file_path + ".tmp", self.file_path)
+1: FileNotFoundError: [Errno 2] No such file or directory: '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle.tmp' -> '/home/bigyang/.triton/autotune/Fp16Matmul_4d_kernel.pickle'
+1: [rank4]:[W430 15:53:20.212139472 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank0]:[W430 15:53:20.840230591 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank6]:[W430 15:53:20.765488153 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank5]:[W430 15:53:20.828731895 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank3]:[W430 15:53:20.364388790 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank2]:[W430 15:53:20.382296765 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+0: [rank1]:[W430 15:53:20.401576254 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: [rank7]:[W430 15:53:20.894057712 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1: W0430 15:53:22.842000 717111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 717250 closing signal SIGTERM
+1: W0430 15:53:22.844000 717111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 717251 closing signal SIGTERM
+1: W0430 15:53:22.844000 717111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 717253 closing signal SIGTERM
+0: W0430 15:53:23.036000 1139897 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1140036 closing signal SIGTERM
+0: W0430 15:53:23.037000 1139897 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1140037 closing signal SIGTERM
+0: W0430 15:53:23.037000 1139897 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1140038 closing signal SIGTERM
+1: E0430 15:53:23.537000 717111 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 717252) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+1: Traceback (most recent call last):
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+1:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+1:     run(args)
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+1:     elastic_launch(
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: ../train_gpt_ulysses.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2026-04-30_15:53:22
+1:   host      : hercules.olympus.clemson.edu
+1:   rank      : 6 (local_rank: 2)
+1:   exitcode  : 1 (pid: 717252)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+0: E0430 15:53:23.679000 1139897 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1140035) of binary: /home/bigyang/.local/share/mamba/envs/ds-hf/bin/python
+0: Traceback (most recent call last):
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/bin/torchrun", line 33, in <module>
+0:     sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+0:     run(args)
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+0:     elastic_launch(
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/bigyang/.local/share/mamba/envs/ds-hf/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: ../train_gpt_ulysses.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2026-04-30_15:53:23
+0:   host      : hades.olympus.clemson.edu
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 1140035)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: hercules: task 1: Exited with exit code 1
+srun: error: hades: task 0: Exited with exit code 1
